@@ -1,0 +1,47 @@
+/* ==========================================================================
+   MERGEN — src/input.css  (تنها فایل مبدأ CSS؛ خروجی: dist/css/style.css)
+
+   ساخت:   npm run dev      (watch)   →  dist/css/style.css
+           npm run build    (minify)  →  dist/css/style.min.css
+
+   ⚠️ فایل dist/css/style.css را دستی ویرایش نکن؛ با هر build بازنویسی می‌شود.
+      CSS دستی هر بخش در src/css/ است و از همین‌جا import می‌شود.
+   ========================================================================== */
+
+/* فقط HTML و main.js اسکن شوند (نه vendor ها و node_modules) */
+@import "tailwindcss" source(none);
+@source "../dist/mergen-interior-final.html";
+@source "../dist/js/main.js";
+
+/* دارک‌مود با کلاس .dark روی <html> (dark:bg-... در تیلویند کار می‌کند) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* --------------------------------------------------------------------------
+   ترتیب import = ترتیب cascade. بعد از آن‌که ظاهر سایت قطعی شد،
+   می‌توانی «fixes» و «light-mode» را داخل فایل هر بخش ادغام کنی.
+   -------------------------------------------------------------------------- */
+@import "./css/00-global.css";
+@import "./css/01-header.css";            /* HTML 01 HEADER */
+@import "./css/02-hero.css";              /* HTML 01 HERO */
+@import "./css/03-material-ticker.css";
+@import "./css/04-layered-scroll.css";    /* HTML 03 LAYERED SCROLL */
+@import "./css/05-slider-01.css";         /* HTML 04 SLIDER 01 */
+@import "./css/06-slider-02.css";         /* HTML 06 SLIDER 02 */
+@import "./css/07-contact.css";           /* HTML 09 CONTACT */
+@import "./css/08-slider-03.css";         /* HTML 14 SLIDER 03 */
+@import "./css/09-shopping-guide.css";    /* HTML 12 SHOPPING GUIDE */
+@import "./css/10-collection.css";        /* HTML 10 COLLECTION */
+@import "./css/11-material-library.css";  /* HTML 15 MATERIAL LIBRARY */
+@import "./css/12-signature-v3.css";      /* HTML 11 SIGNATURE V3 */
+@import "./css/13-experience.css";        /* HTML 13 EXPERIENCE */
+@import "./css/14-faq.css";               /* HTML 17 FAQ */
+@import "./css/15-about.css";             /* HTML 16 ABOUT */
+@import "./css/16-footer.css";            /* HTML 18 FOOTER */
+@import "./css/20-light-mode.css";
+@import "./css/21-brand-metrics.css";
+@import "./css/22-editorial.css";         /* HTML 02 PHILOSOPHY + 07 MATERIAL TO SPACE */
+@import "./css/23-fixes-2026-09.css";
+@import "./css/24-final-night-fixes.css";
+@import "./css/25-horizontal-layered.css";/* HTML 05 HORIZONTAL LAYERED */
+@import "./css/26-orbit-slider.css";      /* HTML 08 ORBIT SLIDER */
+@import "./css/27-light-color-fixes.css";

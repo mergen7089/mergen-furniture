@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>MERGEN Furniture | طراحی، ساخت و اجرای مبلمان و دکوراسیون</title>
+        <meta name="description" content="مرگن؛ طراحی، ساخت و اجرای مبلمان، سرویس خواب و دکوراسیون داخلی سفارشی.">
+        <!-- تعیین تم قبل از رندر صفحه تا هیچ فلش رنگی دیده نشه.
+             این خط باید همینجا و inline بمونه (نه در main.js) چون باید
+             قبل از رنگ‌آمیزی اولیه صفحه اجرا بشه. پیش‌فرض سایت: تم تاریک. -->
+        <script>if(localStorage.getItem('mergen-theme')!=='light')document.documentElement.classList.add('dark');</script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./fonts/vazirmatn/vazirmatn.css">
+        <link rel="stylesheet" href="./css/vendor/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="./css/vendor/owlcarousel/owl.carousel.min.css">
+        <script src="./js/vendor/jquery.min.js"></script>
+        <script src="./js/vendor/owl.carousel.min.js"></script>
+
+    </head>
+    <body>
+        <!-- 01 HEADER -->
+        <header class="mg-header">
+            <div class="mg-head-inner">
+                <button class="mg-menu" id="menuButton" aria-label="menu">
+                    <span><i></i><i></i><i></i></span>
+                </button>
+                <a class="mg-brand" href="#top">
+                    <b>MERGEN</b>
+                    <small>Furniture</small>
+                </a>
+                <nav class="mg-nav">
+                    <button class="mega-nav" data-mega="living">مبلمان</button>
+                    <button class="mega-nav" data-mega="bedroom">سرویس خواب</button>
+                    <button class="mega-nav" data-mega="products">سرویس ناهارخوری</button>
+                    <button class="mega-nav" data-mega="tables">انواع میز</button>
+                    <button class="mega-nav" data-mega="interior">کنسول و جاکفشی</button>
+                    <a href="#collection">محصولات سفارشی</a>
+                    <a href="#about">کاتالوگ</a>
+                </nav>
+                <div class="mg-actions">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button id="themeToggle"><i class="fa-regular fa-moon"></i></button>
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa-regular fa-user"></i></button>
+                    <button><i class="fa-solid fa-location-dot"></i></button>
+                    <button><i class="fa-solid fa-phone"></i></button>
+                    <button><i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count">0</span></button>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+        <div class="mg-overlay" id="megaOverlay"></div>
+        <div class="mg-mega" id="megaMenu">
+            <div class="mg-mega-inner">
+                <div class="mega-feature">
+                    <small id="megaKicker">Mergen Furniture / COLLECTION</small>
+                    <h3 id="megaTitle">طراحی برای<br>زندگی متفاوت</h3>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol1Title">مبلمان</h4>
+                    <div id="megaCol1"></div>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol2Title">سرویس خواب</h4>
+                    <div id="megaCol2"></div>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol3Title">سرویس ناهارخوری</h4>
+                    <div id="megaCol3"></div>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol4Title">انواع میز</h4>
+                    <div id="megaCol4"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="section-nav">
+            <div class="section-nav-inner">
+                <a href="#layers">Kitchen / آشپزخانه</a>
+                <a href="#layers">Bedroom / اتاق خواب</a>
+                <a href="#layers">Livingroom / اتاق پذیرایی</a>
+                <a href="#layers">Closetroom / اتاق لباس</a>
+                <a href="#layers">Childroom / اتاق کودک</a>
+                <a href="#layers">StoreDecor / دکور فروشگاه</a>
+            </div>
+        </nav>
+        <header class="sticky-header" id="sticky">
+            <div class="sticky-inner">
+                <a class="sticky-logo" href="#top">MERGEN</a>
+                <nav class="sticky-nav">
+                    <a href="#slider01">مبلمان</a>
+                    <a href="#layers">سرویس خواب</a>
+                    <a href="#slider01">سرویس ناهارخوری</a>
+                    <a href="#slider02">انواع میز</a>
+                    <a href="#collection">کنسول و جاکفشی</a>
+                    <a href="#faq">محصولات سفارشی</a>
+                </nav>
+                <div class="sticky-actions">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button id="themeToggleSticky"><i class="fa-regular fa-moon"></i></button>
+                    <button><i class="fa-regular fa-user"></i></button>
+                    <button><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+            </div>
+        </header>
+
+
+
+        <main id="top">
+
+            <!-- 01 HERO -->
+            <section id="mergen-hero-slider">
+                <div class="mergen-hero owl-carousel">
+                    <article class="mergen-slide" data-title="فضاهایی برای زندگی کردن" data-kicker="پروژه مسکونی" data-desc="طراحی، ساخت و اجرای فضاهایی که فرم، متریال و عملکرد را در یک تجربه واحد جمع می‌کنند.">
+                        <div class="slide-bg" style="background-image:url('./img/hero1.png')"></div>
+                        <div class="hero-copy">
+                            <div class="hero-kicker text-xs tracking-[.2em] text-emerald-300">پروژه مسکونی</div>
+                            <h1 class="hero-title">فضاهایی برای<br><span>زندگی کردن.</span></h1>
+                            <p class="hero-desc">طراحی، ساخت و اجرای مبلمان و دکوراسیون داخلی با رویکردی مدرن، دقیق و ماندگار.</p>
+                            <a class="hero-btn" href="#collection">مشاهده پروژه‌ها ←</a>
+                        </div>
+                    </article>
+                    <article class="mergen-slide" data-title="آشپزخانه مینیمال" data-kicker="طراحی داخلی" data-desc="ترکیب چوب، نور و خطوط ساده برای ساخت فضایی گرم و کاربردی.">
+                        <div class="slide-bg" style="background-image:url('./img/hero2.png')"></div>
+                        <div class="hero-copy">
+                            <div class="hero-kicker text-xs tracking-[.2em] text-emerald-300">طراحی داخلی</div>
+                            <h1 class="hero-title">سادگی،<br><span>با جزئیات.</span></h1>
+                            <p class="hero-desc">از طراحی اولیه تا تولید و اجرای نهایی، همه‌چیز با یک نگاه یکپارچه پیش می‌رود.</p>
+                            <a class="hero-btn" href="#layers">کشف فضا ←</a>
+                        </div>
+                    </article>
+                    <article class="mergen-slide" data-title="فضای تجاری لوکس" data-kicker="پروژه تجاری" data-desc="طراحی و اجرای یکپارچه برای ایجاد هویت بصری متمایز.">
+                        <div class="slide-bg" style="background-image:url('./img/hero3.png')"></div>
+                        <div class="hero-copy">
+                            <div class="hero-kicker text-xs tracking-[.2em] text-emerald-300">پروژه تجاری</div>
+                            <h1 class="hero-title">هویت،<br><span>در فضا.</span></h1>
+                            <p class="hero-desc">برای فروشگاه، دفتر یا پروژه تجاری؛ طراحی‌ای که دیده می‌شود و در ذهن می‌ماند.</p>
+                            <a class="hero-btn" href="#collection">پروژه‌ها ←</a>
+                        </div>
+                    </article>
+                    <article class="mergen-slide" data-title="اتاق نشیمن معاصر" data-kicker="مبلمان سفارشی" data-desc="جزئیات دقیق، نورپردازی هدفمند و اجرای سفارشی مرگن.">
+                        <div class="slide-bg" style="background-image:url('./img/hero4.png')"></div>
+                        <div class="hero-copy">
+                            <div class="hero-kicker text-xs tracking-[.2em] text-emerald-300">مبلمان سفارشی</div>
+                            <h1 class="hero-title">یک اتاق،<br><span>یک شخصیت.</span></h1>
+                            <p class="hero-desc">مبلمان و عناصر دکوراتیو متناسب با ابعاد، سبک و نیاز واقعی شما.</p>
+                            <a class="hero-btn" href="#slider01">مجموعه مبلمان ←</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="absolute inset-0 pointer-events-none bg-gradient-to-l from-black/10 via-black/40 to-black/70"></div>
+                <button class="hero-nav-arrow prev absolute z-30 left-6 md:left-12 top-1/2 -translate-y-1/2">‹</button>
+                <button class="hero-nav-arrow next absolute z-30 right-6 md:right-12 top-1/2 -translate-y-1/2">›</button>
+                <div class="absolute z-30 left-7 md:left-16 bottom-36 md:bottom-40 w-56 md:w-72">
+                    <div class="flex justify-between mb-3">
+                        <span>
+                            <span id="slide-current" class="text-3xl">01</span>
+                            <span class="mx-2 text-white/30">/</span>
+                            04
+                        </span>
+                        <span class="text-xs text-white/40">PROJECTS</span>
+                    </div>
+                    <div class="h-1 bg-white/15 rounded-full overflow-hidden">
+                        <div id="progress" class="h-full bg-emerald-400"></div>
+                    </div>
+                </div>
+                <div class="absolute z-30 inset-x-0 bottom-0 px-5 md:px-16 pb-5 md:pb-8">
+                    <div id="thumbs" class="flex gap-3 md:gap-5 overflow-hidden"></div>
+                </div>
+            </section>
+
+            <!-- 02 MERGEN PHILOSOPHY -->
+            <section id="philosophy" class="mg-philosophy">
+                <div class="mg-philosophy-media mg-philosophy-media-a" style="background-image:url('./img/phylsophy4.jfif')"></div>
+                <div class="mg-philosophy-media mg-philosophy-media-b" style="background-image:url('./img/phylsophy2.jpg')"></div>
+
+                <div class="mg-philosophy-shade"></div>
+                <div class="mg-philosophy-content">
+                    <span class="mg-kicker">MERGEN / PHILOSOPHY</span>
+                    <h2>فرم، عملکرد و<br><em>احساس.</em></h2>
+                    <p>ما فقط محصول نمی‌سازیم؛ جزئیات را طوری کنار هم قرار می‌دهیم که یک فضای واقعی و ماندگار شکل بگیرد.</p>
+                    <div class="mg-philosophy-tags"><span>FORM</span><span>FUNCTION</span><span>EMOTION</span></div>
+                </div>
+            </section>
+
+            <!-- 03 LAYERED SCROLL -->
+            <section id="layers">
+                <div class="layer-section" data-layer>
+                    <div class="layer-bg" style="background-image:url('./img/kitchen.jpg')"></div>
+                    <div class="layer-content">
+                        <div class="layer-inner">
+                            <div class="layer-no">01 / KITCHEN</div>
+                            <h2 class="layer-title">Kitchen</h2>
+                            <p class="layer-copy">خطوط تمیز، متریال ماندگار و جزئیاتی که آشپزخانه را به قلب خانه تبدیل می‌کند.</p>
+                            <div class="layer-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-section" data-layer>
+                    <div class="layer-bg" style="background-image:url('./img/livingroom.jpg')"></div>
+                    <div class="layer-content">
+                        <div class="layer-inner">
+                            <div class="layer-no">02 / LIVING</div>
+                            <h2 class="layer-title">Living</h2>
+                            <p class="layer-copy">مبلمان و عناصر داخلی با تناسب دقیق برای فضایی آرام، گرم و شخصیت‌دار.</p>
+                            <div class="layer-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-section" data-layer>
+                    <div class="layer-bg" style="background-image:url('./img/bedroom.png')"></div>
+                    <div class="layer-content">
+                        <div class="layer-inner">
+                            <div class="layer-no">03 / BEDROOM</div>
+                            <h2 class="layer-title">Bedroom</h2>
+                            <p class="layer-copy">اتاق خوابی که فقط زیبا نیست؛ برای استراحت، نظم و زندگی روزمره طراحی شده است.</p>
+                            <div class="layer-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-section" data-layer>
+                    <div class="layer-bg" style="background-image:url('./img/bathroom.jpg')"></div>
+                    <div class="layer-content">
+                        <div class="layer-inner">
+                            <div class="layer-no">04 / BATHROOM</div>
+                            <h2 class="layer-title">Bathroom</h2>
+                            <p class="layer-copy">ترکیب متریال، نور و خطوط مینیمال برای یک فضای شخصی با حس هتل.</p>
+                            <div class="layer-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-section" data-layer>
+                    <div class="layer-bg" style="background-image:url('./img/closetroom.jpg')"></div>
+                    <div class="layer-content">
+                        <div class="layer-inner">
+                            <div class="layer-no">05 / CLOSETROOM</div>
+                            <h2 class="layer-title">Closetroom</h2>
+                            <p class="layer-copy">نظم، دسترسی و زیبایی در طراحی کمد و کلوزت روم سفارشی.</p>
+                            <div class="layer-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer-section" data-layer>
+                    <div class="layer-bg" style="background-image:url('./img/interior.jpg')"></div>
+                    <div class="layer-content">
+                        <div class="layer-inner">
+                            <div class="layer-no">06 / INTERIOR</div>
+                            <h2 class="layer-title">Interior</h2>
+                            <p class="layer-copy">وقتی همه عناصر کنار هم قرار می‌گیرند، یک فضای معمولی به یک تجربه تبدیل می‌شود.</p>
+                            <div class="layer-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04 SLIDER 01 -->
+            <section id="slider01" class="section-wrap">
+                <div class="max-w-1400 mx-auto">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                        <div>
+                            <div class="eyebrow text-emerald-300">SLIDER 01 / FURNITURE</div>
+                            <h2 class="section-title text-white mt-4">فرم، برای زندگی.</h2>
+                        </div>
+                        <p class="max-w-md text-white/55 text-sm leading-8"> مدل هایی از مبلمان که می‌توانند راحتی ببخشند و فضای شما را زیبا سازند.</p>
+                    </div>
+                    <div id="furnitureCarousel" class="owl-carousel">
+                        <article class="furniture-card">
+                            <img alt="" src="img/mobl1.jfif">
+                            <div class="furniture-info">
+                                <div class="text-emerald-300 text-xs">01 / SOFA</div>
+                                <h3 class="text-xl mt-2">مبل مدل یک</h3>
+                                <p class="text-white/55 text-xs leading-7 mt-2">فرم نرم و ساختار دقیق برای نشیمنی ماندگار.</p>
+                            </div>
+                        </article>
+                        <article class="furniture-card">
+                            <img alt="" src="img/mobl2.jpg">
+                            <div class="furniture-info">
+                                <div class="text-emerald-300 text-xs">02 / SOFA</div>
+                                <h3 class="text-xl mt-2">مبل مدل دو</h3>
+                                <p class="text-white/55 text-xs leading-7 mt-2">جزئیاتی کوچک که شخصیت فضا را تغییر می‌دهد.</p>
+                            </div>
+                        </article>
+                        <article class="furniture-card">
+                            <img alt="" src="img/mobl3.jfif">
+                            <div class="furniture-info">
+                                <div class="text-emerald-300 text-xs">03 / SOFA</div>
+                                <h3 class="text-xl mt-2">مبل مدل سه</h3>
+                                <p class="text-white/55 text-xs leading-7 mt-2">تعادل بین حجم، کاربرد و متریال.</p>
+                            </div>
+                        </article>
+                        <article class="furniture-card">
+                            <img alt="" src="img/mobl4.jpg">
+                            <div class="furniture-info">
+                                <div class="text-emerald-300 text-xs">04 / SOFA</div>
+                                <h3 class="text-xl mt-2">مبل مدل چهار</h3>
+                                <p class="text-white/55 text-xs leading-7 mt-2">آرامش بصری و عملکرد در یک فرم یکپارچه.</p>
+                            </div>
+                        </article>
+                        <article class="furniture-card">
+                            <img alt="" src="img/mobl6.webp">
+                            <div class="furniture-info">
+                                <div class="text-emerald-300 text-xs">05 / SOFA</div>
+                                <h3 class="text-xl mt-2">مبل مدل پنج</h3>
+                                <p class="text-white/55 text-xs leading-7 mt-2">یک عنصر ظریف برای کامل کردن ترکیب.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05 HORIZONTAL LAYERED -->
+            <section id="horizontal-layered" class="mg-hlayer-section" aria-label="Mergen horizontal layered">
+                <div class="mg-hlayer-sticky">
+                    <div class="mg-hlayer-track">
+                        <article class="mg-hlayer" style="background-image:url('./img/horizontal1.jpg')"><div><small>01 / MATERIAL</small><h4>سرویس خواب چوبی یک</h4><p>دقت در برش، تناسب و جزئیات.</p></div></article>
+                        <article class="mg-hlayer" style="background-image:url('./img/horizontal2.jpg')"><div><small>02 / CRAFT</small><h4>سرویس خواب چوبی دو</h4><p>ساختی که فرم را به تجربه تبدیل می‌کند.</p></div></article>
+                        <article class="mg-hlayer" style="background-image:url('./img/horizontal3.webp')"><div><small>03 / DETAIL</small><h4>سرویس خواب چوبی سه</h4><p>آرامش از دل جزئیات شکل می‌گیرد.</p></div></article>
+                        <article class="mg-hlayer" style="background-image:url('./img/horizontal4.jpg')"><div><small>04 / SPACE</small><h4>سرویس خواب چوبی چهار</h4><p>فضا برای زندگی، کار و ماندن.</p></div></article>
+                        <article class="mg-hlayer" style="background-image:url('./img/horizontal5.jpg')"><div><small>05 / CUSTOM</small><h4>سرویس خواب چوبی پنج</h4><p>هر اندازه و هر نیاز، با یک راه‌حل دقیق.</p></div></article>
+                        <article class="mg-hlayer" style="background-image:url('./img/horizontal6.jpg')"><div><small>06 / SIGNATURE</small><h4>سرویس خواب چوبی شش</h4><p>ساخت سفارشی با زبان طراحی یکپارچه.</p></div></article>
+                    </div>
+                    <div class="mg-hlayer-progress"><i></i></div>
+                </div>
+            </section>
+
+            <!-- 06 SLIDER 02 / INTERIOR DETAILS -->
+            <section id="slider02" class="section-wrap ms-slider02">
+                <div class="max-w-1400 mx-auto">
+                    <div class="text-center mb-14">
+                        <div class="eyebrow text-emerald-300">SLIDER 02 / INTERIOR DETAILS</div>
+                        <h2 class="section-title mt-4">جزئیات، هویت می‌سازند.</h2>
+                    </div>
+                    <div class="ms-scene">
+                        <div>
+                            <div class="ms-row-title" id="msTitle1">ردیف اول</div>
+                            <div class="ms-row ms-row-1">
+                                <div class="ms-track" id="msTrack1"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ms-row-title" id="msTitle2">ردیف دوم</div>
+                            <div class="ms-row ms-row-2">
+                                <div class="ms-track" id="msTrack2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 07 MATERIAL TO SPACE -->
+            <section id="material-space" class="mg-material-space" aria-label="روند تولید مبلمان مرگن">
+                <div class="mg-ms-sticky">
+                    <div class="mg-ms-copy">
+                        <span class="mg-kicker">MERGEN / MATERIAL TO SPACE</span>
+                        <h2>از متریال تا <em>فضا.</em></h2>
+                        <p>با اسکرول، مسیر ساخت یک محصول را از انتخاب متریال تا فضای نهایی ببینید.</p>
+                    </div>
+                    <div class="mg-ms-visual">
+                        <div class="mg-ms-image" style="background-image:url('./img/workshop.jpg')"></div>
+                        <div class="mg-ms-stage">
+                            <small>01 / MATERIAL</small><strong>انتخاب متریال</strong><span>شروع با انتخاب دقیق متریال و رنگ.</span>
+                        </div>
+                        <div class="mg-ms-stage"><small>02 / DESIGN</small><strong>طراحی و اندازه‌گذاری</strong><span>فرم، ابعاد و جزئیات برای ساخت آماده می‌شوند.</span></div>
+                        <div class="mg-ms-stage"><small>03 / CNC</small><strong>برش دقیق</strong><span>قطعات با دقت بالا برای مونتاژ آماده می‌شوند.</span></div>
+                        <div class="mg-ms-stage"><small>04 / ASSEMBLY</small><strong>مونتاژ</strong><span>قطعات به یک محصول واقعی تبدیل می‌شوند.</span></div>
+                        <div class="mg-ms-stage"><small>05 / FINISH</small><strong>پرداخت نهایی</strong><span>روکش، لبه‌ها و جزئیات نهایی کامل می‌شوند.</span></div>
+                        <div class="mg-ms-stage"><small>06 / SPACE</small><strong>مبلمان در فضا</strong><span>محصول نهایی در فضای واقعی قرار می‌گیرد.</span></div>
+                    </div>
+                    <div class="mg-ms-progress"><i></i></div>
+                </div>
+            </section>
+
+            <!-- 08 ORBIT SLIDER -->
+            <section id="orbit-slider" class="mg-orbit-section">
+                <div class="mg-orbit-head">
+                    <span class="mg-kicker">MERGEN / ORBIT COLLECTION</span>
+                    <h2>هفت نگاه، <em>یک زبان.</em></h2>
+                </div>
+                <div class="mg-orbit" aria-label="Mergen orbit slider">
+                    <div class="mg-orbit-stage">
+                        <div class="mg-orbit-track">
+                            <article class="mg-orbit-card">
+                                <img src="./img/orbit1.png" alt="">
+                                <div><small>01</small><strong>Bedroom</strong></div>
+                            </article>
+
+                            <article class="mg-orbit-card">
+                                <img src="./img/orbit1.png" alt="">
+                                <div><small>02</small><strong>Living</strong></div>
+                            </article>
+
+                            <article class="mg-orbit-card">
+                                <img src="./img/kitchen1.jpg" alt="">
+                                <div><small>03</small><strong>Kitchen</strong></div>
+                            </article>
+
+                            <article class="mg-orbit-card">
+                                <img src="./img/naharkhori4.jpg" alt="">
+                                <div><small>04</small><strong>Dining</strong></div>
+                            </article>
+
+                            <article class="mg-orbit-card">
+                                <img src="./img/mizmodiriat.jpg" alt="">
+                                <div><small>05</small><strong>Office</strong></div>
+                            </article>
+
+                            <article class="mg-orbit-card">
+                                <img src="./img/closetroom.jpg" alt="">
+                                <div><small>06</small><strong>Wardrobe</strong></div>
+                            </article>
+
+                            <article class="mg-orbit-card">
+                                <img src="./img/modern-bedset.jpg" alt="">
+                                <div><small>07</small><strong>Signature</strong></div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 09 CONTACT / SOCIALS -->
+            <section id="contact" class="section-wrap mergen-contact">
+                <div class="mc-glow mc-glow-a"></div>
+                <div class="mc-glow mc-glow-b"></div>
+                <div class="max-w-[1400px] mx-auto relative z-10">
+                    <div class="mc-head">
+                        <div>
+                            <div class="eyebrow text-emerald-300">MERGEN / CONTACT</div>
+                            <h2 class="section-title mt-4">راه‌های <span>ارتباط</span> با مرگن.</h2>
+                        </div>
+                        <p>برای مشاوره، سفارش، بازدید و هماهنگی پروژه، مسیر ارتباطی موردنظرتان را انتخاب کنید.</p>
+                    </div>
+                    <div class="mc-contact-layout">
+                        <div class="mc-info-column">
+                            <div class="mc-location-stack">
+                                <article class="mc-location mc-location-main">
+                                    <div class="mc-location-icon">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+                                    <div>
+                                        <small>MERGEN / OFFICE</small>
+                                        <h3>دفتر مرگن</h3>
+                                        <p>آدرس دفتر را اینجا وارد کنید.</p>
+                                        <a href="#">مسیریابی <b>←</b></a>
+                                    </div>
+                                </article>
+                                <article class="mc-location">
+                                    <div class="mc-location-icon">
+                                        <i class="fa-solid fa-store"></i>
+                                    </div>
+                                    <div>
+                                        <small>MERGEN / SHOWROOM</small>
+                                        <h3>فروشگاه و نمایشگاه</h3>
+                                        <p>آدرس فروشگاه و نمایشگاه را اینجا وارد کنید.</p>
+                                        <a href="#">مسیریابی <b>←</b></a>
+                                    </div>
+                                </article>
+                                <article class="mc-location">
+                                    <div class="mc-location-icon">
+                                        <i class="fa-solid fa-industry"></i>
+                                    </div>
+                                    <div>
+                                        <small>MERGEN / WORKSHOP</small>
+                                        <h3>کارگاه مرگن</h3>
+                                        <p>آدرس کارگاه را اینجا وارد کنید.</p>
+                                        <a href="#">مسیریابی <b>←</b></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="mc-social-panel">
+                            <div class="mc-social-panel-head">
+                                <span>CONNECT / 10</span>
+                                <small>شبکه‌های اجتماعی و پیام‌رسان‌ها</small>
+                            </div>
+                            <div class="mc-social-list">
+
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-instagram"></i><span>Instagram</span><small>@mergencnc</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-telegram"></i><span>Telegram</span><small>پیام و سفارش</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-pinterest-p"></i><span>Pinterest</span><small>ایده و پروژه</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span><small>پیام مستقیم</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><small>Mergen CO</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-medium"></i><span>IMO</span><small>ویدئوهای مرگن</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span><small>Mergen Interior</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-viber"></i><span>Viber</span><small>نمونه‌کار و آموزش</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-youtube"></i><span>YouTube</span><small>ویدئوهای مرگن</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-weixin"></i><span>Wechat</span><small>نمونه‌کار و آموزش</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-x-twitter"></i><span>X</span><small>Mergen Interior</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-solid fa-envelope"></i><span>Email</span><small>ارتباط مستقیم</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-tiktok"></i><span>TikTak</span><small>ارتباط مستقیم</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-tumblr"></i><span>Tumbler</span><small>ارتباط مستقیم</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-vimeo-v"></i><span>Vimeo</span><small>ارتباط مستقیم</small><b>↗</b></a>
+                                <a href="#" class="mc-social-line"><i class="fa-brands fa-threads"></i><span>Threads</span><small>ارتباط مستقیم</small><b>↗</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10 COLLECTION SHOWCASE -->
+            <section id="collection" class="section-wrap bg-[#070b0a] text-white relative py-20 md:py-28 overflow-hidden">
+                <div class="vc-glow vc-glow-a">
+                </div>
+                <div class="vc-glow vc-glow-b">
+                </div>
+                <div class="relative max-w-[1400px] mx-auto px-5 lg:px-10">
+                    <div class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div>
+                            <div class="flex items-center gap-3 text-emerald-500 text-[10px] tracking-[.4em] mb-5">
+                                <span class="w-10 h-px bg-emerald-500"></span>
+                                MERGEN COLLECTION
+                            </div>
+                            <h2 class="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight">هنرِ
+                                <span class="font-semibold">زندگی</span>
+                            </h2>
+                        </div>
+                        <p class="max-w-md text-sm leading-8 text-gray-500">مجموعه‌ای از طراحی‌های Mergen برای فضاهایی که شخصیت خودشان را دارند.</p>
+                    </div>
+                    <div class="grid lg:grid-cols-[1fr_360px] gap-5">
+                        <div id="hero" class="relative min-h-[560px] md:min-h-[680px] rounded-[28px] overflow-hidden border border-white/10 group">
+                            <div id="heroImage" class="absolute inset-0 bg-cover bg-center transition-all duration-[1200ms]"></div>
+                            <div class="absolute inset-0 bg-gradient-to-l from-black/85 via-black/30 to-black/10"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                            <div class="absolute top-8 left-8 md:top-12 md:left-12">
+                                <span id="largeNumber" class="text-[90px] md:text-[150px] font-light leading-none text-white/[.08]">01</span>
+                            </div>
+                            <div id="heroContent" class="absolute right-0 bottom-0 left-0 p-7 md:p-12 transition-all duration-500">
+                                <div class="flex items-center gap-3 mb-5">
+                                    <span id="english" class="text-[10px] md:text-xs tracking-[.3em] text-emerald-400">BEDROOM COLLECTION</span>
+                                    <span class="w-12 h-px bg-emerald-500"></span>
+                                </div>
+                                <h3 id="title" class="text-4xl md:text-6xl lg:text-7xl font-semibold mb-5">سرویس خواب</h3>
+                                <p id="description" class="max-w-xl text-sm md:text-base text-gray-300 leading-8 mb-8">طراحی و اجرای سرویس خواب مدرن و سفارشی با جزئیات دقیق، متناسب با فضای شما.</p>
+                                <div class="flex items-center gap-6">
+                                    <button class="px-7 py-3.5 rounded-full bg-white text-black text-sm font-medium transition duration-300 hover:bg-emerald-500">مشاهده مجموعه</button>
+                                    <button class="text-sm text-white/60 hover:text-white transition">مشاهده پروژه‌ها ←</button>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 right-0 left-0 h-[2px] bg-white/10">
+                                <div id="imageProgress" class="h-full bg-emerald-500 transition-all duration-700" style="width:20%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative rounded-[28px] border border-white/10 bg-white/[.025] backdrop-blur-xl p-4 overflow-hidden">
+                            <div class="flex items-center justify-between px-5 py-4 mb-4">
+                                <span class="text-[10px] tracking-[.3em] text-gray-600">COLLECTIONS</span>
+                                <span id="counter" class="text-xs text-gray-600">01 / 05</span>
+                            </div>
+                            <div class="absolute top-[80px] bottom-5 right-0 w-[2px] bg-white/5">
+                                <div id="verticalProgress" class="absolute top-0 right-0 w-full bg-emerald-500 transition-all duration-700" style="height:20%">
+                                </div>
+                            </div>
+                            <div id="collectionList">
+                                <button data-index="0" class="collection active">
+                                    <span class="collection-number">01</span>
+                                    <span class="collection-title">کنسول</span>
+                                    <span class="collection-arrow">←</span>
+                                </button>
+                                <button data-index="1" class="collection">
+                                    <span class="collection-number">02</span>
+                                    <span class="collection-title">کاور رادیاتور</span>
+                                    <span class="collection-arrow">←</span>
+                                </button>
+                                <button data-index="2" class="collection">
+                                    <span class="collection-number">03</span>
+                                    <span class="collection-title">صندلی چوبی</span>
+                                    <span class="collection-arrow">←</span>
+                                </button>
+                                <button data-index="3" class="collection">
+                                    <span class="collection-number">04</span>
+                                    <span class="collection-title">کمد لباس</span>
+                                    <span class="collection-arrow">←</span>
+                                </button>
+                                <button data-index="4" class="collection">
+                                    <span class="collection-number">05</span>
+                                    <span class="collection-title">کتابخانه</span>
+                                    <span class="collection-arrow">←</span>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-7 right-7 left-7 hidden lg:flex items-center justify-between text-[9px] tracking-[.25em] text-gray-700">
+                                <span>MERGEN</span>
+                                <span>2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11 SIGNATURE V3 -->
+            <section id="mergen-v3" class="signature-v3 relative min-h-[920px] overflow-hidden text-white py-20 px-5">
+                <div class="ambient ambient-a"></div>
+                <div class="ambient ambient-b"></div>
+                <header class="v3-topbar">
+                    <div class="brand">
+                        <strong>MERGEN</strong>
+                        <span>INTERIOR DESIGN &amp; FURNITURE</span>
+                    </div>
+                    <nav>
+                        <a>خانه</a>
+                        <a class="active">محصولات</a>
+                        <a>پروژه‌ها</a>
+                        <a>درباره ما</a>
+                        <a>تماس با ما</a>
+                    </nav>
+                    <button class="menu" aria-label="menu">☰</button>
+                </header>
+                <div class="v3-intro">
+                    <span>THE SIGNATURE COLLECTION / 2026</span>
+                    <h2>سرویس <b>ناهارخوری</b></h2>
+                    <p>طراحی، ساخت و اجرای فضاهایی که برای ماندن ساخته شده‌اند.</p>
+                </div>
+                <div class="stage-wrap">
+                    <div class="floor-glow"></div>
+                    <div class="floor-line"></div>
+                    <div class="carousel" id="carousel" aria-label="محصولات مرگن"></div>
+                    <button class="nav-btn prev" id="prev" aria-label="قبلی">‹</button>
+                    <button class="nav-btn next" id="next" aria-label="بعدی">›</button>
+                    <div class="drag-hint">DRAG / SWIPE</div>
+                </div>
+                <section class="details">
+                    <div class="detail-copy">
+                        <span>SELECTED COLLECTION</span>
+                        <h2 id="v3title">سرویس خواب</h2>
+                        <p id="v3desc">آرامش در جزئیات</p>
+                        <a href="#collection">مشاهده محصول <b>←</b></a>
+                    </div>
+                    <div class="thumbs" id="v3Thumbs"></div>
+                    <div class="counter"><strong id="v3counter">01</strong><small>/ 07</small>
+                        <i><em id="v3progress"></em></i>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 12 SHOPPING GUIDE -->
+            <section class="section-wrap surface">
+                <div class="max-w-1400 mx-auto rounded-3xl border thin-line p-8 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-10">
+                    <div>
+                        <div class="eyebrow">MERGEN SERVICE</div>
+                        <h2 class="section-title mt-4">
+                            از ایده تا تحویل،<br>قدم‌به‌قدم.
+                        </h2>
+                    </div>
+                    <div class="max-w-lg">
+                        <p class="leading-8 text-sm opacity-70">
+                            برای شروع یک پروژه لازم نیست همه چیز را بدانید. مسیر سفارش مرگن را ساده و شفاف طراحی کرده‌ایم.
+                        </p>
+                        <button id="guideOpen" class="btn-green mt-7">
+                            راهنمای خرید<i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <div class="guide-backdrop" id="guide">
+                <aside class="guide-panel">
+                    <div class="flex justify-between items-center mb-12">
+                        <div>
+                            <div class="eyebrow">MERGEN / GUIDE</div>
+                            <h3 class="text-3xl font-serif mt-3">راهنمای سفارش</h3>
+                        </div>
+                        <button id="guideClose" class="text-2xl">×</button>
+                    </div>
+                    <div class="space-y-7">
+                        <div class="guide-step flex gap-4">
+                            <b class="text-emerald-500">01</b>
+                            <div>
+                                <h4 class="font-semibold">انتخاب محصول</h4>
+                                <p class="text-sm opacity-60 mt-2 leading-7">
+                                    محصول یا فضای مورد نظر را انتخاب کنید.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="guide-step flex gap-4">
+                            <b class="text-emerald-500">02</b>
+                            <div>
+                                <h4 class="font-semibold">ابعاد و متریال</h4>
+                                <p class="text-sm opacity-60 mt-2 leading-7">
+                                    ابعاد، رنگ، متریال و جزئیات با شما هماهنگ می‌شود.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="guide-step flex gap-4">
+                            <b class="text-emerald-500">03</b>
+                            <div>
+                                <h4 class="font-semibold">طراحی و تأیید</h4>
+                                <p class="text-sm opacity-60 mt-2 leading-7">
+                                    طرح نهایی پیش از تولید بررسی و تأیید می‌شود.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="guide-step flex gap-4">
+                            <b class="text-emerald-500">04</b>
+                            <div>
+                                <h4 class="font-semibold">تولید</h4>
+                                <p class="text-sm opacity-60 mt-2 leading-7">
+                                    ساخت با دقت کارگاهی و کنترل مرحله‌ای انجام می‌شود.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="guide-step flex gap-4">
+                            <b class="text-emerald-500">05</b>
+                            <div>
+                                <h4 class="font-semibold">تحویل و اجرا</h4>
+                                <p class="text-sm opacity-60 mt-2 leading-7">
+                                    در صورت نیاز، حمل، نصب و اجرای پروژه انجام می‌شود.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- 13 MERGEN EXPERIENCE -->
+            <section id="tabs" class="mergen-experience">
+                <div class="me-glow me-glow-a"></div>
+                <div class="me-glow me-glow-b"></div>
+                <div class="me-shell">
+                    <div class="me-heading"><div>
+                        <div class="me-eyebrow"><span></span> MERGEN EXPERIENCE</div>
+                        <h2>تجربه‌ای فراتر از <strong>محصول</strong></h2>
+                    </div>
+                    <p>از ایده و طراحی تا ساخت و اجرای نهایی؛ مسیر ساخت فضای شما، یک تجربه یکپارچه است.</p>
+                </div>
+                <div class="me-tabs" id="meList">
+                    <button class="me-item active" data-index="0">
+                        <span class="me-number">01</span>
+                        <span class="me-item-copy">
+                            <small>EXHIBITION</small>
+                            <strong>نمایشگاه</strong>
+                        </span>
+                        <span class="me-arrow">←</span>
+                    </button>
+                    <button class="me-item" data-index="1">
+                        <span class="me-number">02</span>
+                        <span class="me-item-copy">
+                            <small>SHOWROOM</small>
+                            <strong>فروشگاه</strong>
+                        </span>
+                        <span class="me-arrow">←</span>
+                    </button>
+                    <button class="me-item" data-index="2">
+                        <span class="me-number">03</span>
+                        <span class="me-item-copy">
+                            <small>3D DESIGN</small>
+                            <strong>طراحی سه‌بعدی</strong>
+                        </span>
+                        <span class="me-arrow">←</span>
+                    </button>
+                    <button class="me-item" data-index="3">
+                        <span class="me-number">04</span>
+                        <span class="me-item-copy">
+                            <small>SERVICES</small>
+                            <strong>خدمات</strong>
+                        </span>
+                        <span class="me-arrow">←</span>
+                    </button>
+                </div>
+                <div class="me-content-box">
+                    <div class="me-visual">
+                        <div class="me-image-wrap">
+                            <img id="meImage" src="./img/placeholders/ph-5.svg" alt="نمایشگاه مرگن">
+                        </div>
+                        <div class="me-image-overlay"></div>
+                        <div class="me-visual-top">
+                            <span id="meVisualIndex">01 / 04</span>
+                            <span id="meVisualLabel">EXHIBITION</span>
+                        </div>
+                        <div class="me-visual-copy">
+                            <span>MERGEN / EXPERIENCE</span>
+                            <h3 id="meVisualTitle">فضا را قبل از انتخاب لمس کن.</h3>
+                            <p id="meVisualDesc">نمونه‌کارها، متریال و جزئیات را در فضایی واقعی ببینید و انتخاب دقیق‌تری داشته باشید.</p>
+                            <a href="#collection">شروع یک پروژه <b>←</b></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- 14 SLIDER 03 / CUSTOM PRODUCTS -->
+            <section id="slider03" class="section-wrap surface">
+                <div class="max-w-1400 mx-auto">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                        <div>
+                            <div class="eyebrow text-emerald-300">SLIDER 03 / TABLE COLLECTION</div>
+                            <h2 class="section-title mt-4">مدل های میز</h2>
+                        </div>
+                        <p class="max-w-md text-sm leading-8 opacity-60">چند نمونه از میز که می‌توانند با ابعاد، متریال و سبک پروژه شما دوباره تعریف شوند.</p>
+                    </div>
+                    <div id="customCarousel" class="owl-carousel owl-theme custom-carousel">
+                        <article class="custom-card">
+                            <img alt="" src="img/mizlcd.webp">
+                            <div>
+                                <span>01 / TV STAND</span>
+                                <h3>میز تلویزیون</h3>
+                                <p>فرم ساده، متریال ماندگار و ساخت سفارشی.</p>
+                            </div>
+                        </article>
+                        <article class="custom-card">
+                            <img alt="" src="img/mizjelomobli.jfif">
+                            <div>
+                                <span>02 / COFFEE TABLE</span>
+                                <h3>میز جلومبلی</h3>
+                                <p>ابعاد و پارچه متناسب با فضای واقعی شما.</p>
+                            </div>
+                        </article>
+                        <article class="custom-card">
+                            <img alt="" src="img/mizmodiriat.jpg">
+                            <div>
+                                <span>03 / OFFICE TABLE</span>
+                                <h3>میز مدیریت</h3>
+                                <p>ترکیب کاربرد، حجم و جزئیات اجرایی.</p>
+                            </div>
+                        </article>
+                        <article class="custom-card">
+                            <img alt="" src="img/miztahrir.jfif">
+                            <div>
+                                <span>04 / Desk</span>
+                                <h3>میز تحریر</h3>
+                                <p>طراحی یکپارچه برای اتاق خواب.</p>
+                            </div>
+                        </article>
+                        <article class="custom-card">
+                            <img alt="" src="img/mizlaptop.jfif">
+                            <div>
+                                <span>05 / Desk</span>
+                                <h3>میز کامپیوتر</h3>
+                                <p>طراحی یکپارچه برای اتاق خواب.</p>
+                            </div>
+                        </article>
+                        <article class="custom-card">
+                            <img alt="" src="img/mizasali.jfif">
+                            <div>
+                                <span>06 / SIDE TABLE</span>
+                                <h3>میز عسلی</h3>
+                                <p>یک عنصر ظریف با امکان شخصی‌سازی کامل.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 15 MATERIAL LIBRARY / OFF-CANVAS / SUPPORT -->
+            <section id="materials" class="section-wrap mergen-materials">
+                <div class="mm-glow"></div>
+                <div class="max-w-[1400px] mx-auto relative z-10 mm-inner">
+                    <div>
+                        <div class="eyebrow text-emerald-300">MERGEN / MATERIAL LIBRARY</div>
+                        <h2 class="section-title mt-4">متریال را <span>لمس کن.</span></h2>
+                        <p>انواع چوب، سمپل رنگ، روکش وکیوم و کالیته پارچه را یکجا ببینید و برای انتخاب متریال پروژه آماده شوید.</p>
+                    </div>
+                    <button id="materialsOpen" class="mm-open">
+                        <span>مشاهده متریال و کالیته</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </section>
+            <div id="materialsCanvas" class="materials-canvas" aria-hidden="true">
+                <aside class="materials-panel">
+                    <div class="mm-panel-head">
+                        <div>
+                            <div class="eyebrow text-emerald-300">MERGEN / MATERIALS</div>
+                            <h3>کتابخانه متریال</h3>
+                        </div>
+                        <button id="materialsClose" class="mm-close" aria-label="بستن">×</button>
+                    </div>
+                    <div class="mm-tabs">
+                        <button class="mm-tab active" data-material="wood">انواع چوب</button>
+                        <button class="mm-tab" data-material="color">سمپل رنگ</button>
+                        <button class="mm-tab" data-material="vacuum">روکش وکیوم</button>
+                        <button class="mm-tab" data-material="fabric">کالیته پارچه</button>
+                    </div>
+                    <div class="mm-material-grid" id="materialGrid"></div>
+                </aside>
+            </div>
+
+            <!-- 16 ABOUT / BRAND STORY -->
+            <section id="about" class="about-new section-wrap">
+                <div class="about-shell max-w-1400 mx-auto">
+                    <div class="about-top">
+                        <div>
+                            <div class="eyebrow">MERGEN / 11 — BRAND STORY</div>
+                            <h2 class="about-big">ما فضا را<br><em>از نو تعریف می‌کنیم.</em></h2>
+                        </div>
+                        <p class="about-lead">مرگن جایی بین طراحی معاصر و تجربه واقعی ساخت شکل گرفته؛ جایی که ایده فقط روی کاغذ نمی‌ماند و به یک محصول و فضای واقعی تبدیل می‌شود.</p>
+                    </div>
+                    <div class="about-grid-new">
+                        <div class="about-visual">
+                            <img src="img/brandstory.jpg" class="object-cover aspect-ratio: 1 / 1;" alt="Mergen Interior">
+                            <div class="about-stamp">MERGEN<br><small>INTERIOR ATELIER</small></div>
+                        </div>
+                        <div class="about-story">
+                            <span class="about-index">01 — FROM IDEA TO REALITY</span>
+                            <h3>طراحی، ساخت و اجرا در یک مسیر.</h3>
+                            <p>از اولین ایده و اندازه‌گیری تا طراحی، انتخاب متریال، CNC، تولید و اجرای نهایی؛ هدف این است که تمام اجزا یک زبان مشترک داشته باشند.</p>
+                            <div class="about-metrics" id="brandMetrics">
+                                <div class="about-metric" data-target="9" data-suffix="+"><strong class="metric-number">0</strong><span>سال تجربه ساخت</span></div>
+                                <div class="about-metric" data-target="835" data-suffix="+"><strong class="metric-number">0</strong><span>پروژه تحویل‌شده</span></div>
+                                <div class="about-metric" data-target="98" data-suffix="%"><strong class="metric-number">0</strong><span>رضایت مشتری</span></div>
+                            </div>
+                            <a class="btn-green mt-8" href="#guide">شروع یک پروژه ←</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 17 FAQ -->
+            <section id="faq" class="section-wrap">
+                <div class="max-w-1000 mx-auto">
+                    <div class="text-center mb-12">
+                        <div class="eyebrow">MERGEN / FAQ</div>
+                        <h2 class="section-title mt-4">سؤالات متداول</h2>
+                    </div>
+                    <div id="faqList">
+                        <div class="faq-item open">
+                            <button class="faq-q">
+                                <span>آیا محصولات مرگن سفارشی‌سازی می‌شوند؟</span>
+                                <i class="faq-icon fa-solid fa-plus"></i>
+                            </button>
+                            <div class="faq-a">بله. در پروژه‌های سفارشی، ابعاد، رنگ، متریال و جزئیات بر اساس فضای شما بررسی و طراحی می‌شود.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q">
+                                <span>زمان تولید چقدر است؟</span>
+                                <i class="faq-icon fa-solid fa-plus"></i>
+                            </button>
+                            <div class="faq-a">زمان تولید به نوع محصول، تعداد و پیچیدگی پروژه بستگی دارد و پس از تأیید طرح اعلام می‌شود.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q">
+                                <span>آیا اندازه‌گیری و طراحی هم انجام می‌دهید؟</span>
+                                <i class="faq-icon fa-solid fa-plus"></i>
+                            </button>
+                            <div class="faq-a">برای پروژه‌های دکوراسیون، فرآیند اندازه‌گیری، طراحی و هماهنگی تولید و اجرا قابل انجام است.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q">
+                                <span>آیا MDF و CNC در مجموعه انجام می‌شود؟</span>
+                                <i class="faq-icon fa-solid fa-plus"></i>
+                            </button>
+                            <div class="faq-a">بخش قابل توجهی از فرآیند ساخت با برش و CNC انجام می‌شود تا دقت و تکرارپذیری بالا بماند.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-q">
+                                <span>چطور سفارش را شروع کنم؟</span>
+                                <i class="faq-icon fa-solid fa-plus"></i>
+                            </button>
+                            <div class="faq-a">کافی است محصول یا فضای مورد نظر را مشخص کنید تا برای بررسی ابعاد، سبک و بودجه با شما هماهنگ شود.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 18 FOOTER -->
+            <footer class="mergen-footer" id="footer">
+                <div class="mergen-footer-inner">
+                    <div class="footer-kicker">THE LAST ROOM / 01</div>
+                    <div class="footer-intro">
+                        <h2>فضای بعدی شما از اینجا شروع می‌شود.</h2>
+                        <p>ما فضا را فقط طراحی نمی‌کنیم؛ آن را برای زندگی شما می‌سازیم.</p>
+                    </div>
+                    <div class="plan ">
+                        <a class="room room-1" href="#layers">
+                            <i></i>
+                            <div class="room-content">
+                                <span>01 BEDROOM</span>
+                                <h3>سرویس خواب</h3>
+                                <b>↙</b>
+                            </div>
+                        </a>
+                        <a class="room room-2" href="#slider01">
+                            <i></i>
+                            <div class="room-content">
+                                <span>02 LIVING</span>
+                                <h3>مبلمان</h3>
+                                <b>↙</b>
+                            </div>
+                        </a>
+                        <a class="room room-3" href="#slider02">
+                            <i></i>
+                            <div class="room-content">
+                                <span>03 KITCHEN</span>
+                                <h3>کابینت</h3>
+                                <b>↙</b>
+                            </div>
+                        </a>
+                        <a class="room room-4" href="#slider03">
+                            <i></i>
+                            <div class="room-content">
+                                <span>04 OFFICE</span>
+                                <h3>میز اداری</h3>
+                                <b>↙</b>
+                            </div>
+                        </a>
+                        <a class="room room-5" href="#collection">
+                            <i></i>
+                            <div class="room-content">
+                                <span>05 INTERIOR</span>
+                                <h3>دکوراسیون داخلی</h3>
+                                <b>↙</b>
+                            </div>
+                        </a>
+                        <a class="room room-6" href="#collection">
+                            <i></i>
+                            <div class="room-content">
+                                <span>06 PROJECT</span>
+                                <h3>پروژه‌های مرگن</h3>
+                                <b>↙</b>
+                            </div>
+                        </a>
+                        <div class="center-mark">
+                            <img src="img/mergen.JPG" alt="">
+                            <strong>MERGEN</strong>
+                            <span>INTERIOR</span>
+                        </div>
+                        <span class="dimension d1">MERGEN / PLAN 01</span>
+                        <span class="dimension d2">SCALE 1:100</span>
+                        <span class="dimension d3">INTERIOR / ARCHITECTURE</span>
+                        <span class="crosshair c1"></span>
+                        <span class="crosshair c2"></span>
+                    </div>
+                    <div class="footer-cta">
+                        <span>YOUR NEXT SPACE</span>
+                        <h3>یک پروژه جدید در ذهن دارید؟</h3>
+                        <a href="#guide">شروع یک پروژه <b>↙</b></a>
+                    </div>
+                    <div class="mg-actions">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button><i class="fa-regular fa-heart"></i></button>
+                        <button><i class="fa-regular fa-user"></i></button>
+                        <button><i class="fa-solid fa-location-dot"></i></button>
+                        <button><i class="fa-solid fa-phone"></i></button>
+                        <button><i class="fa-solid fa-bag-shopping"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                    <div class="footer-lower">
+                        <div>
+                            <strong>MERGEN</strong>
+                            <p>طراحی، ساخت و اجرای فضاهایی که برای ماندن ساخته شده‌اند.</p>
+                        </div>
+                        <div>
+                            <strong>EXPLORE</strong>
+                            <a href="#collection">پروژه‌ها</a>
+                            <a href="#about">درباره ما</a><a href="#faq">سؤالات متداول</a>
+                        </div>
+                        <div>
+                            <strong>COLLECTIONS</strong>
+                            <a href="#layers">سرویس خواب</a>
+                            <a href="#slider01">مبلمان</a>
+                            <a href="#slider01">سرویس ناهارخوری</a>
+                            <a href="#slider02">انواع میز</a>
+                        </div>
+                        <div>
+                            <strong>CONTACT</strong>
+                            <span>+98 911 972 5419</span>
+                            <span>mergen@mergen.com</span>
+                            <span>Gonbad Kavus / Iran</span>
+                        </div>
+                    </div>
+                    <div class="footer-legal">
+                        <span>© 2026 MERGEN FURNITURE</span>
+                        <span>DESIGNED FOR SPACES THAT MATTER</span>
+                    </div>
+                    <div class="watermark">MERGEN</div>
+                </div>
+            </footer>
+
+
+        </main>
+
+
+    <button id="backTop" aria-label="بازگشت به بالا">↑</button>
+    <button id="supportButton" class="support-fab" aria-label="پیام به پشتیبان"><span class="support-pulse"></span><i class="fa-solid fa-headset"></i><b></b></button><div id="supportPanel" class="support-panel" aria-hidden="true"><div class="support-panel-head"><div><small>MERGEN / SUPPORT</small><h3>چطور می‌توانیم کمک کنیم؟</h3></div><button id="supportClose">×</button></div><div class="support-options"><a href="#" class="support-option"><i class="fa-brands fa-whatsapp"></i><span><b>واتساپ</b><small>پیام سریع به پشتیبان</small></span><em>←</em></a><a href="#" class="support-option"><i class="fa-brands fa-telegram"></i><span><b>تلگرام</b><small>گفت‌وگوی مستقیم</small></span><em>←</em></a><a href="#" class="support-option"><i class="fa-solid fa-phone"></i><span><b>تماس با ما</b><small>پاسخ‌گویی در ساعات کاری</small></span><em>←</em></a></div></div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

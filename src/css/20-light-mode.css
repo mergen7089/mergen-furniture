@@ -1,0 +1,480 @@
+/* ==========================================================================
+   20-light-mode.css — LIGHT MODE — بازنویسی رنگ‌ها برای هر بخش (html:not(.dark))
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* =========================================================
+   MERGEN — LIGHT MODE : بازطراحی کامل روشن (کرم + پالت شاد)
+   همه‌ی این قوانین فقط زمانی فعالن که تم روشن باشه (بدون کلاس dark).
+   تم تاریک دست‌نخورده باقی می‌مونه — دقیقاً همونیه که بود.
+   نکته: نوار متریال (.mg-ticker)، فوتر (.mergen-footer) و بخش‌های
+   عکس‌محور (هیرو، لایه‌های اسکرولی Kitchen/Living/...، پنل تصویری
+   Mergen Experience) عمداً تیره نگه داشته شدن — این یه انتخاب طراحیه
+   (نوار روشنایی روی عکس، و یک نوار امضادار تیره مثل خیلی سایت‌های
+   لوکس). اگه دوست نداشتی بگو عوضش کنم.
+   ========================================================= */
+
+/* ---- پس‌زمینه پایه‌ی همه‌ی section-wrap ها (قانون سراسری اصلی) ---- */
+html:not(.dark) .section-wrap {
+    background-color: var(--bg) !important;
+}
+html:not(.dark) .section-wrap .section-title {
+    color: var(--ink);
+}
+html:not(.dark) .eyebrow {
+    color: var(--accent2);
+}
+
+/* ---- دکمه‌ها و لینک‌های عمومی ---- */
+html:not(.dark) .btn-green {
+    background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+    border-color: var(--accent-deep);
+    color: #fff;
+}
+html:not(.dark) .btn-green:hover {
+    box-shadow: 0 14px 38px rgba(255,106,77,.28);
+}
+html:not(.dark) .btn-outline {
+    border-color: var(--line)
+}
+html:not(.dark) .mega-feature {
+    background: linear-gradient(135deg, rgba(255,106,77,.86), rgba(20,15,10,.35)), url('./img/placeholders/ph-6.svg') center/cover;
+}
+html:not(.dark) #backTop {
+    background: #fff;
+    border-color: rgba(255,106,77,.35);
+    color: var(--accent);
+    box-shadow: 0 12px 32px rgba(36,28,21,.14);
+}
+
+/* ---- 04 لایه‌های اسکرولی (Kitchen/Living/...) — عمداً تیره (عکس‌محور) ---- */
+/* بدون تغییر */
+
+/* ---- 05 اسلایدر ۰۱ / مبلمان ---- */
+html:not(.dark) #slider01 { color: var(--ink) }
+html:not(.dark) #slider01 p.text-white\/55 { color: var(--ink-soft) }
+html:not(.dark) .furniture-card {
+    background: #fff;
+    border-color: var(--line);
+    box-shadow: 0 18px 46px rgba(36,28,21,.09);
+}
+html:not(.dark) .owl-item.center .furniture-card {
+    border-color: rgba(14,168,147,.4);
+}
+html:not(.dark) .furniture-info .text-emerald-300 { color: var(--accent2) }
+html:not(.dark) .furniture-info h3 { color: var(--ink) }
+html:not(.dark) .furniture-info p.text-white\/55 { color: var(--ink-soft) }
+html:not(.dark) .owl-nav button {
+    border-color: var(--line) !important;
+    color: var(--ink) !important;
+    background: #fff !important;
+}
+html:not(.dark) .owl-nav button:hover {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+/* ---- 06 اسلایدر ۰۲ / جزئیات داخلی — دو‌ردیفه ---- */
+html:not(.dark) #slider02.ms-slider02 {
+    background: radial-gradient(ellipse at 50% 0%, #E9F5F1 0%, transparent 48%), radial-gradient(ellipse at 15% 100%, #FFF1DA 0%, transparent 50%), radial-gradient(ellipse at 85% 100%, #FDEAF0 0%, transparent 45%), var(--bg);
+    color: var(--ink);
+}
+html:not(.dark) #slider02 .ms-row-title { color: rgba(14,168,147,.55) }
+html:not(.dark) #slider02 .ms-row-title.focused { color: var(--accent2) }
+html:not(.dark) #slider02 .ms-row::before { background: linear-gradient(to left, transparent, var(--bg) 85%) }
+html:not(.dark) #slider02 .ms-row::after { background: linear-gradient(to right, transparent, var(--bg) 85%) }
+html:not(.dark) #slider02 .ms-card {
+    background: #fff;
+    border-color: rgba(14,168,147,.16);
+    box-shadow: 0 10px 26px rgba(36,28,21,.08);
+    filter: brightness(1) saturate(.9);
+}
+html:not(.dark) #slider02 .ms-card.ms-neighbor { filter: brightness(1) saturate(.95) }
+html:not(.dark) #slider02 .ms-card.ms-center { filter: none }
+html:not(.dark) #slider02 .ms-info { background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.97)) }
+html:not(.dark) #slider02 .ms-info h3 { color: var(--ink) }
+html:not(.dark) #slider02 .ms-info p { color: var(--ink-soft) }
+html:not(.dark) #slider02 .ms-card.ms-center.ms-focused {
+    box-shadow: 0 0 0 1.5px rgba(255,106,77,.45), 0 0 40px 6px rgba(255,106,77,.2), 0 18px 45px rgba(36,28,21,.18);
+}
+html:not(.dark) #slider02 .ms-scene::before {
+    background:
+        radial-gradient(600px 400px at 20% 25%, rgba(255,182,39,.16), transparent 60%),
+        radial-gradient(600px 400px at 80% 75%, rgba(14,168,147,.13), transparent 60%),
+        radial-gradient(800px 500px at 50% 50%, rgba(255,106,77,.08), transparent 65%);
+}
+
+/* ---- 07 تماس / شبکه‌های اجتماعی ---- */
+html:not(.dark) .mergen-contact { color: var(--ink) }
+html:not(.dark) .mergen-contact .mc-glow-a { background: rgba(255,106,77,.16) }
+html:not(.dark) .mergen-contact .mc-glow-b { background: rgba(14,168,147,.16) }
+html:not(.dark) .mergen-contact .mc-head > p { color: var(--ink-soft) }
+html:not(.dark) .mergen-contact .mc-location {
+    background: linear-gradient(135deg, #fff, var(--surface-2));
+    border-color: var(--line);
+}
+html:not(.dark) .mergen-contact .mc-location:hover {
+    background: linear-gradient(135deg, rgba(255,106,77,.1), #fff);
+    border-color: rgba(255,106,77,.32);
+    box-shadow: 0 16px 40px rgba(36,28,21,.1);
+}
+html:not(.dark) .mergen-contact .mc-location-icon {
+    background: rgba(14,168,147,.12);
+    color: var(--accent2);
+    border-color: rgba(14,168,147,.18);
+}
+html:not(.dark) .mergen-contact .mc-location:hover .mc-location-icon {
+    background: rgba(255,106,77,.18);
+    color: var(--accent);
+}
+html:not(.dark) .mergen-contact .mc-location small { color: var(--accent2) }
+html:not(.dark) .mergen-contact .mc-location h3 { color: var(--ink) }
+html:not(.dark) .mergen-contact .mc-location p { color: var(--ink-soft) }
+html:not(.dark) .mergen-contact .mc-location a { color: var(--accent) }
+html:not(.dark) .mergen-contact .mc-social-panel {
+    background: linear-gradient(145deg, #fff, var(--surface-2));
+    border-color: var(--line);
+}
+html:not(.dark) .mergen-contact .mc-social-panel-head {
+    color: var(--accent);
+    border-color: var(--line);
+}
+html:not(.dark) .mergen-contact .mc-social-panel-head small { color: var(--ink-soft) }
+html:not(.dark) .mergen-contact .mc-social-line {
+    color: var(--ink);
+    border-color: var(--line);
+}
+html:not(.dark) .mergen-contact .mc-social-line i {
+    color: var(--ink-soft);
+    border-color: var(--line);
+    background: #fff;
+}
+html:not(.dark) .mergen-contact .mc-social-line small { color: var(--ink-soft); opacity: .75 }
+html:not(.dark) .mergen-contact .mc-social-line b { color: var(--accent) }
+html:not(.dark) .mergen-contact .mc-social-line:hover {
+    color: var(--ink);
+    border-color: rgba(255,106,77,.32);
+}
+html:not(.dark) .mergen-contact .mc-social-line:hover i {
+    color: var(--accent);
+    background: rgba(255,106,77,.1);
+    border-color: rgba(255,106,77,.25);
+}
+
+/* ---- 08 اسلایدر ۰۳ / محصولات سفارشی ---- */
+html:not(.dark) #slider03 {
+    background: radial-gradient(ellipse at 20% 15%, #FFDACB 0%, transparent 50%), radial-gradient(ellipse at 85% 85%, #FFE9CE 0%, transparent 50%), var(--bg) !important;
+}
+html:not(.dark) #slider03:before { background: rgba(255,106,77,.22) }
+html:not(.dark) #slider03:after { background: rgba(255,182,39,.2) }
+html:not(.dark) #slider03 .custom-card {
+    background: linear-gradient(145deg, #fff, var(--surface-2));
+    border-color: var(--line);
+    box-shadow: 0 18px 48px rgba(36,28,21,.08);
+}
+html:not(.dark) #slider03 .custom-card:hover {
+    border-color: rgba(14,168,147,.32);
+    box-shadow: 0 26px 65px rgba(36,28,21,.12), 0 0 30px rgba(14,168,147,.08);
+}
+html:not(.dark) #slider03 .custom-card img { filter: saturate(1) }
+html:not(.dark) #slider03 .custom-card span { color: var(--accent2) }
+html:not(.dark) #slider03 .custom-card h3 { color: var(--ink) }
+html:not(.dark) #slider03 .custom-card:hover h3 { color: var(--accent-deep) }
+html:not(.dark) #slider03 .custom-card p { color: var(--ink-soft) }
+html:not(.dark) #slider03 .custom-card:hover p { color: var(--ink) }
+html:not(.dark) #slider03 .custom-carousel .owl-nav button {
+    background: var(--accent) !important;
+    border-color: rgba(255,106,77,.3);
+}
+html:not(.dark) #slider03 .custom-carousel .owl-nav button:hover {
+    background: var(--accent-deep) !important;
+    box-shadow: 0 8px 22px rgba(255,106,77,.25);
+}
+
+/* ---- 09 راهنمای خرید ---- */
+html:not(.dark) .thin-line { border-color: var(--line) }
+
+/* ---- 10 نمایش کالکشن عمودی ---- */
+html:not(.dark) #collection { color: var(--ink) }
+html:not(.dark) #collection .vc-glow-a { background: rgba(255,182,39,.2) }
+html:not(.dark) #collection .vc-glow-b { background: rgba(196,64,107,.15) }
+html:not(.dark) #collection p.text-gray-500 { color: var(--ink-soft) !important }
+html:not(.dark) #collection #hero { border-color: var(--line) }
+html:not(.dark) #largeNumber { color: rgba(36,28,21,.055) !important }
+html:not(.dark) #imageProgress, html:not(.dark) #verticalProgress { background: var(--accent) !important }
+html:not(.dark) #collection .backdrop-blur-xl {
+    background: rgba(255,255,255,.75) !important;
+    border-color: var(--line) !important;
+}
+html:not(.dark) #collection span.text-gray-600 { color: var(--ink-soft) !important }
+html:not(.dark) #collection .collection { color: var(--ink-soft) }
+html:not(.dark) #collection .collection:hover {
+    color: var(--ink);
+    background: linear-gradient(90deg, rgba(255,106,77,.13), rgba(255,106,77,.025));
+    border-color: rgba(255,106,77,.28);
+    box-shadow: 0 12px 34px rgba(36,28,21,.09);
+}
+html:not(.dark) #collection .collection-number { color: #9a8c78 }
+html:not(.dark) #collection .collection:hover .collection-number,
+html:not(.dark) #collection .collection.active .collection-number { color: var(--accent) }
+html:not(.dark) #collection .collection.active {
+    color: var(--ink);
+    background: linear-gradient(90deg, rgba(255,106,77,.13), rgba(255,106,77,.025));
+    border-color: rgba(255,106,77,.28);
+    box-shadow: 0 12px 34px rgba(36,28,21,.09);
+}
+html:not(.dark) #collection .collection.active:after { background: var(--accent) }
+
+/* ---- 11 کتابخانه متریال / پنل / پشتیبانی ---- */
+html:not(.dark) .mergen-materials { color: var(--ink) }
+html:not(.dark) .mergen-materials .mm-glow { background: rgba(255,182,39,.2) }
+html:not(.dark) .mergen-materials .mm-inner p { color: var(--ink-soft) }
+html:not(.dark) .mergen-materials .mm-open {
+    background: rgba(255,106,77,.09);
+    border-color: rgba(255,106,77,.35);
+    color: var(--ink);
+}
+html:not(.dark) .mergen-materials .mm-open i { color: var(--accent) }
+html:not(.dark) .mergen-materials .mm-open:hover {
+    background: rgba(255,106,77,.16);
+    border-color: rgba(255,106,77,.55);
+}
+html:not(.dark) .materials-panel {
+    background: linear-gradient(160deg, #fff, var(--surface-2));
+    border-left-color: var(--line);
+    color: var(--ink);
+}
+html:not(.dark) .mm-close { background: #fff; border-color: var(--line); color: var(--ink) }
+html:not(.dark) .mm-close:hover { background: rgba(255,106,77,.12); border-color: rgba(255,106,77,.35) }
+html:not(.dark) .mm-tab { background: #fff; border-color: var(--line); color: var(--ink-soft) }
+html:not(.dark) .mm-tab:hover { color: var(--ink); border-color: rgba(14,168,147,.35) }
+html:not(.dark) .mm-tab.active { color: var(--ink); background: rgba(14,168,147,.13); border-color: var(--accent2) }
+html:not(.dark) .mm-sample, html:not(.dark) .mm-swatch { background: #fff; border-color: var(--line); color: var(--ink) }
+html:not(.dark) .mm-sample:hover, html:not(.dark) .mm-swatch:hover { border-color: rgba(255,106,77,.32) }
+html:not(.dark) .mm-sample img { filter: saturate(1) }
+
+html:not(.dark) .support-fab {
+    background: linear-gradient(145deg, var(--accent), var(--accent-deep));
+    border-color: rgba(255,255,255,.5);
+    box-shadow: 0 14px 36px rgba(255,106,77,.3);
+}
+html:not(.dark) .support-fab i, html:not(.dark) .support-fab b { color: #fff }
+html:not(.dark) .support-panel {
+    background: linear-gradient(160deg, #fff, var(--surface-2));
+    border-color: var(--line);
+    box-shadow: 0 22px 60px rgba(36,28,21,.16);
+}
+html:not(.dark) .support-panel-head h3 { color: var(--ink) }
+html:not(.dark) .support-panel-head small { color: var(--accent2) }
+html:not(.dark) .support-panel-head button { color: var(--ink-soft) }
+html:not(.dark) .support-option { background: #fff; border-color: var(--line); color: var(--ink) }
+html:not(.dark) .support-option i { background: rgba(14,168,147,.12); color: var(--accent2) }
+html:not(.dark) .support-option small { color: var(--ink-soft) }
+html:not(.dark) .support-option em { color: var(--accent) }
+html:not(.dark) .support-option:hover { background: rgba(255,106,77,.07); border-color: rgba(255,106,77,.25) }
+
+/* ---- 12 سیگنیچر V3 / سرویس ناهارخوری ---- */
+html:not(.dark) #mergen-v3, html:not(.dark) .signature-v3 {
+    background: radial-gradient(ellipse at 50% 45%, #FFF3E0 0%, #FFEAD0 32%, #FFF9F0 68%, #FFFDF9 100%);
+    color: var(--ink);
+}
+html:not(.dark) .signature-v3:before {
+    opacity: .4;
+    background-image: linear-gradient(90deg, rgba(36,28,21,.035) 1px, transparent 1px), linear-gradient(rgba(36,28,21,.03) 1px, transparent 1px);
+}
+html:not(.dark) .signature-v3 .ambient-a { background: rgba(255,106,77,.16) }
+html:not(.dark) .signature-v3 .ambient-b { background: rgba(14,168,147,.14) }
+html:not(.dark) .v3-topbar .brand strong { color: var(--ink) }
+html:not(.dark) .v3-topbar .brand span { color: var(--ink-soft) }
+html:not(.dark) .v3-topbar nav a { color: var(--ink-soft) }
+html:not(.dark) .v3-topbar nav a.active, html:not(.dark) .v3-topbar nav a:hover { color: var(--accent) }
+html:not(.dark) .v3-topbar .menu { color: var(--ink) }
+html:not(.dark) .v3-intro > span { color: var(--accent2) }
+html:not(.dark) .v3-intro h2 { color: var(--ink) }
+html:not(.dark) .v3-intro h2 b { color: var(--accent) }
+html:not(.dark) .v3-intro p { color: var(--ink-soft) }
+html:not(.dark) .signature-v3 .card {
+    background: #fff;
+    border-color: var(--line);
+    box-shadow: 0 26px 60px rgba(36,28,21,.13);
+}
+html:not(.dark) .signature-v3 .card img { filter: saturate(1.02) }
+html:not(.dark) .signature-v3 .card:after {
+    background: linear-gradient(180deg, transparent 42%, rgba(20,14,9,.6));
+}
+html:not(.dark) .signature-v3 .card.active {
+    border-color: var(--accent2);
+    box-shadow: 0 0 0 1px rgba(14,168,147,.25), 0 30px 70px rgba(36,28,21,.16), 0 0 55px rgba(14,168,147,.18);
+}
+html:not(.dark) .signature-v3 .card .meta small { color: var(--accent2-light) }
+html:not(.dark) .signature-v3 .floor-glow {
+    background: radial-gradient(ellipse, rgba(255,182,39,.28), transparent 68%);
+}
+html:not(.dark) .signature-v3 .floor-line {
+    border-color: rgba(14,168,147,.22);
+    box-shadow: 0 0 40px rgba(14,168,147,.1);
+}
+html:not(.dark) .signature-v3 .nav-btn { border-color: var(--line); background: #fff; color: var(--ink) }
+html:not(.dark) .signature-v3 .nav-btn:hover {
+    border-color: var(--accent2);
+    color: var(--accent2);
+    box-shadow: 0 0 22px rgba(14,168,147,.2);
+}
+html:not(.dark) .signature-v3 .drag-hint { color: var(--ink-soft) }
+html:not(.dark) .signature-v3 .detail-copy > span { color: var(--ink-soft) }
+html:not(.dark) .signature-v3 .detail-copy h2 { color: var(--ink) }
+html:not(.dark) .signature-v3 .detail-copy p { color: var(--ink-soft) }
+html:not(.dark) .signature-v3 .detail-copy a { color: var(--accent2) }
+html:not(.dark) .signature-v3 .thumb { opacity: .55; border-color: transparent }
+html:not(.dark) .signature-v3 .thumb.active {
+    opacity: 1;
+    border-color: var(--accent2);
+    box-shadow: 0 0 14px rgba(14,168,147,.25);
+}
+html:not(.dark) .signature-v3 .counter strong { color: var(--ink) }
+html:not(.dark) .signature-v3 .counter small { color: var(--ink-soft) }
+html:not(.dark) .signature-v3 .counter i { background: var(--line) }
+html:not(.dark) .signature-v3 .counter i em { background: var(--accent2) }
+
+/* ---- 13 تجربه مرگن (نمایشگاه/فروشگاه/طراحی سه‌بعدی/خدمات) ---- */
+html:not(.dark) .mergen-experience {
+    background: radial-gradient(ellipse at 15% 10%, #FFEAD0 0%, transparent 45%), radial-gradient(ellipse at 90% 90%, #E9F5F1 0%, transparent 40%), var(--bg);
+    color: var(--ink);
+}
+html:not(.dark) .mergen-experience .me-glow-a { background: rgba(255,106,77,.17) }
+html:not(.dark) .mergen-experience .me-glow-b { background: rgba(255,182,39,.18) }
+html:not(.dark) .mergen-experience .me-eyebrow { color: var(--accent2) }
+html:not(.dark) .mergen-experience .me-eyebrow span { background: var(--accent2) }
+html:not(.dark) .mergen-experience .me-heading h2 { color: var(--ink) }
+html:not(.dark) .mergen-experience .me-heading > p { color: var(--ink-soft) }
+html:not(.dark) .mergen-experience .me-content-box {
+    background: #fff;
+    border-color: var(--line);
+    box-shadow: 0 26px 70px rgba(36,28,21,.08);
+}
+html:not(.dark) .mergen-experience .me-tabs { background: #fff; border-color: var(--line) }
+html:not(.dark) .mergen-experience .me-tabs .me-item { color: var(--ink-soft) }
+html:not(.dark) .mergen-experience .me-tabs .me-item:hover {
+    color: var(--ink);
+    background: rgba(36,28,21,.035);
+}
+html:not(.dark) .mergen-experience .me-tabs .me-number { color: var(--ink-soft); opacity: .65 }
+html:not(.dark) .mergen-experience .me-tabs .me-item-copy small { color: var(--accent2) }
+html:not(.dark) .mergen-experience .me-tabs .me-arrow { color: var(--accent2) }
+html:not(.dark) .mergen-experience .me-tabs .me-item.active {
+    color: var(--ink);
+    background: linear-gradient(135deg, rgba(255,106,77,.13), rgba(255,255,255,.5));
+    border-color: rgba(255,106,77,.3);
+    box-shadow: inset 0 0 30px rgba(255,106,77,.04), 0 10px 28px rgba(36,28,21,.08);
+}
+html:not(.dark) .mergen-experience .me-tabs .me-item.active .me-number { color: var(--accent) }
+html:not(.dark) .mergen-experience .me-tabs .me-item.active:after { background: var(--accent) }
+/* پنل تصویری همچنان عکس‌محور و تیره می‌مونه برای خوانایی متن روی عکس */
+html:not(.dark) .mergen-experience .me-visual-top span:last-child { color: #FFD98A }
+
+/* ---- 14 سؤالات متداول — بخشی که از قبل هم واکنش‌گرا بود؛ فقط رنگ‌های تزئینی ---- */
+html:not(.dark) #faq::before { color: var(--accent2); opacity: .7 }
+html:not(.dark) #faq .eyebrow { color: var(--accent2) }
+html:not(.dark) #faq .eyebrow::before { background: var(--accent2) }
+html:not(.dark) #faqList .faq-item::before { color: var(--accent2) }
+html:not(.dark) #faqList .faq-item.open .faq-q span:first-child { color: var(--accent-deep) }
+html:not(.dark) #faqList .faq-icon { border-color: rgba(14,168,147,.28); color: var(--accent2) }
+html:not(.dark) #faqList .faq-item.open .faq-icon {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+html:not(.dark) #faqList .faq-item.open::after { background: var(--accent) }
+
+/* ---- 15 درباره ما / برند استوری ---- */
+html:not(.dark) .about-new {
+    background: linear-gradient(180deg, var(--surface-2), var(--bg));
+    color: var(--ink);
+}
+html:not(.dark) .about-lead { color: var(--ink-soft) }
+html:not(.dark) .about-visual:after {
+    background: linear-gradient(90deg, rgba(255,249,240,0), rgba(255,249,240,.5));
+}
+html:not(.dark) .about-stamp {
+    border-color: rgba(14,168,147,.55);
+    background: rgba(255,255,255,.9);
+    color: var(--ink);
+}
+html:not(.dark) .about-grid-new { border-color: var(--line) }
+html:not(.dark) .about-story { background: var(--surface-2) }
+html:not(.dark) .about-index { color: var(--accent2) }
+html:not(.dark) .about-story h3 { color: var(--ink) }
+html:not(.dark) .about-story p { color: var(--ink-soft) }
+html:not(.dark) .about-big em { color: var(--accent) }
+html:not(.dark) .about-metrics strong { color: var(--ink) }
+html:not(.dark) .about-metrics span { color: var(--ink-soft) }
+
+/* ---- ذره‌بین شادی: گلوهای رنگی نرم پشت هدینگ‌های بزرگ ---- */
+html:not(.dark) .section-title { text-shadow: 0 1px 0 rgba(255,255,255,.5) }
+
+/* =========================================================
+   MERGEN — LIGHT MODE : فوتر (آخرین بخش، حالا روشن)
+   ========================================================= */
+html:not(.dark) #footer,
+html:not(.dark) .mergen-footer {
+    background: radial-gradient(ellipse at 50% 32%, #FFEAD0 0%, #FFF3DE 30%, var(--bg) 66%, #FFFCF4 100%);
+    color: var(--ink);
+}
+html:not(.dark) .footer-kicker { color: var(--accent2) }
+html:not(.dark) .footer-intro h2 { color: var(--ink) }
+html:not(.dark) .footer-intro p { color: var(--ink-soft) }
+
+html:not(.dark) .plan {
+    border-color: var(--line);
+    background-image: linear-gradient(90deg, rgba(36,28,21,.05) 1px, transparent 1px), linear-gradient(rgba(36,28,21,.05) 1px, transparent 1px);
+}
+html:not(.dark) .plan:before {
+    background: radial-gradient(circle at 50% 50%, rgba(255,106,77,.1), transparent 32%);
+}
+html:not(.dark) .plan:after { background: var(--line) }
+
+html:not(.dark) .room {
+    background: rgba(255,255,255,.55);
+    border-color: var(--line);
+}
+html:not(.dark) .room img { opacity: .28 }
+html:not(.dark) .room:hover img { opacity: .5 }
+html:not(.dark) .room i { border-color: rgba(36,28,21,.12) }
+html:not(.dark) .room:hover {
+    background: rgba(255,106,77,.08);
+}
+html:not(.dark) .room:hover i { border-color: rgba(255,106,77,.4) }
+html:not(.dark) .room-content span { color: var(--accent2) }
+html:not(.dark) .room-content h3 { color: var(--ink) }
+html:not(.dark) .room-content b { color: var(--ink) }
+
+html:not(.dark) .center-mark {
+    background: rgba(255,255,255,.85);
+    border-color: rgba(14,168,147,.4);
+    box-shadow: 0 0 40px rgba(14,168,147,.12);
+}
+html:not(.dark) .center-mark strong { color: var(--ink) }
+html:not(.dark) .center-mark span { color: var(--ink-soft) }
+html:not(.dark) .dimension { color: rgba(36,28,21,.35) }
+html:not(.dark) .crosshair:before,
+html:not(.dark) .crosshair:after { background: rgba(14,168,147,.4) }
+
+html:not(.dark) .footer-cta > span { color: var(--accent2) }
+html:not(.dark) .footer-cta h3 { color: var(--ink) }
+html:not(.dark) .footer-cta a {
+    color: var(--accent-deep);
+    border-bottom-color: rgba(214,67,31,.4);
+}
+
+html:not(.dark) .footer-lower { border-top-color: var(--line) }
+html:not(.dark) .footer-lower strong { color: var(--ink) }
+html:not(.dark) .footer-lower p,
+html:not(.dark) .footer-lower a,
+html:not(.dark) .footer-lower span { color: var(--ink-soft) }
+html:not(.dark) .footer-lower a:hover { color: var(--accent-deep) }
+
+html:not(.dark) .footer-legal {
+    border-top-color: var(--line);
+    color: rgba(36,28,21,.4);
+}
+html:not(.dark) .watermark { color: rgba(36,28,21,.035) }

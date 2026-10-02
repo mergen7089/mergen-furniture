@@ -1,0 +1,355 @@
+/* ==========================================================================
+   10-collection.css — COLLECTION SHOWCASE
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 10 COLLECTION SHOWCASE ========== */
+
+/* ===== DEMO ===== */
+.hero {
+    height: calc(100vh - 166px);
+    min-height: 600px;
+    background: linear-gradient(90deg, #000a, #0001), url('IMG/mergenco.jpg') center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 70px
+}
+
+.hero h1 {
+    font: 400 clamp(50px, 6vw, 88px)/.95 Georgia, serif;
+    margin: 0 0 22px
+}
+
+.hero p {
+    max-width: 540px;
+    line-height: 2;
+    font-size: 14px
+}
+
+.hero button {
+    border: 0;
+    border-radius: 30px;
+    padding: 14px 28px;
+    margin-top: 15px;
+    cursor: pointer
+}
+
+/* COLLECTION */
+#collection {
+    background: #07100d;
+    color: #fff
+}
+
+/* Exact Vertical Collection integration */
+#collection .vc-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none
+}
+
+.vc-glow-a {
+    top: -200px;
+    right: -150px;
+    width: 600px;
+    height: 600px;
+    background: rgba(6, 78, 59, .20);
+    filter: blur(160px)
+}
+
+.vc-glow-b {
+    bottom: -250px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    background: rgba(2, 44, 34, .30);
+    filter: blur(150px)
+}
+
+#collection #heroImage {
+    transform: scale(1.01);
+    opacity: 1
+}
+
+#collection #hero:hover #heroImage {
+    transform: scale(1.045)
+}
+
+/* ================================
+   MERGEN COLLECTION — PREMIUM HOVER
+================================ */
+
+#collection .collection{
+    width:100%;
+    min-height:105px;
+
+    display:grid;
+    grid-template-columns:45px 1fr 30px;
+    align-items:center;
+    gap:12px;
+
+    padding:20px 22px;
+    text-align:right;
+
+    position:relative;
+
+    color:#666;
+    border-radius:18px;
+
+    background:transparent;
+    border:1px solid transparent;
+
+    cursor:pointer;
+    font-family:inherit;
+
+    /* حرکت نرم */
+    transition:
+        transform .5s cubic-bezier(.2,.8,.2,1),
+        background .5s ease,
+        border-color .5s ease,
+        box-shadow .5s ease,
+        color .4s ease;
+
+    transform:scale(1);
+    transform-origin:center;
+
+    will-change:transform;
+}
+
+/* ---------- HOVER ---------- */
+
+#collection .collection:hover{
+    color:white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16,185,129,.075),
+            rgba(16,185,129,.018)
+        );
+
+    border-color:rgba(16,185,129,.18);
+
+    transform:scale(1.035);
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.22),
+        0 0 25px rgba(16,185,129,.055);
+
+    z-index:5;
+}
+
+/* ---------- NUMBER ---------- */
+
+#collection .collection-number{
+    font-size:10px;
+    color:#444;
+
+    transition:
+        color .4s ease,
+        transform .45s cubic-bezier(.2,.8,.2,1);
+}
+
+#collection .collection:hover .collection-number{
+    color:#10b981;
+    transform:translateX(-2px);
+}
+
+/* ---------- TITLE ---------- */
+
+#collection .collection-title{
+    font-size:15px;
+    font-weight:400;
+
+    transition:
+        transform .5s cubic-bezier(.2,.8,.2,1),
+        font-size .4s ease,
+        font-weight .4s ease,
+        color .4s ease;
+}
+
+#collection .collection:hover .collection-title{
+    font-size:16px;
+    font-weight:500;
+    transform:translateX(-5px);
+}
+
+/* ---------- ARROW ---------- */
+
+#collection .collection-arrow{
+    opacity:0;
+    transform:translateX(10px);
+
+    font-size:18px;
+    color:#10b981;
+
+    transition:
+        opacity .4s ease,
+        transform .5s cubic-bezier(.2,.8,.2,1);
+}
+
+#collection .collection:hover .collection-arrow{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* ---------- ACTIVE ---------- */
+
+#collection .collection.active{
+    color:white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16,185,129,.11),
+            rgba(16,185,129,.025)
+        );
+
+    border-color:rgba(16,185,129,.25);
+
+    transform:scale(1.035);
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.25),
+        0 0 30px rgba(16,185,129,.08);
+
+    z-index:4;
+}
+
+/* ---------- ACTIVE NUMBER ---------- */
+
+#collection .collection.active .collection-number{
+    color:#10b981;
+}
+
+/* ---------- ACTIVE TITLE ---------- */
+
+#collection .collection.active .collection-title{
+    font-size:17px;
+    font-weight:500;
+    transform:translateX(-5px);
+}
+
+/* ---------- ACTIVE ARROW ---------- */
+
+#collection .collection.active .collection-arrow{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* ---------- GREEN ACTIVE BAR ---------- */
+
+#collection .collection.active:after{
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    top:18px;
+    bottom:18px;
+
+    width:2px;
+
+    background:#10b981;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 15px rgba(16,185,129,.7),
+        0 0 30px rgba(16,185,129,.25);
+
+    transition:
+        height .45s cubic-bezier(.2,.8,.2,1),
+        box-shadow .45s ease;
+}
+
+/* ---------- ACTIVE HOVER ---------- */
+
+#collection .collection.active:hover{
+    transform:scale(1.05);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16,185,129,.14),
+            rgba(16,185,129,.035)
+        );
+
+    border-color:rgba(16,185,129,.35);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.28),
+        0 0 35px rgba(16,185,129,.10);
+}
+
+#collection .collection-number {
+    font-size: 10px;
+    color: #444;
+    transition: color .3s ease
+}
+
+.collection-title {
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .4s ease
+}
+
+.collection-arrow {
+    opacity: 0;
+    transform: translateX(10px);
+    font-size: 18px;
+    color: #10b981;
+    transition: all .4s ease
+}
+
+.collection.active {
+    color: white;
+    background: linear-gradient(90deg, rgba(16, 185, 129, .08), rgba(16, 185, 129, .015));
+}
+
+.collection.active .collection-number {
+    color: #10b981
+}
+
+.collection.active .collection-title {
+    font-size: 17px;
+    font-weight: 500;
+    transform: translateX(-5px)
+}
+
+.collection.active .collection-arrow {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.collection.active:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18px;
+    bottom: 18px;
+    width: 2px;
+    background: #10b981;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(16, 185, 129, .7)
+}
+
+@media(max-width:1023px) {
+    #collection .collection {
+        min-height: 80px
+    }
+}
+
+@media(max-width:767px) {
+    #collection .collection {
+        min-width: 190px;
+        grid-template-columns: 30px 1fr 20px
+    }
+
+    #collection #collectionList {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 8px
+    }
+}

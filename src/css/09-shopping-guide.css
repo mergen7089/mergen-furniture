@@ -1,0 +1,77 @@
+/* ==========================================================================
+   09-shopping-guide.css — SHOPPING GUIDE
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 09 SHOPPING GUIDE ========== */
+
+.thin-line {
+    border-color: rgba(20, 30, 26, .15)
+}
+
+.dark .thin-line {
+    border-color: rgba(255, 255, 255, .12)
+}
+
+/* OFFCANVAS */
+.guide-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #0008;
+    backdrop-filter: blur(5px);
+    z-index: 1800;
+    opacity: 0;
+    visibility: hidden;
+    transition: .8s
+}
+
+.guide-panel {
+    position: fixed;
+    z-index: 1810;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: min(430px, 94vw);
+    background: #f4f4ef;
+    color: #111;
+    transform: translateX(105%);
+    transition: .45s cubic-bezier(.2, .8, .2, 1);
+    padding: 35px;
+    overflow: auto
+}
+
+.dark .guide-panel {
+    background: #0b1713;
+    color: #fff
+}
+
+.guide-backdrop.open .guide-panel {
+    transform: none
+}
+
+.guide-step {
+    opacity: 0;
+    transform: translateX(25px);
+    transition: .5s
+}
+
+.guide-backdrop.open .guide-step {
+    opacity: 1;
+    transform: none
+}
+
+.guide-backdrop.open .guide-step:nth-child(2) {
+    transition-delay: .08s
+}
+
+.guide-backdrop.open .guide-step:nth-child(3) {
+    transition-delay: .16s
+}
+
+.guide-backdrop.open .guide-step:nth-child(4) {
+    transition-delay: .24s
+}
+
+.guide-backdrop.open .guide-step:nth-child(5) {
+    transition-delay: .32s
+}

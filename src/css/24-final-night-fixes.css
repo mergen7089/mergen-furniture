@@ -1,0 +1,132 @@
+/* ==========================================================================
+   24-final-night-fixes.css — FINAL NIGHT FIXES
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ===== FINAL NIGHT FIXES ===== */
+#layers{position:relative;display:block;min-height:600vh;overflow:visible}
+#layers .layer-section{position:sticky;top:0;height:100vh;min-height:620px;overflow:hidden}
+#layers .layer-section .layer-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);transition:transform 1s ease}
+#layers .layer-section .layer-content{position:absolute;inset:0;z-index:2}
+#layers .layer-section .layer-inner{opacity:.72;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+#layers .layer-section.is-active .layer-inner{opacity:1;transform:none}
+#layers .layer-section .layer-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.15) 65%,rgba(0,0,0,.35))}
+#layers .layer-section.is-active .layer-bg{transform:scale(1)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+ #layers{min-height:600vh}
+ #layers .layer-section{min-height:520px}
+ 
+ 
+}
+
+/* Material → Space visibility fix */
+#material-space{position:relative!important;display:block!important;height:620vh!important;min-height:620vh!important;background:#07100d!important;overflow:visible!important;visibility:visible!important;z-index:5!important}
+#material-space .mg-ms-sticky{position:sticky!important;top:0!important;height:100vh!important;min-height:100vh!important;display:block!important;visibility:visible!important;z-index:6!important}
+#material-space .mg-ms-visual{position:absolute!important;inset:0!important;display:block!important;visibility:visible!important;z-index:1!important}
+#material-space .mg-ms-image{display:block!important;opacity:1!important;visibility:visible!important;z-index:0!important}
+#material-space .mg-ms-copy{display:block!important;visibility:visible!important;z-index:8!important}
+#material-space .mg-ms-stage{z-index:8!important}
+#material-space .mg-ms-progress{z-index:9!important}
+#material-space .mg-ms-visual:after{z-index:2!important}
+
+/* MATERIAL TO SPACE — definitive visible layout override */
+#material-space{
+  display:block!important;position:relative!important;
+  height:600vh!important;min-height:600vh!important;
+  padding:0!important;margin:0!important;overflow:clip!important;
+  background:#07100d!important;color:#f5f3ee!important;
+}
+#material-space .mg-ms-sticky{
+  position:sticky!important;top:0!important;
+  width:100%!important;height:100vh!important;min-height:100vh!important;
+  display:block!important;overflow:hidden!important;
+  background:#07100d!important;isolation:isolate!important;
+}
+#material-space .mg-ms-visual{
+  position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;display:block!important;
+  overflow:hidden!important;z-index:0!important;
+}
+#material-space .mg-ms-image{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  display:block!important;opacity:1!important;visibility:visible!important;
+  background-repeat:no-repeat!important;background-size:cover!important;background-position:center!important;
+  z-index:0!important;
+}
+#material-space .mg-ms-visual:after{
+  content:""!important;position:absolute!important;inset:0!important;
+  background:linear-gradient(90deg,rgba(3,9,6,.78),rgba(3,9,6,.34) 58%,rgba(3,9,6,.78))!important;
+  z-index:1!important;pointer-events:none!important;
+}
+#material-space .mg-ms-copy{
+  position:absolute!important;right:7vw!important;top:11vh!important;left:auto!important;
+  z-index:3!important;display:block!important;max-width:min(520px,82vw)!important;
+  color:#f5f3ee!important;visibility:visible!important;opacity:1!important;
+}
+#material-space .mg-ms-copy h2{font-size:clamp(38px,5vw,76px)!important;color:#f5f3ee!important;line-height:1.15!important}
+#material-space .mg-ms-copy p{color:rgba(245,243,238,.8)!important}
+#material-space .mg-ms-stage{
+  position:absolute!important;left:7vw!important;right:auto!important;bottom:15vh!important;
+  z-index:3!important;display:block!important;visibility:visible!important;
+  max-width:min(560px,84vw)!important;color:#fff!important;
+  opacity:0!important;transform:translateY(25px)!important;
+  transition:opacity .55s ease,transform .55s ease!important;
+  pointer-events:none!important;
+}
+#material-space .mg-ms-stage.is-active{
+  opacity:1!important;transform:translateY(0)!important;visibility:visible!important;
+}
+#material-space .mg-ms-stage small{display:block!important;color:#9ae8c5!important;font-size:11px!important;letter-spacing:.2em!important;margin-bottom:14px!important}
+#material-space .mg-ms-stage strong{display:block!important;color:#fff!important;font-size:clamp(30px,4.2vw,58px)!important;font-weight:400!important;margin-bottom:12px!important}
+#material-space .mg-ms-stage span{display:block!important;color:rgba(255,255,255,.8)!important;font-size:15px!important;line-height:1.9!important}
+#material-space .mg-ms-progress{position:absolute!important;left:7vw!important;right:7vw!important;bottom:7vh!important;height:3px!important;z-index:5!important;background:rgba(255,255,255,.3)!important}
+#material-space .mg-ms-progress i{display:block!important;height:100%!important;background:#79d6aa!important;transition:width .2s linear!important}
+@media(max-width:700px){
+ #material-space{height:600vh!important;min-height:600vh!important}
+ #material-space .mg-ms-copy{top:9vh!important;right:6vw!important;left:6vw!important;max-width:none!important}
+ #material-space .mg-ms-stage{left:6vw!important;right:6vw!important;bottom:14vh!important;max-width:none!important}
+ #material-space .mg-ms-progress{left:6vw!important;right:6vw!important}
+}
+
+/* Horizontal layered: keep all six cards in the track and reveal full travel */
+
+
+
+
+
+
+/* Horizontal Layered six-card track correction */
+
+
+
+
+
+
+/* ===== HORIZONTAL LAYERED — DEFINITIVE OVERRIDE ===== */
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MERGEN ORBIT — ROOT FIX / JS CONTROLLED
+   ========================================================= */

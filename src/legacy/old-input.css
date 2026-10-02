@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* فعال‌سازی دارک‌مود بر اساس کلاس (نه فقط prefers-color-scheme) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../Font/Vazirmatn-Variable.woff2') format('woff2-variations'),
+       url('../Font/Vazirmatn-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Vazirmatn', Tahoma, sans-serif;
+
+  /* پالت روشن (لایت) */
+  --color-bg: #F5F3EE;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #EDE9E0;
+  --color-ink: #16130F;
+  --color-ink-soft: #6B6357;
+  --color-line: #16130F1A;
+
+  /* برند */
+  --color-brass: #B08D57;
+  --color-brass-light: #CBA871;
+  --color-brass-deep: #8C6D3F;
+
+  --breakpoint-xs: 420px;
+}
+
+/* توکن‌های دارک‌مود -- override می‌شوند وقتی html.dark فعال باشد */
+.dark {
+  --color-bg: #0B0A08;
+  --color-surface: #16130F;
+  --color-surface-2: #201C15;
+  --color-ink: #F5F3EE;
+  --color-ink-soft: #A69C8C;
+  --color-line: #F5F3EE1A;
+  --color-brass: #CBA871;
+  --color-brass-light: #E2C892;
+  --color-brass-deep: #9E7C4C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  transition: background-color .4s ease, color .4s ease;
+}
+
+/* -------- اسکرول‌بار اختصاصی -------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brass) transparent;
+}
+*::-webkit-scrollbar { width: 9px; height: 9px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--color-brass);
+  border-radius: 99px;
+  border: 2px solid var(--color-bg);
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--color-brass-deep); }
+
+/* -------- کلاس‌های ریویل (AOS سبک، fallback) -------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* -------- خط زیر لینک ناوبری -------- */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  right: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background: var(--color-brass);
+  transition: width .3s ease;
+}
+.nav-link-underline:hover::after { width: 100%; }
+
+/* -------- هیرو زوم -------- */
+@keyframes heroZoom {
+  from { transform: scale(1.15); }
+  to { transform: scale(1); }
+}
+.hero-zoom { animation: heroZoom 7s cubic-bezier(.22,.61,.36,1) both; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-in { animation: fadeInUp .9s cubic-bezier(.22,.61,.36,1) both; }
+
+/* =========================================================
+   کروسل ۵ — کارت‌های لوکس با فوکوس مرکزی
+   ========================================================= */
+#carousel5Track { scroll-snap-type: x mandatory; scrollbar-width: none; }
+#carousel5Track::-webkit-scrollbar { display: none; }
+.c5-card {
+  scroll-snap-align: center;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1), filter .55s ease, opacity .55s ease, box-shadow .55s ease;
+  transform: scale(.9);
+  filter: grayscale(45%) brightness(.85);
+  opacity: .7;
+}
+.c5-card .c5-desc { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .5s ease, opacity .4s ease; }
+.c5-card.c5-center {
+  transform: scale(1.04);
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.35);
+}
+.c5-card.c5-center .c5-desc { max-height: 6rem; opacity: 1; }
+
+/* =========================================================
+   کروسل ۶ — دو ردیفه با فوکوس متناوب
+   ========================================================= */
+#slider6 { background: #05050a; }
+#slider6 .c6-lane { direction: ltr; overflow: hidden; position: relative; }
+#slider6 .c6-lane::before, #slider6 .c6-lane::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 90px; z-index: 5; pointer-events: none;
+}
+#slider6 .c6-lane::before { left: 0; background: linear-gradient(to left, transparent, #05050a 85%); }
+#slider6 .c6-lane::after { right: 0; background: linear-gradient(to right, transparent, #05050a 85%); }
+#slider6 .c6-track { display: flex; align-items: center; gap: 14px; transition: transform .9s cubic-bezier(.22,.61,.36,1); direction: ltr; }
+#slider6 .c6-track.c6-no-anim { transition: none; }
+@media (min-width: 640px) { #slider6 .c6-track { gap: 22px; } }
+.c6-card { transform: scale(.68); opacity: .32; filter: brightness(.5) saturate(.75); transition: transform .9s cubic-bezier(.22,.61,.36,1), opacity .9s ease, filter .9s ease, box-shadow .6s ease; }
+.c6-card.c6-neighbor { transform: scale(.8); opacity: .55; filter: brightness(.68) saturate(.85); }
+.c6-card.c6-center { transform: scale(1.12); opacity: 1; filter: brightness(1) saturate(1.05); z-index: 3; box-shadow: 0 15px 45px rgba(0,0,0,.6); }
+.c6-tone-a.c6-center { box-shadow: 0 0 0 1.5px rgba(255,255,255,.35), 0 0 44px 8px rgba(140,120,255,.5), 0 22px 55px rgba(0,0,0,.65); }
+.c6-tone-b.c6-center { box-shadow: 0 0 0 1.5px rgba(255,255,255,.35), 0 0 44px 8px rgba(255,150,100,.45), 0 22px 55px rgba(0,0,0,.65); }
+.c6-card .c6-desc { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .5s ease, opacity .4s ease; }
+.c6-card.c6-center .c6-desc { max-height: 4rem; opacity: 1; }
+@media (max-width: 576px) { .c6-card.c6-neighbor { transform: scale(.74); } .c6-card.c6-center { transform: scale(1.02); } }
+
+/* =========================================================
+   افکنواس و مودال — پس‌زمینه محو
+   ========================================================= */
+[data-offcanvas-backdrop], [data-modal-backdrop] { transition: opacity .35s ease; }
+[data-offcanvas-sheet] { transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+[data-modal-box] { transition: opacity .3s ease, transform .3s ease; }
+
+/* جای‌گذار تصویر */
+.img-ph {
+  background-image:
+    radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--color-brass) 18%, transparent), transparent 55%),
+    repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-ink) 4%, transparent) 0 2px, transparent 2px 14px);
+  background-color: var(--color-surface-2);
+}

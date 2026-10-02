@@ -1,0 +1,28 @@
+/* ==========================================================================
+   25-horizontal-layered.css — HORIZONTAL LAYERED — SECTION 05
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 05 — HORIZONTAL LAYERED  (نسخه‌ی تمیز و یکپارچه — جای همه‌ی بازنویسی‌های قبلی)
+   ارتفاع بخش را main.js محاسبه می‌کند؛ اینجا فقط ظاهر و چیدمان است.
+   ========================================================================== */
+.mg-hlayer-section{position:relative;height:500vh;background:#07100d}
+.mg-hlayer-sticky{position:sticky;top:0;width:100%;height:100vh;overflow:hidden;display:flex;align-items:center}
+.mg-hlayer-track{display:flex;flex-wrap:nowrap;align-items:center;gap:24px;padding:0 7vw;width:max-content;max-width:none;will-change:transform}
+.mg-hlayer{position:relative;flex:0 0 min(68vw,680px);width:min(68vw,680px);min-width:min(68vw,680px);height:min(70vh,620px);min-height:420px;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 20px 70px rgba(0,0,0,.35)}
+.mg-hlayer:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.78))}
+.mg-hlayer>div{position:absolute;z-index:2;right:0;left:0;bottom:0;padding:34px;color:#fff}
+.mg-hlayer small{font-size:9px;letter-spacing:.28em;color:#79d6aa}
+.mg-hlayer h3{font-size:clamp(34px,5vw,68px);font-weight:300;margin:8px 0}
+.mg-hlayer p{font-size:13px;color:rgba(255,255,255,.65)}
+.mg-hlayer-progress{position:absolute;z-index:20;bottom:30px;left:7vw;right:7vw;height:1px;background:rgba(255,255,255,.12)}
+.mg-hlayer-progress i{display:block;width:0;height:100%;background:#79d6aa}
+@media(max-width:700px){
+  .mg-hlayer-section{height:auto}
+  .mg-hlayer-sticky{position:relative;height:auto;overflow:visible;display:block}
+  .mg-hlayer-track{width:100%;flex-direction:column;gap:18px;padding:30px 6vw 80px;transform:none!important}
+  .mg-hlayer{flex:none;width:100%;min-width:0;height:65vh;min-height:360px}
+  .mg-hlayer-progress{display:none}
+}
+@media(prefers-reduced-motion:reduce){.mg-hlayer-track{transform:none!important}}

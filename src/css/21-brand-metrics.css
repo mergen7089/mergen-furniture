@@ -1,0 +1,12 @@
+/* ==========================================================================
+   21-brand-metrics.css — BRAND STORY — ANIMATED METRICS
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== BRAND STORY — ANIMATED METRICS ========== */
+.about-metrics .about-metric{position:relative;min-width:0}
+.about-metrics .about-metric strong{display:block;direction:ltr;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.about-metrics .about-metric span{white-space:nowrap}
+.about-metrics .about-metric::after{content:"";display:block;width:34px;height:1px;margin-top:14px;background:#79d6aa;opacity:.55;transition:width .45s ease}
+.about-metrics .about-metric:hover::after{width:58px}
+@media(max-width:600px){.about-metrics{gap:14px}.about-metrics .about-metric span{font-size:10px}.about-metrics .about-metric strong{font-size:34px}}

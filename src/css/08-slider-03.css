@@ -1,0 +1,157 @@
+/* ==========================================================================
+   08-slider-03.css — SLIDER 03 / CUSTOM PRODUCTS
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 08 SLIDER 03 / CUSTOM PRODUCTS ========== */
+
+.custom-card {
+    overflow: hidden;
+    border-radius: 24px;
+    background: #0b1511;
+    border: 1px solid #ffffff14;
+    color: #fff
+}
+
+.custom-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    transition: .6s
+}
+
+.custom-card:hover img {
+    transform: scale(1.045)
+}
+
+.custom-card>div {
+    padding: 22px
+}
+
+.custom-card span {
+    font-size: 10px;
+    letter-spacing: .18em;
+    color: #79d6aa
+}
+
+.custom-card h3 {
+    font: 600 25px Georgia, serif;
+    margin: 8px 0
+}
+
+.custom-card p {
+    font-size: 12px;
+    line-height: 2;
+    color: #ffffff88
+}
+
+.custom-carousel .owl-nav button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50% !important;
+    background: var(--brand-green) !important;
+    color: #fff !important;
+    font-size: 28px !important
+}
+
+.custom-carousel .owl-nav {
+    margin-top: 20px
+}
+
+/* Slider 03 — same dark metallic-green language as Slider 02 */
+#slider03 {
+    background: #06100c !important;
+    color: #fff;
+    position: relative;
+    overflow: hidden
+}
+
+#slider03:before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    right: -240px;
+    top: -240px;
+    border-radius: 50%;
+    background: rgba(6, 78, 59, .18);
+    filter: blur(150px);
+    pointer-events: none
+}
+
+#slider03:after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -250px;
+    bottom: -280px;
+    border-radius: 50%;
+    background: rgba(2, 44, 34, .26);
+    filter: blur(145px);
+    pointer-events: none
+}
+
+#slider03>.max-w-1400 {
+    position: relative;
+    z-index: 2
+}
+
+#slider03 .custom-card {
+    background: linear-gradient(145deg, #0b1713, #07100d);
+    border: 1px solid rgba(255, 255, 255, .09);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .22);
+    transition: transform .75s cubic-bezier(.2, .8, .2, 1), border-color .6s ease, box-shadow .75s ease, background .6s ease
+}
+
+#slider03 .custom-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(16, 185, 129, .28);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .38), 0 0 35px rgba(16, 185, 129, .06)
+}
+
+#slider03 .custom-card img {
+    filter: saturate(.78);
+    transition: transform 1.05s cubic-bezier(.2, .8, .2, 1), filter .8s ease
+}
+
+#slider03 .custom-card:hover img {
+    transform: scale(1.055);
+    filter: saturate(1)
+}
+
+#slider03 .custom-card span {
+    color: #10b981;
+    transition: color .45s ease
+}
+
+#slider03 .custom-card h3 {
+    transition: transform .55s cubic-bezier(.2, .8, .2, 1), color .45s ease
+}
+
+#slider03 .custom-card:hover h3 {
+    transform: translateX(-4px);
+    color: #b8f5dd
+}
+
+#slider03 .custom-card p {
+    color: rgba(255, 255, 255, .48);
+    transition: color .45s ease
+}
+
+#slider03 .custom-card:hover p {
+    color: rgba(255, 255, 255, .68)
+}
+
+#slider03 .custom-carousel .owl-nav button {
+    background: var(--brand-green) !important;
+    border: 1px solid rgba(16, 185, 129, .18);
+    transition: transform .45s cubic-bezier(.2, .8, .2, 1), background .45s ease, box-shadow .45s ease
+}
+
+#slider03 .custom-carousel .owl-nav button:hover {
+    background: #1d4b3e !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, .16)
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   26-orbit-slider.css — ORBIT SLIDER — SECTION 08
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 08 — ORBIT SLIDER  (حرکت را main.js با Web Animations کنترل می‌کند)
+   اندازه‌ی کارت‌ها از متغیرهای --ocw و --och می‌آید که JS روی .mg-orbit-stage می‌گذارد.
+   ========================================================================== */
+.mg-orbit-stage{position:relative;height:clamp(440px,62vh,620px);overflow:hidden;direction:ltr}
+.mg-orbit-track{position:absolute;inset:0}
+.mg-orbit-card{position:absolute;top:0;left:0;width:var(--ocw,360px);height:var(--och,300px);border-radius:24px;overflow:hidden;opacity:0;will-change:transform,opacity,filter;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.mg-orbit-card div{direction:rtl}

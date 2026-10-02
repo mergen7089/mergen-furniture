@@ -1,0 +1,57 @@
+/* ==========================================================================
+   03-material-ticker.css — MATERIAL TICKER
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 03 MATERIAL TICKER ========== */
+
+.mg-ticker {
+    background: var(--ticker-bg);
+    overflow: hidden;
+    padding: 18px 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)
+}
+
+.mg-ticker-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: max-content;
+    font-size: 15px;
+    letter-spacing: .5px;
+    color: var(--ticker-ink);
+    animation: mg-ticker-move 22s linear infinite
+}
+
+.mg-ticker:hover .mg-ticker-track {
+    animation-play-state: paused
+}
+
+.mg-ticker-track span {
+    padding: 0 6px
+}
+
+.mg-ticker-dot {
+    color: var(--ticker-accent);
+    font-size: 11px;
+    padding: 0 22px !important;
+    display: inline-flex;
+    align-items: center;
+    opacity: .85
+}
+
+@keyframes mg-ticker-move {
+    from { transform: translateX(0) }
+    to { transform: translateX(-50%) }
+}
+
+@media (max-width: 600px) {
+    .mg-ticker-track {
+        font-size: 13px
+    }
+    .mg-ticker-dot {
+        padding: 0 14px !important
+    }
+}

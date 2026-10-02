@@ -1,0 +1,47 @@
+/* ==========================================================================
+   27-light-color-fixes.css — LIGHT MODE COLOR FIXES — سبز→قهوه‌ای، قرمز→مرجانی
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ==========================================================================
+   LIGHT MODE COLOR FIXES  (فقط روی html:not(.dark) اثر دارد؛ حالت تاریک دست‌نخورده)
+   ۱) متن‌های سبز/فیروزه‌ای  →  قهوه‌ای سیر (--brown-deep)
+   ۲) دکمه‌های قرمز پررنگ     →  قرمز مرجانی سایت (--accent: #FF6A4D)
+   ========================================================================== */
+html:not(.dark){
+  --brown-deep:#4a2c17;
+  --accent-deep:#F2593B;          /* انتهای گرادیان دکمه‌ها و هاورها: مرجانی، نه قرمز پررنگ */
+  --accent2:var(--brown-deep);    /* رنگ لینک/آیکون/متن ثانویه که قبلاً فیروزه‌ای بود */
+  --accent2-light:#7a4a2a;
+  --accent2-deep:#3a2010;
+}
+/* دکمه‌هایی که قبلاً با !important رنگ قهوه‌ای‌مایل/قرمز گرفته بودند → مرجانی یکدست */
+html:not(.dark) .hero-btn,
+html:not(.dark) .btn-green,
+html:not(.dark) .owl-nav button,
+html:not(.dark) .custom-carousel .owl-nav button,
+html:not(.dark) .support-fab,
+html:not(.dark) .support-panel-head button{background:var(--accent)!important;border-color:var(--accent)!important;color:#fff!important}
+html:not(.dark) .hero-btn:hover,
+html:not(.dark) .btn-green:hover,
+html:not(.dark) .owl-nav button:hover,
+html:not(.dark) .custom-carousel .owl-nav button:hover,
+html:not(.dark) .support-fab:hover{background:var(--accent-deep)!important;border-color:var(--accent-deep)!important}
+html:not(.dark) .support-fab{box-shadow:0 10px 30px rgba(255,106,77,.28)!important}
+
+/* متن‌های سبز ثابت (hex) که در حالت روشن روی زمینه‌ی روشن می‌نشینند → قهوه‌ای سیر */
+html:not(.dark) .mergen-contact .mc-head h2 span,
+html:not(.dark) .mergen-contact .mc-social i,
+html:not(.dark) .mergen-contact .mc-location-icon,
+html:not(.dark) .mergen-contact .mc-location small,
+html:not(.dark) .mergen-contact .mc-location a,
+html:not(.dark) .mergen-contact .mc-social-panel-head,
+html:not(.dark) .mergen-contact .mc-social-line b,
+html:not(.dark) .mergen-materials .section-title span,
+html:not(.dark) .mergen-materials .mm-open i,
+html:not(.dark) #collection .collection-arrow,
+html:not(.dark) .collection-arrow,
+html:not(.dark) .mg-orbit-head em,
+html:not(.dark) #faq .section-title,
+html:not(.dark) #faqList .faq-q{color:var(--brown-deep)!important}
+html:not(.dark) #slider02 .ms-row-title{color:rgba(74,44,23,.55)}

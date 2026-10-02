@@ -1,0 +1,90 @@
+/* ==========================================================================
+   23-fixes-2026-09.css — FIXES 2026-09
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ===== MERGEN FIX / EDITORIAL PASS 2026-09 ===== */
+
+/* Second navigation header: keep its titles readable in both themes */
+.section-nav a{color:var(--ink)!important;text-shadow:none!important}
+.section-nav a:after{background:var(--brand-green)}
+.dark .section-nav a{color:#f5f3ee!important}
+.dark .section-nav{background:rgba(11,10,8,.92)}
+
+/* Philosophy: two images enter from opposite sides, crossfade, then leave opposite */
+.mg-philosophy-media{opacity:0;transform:translate3d(0,0,0) scale(1.035);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.mg-philosophy-media-a{clip-path:inset(0);transform:translate3d(12%,0,0) scale(1.04)}
+.mg-philosophy-media-b{clip-path:inset(0);transform:translate3d(-12%,0,0) scale(1.04)}
+.mg-philosophy.is-active .mg-philosophy-media-a{opacity:1;animation:mgPhilA 6.8s cubic-bezier(.2,.75,.2,1) both}
+.mg-philosophy.is-active .mg-philosophy-media-b{opacity:1;animation:mgPhilB 6.8s cubic-bezier(.2,.75,.2,1) 3.4s both}
+@keyframes mgPhilA{0%{opacity:0;transform:translate3d(12%,0,0) scale(1.04)}18%{opacity:1;transform:translate3d(0,0,0) scale(1)}48%{opacity:1;transform:translate3d(0,0,0) scale(1.015)}82%{opacity:.95;transform:translate3d(-12%,0,0) scale(1.04)}100%{opacity:0;transform:translate3d(-16%,0,0) scale(1.05)}}
+@keyframes mgPhilB{0%{opacity:0;transform:translate3d(-12%,0,0) scale(1.04)}18%{opacity:1;transform:translate3d(0,0,0) scale(1)}48%{opacity:1;transform:translate3d(0,0,0) scale(1.015)}82%{opacity:.95;transform:translate3d(12%,0,0) scale(1.04)}100%{opacity:0;transform:translate3d(16%,0,0) scale(1.05)}}
+
+/* Material -> Space: six-stage cinematic scroll */
+.mg-material-space{height:620vh;min-height:0;background:#07100d;color:#f5f3ee;padding:0;text-align:initial;display:block}
+.mg-ms-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center}
+.mg-ms-copy{position:absolute;z-index:5;right:7vw;top:12vh;max-width:520px}
+.mg-ms-copy h2{font-size:clamp(40px,6vw,82px);font-weight:300;line-height:1.05;margin:14px 0}
+.mg-ms-copy h2 em{font-style:normal;color:#79d6aa}
+.mg-ms-copy p{color:rgba(245,243,238,.58);line-height:2;font-size:14px;max-width:440px}
+.mg-ms-visual{position:absolute;inset:0}
+.mg-ms-image{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.82);transform:scale(1.04);transition:background-image .35s ease,transform 1s ease}
+.mg-ms-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,9,7,.72),rgba(4,9,7,.2) 52%,rgba(4,9,7,.82))}
+.mg-ms-stage{position:absolute;z-index:4;left:7vw;bottom:15vh;max-width:460px;opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.mg-ms-stage.is-active{opacity:1;transform:none}
+.mg-ms-stage small{display:block;color:#79d6aa;letter-spacing:.28em;font-size:10px;margin-bottom:12px}
+.mg-ms-stage strong{display:block;font-size:clamp(28px,4vw,56px);font-weight:300;margin-bottom:8px}
+.mg-ms-stage span{font-size:13px;color:rgba(245,243,238,.62)}
+.mg-ms-progress{position:absolute;z-index:6;left:7vw;right:7vw;bottom:8vh;height:2px;background:rgba(255,255,255,.16)}
+.mg-ms-progress i{display:block;width:0;height:100%;background:#79d6aa;transition:width .25s ease}
+
+/* Light mode requested surfaces */
+html:not(.dark) .mg-material-space,
+html:not(.dark) .mg-hlayer-section,
+html:not(.dark) .mg-orbit-section{background:#eee9df!important;color:#2d251d}
+html:not(.dark) .mg-ms-copy p,
+html:not(.dark) .mg-ms-stage span{color:rgba(45,37,29,.62)}
+html:not(.dark) .mg-ms-visual:after{background:linear-gradient(90deg,rgba(238,233,223,.76),rgba(238,233,223,.12) 52%,rgba(20,16,12,.62))}
+html:not(.dark) .mg-hlayer:after{background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.76))}
+html:not(.dark) .mg-orbit-head h2{color:#2d251d}
+
+/* In light mode, small green labels become deep furniture brown */
+html:not(.dark) .mg-kicker,
+html:not(.dark) .mg-hlayer small,
+html:not(.dark) .mg-ms-stage small,
+html:not(.dark) .eyebrow,
+html:not(.dark) .about-index,
+html:not(.dark) .about-top .eyebrow,
+html:not(.dark) .footer-kicker,
+html:not(.dark) .room-content span,
+html:not(.dark) .v3-intro>span,
+html:not(.dark) .signature-v3 .card .meta small,
+html:not(.dark) .mergen-experience .me-eyebrow,
+html:not(.dark) .mergen-experience .me-tabs .me-item-copy small{color:#5a3b24!important}
+html:not(.dark) .mg-kicker:before{background:#5a3b24!important}
+
+/* Soften coral/red UI buttons in light mode */
+html:not(.dark) .hero-btn,
+html:not(.dark) .btn-green,
+html:not(.dark) .owl-nav button,
+html:not(.dark) .custom-carousel .owl-nav button,
+html:not(.dark) .support-fab,
+html:not(.dark) .support-panel-head button{background:#b97863!important;border-color:#b97863!important;color:#fff!important}
+html:not(.dark) .hero-btn:hover,
+html:not(.dark) .btn-green:hover,
+html:not(.dark) .owl-nav button:hover,
+html:not(.dark) .custom-carousel .owl-nav button:hover,
+html:not(.dark) .support-fab:hover{background:#9e5f4e!important;border-color:#9e5f4e!important}
+html:not(.dark) .support-fab{box-shadow:0 10px 30px rgba(122,76,58,.22)!important}
+
+/* Light scrollbar: clearly visible warm brown */
+html:not(.dark){scrollbar-color:#7a6750 #e6e0d6}
+html:not(.dark)::-webkit-scrollbar-track{background:#e6e0d6}
+html:not(.dark)::-webkit-scrollbar-thumb{background:#7a6750;border-color:#e6e0d6}
+html:not(.dark)::-webkit-scrollbar-thumb:hover{background:#5a3b24}
+
+/* Dark scrollbar: stronger Mergen green contrast */
+.dark{scrollbar-color:#79d6aa #07110d}
+.dark::-webkit-scrollbar-track{background:#07110d}
+.dark::-webkit-scrollbar-thumb{background:#79d6aa;border-color:#07110d}
+.dark::-webkit-scrollbar-thumb:hover{background:#9ae8c5}

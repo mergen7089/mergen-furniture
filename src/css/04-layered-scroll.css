@@ -1,0 +1,96 @@
+/* ==========================================================================
+   04-layered-scroll.css — LAYERED SCROLL
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 04 LAYERED SCROLL ========== */
+
+/* LAYERS */
+#layers {
+    background: #101411;
+    color: #fff;
+    position: relative
+}
+
+.layer-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    min-height: 680px;
+    overflow: hidden;
+    transform-origin: center top;
+    will-change: transform, opacity, filter;
+    z-index: 1
+}
+
+.layer-bg {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.04);
+    transition: transform .08s linear
+}
+
+.layer-section:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #050806df 0%, #0508067d 48%, #05080625 100%), linear-gradient(0deg, #050806aa, transparent 40%);
+    z-index: 1
+}
+
+.layer-content {
+    position: relative;
+    z-index: 3;
+    width: min(1400px, 88%);
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center
+}
+
+.layer-inner {
+    max-width: 760px
+}
+
+.layer-no {
+    font-size: 11px;
+    letter-spacing: .28em;
+    color: #8edab5
+}
+
+.layer-title {
+    font: 400 clamp(55px, 9vw, 125px)/.9 Georgia, serif;
+    margin: 18px 0 25px
+}
+
+.layer-copy {
+    font-size: 15px;
+    line-height: 2;
+    color: #e0e8e4;
+    max-width: 560px
+}
+
+.layer-line {
+    width: 100px;
+    height: 2px;
+    background: #79d6aa;
+    margin-top: 35px
+}
+
+.layer-section.is-current .layer-content {
+    transition: opacity .15s
+}
+
+.layer-section.outgoing .layer-inner {
+    opacity: .02;
+    transform: translateY(-18px) scale(.97);
+    filter: blur(3px);
+    transition: .2s
+}
+
+.layer-section.incoming .layer-inner {
+    opacity: 1
+}

@@ -1,0 +1,387 @@
+/* ==========================================================================
+   07-contact.css — CONTACT / SOCIALS
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 07 CONTACT / SOCIALS ========== */
+
+/* Contact */
+.mergen-contact {
+    position: relative;
+    background: #070b0a;
+    color: #fff;
+    overflow: hidden;
+    isolation: isolate
+}
+
+.mergen-contact .mc-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1
+}
+
+.mergen-contact .mc-glow-a {
+    width: 650px;
+    height: 650px;
+    right: -220px;
+    top: -280px;
+    background: rgba(6, 78, 59, .22);
+    filter: blur(165px)
+}
+
+.mergen-contact .mc-glow-b {
+    width: 520px;
+    height: 520px;
+    left: -220px;
+    bottom: -300px;
+    background: rgba(2, 44, 34, .28);
+    filter: blur(150px)
+}
+
+.mergen-contact .mc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 60px;
+    margin-bottom: 45px
+}
+
+.mergen-contact .mc-head h2 span,
+.mergen-materials .section-title span {
+    color: #10b981
+}
+
+.mergen-contact .mc-head>p {
+    max-width: 430px;
+    color: rgba(255, 255, 255, .42);
+    font-size: 13px;
+    line-height: 2.2;
+    margin: 0
+}
+
+.mergen-contact .mc-social-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px
+}
+
+.mergen-contact .mc-social {
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .018);
+    color: #fff;
+    text-decoration: none;
+    transition: transform .65s cubic-bezier(.2, .8, .2, 1), background .55s ease, border-color .55s ease, box-shadow .65s ease
+}
+
+.mergen-contact .mc-social i {
+    font-size: 22px;
+    color: #10b981;
+    transition: transform .55s cubic-bezier(.2, .8, .2, 1), color .45s ease
+}
+
+.mergen-contact .mc-social span {
+    font-size: 13px;
+    margin-top: 18px
+}
+
+.mergen-contact .mc-social small {
+    font-size: 9px;
+    color: rgba(255, 255, 255, .32);
+    direction: ltr;
+    text-align: right
+}
+
+.mergen-contact .mc-social:hover {
+    transform: translateY(-7px);
+    background: linear-gradient(145deg, rgba(16, 185, 129, .09), rgba(255, 255, 255, .018));
+    border-color: rgba(16, 185, 129, .25);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, .24), 0 0 25px rgba(16, 185, 129, .05)
+}
+
+.mergen-contact .mc-social:hover i {
+    transform: scale(1.08) translateY(-2px);
+    color: #8ee8c8
+}
+
+.mergen-contact .mc-locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 14px
+}
+
+.mergen-contact .mc-location {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .018);
+    transition: transform .65s cubic-bezier(.2, .8, .2, 1), border-color .55s ease, background .55s ease
+}
+
+.mergen-contact .mc-location:hover {
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, .2);
+    background: rgba(16, 185, 129, .035)
+}
+
+.mergen-contact .mc-location-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: rgba(16, 185, 129, .09);
+    color: #10b981
+}
+
+.mergen-contact .mc-location small {
+    font-size: 8px;
+    letter-spacing: .22em;
+    color: #10b981
+}
+
+.mergen-contact .mc-location h3 {
+    margin: 7px 0;
+    font-size: 20px;
+    font-weight: 400
+}
+
+.mergen-contact .mc-location p {
+    margin: 0;
+    color: rgba(255, 255, 255, .4);
+    font-size: 11px;
+    line-height: 2
+}
+
+.mergen-contact .mc-location a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #10b981;
+    font-size: 10px;
+    text-decoration: none;
+    transition: transform .4s ease
+}
+
+.mergen-contact .mc-location a:hover {
+    transform: translateX(-4px)
+}
+
+/* Contact — editorial communication hub instead of card grid */
+.mergen-contact .mc-contact-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, .82fr) minmax(0, 1.18fr);
+    gap: 18px;
+    align-items: stretch
+}
+
+.mergen-contact .mc-info-column {
+    padding: 10px 0
+}
+
+.mergen-contact .mc-location-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    height: 100%
+}
+
+.mergen-contact .mc-location {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 23px 25px;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .025), rgba(255, 255, 255, .008));
+    transition: transform .65s cubic-bezier(.16, 1, .3, 1), border-color .5s ease, background .5s ease, box-shadow .6s ease
+}
+
+.mergen-contact .mc-location:hover {
+    transform: translateX(-5px);
+    border-color: rgba(16, 185, 129, .23);
+    background: linear-gradient(135deg, rgba(16, 185, 129, .065), rgba(255, 255, 255, .01));
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .2)
+}
+
+.mergen-contact .mc-location-icon {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: rgba(16, 185, 129, .08);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, .1);
+    transition: transform .55s cubic-bezier(.2, .8, .2, 1), background .45s ease
+}
+
+.mergen-contact .mc-location:hover .mc-location-icon {
+    transform: scale(1.06) rotate(-3deg);
+    background: rgba(16, 185, 129, .13)
+}
+
+.mergen-contact .mc-location small {
+    font-size: 8px;
+    letter-spacing: .22em;
+    color: #10b981
+}
+
+.mergen-contact .mc-location h3 {
+    margin: 6px 0 4px;
+    font-size: 18px;
+    font-weight: 400
+}
+
+.mergen-contact .mc-location p {
+    margin: 0;
+    color: rgba(255, 255, 255, .38);
+    font-size: 10px;
+    line-height: 1.9
+}
+
+.mergen-contact .mc-location a {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px;
+    color: #10b981;
+    font-size: 9px;
+    text-decoration: none
+}
+
+.mergen-contact .mc-location a b {
+    font-weight: 400;
+    transition: transform .4s ease
+}
+
+.mergen-contact .mc-location a:hover b {
+    transform: translateX(-4px)
+}
+
+.mergen-contact .mc-social-panel {
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, .025), rgba(255, 255, 255, .008));
+    backdrop-filter: blur(15px)
+}
+
+.mergen-contact .mc-social-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    color: #10b981;
+    font-size: 9px;
+    letter-spacing: .2em
+}
+
+.mergen-contact .mc-social-panel-head small {
+    color: rgba(255, 255, 255, .3);
+    font-size: 9px;
+    letter-spacing: 0
+}
+
+.mergen-contact .mc-social-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px
+}
+
+.mergen-contact .mc-social-line {
+    display: grid;
+    grid-template-columns: 32px 1fr auto 18px;
+    align-items: center;
+    gap: 10px;
+    min-height: 62px;
+    border-bottom: 1px solid rgba(255, 255, 255, .055);
+    color: #fff;
+    text-decoration: none;
+    transition: transform .55s cubic-bezier(.2, .8, .2, 1), padding .55s cubic-bezier(.2, .8, .2, 1), color .4s ease, border-color .4s ease
+}
+
+.mergen-contact .mc-social-line:nth-last-child(-n+2) {
+    border-bottom: 0
+}
+
+.mergen-contact .mc-social-line i {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 9px;
+    color: #6d7973;
+    font-size: 13px;
+    transition: color .45s ease, background .45s ease, border-color .45s ease, transform .5s cubic-bezier(.2, .8, .2, 1)
+}
+
+.mergen-contact .mc-social-line span {
+    font-size: 11px
+}
+
+.mergen-contact .mc-social-line small {
+    font-size: 8px;
+    color: rgba(255, 255, 255, .25);
+    direction: ltr
+}
+
+.mergen-contact .mc-social-line b {
+    font-size: 13px;
+    font-weight: 400;
+    color: #10b981;
+    opacity: .35;
+    transition: transform .45s ease, opacity .4s ease
+}
+
+.mergen-contact .mc-social-line:hover {
+    transform: translateX(-5px);
+    padding-right: 5px;
+    color: #fff;
+    border-color: rgba(16, 185, 129, .18)
+}
+
+.mergen-contact .mc-social-line:hover i {
+    color: #8ee8c8;
+    background: rgba(16, 185, 129, .08);
+    border-color: rgba(16, 185, 129, .2);
+    transform: scale(1.06)
+}
+
+.mergen-contact .mc-social-line:hover b {
+    opacity: 1;
+    transform: translateX(-4px)
+}
+
+@media(max-width:900px) {
+    .mergen-experience .me-tabs {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .mergen-contact .mc-contact-layout {
+        grid-template-columns: 1fr
+    }
+
+    .mergen-contact .mc-location-stack {
+        height: auto
+    }
+
+    .mergen-contact .mc-location {
+        min-height: 105px
+    }
+}

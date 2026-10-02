@@ -1,0 +1,89 @@
+/* ==========================================================================
+   02-hero.css — HERO
+   (ترتیب فایل‌ها در src/input.css همان ترتیب cascade است؛ جابه‌جایی‌شان ظاهر را عوض می‌کند)
+   ========================================================================== */
+
+/* ========== 02 HERO ========== */
+
+/* HERO */
+#mergen-hero-slider {
+    min-height: calc(100svh - 166px);
+    background: #050908;
+    color: #fff
+}
+
+.mergen-slide {
+    height: calc(100svh - 166px);
+    min-height: 680px;
+    position: relative;
+    overflow: hidden
+}
+
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.08);
+    transition: transform 7s cubic-bezier(.2, .65, .2, 1)
+}
+
+.hero-copy {
+    position: absolute;
+    z-index: 20;
+    right: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 650px
+}
+
+.hero-copy>* {
+    opacity: 0;
+    transform: translateY(28px)
+}
+
+.hero-title {
+    font: 400 clamp(45px, 6vw, 88px)/1.05 Georgia, serif;
+    margin: 15px 0
+}
+
+.hero-title span {
+    color: #55d59f
+}
+
+.hero-desc {
+    max-width: 540px;
+    color: #d9e1dd;
+    line-height: 2;
+    font-size: 14px
+}
+
+.hero-btn {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 24px;
+    background: #fff;
+    color: #111;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-size: 13px
+}
+
+.hero-nav-arrow {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ffffff55;
+    border-radius: 50%;
+    font-size: 34px;
+    color: #fff;
+    background: #0002;
+    backdrop-filter: blur(8px);
+    transition: .3s
+}
+
+.hero-nav-arrow:hover {
+    border-color: #55d59f;
+    color: #55d59f;
+    transform: scale(1.08)
+}
