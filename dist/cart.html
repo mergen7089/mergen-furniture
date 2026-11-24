@@ -1,0 +1,1048 @@
+```html
+<!DOCTYPE html>
+<html data-page="cart" lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>سبد خرید | مرگن</title>
+
+  <link href="./css/style.css" rel="stylesheet">
+<link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
+<script src="./js/main.js"></script>
+</head>
+
+<body
+  class="min-h-screen overflow-x-hidden bg-[#FBF0DD] font-vazir text-[#241C15] transition-colors duration-500 dark:bg-[#07100D] dark:text-[#F4F7F4]"
+>
+
+  <!-- =========================================================
+       TOP BAR
+  ========================================================== -->
+  <div
+    class="relative z-50 bg-[#17251F] px-4 py-2.5 text-center text-[11px] font-medium tracking-wide text-white/90"
+  >
+    ساخت سفارشی • کیفیت ساخت مرگن • هماهنگی مستقیم با تیم طراحی
+  </div>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+  <header
+    class="sticky top-0 z-40 border-b border-black/[0.06] bg-[#FBF0DD]/90 backdrop-blur-xl dark:border-white/[0.08] dark:bg-[#07100D]/90"
+  >
+    <div
+      class="mx-auto flex max-w-[1400px] items-center justify-between gap-5 px-5 py-4 lg:px-8"
+    >
+
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="group flex items-center gap-3"
+      >
+        <img src="img/logo.jpg" alt="MERGEN" class="h-11 w-11 rounded-full object-cover shadow-lg transition-transform duration-500 group-hover:scale-105">
+
+        <span class="hidden sm:block">
+          <span
+            class="block text-[15px] font-bold tracking-[0.22em]"
+          >
+            MERGEN
+          </span>
+
+          <span
+            class="mt-0.5 block text-[9px] uppercase tracking-[0.28em] text-[#7C6C58] dark:text-[#A9B7AF]"
+          >
+            Furniture Atelier
+          </span>
+        </span>
+      </a>
+
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2">
+
+        <a
+          href="collection.html"
+          class="cart-fill hidden rounded-full border border-black/10 bg-white/60 px-5 py-2.5 text-xs font-medium text-[#241C15] transition-all duration-500 hover:-translate-y-0.5 hover:border-[#17251F] hover:bg-[#17251F] hover:text-white sm:block dark:border-white/10 dark:bg-white/5 dark:text-white/80 dark:hover:bg-[#17251F]"
+        >
+          ادامه خرید
+        </a>
+
+        <button
+          id="themeToggle"
+          type="button"
+          aria-label="تغییر تم"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/60 text-sm transition-all duration-500 hover:-translate-y-0.5 hover:bg-[#17251F] hover:text-white dark:border-white/10 dark:bg-white/5"
+        >
+          ☼
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       ARCHITECTURAL BACKGROUND
+  ========================================================== -->
+  <main class="relative isolate overflow-hidden">
+
+    <!-- soft ambient lights -->
+    <div
+      class="pointer-events-none absolute -right-40 top-40 -z-10 h-[500px] w-[500px] rounded-full bg-[#79D6AA]/10 blur-[120px]"
+    ></div>
+
+    <div
+      class="pointer-events-none absolute -left-40 top-[700px] -z-10 h-[500px] w-[500px] rounded-full bg-[#FF6A4D]/10 blur-[130px]"
+    ></div>
+
+    <!-- Architectural lines -->
+    <div
+      class="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-30 dark:opacity-20"
+    >
+      <div
+        class="absolute -right-[18%] top-[8%] h-[520px] w-[90%] rounded-[50%] border border-[#17251F]/15 rotate-[-7deg]"
+      ></div>
+
+      <div
+        class="absolute -right-[12%] top-[13%] h-[520px] w-[90%] rounded-[50%] border border-[#17251F]/10 rotate-[-7deg]"
+      ></div>
+
+      <div
+        class="absolute -left-[25%] top-[38%] h-[600px] w-[100%] rounded-[50%] border border-[#17251F]/10 rotate-[8deg]"
+      ></div>
+
+      <div
+        class="absolute -left-[20%] top-[43%] h-[600px] w-[100%] rounded-[50%] border border-[#17251F]/10 rotate-[8deg]"
+      ></div>
+
+      <div
+        class="absolute -right-[30%] top-[72%] h-[600px] w-[110%] rounded-[50%] border border-[#17251F]/10 rotate-[-5deg]"
+      ></div>
+    </div>
+
+
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+    <section
+      class="mx-auto max-w-[1400px] px-5 pb-12 pt-14 lg:px-8 lg:pb-16 lg:pt-20"
+    >
+
+      <div class="max-w-3xl">
+
+        <div
+          class="mb-5 flex items-center gap-3 text-[10px] font-semibold tracking-[0.25em] text-[#7C6C58] dark:text-[#A9B7AF]"
+        >
+          <span
+            class="h-px w-10 bg-[#17251F] dark:bg-[#79D6AA]"
+          ></span>
+
+          MERGEN ATELIER / 01
+        </div>
+
+
+        <h1
+          class="text-4xl font-bold leading-[1.35] tracking-tight sm:text-5xl lg:text-6xl"
+        >
+          سبد خرید
+        </h1>
+
+
+        <p
+          class="mt-5 max-w-2xl text-sm leading-8 text-[#7C6C58] sm:text-base dark:text-[#A9B7AF]"
+        >
+          انتخاب‌های شما اینجا جمع شده‌اند؛ از انتخاب محصول تا ساخت و اجرای
+          نهایی، مرگن کنار شماست تا تجربه‌ای دقیق و متفاوت شکل بگیرد.
+        </p>
+
+
+        
+<!-- Hero chips -->
+<div class="mt-7 flex flex-wrap gap-2.5">
+
+  <!-- انتخاب‌های شما -->
+  <span
+    class="group relative isolate overflow-hidden rounded-full border border-[#17251F]/15 bg-white/75 px-4 py-2.5 text-xs text-[#7C6C58] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:border-[#79D6AA] hover:text-[#17251F] dark:border-white/10 dark:bg-white/5 dark:text-[#A9B7AF]"
+  >
+    <span
+      class="absolute inset-0 z-0 translate-x-full bg-[#79D6AA] transition-transform duration-700 ease-out group-hover:translate-x-0"
+    ></span>
+
+    <span class="relative z-10">
+      انتخاب‌های شما
+    </span>
+  </span>
+
+
+  <!-- ساخت و اجرای سفارشی -->
+  <span
+    class="group relative isolate overflow-hidden rounded-full border border-[#17251F]/15 bg-white/75 px-4 py-2.5 text-xs text-[#7C6C58] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:border-[#79D6AA] hover:text-[#17251F] dark:border-white/10 dark:bg-white/5 dark:text-[#A9B7AF]"
+  >
+    <span
+      class="absolute inset-0 z-0 translate-x-full bg-[#79D6AA] transition-transform duration-700 ease-out group-hover:translate-x-0"
+    ></span>
+
+    <span class="relative z-10">
+      ساخت و اجرای سفارشی
+    </span>
+  </span>
+
+
+  <!-- هماهنگی مستقیم با مرگن -->
+  <span
+    class="group relative isolate overflow-hidden rounded-full border border-[#17251F]/15 bg-white/75 px-4 py-2.5 text-xs text-[#7C6C58] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:border-[#79D6AA] hover:text-[#17251F] dark:border-white/10 dark:bg-white/5 dark:text-[#A9B7AF]"
+  >
+    <span
+      class="absolute inset-0 z-0 translate-x-full bg-[#79D6AA] transition-transform duration-700 ease-out group-hover:translate-x-0"
+    ></span>
+
+    <span class="relative z-10">
+      هماهنگی مستقیم با مرگن
+    </span>
+  </span>
+
+</div>
+
+
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         CART CONTENT
+    ======================================================== -->
+    <section
+      class="mx-auto max-w-[1400px] px-5 pb-20 lg:px-8"
+    >
+
+      <div
+        class="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_390px]"
+      >
+
+        <!-- ===================================================
+             PRODUCTS
+        ==================================================== -->
+        <div>
+
+          <div
+            class="mb-5 flex items-center justify-between gap-4"
+          >
+
+            <div>
+              <p
+                id="cartCountLabel"
+                class="text-sm font-semibold"
+              >
+                محصولات سبد خرید
+              </p>
+
+              <p
+                class="mt-1 text-xs text-[#7C6C58] dark:text-[#A9B7AF]"
+              >
+                انتخاب‌های شما برای ادامه فرایند
+              </p>
+            </div>
+
+
+            <button
+              id="clearCartBtn"
+              type="button"
+              class="rounded-full px-4 py-2 text-xs text-[#7C6C58] transition-all duration-300 hover:bg-black/5 hover:text-red-600 dark:hover:bg-white/5"
+            >
+              حذف همه
+            </button>
+
+          </div>
+
+
+          <!-- Cart items -->
+          <div
+            id="cartItems"
+            class="space-y-4"
+          ></div>
+
+
+          <!-- Empty state -->
+          <div
+            id="emptyCart"
+            class="hidden overflow-hidden rounded-[28px] border border-black/[0.07] bg-white/75 p-8 text-center shadow-[0_25px_70px_rgba(36,28,21,.06)] backdrop-blur-xl sm:p-14 dark:border-white/[0.08] dark:bg-white/[0.035]"
+          >
+
+            <div
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#17251F] text-2xl text-white shadow-xl"
+            >
+              M
+            </div>
+
+            <h2
+              class="mt-7 text-xl font-bold"
+            >
+              سبد خرید شما خالی است
+            </h2>
+
+            <p
+              class="mx-auto mt-3 max-w-md text-sm leading-7 text-[#7C6C58] dark:text-[#A9B7AF]"
+            >
+              هنوز محصولی به سبد اضافه نکرده‌اید. می‌توانید به مجموعه مرگن
+              برگردید و انتخاب خود را انجام دهید.
+            </p>
+
+            <div
+              class="mt-7 flex flex-col justify-center gap-3 sm:flex-row"
+            >
+
+              <a
+                href="collection.html"
+                class="rounded-full bg-[#17251F] px-7 py-3 text-xs font-semibold text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                مشاهده مجموعه
+              </a>
+
+              <button
+                id="demoProductBtn"
+                type="button"
+                class="rounded-full border border-black/10 bg-white px-7 py-3 text-xs font-semibold transition-all duration-500 hover:-translate-y-0.5 hover:border-[#17251F] hover:bg-[#17251F] hover:text-white dark:border-white/10 dark:bg-white/5"
+              >
+                افزودن محصول نمونه برای تست
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ===================================================
+             SUMMARY
+        ==================================================== -->
+        <aside
+          class="relative overflow-hidden rounded-[30px] bg-[#17251F] p-6 text-white shadow-[0_30px_100px_rgba(23,37,31,.25)] sm:p-7"
+        >
+
+          <!-- Soft light -->
+          <div
+            class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#79D6AA]/20 blur-[80px]"
+          ></div>
+
+          <div
+            class="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-white/10 blur-[90px]"
+          ></div>
+
+
+          <!-- Decorative line -->
+          <div
+            class="absolute right-0 top-10 h-px w-24 bg-gradient-to-l from-[#79D6AA]/80 to-transparent"
+          ></div>
+
+
+          <div class="relative z-10">
+
+            <p
+              class="text-[10px] font-semibold tracking-[0.25em] text-[#79D6AA]"
+            >
+              MERGEN / ORDER
+            </p>
+
+            <h2
+              class="mt-3 text-xl font-bold"
+            >
+              خلاصه سفارش
+            </h2>
+
+
+            <div
+              class="my-7 h-px bg-white/10"
+            ></div>
+
+
+            <!-- Subtotal -->
+            <div
+              class="flex items-center justify-between gap-4 text-sm"
+            >
+              <span class="text-white/60">
+                مبلغ محصولات
+              </span>
+
+              <strong
+                id="subtotal"
+                class="font-semibold"
+              >
+                ۰ تومان
+              </strong>
+            </div>
+
+
+            <!-- Discount -->
+            <div
+              class="mt-4 flex items-center justify-between gap-4 text-sm"
+            >
+              <span class="text-white/60">
+                تخفیف
+              </span>
+
+              <strong
+                id="discount"
+                class="font-semibold text-[#79D6AA]"
+              >
+                ۰ تومان
+              </strong>
+            </div>
+
+
+            <!-- Shipping -->
+            <div
+              class="mt-4 flex items-center justify-between gap-4 text-sm"
+            >
+              <span class="text-white/60">
+                هماهنگی ارسال
+              </span>
+
+              <span
+                class="text-xs text-white/80"
+              >
+                پس از ثبت سفارش
+              </span>
+            </div>
+
+
+            <div
+              class="my-7 h-px bg-white/10"
+            ></div>
+
+
+            <!-- Coupon -->
+            <div>
+
+              <label
+                for="couponInput"
+                class="mb-2 block text-xs text-white/60"
+              >
+                کد تخفیف
+              </label>
+
+              <div
+                class="flex overflow-hidden rounded-2xl border border-white/10 bg-black/10 p-1"
+              >
+
+                <input
+                  id="couponInput"
+                  type="text"
+                  placeholder="مثلاً MERGEN10"
+                  class="min-w-0 flex-1 bg-transparent px-3 py-2 text-xs text-white outline-hidden placeholder:text-white/30"
+                />
+
+                <button
+                  id="couponBtn"
+                  type="button"
+                  class="rounded-xl bg-white px-4 py-2 text-xs font-bold text-[#17251F] transition-all duration-300 hover:bg-[#79D6AA]"
+                >
+                  اعمال
+                </button>
+
+              </div>
+
+              <p
+                id="couponMessage"
+                class="mt-2 min-h-4 text-[10px] text-[#79D6AA]"
+              ></p>
+
+            </div>
+
+
+            <!-- Total -->
+            <div
+              class="mt-5 rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+            >
+
+              <div
+                class="flex items-end justify-between gap-4"
+              >
+
+                <div>
+                  <p class="text-xs text-white/50">
+                    مبلغ نهایی
+                  </p>
+
+                  <p
+                    class="mt-1 text-[10px] text-white/30"
+                  >
+                    قبل از پرداخت نهایی
+                  </p>
+                </div>
+
+                <strong
+                  id="total"
+                  class="text-xl font-bold text-[#79D6AA]"
+                >
+                  ۰ تومان
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <!-- Checkout -->
+            <button
+              id="checkoutBtn"
+              type="button"
+              class="group relative mt-5 w-full overflow-hidden rounded-2xl bg-white px-5 py-4 text-sm font-bold text-[#17251F] transition-all duration-500 hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-40"
+            >
+
+              <span
+                class="absolute inset-0 -translate-x-full bg-[#79D6AA] transition-transform duration-700 group-hover:translate-x-0"
+              ></span>
+
+              <span class="relative z-10">
+                ادامه و ثبت سفارش
+              </span>
+
+            </button>
+
+
+            <p
+              class="mt-4 text-center text-[10px] leading-6 text-white/40"
+            >
+              اطلاعات سفارش شما تنها برای تکمیل فرایند خرید استفاده خواهد شد.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         TRUST SECTION
+    ======================================================== -->
+    <section
+      class="mx-auto max-w-[1400px] px-5 pb-20 lg:px-8"
+    >
+
+      <div
+        class="grid gap-3 sm:grid-cols-3"
+      >
+
+        <div
+          class="rounded-2xl border border-black/[0.06] bg-white/60 p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-lg dark:border-white/[0.07] dark:bg-white/[0.035]"
+        >
+          <div
+            class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#17251F] text-white"
+          >
+            ✓
+          </div>
+
+          <h3 class="text-sm font-bold">
+            ساخت دقیق
+          </h3>
+
+          <p
+            class="mt-2 text-xs leading-6 text-[#7C6C58] dark:text-[#A9B7AF]"
+          >
+            هر محصول با توجه به جزئیات و نیاز پروژه شما بررسی و اجرا می‌شود.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-black/[0.06] bg-white/60 p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-lg dark:border-white/[0.07] dark:bg-white/[0.035]"
+        >
+          <div
+            class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#17251F] text-white"
+          >
+            ◆
+          </div>
+
+          <h3 class="text-sm font-bold">
+            هماهنگی مستقیم
+          </h3>
+
+          <p
+            class="mt-2 text-xs leading-6 text-[#7C6C58] dark:text-[#A9B7AF]"
+          >
+            برای محصولات سفارشی، قبل از پرداخت نهایی جزئیات با شما هماهنگ می‌شود.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-black/[0.06] bg-white/60 p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-lg dark:border-white/[0.07] dark:bg-white/[0.035]"
+        >
+          <div
+            class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#17251F] text-white"
+          >
+            M
+          </div>
+
+          <h3 class="text-sm font-bold">
+            تجربه مرگن
+          </h3>
+
+          <p
+            class="mt-2 text-xs leading-6 text-[#7C6C58] dark:text-[#A9B7AF]"
+          >
+            از انتخاب تا اجرای نهایی، هدف ما ساخت محصولی است که ارزش فضای شما را بیشتر کند.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         RECOMMENDATIONS
+    ======================================================== -->
+    <section
+      class="mx-auto max-w-[1400px] px-5 pb-24 lg:px-8"
+    >
+
+      <div class="mb-8">
+
+        <p
+          class="text-[10px] font-semibold tracking-[0.25em] text-[#7C6C58] dark:text-[#A9B7AF]"
+        >
+          MAYBE YOU'LL LIKE
+        </p>
+
+        <h2
+          class="mt-2 text-2xl font-bold"
+        >
+          پیشنهاد مرگن
+        </h2>
+
+      </div>
+
+
+      <div
+        class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      >
+
+        <!-- Recommendation 1 -->
+        <a
+          href="product.html?id=aura-console"
+          class="group overflow-hidden rounded-[26px] border border-black/[0.06] bg-white/70 backdrop-blur-xl transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(36,28,21,.10)] dark:border-white/[0.08] dark:bg-white/[0.035]"
+        >
+
+          <div class="aspect-[4/3] overflow-hidden">
+
+            <img
+              src="assets/products/aura-01.webp"
+              alt="میز کنسول آورا"
+              class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+
+          </div>
+
+          <div class="p-5">
+
+            <p
+              class="text-[10px] text-[#7C6C58] dark:text-[#A9B7AF]"
+            >
+              میز کنسول
+            </p>
+
+            <h3
+              class="mt-2 text-base font-bold"
+            >
+              میز کنسول آورا
+            </h3>
+
+            <p
+              class="mt-1 text-[10px] tracking-[0.18em] text-[#7C6C58] dark:text-[#A9B7AF]"
+            >
+              AURA CONSOLE
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- Recommendation 2 -->
+        <a
+          href="collection.html"
+          class="group flex min-h-[250px] flex-col justify-between overflow-hidden rounded-[26px] border border-black/[0.06] bg-[#F6E2C2] p-6 transition-all duration-700 hover:-translate-y-1 hover:shadow-xl dark:border-white/[0.08] dark:bg-white/[0.045]"
+        >
+
+          <div>
+
+            <p
+              class="text-[10px] font-semibold tracking-[0.2em] text-[#7C6C58] dark:text-[#A9B7AF]"
+            >
+              COLLECTION
+            </p>
+
+            <h3
+              class="mt-4 max-w-xs text-xl font-bold leading-8"
+            >
+              مجموعه کامل مرگن را ببینید
+            </h3>
+
+          </div>
+
+          <div
+            class="flex items-center justify-between"
+          >
+
+            <span
+              class="text-xs text-[#7C6C58] dark:text-[#A9B7AF]"
+            >
+              مشاهده مجموعه
+            </span>
+
+            <span
+              class="flex h-11 w-11 items-center justify-center rounded-full bg-[#17251F] text-white transition-transform duration-500 group-hover:-translate-x-1"
+            >
+              ←
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- Recommendation 3 -->
+        <div
+          class="flex min-h-[250px] flex-col justify-between overflow-hidden rounded-[26px] bg-[#17251F] p-6 text-white shadow-[0_25px_70px_rgba(23,37,31,.18)]"
+        >
+
+          <div>
+
+            <p
+              class="text-[10px] font-semibold tracking-[0.2em] text-[#79D6AA]"
+            >
+              CUSTOM
+            </p>
+
+            <h3
+              class="mt-4 text-xl font-bold leading-8"
+            >
+              محصولی که دقیقاً برای فضای شما ساخته شود.
+            </h3>
+
+          </div>
+
+          <p
+            class="text-xs leading-6 text-white/55"
+          >
+            برای پروژه‌های سفارشی، پیش از ثبت نهایی سفارش با مرگن هماهنگ کنید.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       CHECKOUT MODAL
+  ========================================================== -->
+  <div
+    id="checkoutModal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 p-4 backdrop-blur-md"
+  >
+
+    <div
+      id="checkoutPanel"
+      class="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-[30px] border border-black/10 bg-[#FBF0DD] p-6 shadow-[0_40px_120px_rgba(0,0,0,.30)] sm:p-8 dark:border-white/10 dark:bg-[#09120F]"
+    >
+
+      <!-- Close -->
+      <button
+        id="closeCheckout"
+        type="button"
+        class="absolute left-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-sm transition-all duration-300 hover:bg-[#17251F] hover:text-white dark:bg-white/5"
+      >
+        ×
+      </button>
+
+
+      <p
+        class="text-[10px] font-semibold tracking-[0.25em] text-[#7C6C58] dark:text-[#79D6AA]"
+      >
+        MERGEN CHECKOUT
+      </p>
+
+      <h2
+        class="mt-3 text-2xl font-bold"
+      >
+        ثبت سفارش
+      </h2>
+
+
+      <!-- Steps -->
+      <div
+        class="mt-7 grid grid-cols-3 gap-2"
+      >
+
+        <div
+          id="stepIndicator1"
+          class="rounded-xl bg-[#17251F] px-3 py-2 text-center text-[10px] font-semibold text-white"
+        >
+          ۱. اطلاعات
+        </div>
+
+        <div
+          id="stepIndicator2"
+          class="rounded-xl bg-black/5 px-3 py-2 text-center text-[10px] text-[#7C6C58] dark:bg-white/5 dark:text-[#A9B7AF]"
+        >
+          ۲. ارسال
+        </div>
+
+        <div
+          id="stepIndicator3"
+          class="rounded-xl bg-black/5 px-3 py-2 text-center text-[10px] text-[#7C6C58] dark:bg-white/5 dark:text-[#A9B7AF]"
+        >
+          ۳. پرداخت
+        </div>
+
+      </div>
+
+
+      <!-- Step 1 -->
+      <div
+        id="checkoutStep1"
+        class="mt-8"
+      >
+
+        <div class="grid gap-4 sm:grid-cols-2">
+
+          <label class="block">
+            <span class="mb-2 block text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+              نام و نام خانوادگی
+            </span>
+
+            <input
+              id="customerName"
+              type="text"
+              class="w-full rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm outline-hidden transition-all duration-300 focus:border-[#17251F] focus:ring-2 focus:ring-[#17251F]/10 dark:border-white/10 dark:bg-white/5"
+              placeholder="نام شما"
+            />
+          </label>
+
+
+          <label class="block">
+            <span class="mb-2 block text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+              شماره تماس
+            </span>
+
+            <input
+              id="customerPhone"
+              type="tel"
+              class="w-full rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm outline-hidden transition-all duration-300 focus:border-[#17251F] focus:ring-2 focus:ring-[#17251F]/10 dark:border-white/10 dark:bg-white/5"
+              placeholder="09xxxxxxxxx"
+            />
+          </label>
+
+        </div>
+
+
+        <label class="mt-4 block">
+          <span class="mb-2 block text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+            توضیحات سفارش
+          </span>
+
+          <textarea
+            id="customerNote"
+            rows="4"
+            class="w-full resize-none rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm outline-hidden transition-all duration-300 focus:border-[#17251F] focus:ring-2 focus:ring-[#17251F]/10 dark:border-white/10 dark:bg-white/5"
+            placeholder="اگر نکته‌ای درباره سفارش دارید..."
+          ></textarea>
+        </label>
+
+
+        <button
+          id="toStep2"
+          type="button"
+          class="mt-6 w-full rounded-2xl bg-[#17251F] px-5 py-4 text-sm font-bold text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          ادامه
+        </button>
+
+      </div>
+
+
+      <!-- Step 2 -->
+      <div
+        id="checkoutStep2"
+        class="mt-8 hidden"
+      >
+
+        <label class="block">
+
+          <span class="mb-2 block text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+            آدرس
+          </span>
+
+          <textarea
+            id="customerAddress"
+            rows="4"
+            class="w-full resize-none rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm outline-hidden transition-all duration-300 focus:border-[#17251F] focus:ring-2 focus:ring-[#17251F]/10 dark:border-white/10 dark:bg-white/5"
+            placeholder="آدرس کامل..."
+          ></textarea>
+
+        </label>
+
+
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+
+          <label class="block">
+
+            <span class="mb-2 block text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+              شهر
+            </span>
+
+            <input
+              id="customerCity"
+              type="text"
+              class="w-full rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm outline-hidden focus:border-[#17251F] dark:border-white/10 dark:bg-white/5"
+              placeholder="شهر"
+            />
+
+          </label>
+
+
+          <label class="block">
+
+            <span class="mb-2 block text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+              کد پستی
+            </span>
+
+            <input
+              id="customerPostal"
+              type="text"
+              class="w-full rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm outline-hidden focus:border-[#17251F] dark:border-white/10 dark:bg-white/5"
+              placeholder="کد پستی"
+            />
+
+          </label>
+
+        </div>
+
+
+        <div class="mt-6 flex gap-3">
+
+          <button
+            id="backToStep1"
+            type="button"
+            class="flex-1 rounded-2xl border border-black/10 bg-white/70 px-5 py-4 text-sm font-semibold transition-all duration-300 hover:bg-black/5 dark:border-white/10 dark:bg-white/5"
+          >
+            برگشت
+          </button>
+
+          <button
+            id="toStep3"
+            type="button"
+            class="flex-[2] rounded-2xl bg-[#17251F] px-5 py-4 text-sm font-bold text-white transition-all duration-500 hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            ادامه
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Step 3 -->
+      <div
+        id="checkoutStep3"
+        class="mt-8 hidden"
+      >
+
+        <div
+          class="rounded-2xl border border-[#17251F]/10 bg-white/60 p-5 dark:border-white/10 dark:bg-white/5"
+        >
+
+          <div
+            class="flex items-center justify-between"
+          >
+
+            <span class="text-xs text-[#7C6C58] dark:text-[#A9B7AF]">
+              مبلغ قابل پرداخت
+            </span>
+
+            <strong
+              id="checkoutTotal"
+              class="text-lg font-bold text-[#17251F] dark:text-[#79D6AA]"
+            >
+              ۰ تومان
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="mt-5 rounded-2xl bg-[#17251F] p-5 text-white"
+        >
+
+          <p
+            class="text-xs font-semibold text-[#79D6AA]"
+          >
+            پرداخت آنلاین
+          </p>
+
+          <p
+            class="mt-2 text-xs leading-6 text-white/55"
+          >
+            در نسخه نهایی، این بخش به درگاه پرداخت متصل خواهد شد.
+          </p>
+
+        </div>
+
+
+        <div class="mt-6 flex gap-3">
+
+          <button
+            id="backToStep2"
+            type="button"
+            class="flex-1 rounded-2xl border border-black/10 bg-white/70 px-5 py-4 text-sm font-semibold transition-all duration-300 hover:bg-black/5 dark:border-white/10 dark:bg-white/5"
+          >
+            برگشت
+          </button>
+
+          <button
+            id="finalPayment"
+            type="button"
+            class="flex-[2] rounded-2xl bg-[#17251F] px-5 py-4 text-sm font-bold text-white transition-all duration-500 hover:-translate-y-0.5 hover:bg-[#1C4B3D] hover:shadow-xl"
+          >
+            پرداخت و ثبت سفارش
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       TOAST
+  ========================================================== -->
+  <div
+    id="toast"
+    class="pointer-events-none fixed bottom-5 left-1/2 z-[200] hidden -translate-x-1/2 translate-y-4 rounded-full bg-[#17251F] px-5 py-3 text-xs font-medium text-white opacity-0 shadow-2xl transition-all duration-500"
+  >
+    انجام شد
+  </div>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+  </body>
+</html>
+```

@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html data-page="home" class="scroll-smooth" dir="rtl" lang="fa">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>MERGEN Furniture | طراحی، ساخت و اجرای مبلمان و دکوراسیون</title>
+    <meta content="مرگن؛ طراحی، ساخت و اجرای مبلمان، سرویس خواب و دکوراسیون داخلی سفارشی." name="description">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
+    <link href="./css/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="./css/vendor/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    <script src="./js/vendor/jquery.min.js"></script>
+    <script src="./js/vendor/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <!-- 01 HEADER -->
+        <header class="h-[94px] bg-(color:--surface) border-b-[2px] [border-bottom-style:solid] border-b-(color:--line) relative z-[1000]">
+            <div class="hdr-inner m-auto gap-[35px] h-full w-[min(1400px,calc(100%_-_70px))] flex items-center mx900:w-[calc(100%_-_28px)] mx900:justify-between">
+                <button aria-label="menu"
+                    class="border-0 border-none w-[48px] h-[48px] rounded-[50%] bg-[#050505] text-[#fff] grid place-items-center cursor-pointer [transition:.3s] hover:bg-(color:--brand-green) hover:[transform:rotate(90deg)]"
+                    id="menuButton">
+                    <span class="gap-[5px] w-[20px] flex flex-col"><i class="c-i"></i><i class="c-i"></i><i
+                            class="c-i"></i></span>
+                </button>
+                <a class="hdr-logo w-[165px] [flex:none] text-center [direction:ltr] leading-[.9] mx900:w-auto" href="#top">
+                    <b
+                        class="not-italic font-bold text-[29px] leading-[normal] font-[family-name:Arial] tracking-[-1.8px] mx900:text-[24px]">MERGEN</b>
+                    <small
+                        class="block not-italic font-normal text-[14px] leading-[normal] font-[family-name:Arial] tracking-[2px] mt-[5px] mx900:text-[10px]">Furniture</small>
+                </a>
+                <nav class="hdr-nav gap-[27px] [flex:1] flex justify-center mx900:gap-[12px] mx900:hidden">
+                    <button class="mega-nav c-mega-nav" data-mega="living">مبلمان</button>
+                    <button class="mega-nav c-mega-nav" data-mega="bedroom">سرویس خواب</button>
+                    <button class="mega-nav c-mega-nav" data-mega="products">سرویس ناهارخوری</button>
+                    <button class="mega-nav c-mega-nav" data-mega="tables">انواع میز</button>
+                    <button class="mega-nav c-mega-nav" data-mega="interior">کنسول و استند</button>
+                    <a href="#collection" class="c-a">محصولات سفارشی</a>
+                </nav>
+                <div class="hdr-icons gap-[20px] flex items-center [direction:ltr] mx900:hidden">
+                    <button data-search class="c-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="lang-toggle c-lang" aria-label="Language" title="English">
+                        <i class="fa-solid fa-globe"></i><span class="lang-label">EN</span>
+                    </button>
+                    <button id="themeToggle" class="c-button"><i class="fa-regular fa-moon"></i></button>
+                    <button data-href="wishlist.html" class="c-button hdr-opt"><i class="fa-regular fa-heart"></i></button>
+                    <button data-href="login.html" class="c-button hdr-opt"><i class="fa-regular fa-user"></i></button>
+                    <button data-href="https://www.google.com/maps/search/?api=1&amp;query=Gonbad%20Kavus" data-blank class="c-button hdr-opt"><i class="fa-solid fa-location-dot"></i></button>
+                    <button data-call="+989119725419" class="c-button"><i class="fa-solid fa-phone"></i></button>
+                    <button data-href="cart.html" class="c-button"><i class="fa-solid fa-bag-shopping"></i>
+                        <span class="absolute right-[-9px] top-[-8px] w-[15px] h-[15px] rounded-[50%] bg-(color:--brand-green) text-[#fff] not-italic font-normal text-[9px] leading-[normal] font-[family-name:Arial] grid place-items-center">0</span>
+                    </button>
+                </div>
+                <button
+                    class="hidden mx900:border-0 mx900:border-none mx900:grid mx900:place-items-center mx900:w-[43px] mx900:h-[43px] mx900:rounded-[50%] mx900:bg-[#111] mx900:text-[#fff]"
+                    id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+        <div class="[&.open]:opacity-100 [&.open]:visible inset-0 opacity-0 invisible fixed bg-[#0007] z-[900] [transition:.3s]" id="megaOverlay">
+        </div>
+        <div id="sideOverlay" class="fixed inset-0 z-[4990] bg-black/55 backdrop-blur-[3px] opacity-0 invisible [transition:opacity_.35s_ease,visibility_0s_linear_.35s] [&.open]:opacity-100 [&.open]:visible [&.open]:[transition:opacity_.35s_ease,visibility_0s]">
+        </div>
+        <aside id="sideMenu" aria-hidden="true" aria-label="منوی اصلی"
+            class="fixed top-0 right-0 z-[5000] h-full w-[min(410px,88vw)] flex flex-col overflow-y-auto bg-(color:--surface) text-(color:--ink) border-l border-(color:--line) shadow-[-30px_0_80px_rgba(0,0,0,.35)] translate-x-full invisible [transition:translate_.55s_cubic-bezier(.2,.8,.2,1),visibility_0s_linear_.55s] [&.open]:translate-x-0 [&.open]:visible [&.open]:[transition:translate_.55s_cubic-bezier(.2,.8,.2,1),visibility_0s]">
+            <div class="flex items-center justify-between h-[94px] shrink-0 px-[28px] border-b border-(color:--line)">
+                <a href="#top" class="[direction:ltr] text-center leading-[.9]"><b
+                        class="block text-[26px] font-bold tracking-[-1.5px] font-[family-name:Arial]">MERGEN</b><small
+                        class="block mt-[4px] text-[12px] tracking-[2px] font-[family-name:Arial]">Furniture</small></a>
+                <button id="sideClose" aria-label="بستن منو" class="c-side-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="flex flex-col flex-1 px-[28px] py-[10px]">
+                <a href="#top" class="c-side-link"><span class="c-side-num">01</span><span>خانه</span></a>
+                <a href="#slider01" class="c-side-link"><span class="c-side-num">02</span><span>مبلمان</span></a>
+                <a href="#layers" class="c-side-link"><span class="c-side-num">03</span><span>سرویس خواب</span></a>
+                <a href="#mergen-v3" class="c-side-link"><span class="c-side-num">04</span><span>سرویس ناهارخوری</span></a>
+                <a href="#slider02" class="c-side-link"><span class="c-side-num">05</span><span>انواع میز</span></a>
+                <a href="#collection" class="c-side-link"><span class="c-side-num">06</span><span>کنسول و استند</span></a>
+                <a href="#slider03" class="c-side-link"><span class="c-side-num">07</span><span>محصولات سفارشی</span></a>
+                <a href="#about" class="c-side-link"><span class="c-side-num">08</span><span>درباره‌ی مرگن</span></a>
+                <a href="#faq" class="c-side-link"><span class="c-side-num">09</span><span>سوالات متداول</span></a>
+                <a href="#contact" class="c-side-link"><span class="c-side-num">10</span><span>تماس با ما</span></a>
+            </nav>
+            <div class="shrink-0 flex flex-col gap-[16px] p-[28px] border-t border-(color:--line)">
+                <a href="#contact" class="side-cta c-side-cta">تماس با ما</a>
+                <div class="flex items-center justify-between">
+                    <small class="text-[11px] tracking-[2px] opacity-60 [direction:ltr] font-[family-name:Arial]">MERGEN
+                        FURNITURE</small>
+                    <div class="flex items-center gap-[10px] [direction:ltr]">
+                        <button class="lang-toggle c-lang" aria-label="Language" title="English"><i
+                                class="fa-solid fa-globe"></i><span class="lang-label">EN</span></button>
+                        <button id="themeToggleSide" class="c-button" aria-label="Theme"><i
+                                class="fa-regular fa-moon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="[&.open]:opacity-100 [&.open]:visible [&.open]:[transform:none] opacity-0 invisible [transform:translateY(-12px)] top-[94px] absolute left-0 w-full bg-[#f8f5ed] border-b-[1px] [border-bottom-style:solid] border-b-[#111] shadow-[0_20px_50px_#0002] z-[950] [transition:.3s] mx900:top-[94px] dark:border-[#52625a] dark:bg-[#0b1713] dark:text-[#f5f7f5]" id="megaMenu">
+            <div class="mega-inner m-auto px-0 gap-[50px] grid-cols-[1.2fr_1fr_1fr_1fr] w-[min(1400px,calc(100%_-_100px))] pt-[45px] pb-[50px] grid mx900:py-[25px] mx900:px-0 mx900:gap-[25px] mx900:grid-cols-[1fr_1fr] mx900:w-[calc(100%_-_40px)]">
+                <div class="mx900:[grid-column:1/-1] p-[30px] min-h-[235px] text-[#fff] bg-[image:linear-gradient(135deg,#143b32df,#0005),url('../img/placeholders/ph-6.svg')] bg-[position:0%_0%,center] bg-[length:auto,cover] flex flex-col justify-end light:bg-[image:linear-gradient(135deg,rgba(255,106,77,.86),rgba(20,15,10,.35)),url('../img/placeholders/ph-6.svg')] light:bg-[position:0%_0%,center] light:bg-[length:auto,cover]">
+                    <small id="megaKicker">Mergen Furniture / COLLECTION</small>
+                    <h3 id="megaTitle" class="my-[8px] mx-0 not-italic font-normal text-[29px] leading-[1.25] font-[family-name:Georgia]">طراحی
+                        برای<br>زندگی متفاوت
+                    </h3>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol1Title" class="c-h4">مبلمان</h4>
+                    <div id="megaCol1"></div>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol2Title" class="c-h4">سرویس خواب</h4>
+                    <div id="megaCol2"></div>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol3Title" class="c-h4">سرویس ناهارخوری</h4>
+                    <div id="megaCol3"></div>
+                </div>
+                <div class="mega-col">
+                    <h4 id="megaCol4Title" class="c-h4">انواع میز</h4>
+                    <div id="megaCol4"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="section-nav h-[72px] bg-[#fff] relative z-[850] border-b-[1px] [border-bottom-style:solid] border-b-[#eee] mx900:overflow-auto mx900:h-[62px] dark:border-[#26332e] dark:bg-[rgba(11,10,8,.92)]">
+            <div
+                class="m-auto gap-[25px] w-[min(1200px,calc(100%_-_70px))] h-full flex items-center justify-between mx900:py-0 mx900:px-[15px] mx900:gap-[5px] mx900:w-max mx900:justify-start mx900:min-w-full">
+                <a href="#layers" class="c-a-2">Kitchen / آشپزخانه</a>
+                <a href="#layers" class="c-a-2">Bedroom / اتاق خواب</a>
+                <a href="#layers" class="c-a-2">Livingroom / اتاق پذیرایی</a>
+                <a href="#layers" class="c-a-2">Closetroom / اتاق لباس</a>
+                <a href="#layers" class="c-a-2">Childroom / اتاق کودک</a>
+                <a href="#layers" class="c-a-2">StoreDecor / دکور فروشگاه</a>
+            </div>
+        </nav>
+        <header class="fixed top-0 left-0 w-full h-[68px] bg-[color-mix(in_srgb,var(--surface)_96%,transparent)] [backdrop-filter:blur(14px)] border-b-[1px] [border-bottom-style:solid] border-b-(color:--line) z-[1500] [transform:translateY(-110%)] opacity-0 pointer-events-none [transition:.4s] text-(color:--ink) [&.show]:[transform:none] [&.show]:opacity-100 [&.show]:pointer-events-auto" id="sticky">
+            <div class="m-auto gap-[30px] w-[min(1400px,calc(100%_-_70px))] h-full flex items-center mx800:justify-between">
+                <a class="not-italic font-bold text-[23px] leading-[normal] font-[family-name:Arial] tracking-[-1px] [direction:ltr] w-auto flex items-center gap-[10px]"
+                    href="#top">MERGEN<img src="img/logo.jpg" alt="" class="h-[36px] w-[36px] rounded-full object-cover"></a>
+                <nav class="gap-[28px] [flex:1] flex justify-center">
+                    <a href="#slider01" class="c-sticky-link">مبلمان</a>
+                    <a href="#layers" class="c-sticky-link">سرویس خواب</a>
+                    <a href="#slider01" class="c-sticky-link">سرویس ناهارخوری</a>
+                    <a href="#slider02" class="c-sticky-link">انواع میز</a>
+                    <a href="#collection" class="c-sticky-link">کنسول و جاکفشی</a>
+                    <a href="#faq" class="c-sticky-link">محصولات سفارشی</a>
+                </nav>
+                <div class="gap-[18px] flex [direction:ltr]">
+                    <button data-search class="c-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="lang-toggle c-lang" aria-label="Language" title="English"><i
+                            class="fa-solid fa-globe"></i><span class="lang-label">EN</span></button>
+                    <button id="themeToggleSticky" class="c-button"><i class="fa-regular fa-moon"></i></button>
+                    <button data-href="login.html" class="c-button"><i class="fa-regular fa-user"></i></button>
+                    <button data-href="cart.html" class="c-button"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+            </div>
+        </header>
+    <main id="top">
+        <!-- 01 HERO -->
+        <section id="mergen-hero-slider" class="min-h-[calc(100svh_-_166px)] bg-[#050908] text-[#fff]">
+            <div class="mergen-hero owl-carousel">
+                <article class="mergen-slide c-mergen-slide"
+                    data-desc="مشاهده فرم، متریال و عملکرد را در یک تجربه واحد."
+                    data-kicker="پروژه مسکونی" data-title="فضا برای زندگی کردن">
+                    <div class="slide-bg c-slide-bg" style="background-image:url('./img/hero1.png')"></div>
+                    <div class="c-div">
+                        <div class="hero-kicker c-hero-kicker">پروژه مسکونی</div>
+                        <h1 class="hero-title c-hero-title">فضاهایی برای<br><span class="text-[#55d59f]">زندگی کردن.</span></h1>
+                        <p class="hero-desc c-hero-desc">طراحی، ساخت و اجرای مبلمان و دکوراسیون داخلی با رویکردی مدرن، دقیق و
+                            ماندگار.</p>
+                        <a class="c-a-3" href="#collection">مشاهده پروژه‌ها ←</a>
+                    </div>
+                </article>
+                <article class="mergen-slide c-mergen-slide"
+                    data-desc="ترکیب چوب، نور و خطوط ساده برای ساخت فضایی گرم " data-kicker="طراحی داخلی"
+                    data-title="فضا برای آسایش روان">
+                    <div class="slide-bg c-slide-bg" style="background-image:url('./img/hero2.png')"></div>
+                    <div class="c-div">
+                        <div class="hero-kicker c-hero-kicker">طراحی داخلی</div>
+                        <h1 class="hero-title c-hero-title">سادگی،<br><span class="text-[#55d59f]">با جزئیات.</span></h1>
+                        <p class="hero-desc c-hero-desc">از طراحی اولیه تا تولید و اجرای نهایی، همه‌چیز با یک نگاه یکپارچه پیش
+                            می‌رود.</p>
+                        <a class="c-a-3" href="#layers">کشف فضا ←</a>
+                    </div>
+                </article>
+                <article class="mergen-slide c-mergen-slide" data-desc="طراحی و اجرای یکپارچه برای ایجاد هویت بصری متمایز."
+                    data-kicker="پروژه مسکونی" data-title="فضا برای باهم بودن">
+                    <div class="slide-bg c-slide-bg" style="background-image:url('./img/hero3.png')"></div>
+                    <div class="c-div">
+                        <div class="hero-kicker c-hero-kicker">پروژه تجاری</div>
+                        <h1 class="hero-title c-hero-title">هویت،<br><span class="text-[#55d59f]">در فضا.</span></h1>
+                        <p class="hero-desc c-hero-desc">برای فروشگاه، دفتر یا پروژه تجاری؛ طراحی‌ای که دیده می‌شود و در ذهن
+                            می‌ماند.</p>
+                        <a class="c-a-3" href="#collection">پروژه‌ها ←</a>
+                    </div>
+                </article>
+                <article class="mergen-slide c-mergen-slide" data-desc="جزئیات دقیق، نورپردازی هدفمند و اجرای سفارشی."
+                    data-kicker="پروژه تجاری" data-title="فضا برای تصمیم گیری">
+                    <div class="slide-bg c-slide-bg" style="background-image:url('./img/hero4.png')"></div>
+                    <div class="c-div">
+                        <div class="hero-kicker c-hero-kicker">مبلمان سفارشی</div>
+                        <h1 class="hero-title c-hero-title">یک اتاق،<br><span class="text-[#55d59f]">یک شخصیت.</span></h1>
+                        <p class="hero-desc c-hero-desc">مبلمان و عناصر دکوراتیو متناسب با ابعاد، سبک و نیاز واقعی شما.</p>
+                        <a class="c-a-3" href="#slider01">مجموعه مبلمان ←</a>
+                    </div>
+                </article>
+                <article class="mergen-slide c-mergen-slide" data-desc="رعابت اصول فضاسازی در طراحی استفاده از ترکیب رنگ"
+                    data-kicker="سرویس سفارشی" data-title="فضا برای ساخت آینده">
+                    <div class="slide-bg c-slide-bg" style="background-image:url('./img/hero5.png')"></div>
+                    <div class="c-div">
+                        <div class="hero-kicker c-hero-kicker">مبلمان سفارشی</div>
+                        <h1 class="hero-title c-hero-title">یک اتاق،<br><span class="text-[#55d59f]">یک شخصیت.</span></h1>
+                        <p class="hero-desc c-hero-desc">مبلمان و عناصر دکوراتیو متناسب با ابعاد، سبک و نیاز واقعی شما.</p>
+                        <a class="c-a-3" href="#slider01">مجموعه مبلمان ←</a>
+                    </div>
+                </article>
+            </div>
+            <div class="absolute inset-0 pointer-events-none bg-gradient-to-l from-black/10 via-black/40 to-black/70"></div>
+            <button
+                class="hero-nav-arrow prev absolute z-30 md:left-12 top-1/2 -translate-y-1/2 left-6 border border-[#ffffff55] border-solid w-[48px] h-[48px] text-[34px] rounded-[50%] text-[#fff] bg-[#0002] [backdrop-filter:blur(8px)] [transition:.3s] hover:border-[#55d59f] hover:text-[#55d59f] hover:[transform:scale(1.08)]">‹</button>
+            <button
+                class="hero-nav-arrow next absolute z-30 md:right-12 top-1/2 -translate-y-1/2 right-6 border border-[#ffffff55] border-solid w-[48px] h-[48px] text-[34px] rounded-[50%] text-[#fff] bg-[#0002] [backdrop-filter:blur(8px)] [transition:.3s] hover:border-[#55d59f] hover:text-[#55d59f] hover:[transform:scale(1.08)]">›</button>
+            <div class="absolute z-30 md:left-16 md:bottom-40 md:w-72 left-7 bottom-36 w-56">
+                <div class="flex justify-between mb-3">
+                    <span>
+                        <span class="text-3xl" id="slide-current">01</span>
+                        <span class="mx-2 text-white/30">/</span>
+                        <span id="slide-total">05</span>
+                    </span>
+                    <span class="text-xs text-white/40">PROJECTS</span>
+                </div>
+                <div class="h-1 bg-white/15 rounded-full overflow-hidden">
+                    <div class="h-full bg-emerald-400" id="progress"></div>
+                </div>
+            </div>
+            <div class="absolute z-30 inset-x-0 bottom-0 md:px-16 md:pb-8 px-5 pb-5">
+                <div class="flex md:gap-5 overflow-hidden gap-3" id="thumbs"></div>
+            </div>
+        </section>
+        <!-- 02 MERGEN PHILOSOPHY -->
+        <section class="mg-philosophy group/philosophy overflow-hidden relative min-h-[50vh] h-[50vh] bg-[#07100d] text-[#f5f3ee] mx700:min-h-[480px] mx700:h-[60vh]"
+            id="philosophy">
+            <div class="inset-0 absolute bg-cover bg-center [transform:translate3d(12%,0,0)_scale(1.04)] opacity-0 [transition:opacity_.9s_ease,transform_1.1s_cubic-bezier(.2,.8,.2,1)] [clip-path:inset(0)] group-[.is-active]/philosophy:opacity-100 group-[.is-active]/philosophy:[animation:mgPhilA_6.8s_cubic-bezier(.2,.75,.2,1)_both]"
+                style="background-image:url('./img/phylsophy1.jpg')"></div>
+            <div class="inset-0 absolute bg-cover bg-center [transform:translate3d(-12%,0,0)_scale(1.04)] opacity-0 [transition:opacity_.9s_ease,transform_1.1s_cubic-bezier(.2,.8,.2,1)] [clip-path:inset(0)] group-[.is-active]/philosophy:opacity-100 group-[.is-active]/philosophy:[animation:mgPhilB_6.8s_cubic-bezier(.2,.75,.2,1)_3.4s_both]"
+                style="background-image:url('./img/phylsophy2.jpg')"></div>
+            <div class="inset-0 absolute bg-[image:linear-gradient(90deg,rgba(5,12,9,.94)_0%,rgba(5,12,9,.72)_42%,rgba(5,12,9,.18)_100%)] mx700:bg-[image:linear-gradient(90deg,rgba(5,12,9,.88),rgba(5,12,9,.35))]">
+            </div>
+            <div class="m-auto py-[clamp(40px,6vw,90px)] px-[5vw] relative z-[2] h-full max-w-[1400px] flex flex-col justify-center mg-phil-copy">
+                <span
+                    class="mg-kicker block text-[10px] tracking-[.32em] text-[#79d6aa] font-semibold light:text-[#5a3b24]! light:before:bg-[#5a3b24]! before:content-none">MERGEN
+                    / PHILOSOPHY</span>
+                <h2 class="my-[16px] mx-0 text-[length:clamp(42px,6vw,86px)] leading-[1.02] font-light">فرم، عملکرد و<br><em
+                        class="not-italic text-[#79d6aa]">احساس.</em></h2>
+                <p class="max-w-[520px] text-[rgba(245,243,238,.62)] leading-[2] text-[14px]">ما فقط محصول نمی‌سازیم؛ جزئیات را
+                    طوری کنار هم قرار می‌دهیم که یک فضای واقعی و ماندگار شکل بگیرد.</p>
+                <div
+                    class="gap-[28px] flex mt-[28px] text-[10px] tracking-[.3em] text-[rgba(245,243,238,.48)] mx700:gap-[14px] mx700:flex-wrap">
+                    <span>FORM</span><span class="c-span">FUNCTION</span><span class="c-span">EMOTION</span>
+                </div>
+            </div>
+        </section>
+        <!-- 03 LAYERED SCROLL -->
+        <section id="layers">
+            <div class="layer-section" data-layer="">
+                <div class="layer-bg" style="background-image:url('./img/kitchen.webp')"></div>
+                <div class="layer-content">
+                    <div class="layer-inner">
+                        <div class="layer-no">01 / KITCHEN</div>
+                        <h2 class="layer-title">Kitchen</h2>
+                        <p class="layer-copy">خطوط تمیز، متریال ماندگار و جزئیاتی که آشپزخانه را به قلب خانه تبدیل می‌کند.</p>
+                        <div class="layer-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-section" data-layer="">
+                <div class="layer-bg" style="background-image:url('./img/livingroom.jpg')"></div>
+                <div class="layer-content">
+                    <div class="layer-inner">
+                        <div class="layer-no">02 / LIVING</div>
+                        <h2 class="layer-title">Living</h2>
+                        <p class="layer-copy">مبلمان و عناصر داخلی با تناسب دقیق برای فضایی آرام، گرم و شخصیت‌دار.</p>
+                        <div class="layer-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-section" data-layer="">
+                <div class="layer-bg" style="background-image:url('./img/bedroom.png')"></div>
+                <div class="layer-content">
+                    <div class="layer-inner">
+                        <div class="layer-no">03 / BEDROOM</div>
+                        <h2 class="layer-title">Bedroom</h2>
+                        <p class="layer-copy">اتاق خوابی که فقط زیبا نیست؛ برای استراحت، نظم و زندگی روزمره طراحی شده است.</p>
+                        <div class="layer-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-section" data-layer="">
+                <div class="layer-bg" style="background-image:url('./img/babyroom.png')"></div>
+                <div class="layer-content">
+                    <div class="layer-inner">
+                        <div class="layer-no">04 / BABYROOM</div>
+                        <h2 class="layer-title">Babyroom</h2>
+                        <p class="layer-copy">ترکیب متریال، نور و خطوط مینیمال برای یک فضای شخصی با حس هتل.</p>
+                        <div class="layer-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-section" data-layer="">
+                <div class="layer-bg" style="background-image:url('./img/meetingroom.png')"></div>
+                <div class="layer-content">
+                    <div class="layer-inner">
+                        <div class="layer-no">05 / MEETING</div>
+                        <h2 class="layer-title">Meeting</h2>
+                        <p class="layer-copy">نظم، دسترسی و زیبایی در طراحی کمد و کلوزت روم سفارشی.</p>
+                        <div class="layer-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-section" data-layer="">
+                <div class="layer-bg" style="background-image:url('./img/interior.png')"></div>
+                <div class="layer-content">
+                    <div class="layer-inner">
+                        <div class="layer-no">06 / INTERIOR</div>
+                        <h2 class="layer-title">Interior</h2>
+                        <p class="layer-copy">وقتی همه عناصر کنار هم قرار می‌گیرند، یک فضای معمولی به یک تجربه تبدیل می‌شود.</p>
+                        <div class="layer-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 04 SLIDER 01 -->
+        <section class="section-wrap" id="slider01">
+            <div class="max-w-1400 mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                    <div>
+                        <div class="eyebrow text-emerald-300">SLIDER 01 / FURNITURE</div>
+                        <h2 class="section-title text-white mt-4">فرم، برای زندگی.</h2>
+                    </div>
+                    <p class="max-w-md text-white/55 text-sm leading-8"> مدل هایی از مبلمان که می‌توانند راحتی ببخشند و فضای شما
+                        را زیبا سازند.</p>
+                </div>
+                <div class="owl-carousel" id="furnitureCarousel">
+                    <article class="furniture-card">
+                        <img alt="" src="img/mobl1.jpg">
+                        <div class="furniture-info">
+                            <div class="text-emerald-300 text-xs">01 / SOFA</div>
+                            <h3 class="text-xl mt-2">مبل مدل یک</h3>
+                            <p class="text-white/55 text-xs leading-7 mt-2">فرم نرم و ساختار دقیق برای نشیمنی ماندگار.</p>
+                        </div>
+                    </article>
+                    <article class="furniture-card">
+                        <img alt="" src="img/mobl2.jpg">
+                        <div class="furniture-info">
+                            <div class="text-emerald-300 text-xs">02 / SOFA</div>
+                            <h3 class="text-xl mt-2">مبل مدل دو</h3>
+                            <p class="text-white/55 text-xs leading-7 mt-2">جزئیاتی کوچک که شخصیت فضا را تغییر می‌دهد.</p>
+                        </div>
+                    </article>
+                    <article class="furniture-card">
+                        <img alt="" src="img/mobl3.jpg">
+                        <div class="furniture-info">
+                            <div class="text-emerald-300 text-xs">03 / SOFA</div>
+                            <h3 class="text-xl mt-2">مبل مدل سه</h3>
+                            <p class="text-white/55 text-xs leading-7 mt-2">تعادل بین حجم، کاربرد و متریال.</p>
+                        </div>
+                    </article>
+                    <article class="furniture-card">
+                        <img alt="" src="img/mobl4.jpg">
+                        <div class="furniture-info">
+                            <div class="text-emerald-300 text-xs">04 / SOFA</div>
+                            <h3 class="text-xl mt-2">مبل مدل چهار</h3>
+                            <p class="text-white/55 text-xs leading-7 mt-2">آرامش بصری و عملکرد در یک فرم یکپارچه.</p>
+                        </div>
+                    </article>
+                    <article class="furniture-card">
+                        <img alt="" src="img/mobl5.jpg">
+                        <div class="furniture-info">
+                            <div class="text-emerald-300 text-xs">05 / SOFA</div>
+                            <h3 class="text-xl mt-2">مبل مدل پنج</h3>
+                            <p class="text-white/55 text-xs leading-7 mt-2">یک عنصر ظریف برای کامل کردن ترکیب.</p>
+                        </div>
+                    </article>
+                    <article class="furniture-card">
+                        <img alt="" src="img/mobl6.jpg">
+                        <div class="furniture-info">
+                            <div class="text-emerald-300 text-xs">05 / SOFA</div>
+                            <h3 class="text-xl mt-2">مبل مدل شش</h3>
+                            <p class="text-white/55 text-xs leading-7 mt-2">یک عنصر ظریف برای کامل کردن ترکیب.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- 05 HORIZONTAL LAYERED -->
+        <section aria-label="Mergen horizontal layered" class="mg-hlayer-section" id="horizontal-layered">
+            <div class="mg-hlayer-sticky">
+                <div class="mg-hlayer-track">
+                    <article class="mg-hlayer" style="background-image:url('./img/horizontal1.jpg')">
+                        <div><small>01 / MATERIAL</small>
+                            <h4>سرویس خواب چوبی یک</h4>
+                            <p>دقت در برش، تناسب و جزئیات.</p>
+                        </div>
+                    </article>
+                    <article class="mg-hlayer" style="background-image:url('./img/horizontal2.jpg')">
+                        <div><small>02 / CRAFT</small>
+                            <h4>سرویس خواب چوبی دو</h4>
+                            <p>ساختی که فرم را به تجربه تبدیل می‌کند.</p>
+                        </div>
+                    </article>
+                    <article class="mg-hlayer" style="background-image:url('./img/horizontal3.webp')">
+                        <div><small>03 / DETAIL</small>
+                            <h4>سرویس خواب چوبی سه</h4>
+                            <p>آرامش از دل جزئیات شکل می‌گیرد.</p>
+                        </div>
+                    </article>
+                    <article class="mg-hlayer" style="background-image:url('./img/horizontal4.jpg')">
+                        <div><small>04 / SPACE</small>
+                            <h4>سرویس خواب چوبی چهار</h4>
+                            <p>فضا برای زندگی، کار و ماندن.</p>
+                        </div>
+                    </article>
+                    <article class="mg-hlayer" style="background-image:url('./img/horizontal5.jpg')">
+                        <div><small>05 / CUSTOM</small>
+                            <h4>سرویس خواب چوبی پنج</h4>
+                            <p>هر اندازه و هر نیاز، با یک راه‌حل دقیق.</p>
+                        </div>
+                    </article>
+                    <article class="mg-hlayer" style="background-image:url('./img/horizontal6.jpg')">
+                        <div><small>06 / SIGNATURE</small>
+                            <h4>سرویس خواب چوبی شش</h4>
+                            <p>ساخت سفارشی با زبان طراحی یکپارچه.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mg-hlayer-progress"><i></i></div>
+            </div>
+        </section>
+        <!-- 06 SLIDER 02 / INTERIOR DETAILS -->
+        <section class="section-wrap ms-slider02" id="slider02">
+            <div class="max-w-1400 mx-auto">
+                <div class="text-center mb-14">
+                    <div class="eyebrow text-emerald-300">SLIDER 02 / INTERIOR DETAILS</div>
+                    <h2 class="section-title mt-4">جزئیات، هویت می‌سازند.</h2>
+                </div>
+                <div class="ms-scene">
+                    <div>
+                        <div class="ms-row-title" id="msTitle1">ردیف اول</div>
+                        <div class="ms-row ms-row-1">
+                            <div class="ms-track" id="msTrack1"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ms-row-title" id="msTitle2">ردیف دوم</div>
+                        <div class="ms-row ms-row-2">
+                            <div class="ms-track" id="msTrack2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 07 SOFASPACE -->
+        <section aria-label="برند مبلمان مرگن" class="mg-material-space" id="material-space">
+            <div class="mg-ms-sticky">
+                <div class="mg-ms-copy">
+                    <span class="mg-kicker">MERGEN / SOFASPACE</span>
+                    <h2>مبلمان و <em>فضا.</em></h2>
+                    <p>با اسکرول، جدیدترین مدل های مبلمان را مشاهده کنید.</p>
+                </div>
+                <div class="mg-ms-visual">
+                    <div class="mg-ms-image" style="background-image:url('./img/workshop.jpg')"></div>
+                    <div class="mg-ms-stage">
+                        <small>01 / MATERIAL</small><strong>انتخاب متریال</strong><span>شروع با انتخاب دقیق متریال و رنگ.</span>
+                    </div>
+                    <div class="mg-ms-stage"><small>02 / DESIGN</small><strong>طراحی و اندازه‌گذاری</strong><span>فرم، ابعاد و
+                            جزئیات برای ساخت آماده می‌شوند.</span></div>
+                    <div class="mg-ms-stage"><small>03 / CNC</small><strong>برش دقیق</strong><span>قطعات با دقت بالا برای مونتاژ
+                            آماده می‌شوند.</span></div>
+                    <div class="mg-ms-stage"><small>04 / ASSEMBLY</small><strong>مونتاژ</strong><span>قطعات به یک محصول واقعی
+                            تبدیل می‌شوند.</span></div>
+                    <div class="mg-ms-stage"><small>05 / FINISH</small><strong>پرداخت نهایی</strong><span>روکش، لبه‌ها و جزئیات
+                            نهایی کامل می‌شوند.</span></div>
+                    <div class="mg-ms-stage"><small>06 / SPACE</small><strong>مبلمان در فضا</strong><span>محصول نهایی در فضای
+                            واقعی قرار می‌گیرد.</span></div>
+                </div>
+                <div class="mg-ms-progress"><i></i></div>
+            </div>
+        </section>
+        <!-- 08 ORBIT SLIDER -->
+        <section class="mg-orbit-section" id="orbit-slider">
+            <div class="mg-orbit-head">
+                <span class="mg-kicker">MERGEN / ORBIT COLLECTION</span>
+                <h2>هر نگاه، <em>یک زبان.</em></h2>
+            </div>
+            <div aria-label="Mergen orbit slider" class="mg-orbit">
+                <div class="mg-orbit-stage">
+                    <div class="mg-orbit-track">
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht17.jpg">
+                            <div><small>01</small><strong>مدل هفدهم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht18.jpg">
+                            <div><small>02</small><strong>مدل هجدهم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht19.jpg">
+                            <div><small>03</small><strong>مدل نوزدهم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht20.jfif">
+                            <div><small>04</small><strong>مدل بیستم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht21.webp">
+                            <div><small>05</small><strong>مدل بیست و یکم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht22.jfif">
+                            <div><small>06</small><strong>مدل بیست و دوم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht23.jpg">
+                            <div><small>07</small><strong>مدل بیست و سوم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht24.jfif">
+                            <div><small>08</small><strong>مدل بیست و چهارم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht25.jpg">
+                            <div><small>09</small><strong>مدل بیست و پنجم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht26.jpg">
+                            <div><small>10</small><strong>مدل بیست و ششم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht27.jfif">
+                            <div><small>11</small><strong>مدل بیست و هفتم</strong></div>
+                        </article>
+                        <article class="mg-orbit-card">
+                            <img alt="" src="./img/takht28.jpg">
+                            <div><small>12</small><strong>مدل بیست و هشتم</strong></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 09 CONTACT / SOCIALS -->
+        <section class="section-wrap c-section-wrap" id="contact">
+            <div
+                class="absolute rounded-[50%] pointer-events-none z-[-1] w-[650px] h-[650px] right-[-220px] top-[-280px] bg-[rgba(6,78,59,.22)] [filter:blur(165px)] light:bg-[rgba(255,106,77,.16)]">
+            </div>
+            <div
+                class="absolute rounded-[50%] pointer-events-none z-[-1] w-[520px] h-[520px] left-[-220px] bottom-[-300px] bg-[rgba(2,44,34,.28)] [filter:blur(150px)] light:bg-[rgba(14,168,147,.16)]">
+            </div>
+            <div class="relative max-w-[1400px] z-10">
+                <div class="mx1000:flex-col gap-[60px] [align-items:end] flex justify-between mb-[45px]">
+                    <div>
+                        <div class="eyebrow c-eyebrow">MERGEN / CONTACT</div>
+                        <h2 class="section-title c-section-title">راه‌های <span
+                                class="text-[#10b981] light:text-(color:--brown-deep)!">ارتباط</span> با مرگن.</h2>
+                    </div>
+                    <p
+                        class="m-0 max-w-[430px] text-[rgba(255,255,255,.42)] text-[13px] leading-[2.2] light:text-(color:--ink-soft)">
+                        برای مشاوره، سفارش، بازدید و هماهنگی پروژه، مسیر ارتباطی موردنظرتان را انتخاب کنید.</p>
+                </div>
+                <div
+                    class="gap-[18px] grid grid-cols-[minmax(300px,.82fr)_minmax(0,1.18fr)] items-stretch mx900:grid-cols-[1fr]">
+                    <div class="py-[10px] px-0">
+                        <div class="gap-[9px] flex flex-col h-full mx900:h-auto">
+                            <article class="group/mc-location c-article">
+                                <div class="c-div-2">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div>
+                                    <small class="c-small">MERGEN / OFFICE</small>
+                                    <h3 class="c-h3">دفتر مرگن</h3>
+                                    <p class="c-p">آدرس دفتر را اینجا وارد کنید.</p>
+                                    <a href="#" class="group/a c-a-4">مسیریابی <b class="c-b">←</b></a>
+                                </div>
+                            </article>
+                            <article class="group/mc-location c-article">
+                                <div class="c-div-2">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                <div>
+                                    <small class="c-small">MERGEN / SHOWROOM</small>
+                                    <h3 class="c-h3">فروشگاه و نمایشگاه</h3>
+                                    <p class="c-p">آدرس فروشگاه و نمایشگاه را اینجا وارد کنید.</p>
+                                    <a href="#" class="group/a c-a-4">مسیریابی <b class="c-b">←</b></a>
+                                </div>
+                            </article>
+                            <article class="group/mc-location c-article">
+                                <div class="c-div-2">
+                                    <i class="fa-solid fa-industry"></i>
+                                </div>
+                                <div>
+                                    <small class="c-small">MERGEN / WORKSHOP</small>
+                                    <h3 class="c-h3">کارگاه مرگن</h3>
+                                    <p class="c-p">آدرس کارگاه را اینجا وارد کنید.</p>
+                                    <a href="#" class="group/a c-a-4">مسیریابی <b class="c-b">←</b></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div
+                        class="p-[22px] border border-[rgba(255,255,255,.07)] border-solid rounded-[22px] bg-[image:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.008))] [backdrop-filter:blur(15px)] mx600:p-[15px] light:border-(color:--line) light:bg-[image:linear-gradient(145deg,#fff,var(--surface-2))]">
+                        <div
+                            class="px-[4px] flex justify-between items-center pt-0 pb-[16px] border-b-[1px] [border-bottom-style:solid] border-b-[rgba(255,255,255,.07)] text-[#10b981] text-[9px] tracking-[.2em] light:border-(color:--line) light:text-(color:--brown-deep)!">
+                            <span>CONNECT / 10</span>
+                            <small
+                                class="text-[rgba(255,255,255,.3)] text-[9px] tracking-[0] light:text-(color:--ink-soft)">شبکه‌های
+                                اجتماعی و پیام‌رسان‌ها</small>
+                        </div>
+                        <div class="grid grid-cols-[1fr_1fr] gap-x-[20px] mx600:grid-cols-[1fr]">
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-instagram c-fa-brands"></i><span
+                                    class="text-[11px]">Instagram</span><small class="c-small-2">@mergencnc</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-telegram c-fa-brands"></i><span
+                                    class="text-[11px]">Telegram</span><small class="c-small-2">پیام و سفارش</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-pinterest-p c-fa-brands"></i><span
+                                    class="text-[11px]">Pinterest</span><small class="c-small-2">ایده و پروژه</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-whatsapp c-fa-brands"></i><span
+                                    class="text-[11px]">WhatsApp</span><small class="c-small-2">پیام مستقیم</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-linkedin-in c-fa-brands"></i><span
+                                    class="text-[11px]">LinkedIn</span><small class="c-small-2">Mergen CO</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-brands fa-medium c-fa-brands"></i><span
+                                    class="text-[11px]">IMO</span><small class="c-small-2">ویدئوهای مرگن</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-facebook-f c-fa-brands"></i><span
+                                    class="text-[11px]">Facebook</span><small class="c-small-2">Mergen Interior</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-brands fa-viber c-fa-brands"></i><span
+                                    class="text-[11px]">Viber</span><small class="c-small-2">نمونه‌کار و آموزش</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-brands fa-youtube c-fa-brands"></i><span
+                                    class="text-[11px]">YouTube</span><small class="c-small-2">ویدئوهای مرگن</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-brands fa-weixin c-fa-brands"></i><span
+                                    class="text-[11px]">Wechat</span><small class="c-small-2">نمونه‌کار و آموزش</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i
+                                    class="fa-brands fa-x-twitter c-fa-brands"></i><span class="text-[11px]">X</span><small
+                                    class="c-small-2">Mergen Interior</small><b class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-solid fa-envelope c-fa-brands"></i><span
+                                    class="text-[11px]">Email</span><small class="c-small-2">ارتباط مستقیم</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-brands fa-tiktok c-fa-brands"></i><span
+                                    class="text-[11px]">TikTak</span><small class="c-small-2">ارتباط مستقیم</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line c-a-5" href="#"><i class="fa-brands fa-tumblr c-fa-brands"></i><span
+                                    class="text-[11px]">Tumbler</span><small class="c-small-2">ارتباط مستقیم</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line gap-[10px] grid grid-cols-[32px_1fr_auto_18px] items-center min-h-[62px] border-b-[0] [border-bottom-style:none] border-b-current text-[#fff] no-underline [transition:transform_.55s_cubic-bezier(.2,.8,.2,1),padding_.55s_cubic-bezier(.2,.8,.2,1),color_.4s_ease,border-color_.4s_ease] will-change-[transform] mx600:grid-cols-[32px_1fr_auto_16px] mx600:border-b-[1px] mx600:[border-bottom-style:solid] mx600:border-b-[rgba(255,255,255,.055)] hover:border-[rgba(16,185,129,.18)] hover:text-[#fff] hover:[transform:translateX(-5px)] hover:pr-[5px] light:border-(color:--line) light:text-(color:--ink) light:hover:border-[rgba(255,106,77,.32)] light:hover:text-(color:--ink) hover:mx600:border-b-[rgba(255,255,255,.055)] hover:light:border-(color:--line) hover:light:text-(color:--ink) light:mx600:border-b-(color:--line) hover:light:mx600:border-b-[rgba(255,106,77,.32)]"
+                                href="#"><i class="fa-brands fa-vimeo-v c-fa-brands"></i><span
+                                    class="text-[11px]">Vimeo</span><small class="c-small-2">ارتباط مستقیم</small><b
+                                    class="c-b-2">↗</b></a>
+                            <a class="group/mc-social-line gap-[10px] grid grid-cols-[32px_1fr_auto_18px] items-center min-h-[62px] border-b-[0] [border-bottom-style:none] border-b-current text-[#fff] no-underline [transition:transform_.55s_cubic-bezier(.2,.8,.2,1),padding_.55s_cubic-bezier(.2,.8,.2,1),color_.4s_ease,border-color_.4s_ease] will-change-[transform] mx600:grid-cols-[32px_1fr_auto_16px] mx600:border-b-[0] mx600:[border-bottom-style:none] mx600:border-b-current hover:border-[rgba(16,185,129,.18)] hover:text-[#fff] hover:[transform:translateX(-5px)] hover:pr-[5px] light:border-(color:--line) light:text-(color:--ink) light:hover:border-[rgba(255,106,77,.32)] light:hover:text-(color:--ink) hover:mx600:border-b-current hover:light:border-(color:--line) hover:light:text-(color:--ink) light:mx600:border-b-(color:--line) hover:light:mx600:border-b-[rgba(255,106,77,.32)]"
+                                href="#"><i class="fa-brands fa-threads c-fa-brands"></i><span
+                                    class="text-[11px]">Threads</span><small class="c-small-2">ارتباط مستقیم</small><b
+                                    class="c-b-2">↗</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 10 MERGEN COLLECTION -->
+        <section
+            class="section-wrap relative overflow-hidden py-[110px] px-[max(5vw,25px)] text-[#fff] mx600:py-[80px] mx600:px-[20px] bg-[#06100c]! light:bg-(color:--bg)! light:text-(color:--ink)"
+            id="collection">
+            <div
+                class="absolute rounded-[50%] pointer-events-none top-[-200px] right-[-150px] w-[600px] h-[600px] bg-[rgba(6,78,59,.20)] [filter:blur(160px)] light:bg-[rgba(255,182,39,.2)]">
+            </div>
+            <div
+                class="absolute rounded-[50%] pointer-events-none bottom-[-250px] left-[-200px] w-[500px] h-[500px] bg-[rgba(2,44,34,.30)] [filter:blur(150px)] light:bg-[rgba(196,64,107,.15)]">
+            </div>
+            <div class="relative max-w-[1400px] lg:px-10 px-5">
+                <div class="md:mb-16 flex md:flex-row md:items-end justify-between gap-6 mb-12 flex-col">
+                    <div>
+                        <div class="flex items-center gap-3 text-emerald-500 text-[10px] tracking-[.4em] mb-5">
+                            <span class="w-10 h-px bg-emerald-500"></span>
+                            MERGEN COLLECTION
+                        </div>
+                        <h2 class="lg:text-7xl font-light tracking-tight md:text-6xl text-4xl">هنرِ
+                            <span class="font-semibold">زندگی</span>
+                        </h2>
+                    </div>
+                    <p class="max-w-md text-sm leading-8 text-gray-500 light:text-(color:--ink-soft)!">مجموعه‌ای از طراحی‌های
+                        Mergen برای فضاهایی که شخصیت خودشان را دارند.</p>
+                </div>
+                <div class="grid lg:grid-cols-[1fr_360px] gap-5">
+                    <div class="relative group/hero md:min-h-[680px] rounded-[28px] overflow-hidden border border-white/10 min-h-[560px] light:border-(color:--line)"
+                        id="hero">
+                        <div class="absolute inset-0 bg-cover bg-center [transform:scale(1.01)] opacity-100 group-hover/hero:[transform:scale(1.045)]"
+                            id="heroImage"></div>
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/85 via-black/30 to-black/10"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
+                        <div class="absolute md:top-12 md:left-12 top-8 left-8">
+                            <span
+                                class="md:text-[150px] font-light leading-none text-white/[.08] text-[90px] light:text-[rgba(36,28,21,.055)]!"
+                                id="largeNumber">01</span>
+                        </div>
+                        <div class="absolute right-0 bottom-0 left-0 md:p-12 p-7" id="heroContent">
+                            <div class="flex items-center gap-3 mb-5">
+                                <span class="md:text-xs tracking-[.3em] text-emerald-400 text-[10px]" id="english">BEDROOM
+                                    COLLECTION</span>
+                                <span class="w-12 h-px bg-emerald-500"></span>
+                            </div>
+                            <h3 class="lg:text-7xl font-semibold mb-5 md:text-6xl text-4xl" id="title">سرویس خواب</h3>
+                            <p class="max-w-xl md:text-base text-gray-300 leading-8 mb-8 text-sm" id="description">طراحی و اجرای
+                                سرویس خواب مدرن و سفارشی با جزئیات دقیق، متناسب با فضای شما.</p>
+                            <div class="flex items-center gap-6">
+                                <button class="px-7 py-3.5 rounded-full bg-white text-black">مشاهده مجموعه</button>
+                                <button class="text-white/60">مشاهده پروژه‌ها ←</button>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 right-0 left-0 h-[2px] bg-white/10">
+                            <div class="h-full bg-emerald-500 light:bg-(color:--btn-red)!" id="imageProgress" style="width:20%">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative rounded-[28px] border border-white/10 bg-white/[.025] backdrop-blur-xl p-4 overflow-hidden light:border-(color:--line)! light:bg-[rgba(255,255,255,.75)]!">
+                        <div class="flex items-center justify-between px-5 py-4 mb-4">
+                            <span
+                                class="text-[10px] tracking-[.3em] text-gray-600 light:text-(color:--ink-soft)!">COLLECTIONS</span>
+                            <span class="text-xs text-gray-600 light:text-(color:--ink-soft)!" id="counter">01 / 05</span>
+                        </div>
+                        <div class="absolute top-[80px] bottom-5 right-0 w-[2px] bg-white/5">
+                            <div class="absolute w-full bg-emerald-500 light:bg-(color:--btn-red)!" id="verticalProgress"
+                                style="height:20%">
+                            </div>
+                        </div>
+                        <div id="collectionList" class="mx767:gap-[8px] mx767:flex mx767:overflow-x-auto mx767:pb-[8px]">
+                            <button class="collection active group/collection c-collection" data-index="0">
+                                <span class="c-span-2">01</span>
+                                <span class="c-span-3">کنسول</span>
+                                <span class="c-span-4">←</span>
+                            </button>
+                            <button class="collection group/collection c-collection" data-index="1">
+                                <span class="c-span-2">02</span>
+                                <span class="c-span-3">کاور رادیاتور</span>
+                                <span class="c-span-4">←</span>
+                            </button>
+                            <button class="collection group/collection c-collection" data-index="2">
+                                <span class="c-span-2">03</span>
+                                <span class="c-span-3">صندلی چوبی</span>
+                                <span class="c-span-4">←</span>
+                            </button>
+                            <button class="collection group/collection c-collection" data-index="3">
+                                <span class="c-span-2">04</span>
+                                <span class="c-span-3">کمد لباس</span>
+                                <span class="c-span-4">←</span>
+                            </button>
+                            <button class="collection group/collection c-collection" data-index="4">
+                                <span class="c-span-2">05</span>
+                                <span class="c-span-3">کتابخانه</span>
+                                <span class="c-span-4">←</span>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute bottom-7 right-7 left-7 lg:flex items-center justify-between text-[9px] tracking-[.25em] text-gray-700 hidden">
+                            <span>MERGEN</span>
+                            <span>2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 11 SIGNATURE V3 -->
+        <section class="signature-v3 relative min-h-[920px] overflow-hidden text-white py-20 px-5" id="mergen-v3">
+            <div class="ambient ambient-a"></div>
+            <div class="ambient ambient-b"></div>
+            <header class="v3-topbar">
+                <div class="brand">
+                    <strong>MERGEN</strong>
+                    <span>INTERIOR DESIGN &amp; FURNITURE</span>
+                </div>
+                <nav>
+                    <a>خانه</a>
+                    <a class="active">محصولات</a>
+                    <a>پروژه‌ها</a>
+                    <a>درباره ما</a>
+                    <a>تماس با ما</a>
+                </nav>
+                <button aria-label="menu" class="menu">☰</button>
+            </header>
+            <div class="v3-intro">
+                <span>THE SIGNATURE COLLECTION / 2026</span>
+                <h2>سرویس <b>ناهارخوری</b></h2>
+                <p>طراحی، ساخت و اجرای فضاهایی که برای ماندن ساخته شده‌اند.</p>
+            </div>
+            <div class="stage-wrap">
+                <div class="floor-glow"></div>
+                <div class="floor-line"></div>
+                <div aria-label="محصولات مرگن" class="carousel" id="carousel"></div>
+                <button aria-label="قبلی" class="nav-btn prev" id="prev"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+                <button aria-label="بعدی" class="nav-btn next" id="next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+                <div class="drag-hint">DRAG / SWIPE</div>
+            </div>
+            <section class="details">
+                <div class="detail-copy">
+                    <span>SELECTED COLLECTION</span>
+                    <h2 id="v3title">سرویس خواب</h2>
+                    <p id="v3desc">آرامش در جزئیات</p>
+                    <a href="#collection">مشاهده محصول <b>←</b></a>
+                </div>
+                <div class="thumbs" id="v3Thumbs"></div>
+                <div class="counter"><strong id="v3counter">01</strong><small>/ 07</small>
+                    <i><em id="v3progress"></em></i>
+                </div>
+            </section>
+        </section>
+        <!-- 12 SHOPPING GUIDE -->
+        <section
+            class="section-wrap surface py-[110px] px-[max(5vw,25px)] relative mx600:py-[80px] mx600:px-[20px] bg-[#06100c]! light:bg-(color:--bg)! dark:text-[#f3f6f4]">
+            <div
+                class="max-w-1400 rounded-3xl border md:p-14 flex lg:flex-row items-center justify-between gap-10 flex-col p-8 border-[rgba(20,30,26,.15)] dark:border-[rgba(255,255,255,.12)] light:border-(color:--line)">
+                <div>
+                    <div class="eyebrow c-eyebrow">MERGEN SERVICE</div>
+                    <h2 class="section-title c-section-title">
+                        از ایده تا تحویل،<br>قدم‌به‌قدم.
+                    </h2>
+                </div>
+                <div class="max-w-lg">
+                    <p class="leading-8 text-sm opacity-70">
+                        برای شروع یک پروژه لازم نیست همه چیز را بدانید. مسیر سفارش مرگن را ساده و شفاف طراحی کرده‌ایم.
+                    </p>
+                    <button
+                        class="mt-7 py-[13px] px-[22px] border border-[#315f4e] border-solid gap-[10px] inline-flex items-center bg-(color:--brand-green) text-[#fff] rounded-[999px] text-[13px] [transition:.25s] light:border-(color:--btn-red)! light:bg-(color:--btn-red)! light:bg-none! light:text-[#fff]! light:hover:border-(color:--btn-red-hover)! light:hover:bg-(color:--btn-red-hover)! light:hover:bg-none! hover:[transform:translateY(-2px)] hover:shadow-[0_12px_35px_color-mix(in_srgb,var(--brand-green)_19%,transparent)] light:hover:shadow-[0_14px_38px_rgba(255,138,120,.3)]"
+                        id="guideOpen">
+                        راهنمای خرید<i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="group/guide-backdrop [&.open]:opacity-100 [&.open]:visible inset-0 opacity-0 invisible fixed bg-[#0008] [backdrop-filter:blur(5px)] z-[1800] [transition:.8s]"
+            id="guide">
+            <aside
+                class="p-[35px] overflow-auto fixed z-[1810] left-0 top-0 h-full w-[min(430px,94vw)] bg-[#f4f4ef] text-[#111] [transform:translateX(105%)] [transition:.45s_cubic-bezier(.2,.8,.2,1)] dark:bg-[#0b1713] dark:text-[#fff] group-[.open]/guide-backdrop:[transform:none]">
+                <div class="flex justify-between items-center mb-12">
+                    <div>
+                        <div class="eyebrow c-eyebrow">MERGEN / GUIDE</div>
+                        <h3 class="text-3xl font-serif mt-3">راهنمای سفارش</h3>
+                    </div>
+                    <button id="guideClose">×</button>
+                </div>
+                <div class="space-y-7">
+                    <div
+                        class="flex gap-4 opacity-0 [transform:translateX(25px)] [transition:.5s] group-[.open]/guide-backdrop:opacity-100 group-[.open]/guide-backdrop:[transform:none]">
+                        <b class="text-emerald-500">01</b>
+                        <div>
+                            <h4 class="font-semibold">انتخاب محصول</h4>
+                            <p class="c-p-2">
+                                محصول یا فضای مورد نظر را انتخاب کنید.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 opacity-0 [transform:translateX(25px)] [transition:.5s] group-[.open]/guide-backdrop:opacity-100 group-[.open]/guide-backdrop:[transform:none] group-[.open]/guide-backdrop:[transition-delay:.08s]">
+                        <b class="text-emerald-500">02</b>
+                        <div>
+                            <h4 class="font-semibold">ابعاد و متریال</h4>
+                            <p class="c-p-2">
+                                ابعاد، رنگ، متریال و جزئیات با شما هماهنگ می‌شود.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 opacity-0 [transform:translateX(25px)] [transition:.5s] group-[.open]/guide-backdrop:opacity-100 group-[.open]/guide-backdrop:[transform:none] group-[.open]/guide-backdrop:[transition-delay:.16s]">
+                        <b class="text-emerald-500">03</b>
+                        <div>
+                            <h4 class="font-semibold">طراحی و تأیید</h4>
+                            <p class="c-p-2">
+                                طرح نهایی پیش از تولید بررسی و تأیید می‌شود.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 opacity-0 [transform:translateX(25px)] [transition:.5s] group-[.open]/guide-backdrop:opacity-100 group-[.open]/guide-backdrop:[transform:none] group-[.open]/guide-backdrop:[transition-delay:.24s]">
+                        <b class="text-emerald-500">04</b>
+                        <div>
+                            <h4 class="font-semibold">تولید</h4>
+                            <p class="c-p-2">
+                                ساخت با دقت کارگاهی و کنترل مرحله‌ای انجام می‌شود.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 opacity-0 [transform:translateX(25px)] [transition:.5s] group-[.open]/guide-backdrop:opacity-100 group-[.open]/guide-backdrop:[transform:none] group-[.open]/guide-backdrop:[transition-delay:.32s]">
+                        <b class="text-emerald-500">05</b>
+                        <div>
+                            <h4 class="font-semibold">تحویل و اجرا</h4>
+                            <p class="c-p-2">
+                                در صورت نیاز، حمل، نصب و اجرای پروژه انجام می‌شود.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!-- 13 MERGEN EXPERIENCE -->
+        <section
+            class="mergen-experience py-[120px] px-0 overflow-hidden relative min-h-[900px] bg-[#070b0a] text-[#fff] isolate mx600:py-[80px] mx600:px-0 mx600:min-h-auto light:bg-(color:--bg) light:bg-[image:radial-gradient(ellipse_at_15%_10%,#FFEAD0_0%,transparent_45%),radial-gradient(ellipse_at_90%_90%,#E9F5F1_0%,transparent_40%),none] light:text-(color:--ink)"
+            id="tabs">
+            <div class="absolute rounded-[50%] pointer-events-none z-[-1] w-[650px] h-[650px] top-[-260px] right-[-170px] bg-[rgba(6,78,59,.22)] [filter:blur(165px)] light:bg-[rgba(255,106,77,.17)]">
+            </div>
+            <div class="absolute rounded-[50%] pointer-events-none z-[-1] w-[520px] h-[520px] bottom-[-250px] left-[-190px] bg-[rgba(2,44,34,.32)] [filter:blur(150px)] light:bg-[rgba(255,182,39,.18)]">
+            </div>
+            <div class="m-auto py-0 px-[40px] relative max-w-[1400px] mx600:py-0 mx600:px-[20px]">
+                <div class="gap-[60px] flex justify-between [align-items:end] mb-[55px] mx1000:gap-[20px] mx1000:items-start mx1000:flex-col mx600:mb-[35px]">
+                    <div>
+                        <div class="gap-[12px] flex items-center mb-[20px] text-[#10b981] text-[10px] tracking-[.38em] light:text-[#5a3b24]!">
+                            <span class="w-[40px] h-[1px] bg-[#10b981] light:bg-(color:--accent2)"></span> MERGEN EXPERIENCE
+                        </div>
+                        <h2 class="m-0 text-[length:clamp(40px,5vw,72px)] font-light leading-[1.05] tracking-[-.035em] mx600:text-[42px] light:text-(color:--ink)">
+                            تجربه‌ای فراتر از <strong class="font-semibold">محصول</strong></h2>
+                    </div>
+                    <p class="mx-0 max-w-[420px] mt-0 mb-[4px] text-[#ffffff55] text-[13px] leading-[2.2] light:text-(color:--ink-soft)">
+                        از ایده و طراحی تا ساخت و اجرای نهایی؛ مسیر ساخت فضای شما، یک تجربه یکپارچه است.</p>
+                </div>
+                <div class="p-[8px] border border-[rgba(255,255,255,.07)] border-solid gap-[8px] grid-cols-[repeat(4,1fr)] grid mb-[18px] rounded-[22px] bg-[rgba(255,255,255,.018)] [backdrop-filter:blur(18px)] mx600:p-[6px] mx600:grid-cols-[1fr] light:border-(color:--line) light:bg-[#fff]"
+                    id="meList">
+                    <button class="me-item active group/me-item c-me-item" data-index="0">
+                        <span class="c-span-5">01</span>
+                        <span class="me-item-copy c-me-item-copy">
+                            <small class="c-small-3">EXHIBITION</small>
+                            <strong class="c-strong">نمایشگاه</strong>
+                        </span>
+                        <span class="c-span-6">←</span>
+                    </button>
+                    <button class="me-item group/me-item c-me-item" data-index="1">
+                        <span class="c-span-5">02</span>
+                        <span class="me-item-copy c-me-item-copy">
+                            <small class="c-small-3">SHOWROOM</small>
+                            <strong class="c-strong">فروشگاه</strong>
+                        </span>
+                        <span class="c-span-6">←</span>
+                    </button>
+                    <button class="me-item group/me-item c-me-item" data-index="2">
+                        <span class="c-span-5">03</span>
+                        <span class="me-item-copy c-me-item-copy">
+                            <small class="c-small-3">3D DESIGN</small>
+                            <strong class="c-strong">طراحی سه‌بعدی</strong>
+                        </span>
+                        <span class="c-span-6">←</span>
+                    </button>
+                    <button class="me-item group/me-item c-me-item" data-index="3">
+                        <span class="c-span-5">04</span>
+                        <span class="me-item-copy c-me-item-copy">
+                            <small class="c-small-3">SERVICES</small>
+                            <strong class="c-strong">خدمات</strong>
+                        </span>
+                        <span class="c-span-6">←</span>
+                    </button>
+                </div>
+                <div class="p-[10px] border border-[rgba(255,255,255,.08)] border-solid relative rounded-[28px] bg-[rgba(255,255,255,.015)] shadow-[0_30px_90px_rgba(0,0,0,.22)] light:border-(color:--line) light:bg-[#fff] light:shadow-[0_26px_70px_rgba(36,28,21,.08)] mx600:p-[6px] mx600:rounded-[22px]">
+                    <div
+                        class="group/me-visual mx600:h-[480px] mx600:min-h-[480px] mx600:rounded-[18px] border border-[#ffffff10] border-solid overflow-hidden h-[min(62vh,680px)] min-h-[560px] relative rounded-[22px] bg-[#08100d] w-full">
+                        <div class="inset-0 overflow-hidden absolute">
+                            <img alt="نمایشگاه مرگن" id="meImage" src="./img/placeholders/ph-5.svg"
+                                class="w-full h-full block object-cover [transform:scale(1.01)] [filter:saturate(.82)] [transition:opacity_.55s_ease,transform_1.15s_cubic-bezier(.16,1,.3,1),filter_.8s_ease] group-hover/me-visual:[transform:scale(1.045)] group-hover/me-visual:[filter:saturate(1)]">
+                        </div>
+                        <div
+                            class="inset-0 absolute bg-[image:linear-gradient(90deg,rgba(0,0,0,.1),rgba(0,0,0,.45)),linear-gradient(0deg,#000_0%,rgba(0,0,0,.25)_45%,rgba(0,0,0,.08)_100%)] pointer-events-none">
+                        </div>
+                        <div
+                            class="inset-x-[32px] absolute top-[30px] flex justify-between [direction:ltr] text-[#ffffff60] text-[9px] tracking-[.25em]">
+                            <span id="meVisualIndex">01 / 04</span>
+                            <span id="meVisualLabel" class="text-[#10b981] light:text-[#FFD98A]">EXHIBITION</span>
+                        </div>
+                        <div
+                            class="inset-x-[42px] absolute bottom-[40px] max-w-[560px] mx600:inset-x-[25px] mx600:bottom-[27px]">
+                            <span class="text-[#10b981] text-[9px] tracking-[.25em]">MERGEN / EXPERIENCE</span>
+                            <h3 id="meVisualTitle"
+                                class="mx-0 mt-[12px] mb-[10px] not-italic font-normal text-[length:clamp(30px,3.5vw,52px)] leading-[1.1] font-[family-name:Georgia,serif] mx600:text-[30px]">
+                                فضا را قبل از انتخاب لمس کن.</h3>
+                            <p id="meVisualDesc" class="m-0 max-w-[480px] text-[#ffffff75] text-[12px] leading-[2]">نمونه‌کارها،
+                                متریال و جزئیات را در فضایی واقعی ببینید و انتخاب دقیق‌تری داشته باشید.</p>
+                            <a href="#collection"
+                                class="group/a gap-[12px] will-change-[transform] inline-flex mt-[22px] text-[#fff] text-[11px] no-underline [transition:.3s] hover:text-[#10b981]">شروع
+                                یک پروژه <b
+                                    class="text-[#10b981] [transition:.3s] group-hover/a:[transform:translateX(-5px)]">←</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 14 SLIDER 03 / CUSTOM PRODUCTS -->
+        <section class="section-wrap surface" id="slider03">
+            <div class="max-w-1400 mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                    <div>
+                        <div class="eyebrow text-emerald-300">SLIDER 03 / TABLE COLLECTION</div>
+                        <h2 class="section-title mt-4">مدل های میز</h2>
+                    </div>
+                    <p class="max-w-md text-sm text-black leading-8 opacity-60">چند نمونه از میز که می‌توانند با ابعاد، متریال و سبک پروژه
+                        شما دوباره تعریف شوند.</p>
+                </div>
+                <div class="owl-carousel owl-theme custom-carousel" id="customCarousel">
+                    <article class="custom-card">
+                        <img alt="" src="img/bosstable.jpg">
+                        <div>
+                            <span>03 / OFFICE TABLE</span>
+                            <h3>میز مدیریت</h3>
+                            <p>ترکیب کاربرد، حجم و جزئیات اجرایی.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/tvtable.jpg">
+                        <div>
+                            <span>01 / TV STAND</span>
+                            <h3>میز تلویزیون</h3>
+                            <p>فرم ساده، متریال ماندگار و ساخت سفارشی.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/sofatable.jpg">
+                        <div>
+                            <span>02 / COFFEE TABLE</span>
+                            <h3>میز جلومبلی</h3>
+                            <p>ابعاد و پارچه متناسب با فضای واقعی شما.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/dressingtable.jpg">
+                        <div>
+                            <span>02 / DRESSING TABLE</span>
+                            <h3>میز آرایش</h3>
+                            <p>ابعاد و پارچه متناسب با فضای واقعی شما.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/desk.jpg">
+                        <div>
+                            <span>04 / Desk</span>
+                            <h3>میز تحریر</h3>
+                            <p>طراحی یکپارچه برای اتاق خواب.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/computertable.jpg">
+                        <div>
+                            <span>05 / Desk</span>
+                            <h3>میز کامپیوتر</h3>
+                            <p>طراحی یکپارچه برای اتاق خواب.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/sidetable.jpg">
+                        <div>
+                            <span>06 / SIDE TABLE</span>
+                            <h3>میز عسلی</h3>
+                            <p>یک عنصر ظریف با امکان شخصی‌سازی کامل.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/laptoptable.jpg">
+                        <div>
+                            <span>06 / lAPTOP TABLE</span>
+                            <h3>میز لپتاپ</h3>
+                            <p>یک عنصر ظریف با امکان شخصی‌سازی کامل.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/bedsidetable.jpg">
+                        <div>
+                            <span>06 / BEDSIDE TABLE</span>
+                            <h3>میز پاتختی</h3>
+                            <p>یک عنصر ظریف با امکان شخصی‌سازی کامل.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/phonetable.jpg">
+                        <div>
+                            <span>06 / PHONE TABLE</span>
+                            <h3>میز تلفن</h3>
+                            <p>یک عنصر ظریف با امکان شخصی‌سازی کامل.</p>
+                        </div>
+                    </article>
+                    <article class="custom-card">
+                        <img alt="" src="img/counterdesk.jpg">
+                        <div>
+                            <span>06 / COUNTER DESK</span>
+                            <h3>میز پیشخوان</h3>
+                            <p>یک عنصر ظریف با امکان شخصی‌سازی کامل.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- 15 MATERIAL LIBRARY / OFF-CANVAS / SUPPORT -->
+        <section class="section-wrap c-section-wrap" id="materials">
+            <div
+                class="absolute w-[600px] h-[600px] right-[-220px] top-[-260px] rounded-[50%] bg-[rgba(6,78,59,.2)] [filter:blur(160px)] pointer-events-none light:bg-[rgba(255,182,39,.2)]">
+            </div>
+            <div
+                class="relative max-w-[1400px] z-10 mx1000:flex-col py-[45px] px-0 gap-[50px] items-center flex justify-between mx600:py-[25px] mx600:px-0">
+                <div class="max-w-[650px]">
+                    <div class="eyebrow c-eyebrow">MERGEN / MATERIAL LIBRARY</div>
+                    <h2 class="section-title c-section-title">متریال را <span
+                            class="text-[#10b981] light:text-(color:--brown-deep)!">لمس کن.</span></h2>
+                    <p
+                        class="mx-0 max-w-[600px] text-[rgba(255,255,255,.42)] text-[13px] leading-[2.2] mt-[20px] mb-0 light:text-(color:--ink-soft)">
+                        انواع چوب، سمپل رنگ، روکش وکیوم و کالیته پارچه را یکجا ببینید و برای انتخاب متریال پروژه آماده شوید.</p>
+                </div>
+                <button
+                    class="group/mm-open py-[20px] px-[24px] border border-[rgba(16,185,129,.28)] border-solid gap-[25px] inline-flex items-center [flex:0_0_auto] rounded-[16px] bg-[rgba(16,185,129,.055)] text-[#fff] font-[family-name:inherit] cursor-pointer [transition:transform_.6s_cubic-bezier(.2,.8,.2,1),background_.5s_ease,border-color_.5s_ease,box-shadow_.6s_ease] will-change-[transform] hover:border-[rgba(16,185,129,.48)] hover:bg-[rgba(16,185,129,.1)] hover:[transform:translateY(-4px)] hover:shadow-[0_18px_45px_rgba(0,0,0,.2)] light:border-[rgba(255,106,77,.35)] light:bg-[rgba(255,106,77,.09)] light:text-(color:--ink) light:hover:border-[rgba(255,106,77,.55)] light:hover:bg-[rgba(255,106,77,.16)] hover:light:border-[rgba(255,106,77,.35)] hover:light:bg-[rgba(255,106,77,.09)] mx600:w-full mx600:justify-between"
+                    id="materialsOpen">
+                    <span>مشاهده متریال و کالیته</span>
+                    <i
+                        class="fa-solid fa-arrow-left text-[#10b981]! [transition:transform_.5s_cubic-bezier(.2,.8,.2,1)]! light:text-(color:--brown-deep)! group-hover/mm-open:[transform:translateX(-6px)]!"></i>
+                </button>
+            </div>
+        </section>
+        <div aria-hidden="true"
+            class="group/materials-canvas [&.open]:visible [&.open]:opacity-100 [&.open]:pointer-events-auto [&.open]:bg-[rgba(0,0,0,.58)] [&.open]:[backdrop-filter:blur(7px)] [&.open]:[transition-delay:0s] inset-0 invisible opacity-0 pointer-events-none bg-[rgba(0,0,0,.0)] fixed z-[10000] [transition:opacity_.5s_ease,background_.5s_ease,visibility_0s_linear_.5s]"
+            id="materialsCanvas">
+            <aside
+                class="p-[34px] inset-y-0 overflow-auto absolute right-0 w-[min(620px,92vw)] bg-[image:linear-gradient(160deg,#0b1511,#050907)] border-l-[1px] [border-left-style:solid] border-l-[rgba(16,185,129,.16)] shadow-[-30px_0_100px_rgba(0,0,0,.45)] [transform:translateX(105%)] [transition:transform_.8s_cubic-bezier(.16,1,.3,1)] mx600:py-[24px] mx600:px-[18px] mx600:w-full light:bg-[image:linear-gradient(160deg,#fff,var(--surface-2))] light:border-l-(color:--line) light:text-(color:--ink) group-[.open]/materials-canvas:[transform:translateX(0)]">
+                <div class="flex justify-between items-start mb-[30px]">
+                    <div>
+                        <div class="eyebrow c-eyebrow">MERGEN / MATERIALS</div>
+                        <h3 class="text-[30px] font-light mt-[8px]">کتابخانه متریال</h3>
+                    </div>
+                    <button aria-label="بستن"
+                        class="border border-[rgba(255,255,255,.1)] border-solid w-[42px] h-[42px] rounded-[50%] bg-[rgba(255,255,255,.025)] text-[#fff] text-[25px] cursor-pointer [transition:transform_.45s_ease,background_.45s_ease,border-color_.45s_ease] will-change-[transform] hover:border-[rgba(16,185,129,.3)] hover:bg-[rgba(16,185,129,.1)] hover:[transform:rotate(90deg)] light:border-(color:--line) light:bg-[#fff] light:text-(color:--ink) light:hover:border-[rgba(255,106,77,.35)] light:hover:bg-[rgba(255,106,77,.12)] hover:light:border-(color:--line) hover:light:bg-[#fff]"
+                        id="materialsClose">×</button>
+                </div>
+                <div class="overflow-auto gap-[7px] flex pb-[8px] mb-[24px]">
+                    <button class="mm-tab active c-mm-tab" data-material="wood">انواع چوب</button>
+                    <button class="mm-tab c-mm-tab" data-material="color">سمپل رنگ</button>
+                    <button class="mm-tab c-mm-tab" data-material="vacuum">روکش وکیوم</button>
+                    <button class="mm-tab c-mm-tab" data-material="fabric">کالیته پارچه</button>
+                </div>
+                <div class="gap-[12px] grid grid-cols-[repeat(2,1fr)] mx600:grid-cols-[1fr_1fr]" id="materialGrid"></div>
+            </aside>
+        </div>
+        <!-- 16 growing room -->
+        <section id="mg-growing-room" class="relative isolate overflow-hidden bg-[#06100c] px-5 py-24 text-white md:px-8 lg:px-12 xl:py-32">
+            <!-- ambient light -->
+            <div class="pointer-events-none absolute -right-40 -top-40 h-[420px] w-[420px] rounded-full bg-emerald-900/20 blur-[130px]"> </div>
+            <div class="pointer-events-none absolute -bottom-52 -left-40 h-[420px] w-[420px] rounded-full bg-emerald-950/30 blur-[140px]"> </div>
+            <div class="relative mx-auto max-w-[1450px]">
+                <!-- TOP LINE -->
+                <div class="mb-12 flex items-center justify-between md:mb-16">
+                    <div class="flex items-center gap-3 text-[9px] tracking-[0.32em] text-emerald-400" dir="ltr">
+                        <span class="h-px w-9 bg-emerald-400"></span>
+                        MERGEN / GROWING ROOM
+                    </div>
+                    <div class="flex items-baseline gap-1 text-white/35" dir="ltr">
+                        <span id="mgGrowCounter" class="text-2xl font-light text-white/70">01</span>
+                        <span class="text-[10px]">/ 04</span>
+                    </div>
+                </div>
+                <!-- MAIN GRID -->
+                <div class="grid items-center gap-12 lg:grid-cols-[minmax(390px,0.78fr)_minmax(560px,1.22fr)] xl:gap-20">
+                    <div class="order-1 text-right" dir="rtl">
+                        <span class="mb-5 block text-[11px] text-white/35">
+                            یک اتاق برای امروز نیست.
+                        </span>
+                        <h2 class="max-w-[620px] text-[clamp(40px,4.5vw,72px)] font-light leading-[1.18] tracking-[-0.045em]">
+                            اتاق او،
+                            <span class="block font-medium text-emerald-400">
+                                همراه با او
+                            </span>
+                            بزرگ می‌شود.
+                        </h2>
+                        <p class="mt-7 max-w-[520px] text-[13px] leading-[2.25] text-white/40">
+                            فضایی که فقط برای امروز طراحی نشده.
+                            از اولین سال‌های زندگی تا زمانی که کودک
+                            دنیای خودش را پیدا می‌کند، اتاق هم همراه
+                            با او تغییر می‌کند.
+                        </p>
+                        <!-- AGE TIMELINE -->
+                        <div id="mgGrowTimeline" class="relative mt-14 grid grid-cols-4 gap-3">
+                            <!-- line -->
+                            <div class="absolute right-[6%] left-[6%] top-[5px] h-px bg-white/[0.08]">
+                                <span id="mgGrowProgress" class="block h-full w-0 bg-emerald-400 transition-[width] duration-700 ease-out"></span>
+                            </div>
+                            <!-- 01 -->
+                            <button type="button" data-grow-index="0" class="mg-grow-stage group relative z-10 text-right">
+                                <span class="mg-grow-dot mb-5 block h-[10px] w-[10px] rounded-full border border-emerald-400 bg-emerald-400 shadow-[0_0_0_7px_rgba(16,185,129,0.08)] transition duration-500 group-hover:scale-125"></span>
+                                <span class="block text-[9px] text-white/40"> ۰ — ۲ </span>
+                                <strong class="mt-1 block whitespace-nowrap text-[12px] font-normal text-white">
+                                    اولین پناه
+                                </strong>
+                                <!-- 3 sec loader -->
+                                <span class="mg-grow-loader pointer-events-none absolute right-0 top-[34px] h-px w-full overflow-hidden opacity-0">
+                                    <span class="block h-full w-0 bg-emerald-400"></span>
+                                </span>
+                            </button>
+                            <!-- 02 -->
+                            <button type="button" data-grow-index="1" class="mg-grow-stage group relative z-10 text-right">
+                                <span
+                                    class="mg-grow-dot mb-5 block h-[10px] w-[10px] rounded-full border border-white/20 bg-[#06100c] transition duration-500 group-hover:scale-125 group-hover:border-emerald-400"></span>
+                                <span class="block text-[9px] text-white/40">
+                                    ۲ — ۵
+                                </span>
+                                <strong
+                                    class="mt-1 block whitespace-nowrap text-[12px] font-normal text-white/50 transition-colors duration-300 group-hover:text-white">
+                                    دنیای بازی
+                                </strong>
+                                <span
+                                    class="mg-grow-loader pointer-events-none absolute right-0 top-[34px] h-px w-full overflow-hidden opacity-0">
+                                    <span class="block h-full w-0 bg-emerald-400"></span>
+                                </span>
+                            </button>
+                            <!-- 03 -->
+                            <button type="button" data-grow-index="2" class="mg-grow-stage group relative z-10 text-right">
+                                <span
+                                    class="mg-grow-dot mb-5 block h-[10px] w-[10px] rounded-full border border-white/20 bg-[#06100c] transition duration-500 group-hover:scale-125 group-hover:border-emerald-400"></span>
+
+                                <span class="block text-[9px] text-white/40">
+                                    ۵ — ۸
+                                </span>
+                                <strong
+                                    class="mt-1 block whitespace-nowrap text-[12px] font-normal text-white/50 transition-colors duration-300 group-hover:text-white">
+                                    دنیای یادگیری
+                                </strong>
+                                <span
+                                    class="mg-grow-loader pointer-events-none absolute right-0 top-[34px] h-px w-full overflow-hidden opacity-0">
+                                    <span class="block h-full w-0 bg-emerald-400"></span>
+                                </span>
+                            </button>
+                            <!-- 04 -->
+                            <button type="button" data-grow-index="3" class="mg-grow-stage group relative z-10 text-right">
+                                <span
+                                    class="mg-grow-dot mb-5 block h-[10px] w-[10px] rounded-full border border-white/20 bg-[#06100c] transition duration-500 group-hover:scale-125 group-hover:border-emerald-400"></span>
+                                <span class="block text-[9px] text-white/40">
+                                    ۸ — ۱۲
+                                </span>
+                                <strong
+                                    class="mt-1 block whitespace-nowrap text-[12px] font-normal text-white/50 transition-colors duration-300 group-hover:text-white">
+                                    اتاق خودش
+                                </strong>
+                                <span
+                                    class="mg-grow-loader pointer-events-none absolute right-0 top-[34px] h-px w-full overflow-hidden opacity-0">
+                                    <span class="block h-full w-0 bg-emerald-400"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div id="mgGrowTeaser"
+                            class="pointer-events-none mt-9 flex min-h-[112px] max-w-[570px] translate-y-3 items-center gap-5 rounded-2xl border border-white/[0.07] bg-white/[0.025] px-5 py-4 opacity-0 backdrop-blur-xl transition-all duration-700">
+                            <div id="mgGrowTeaserNumber" class="text-4xl font-extralight text-white/[0.10]" dir="ltr">
+                                01
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <span id="mgGrowTeaserKicker" class="text-[8px] tracking-[0.28em] text-emerald-400" dir="ltr">
+                                    FIRST ROOM
+                                </span>
+                                <h3 id="mgGrowTeaserTitle" class="mt-1 text-[17px] font-normal">
+                                    اولین پناه
+                                </h3>
+                                <p id="mgGrowTeaserText" class="mt-1 text-[10px] leading-7 text-white/35">
+                                    فضایی آرام برای اولین سال‌های زندگی.
+                                </p>
+                            </div>
+                            <span class="text-lg text-emerald-400">  ← </span>
+                        </div>
+                        <!-- CTA -->
+                        <a href="baby-collection.html"
+                            class="group mt-7 inline-flex items-center gap-5 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.03] px-5 py-3 text-[11px] text-white transition-all duration-500 hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-emerald-400/[0.07]">
+                            <span>تجربه دنیای او</span>
+                            <span class="text-emerald-400 transition-transform duration-500 group-hover:-translate-x-1">
+                                ←
+                            </span>
+                        </a>
+                    </div>
+                    <div data-media class="mg-grow-media order-2 relative h-[480px] overflow-hidden rounded-[24px] border border-white/[0.08] bg-[#09130f] shadow-[0_35px_100px_rgba(0,0,0,0.3)] md:h-[600px] xl:h-[680px]"
+                        id="mgGrowVisual">
+                        <!-- image -->
+                        <img id="mgGrowImage"
+                            src="https://multilojaonline.vteximg.com.br/arquivos/ids/258100/Quarto-de-Bebe-Completo-com-Berco-Mini-Cama-Guarda-Roupa-e-Comoda-com-Janela-Elo-New-Moveis-Peroba-Branco-Brilho-S-V.jpg?v=638627970921900000"
+                            alt="اتاق کودک مرگن"
+                            class="absolute inset-0 h-full w-full scale-[1.025] object-cover transition-all duration-1000 ease-out">
+                        <!-- dark cinematic overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/[0.04] via-transparent to-black/75"></div>
+                        <!-- BIG NUMBER -->
+                        <div id="mgGrowBigNumber"
+                            class="absolute left-7 top-5 text-[100px] font-extralight leading-none tracking-[-0.06em] text-white/[0.12] md:text-[145px]"
+                            dir="ltr">
+                            01
+                        </div>
+                        <!-- TOP LABEL -->
+                        <div class="absolute right-6 top-7 flex items-center gap-3 text-[8px] tracking-[0.22em] text-white/50"
+                            dir="ltr">
+                            <span>DESIGNED TO GROW</span>
+                            <i class="h-px w-6 bg-white/25"></i>
+                            <span class="text-white/25">
+                                MERGEN / 2026
+                            </span>
+                        </div>
+                        <!-- BOTTOM LABEL -->
+                        <div class="absolute bottom-7 right-7 flex items-center gap-3" dir="ltr">
+                            <span id="mgGrowStage" class="text-[9px] tracking-[0.25em] text-emerald-400">
+                                STAGE 01
+                            </span>
+                            <span id="mgGrowStageName" class="text-[10px] tracking-[0.15em] text-white">
+                                FIRST ROOM
+                            </span>
+                        </div>
+                        <!-- border accent -->
+                        <div class="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-l from-emerald-400/70 to-transparent">
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER LINE -->
+                <div class="mt-14 flex items-center gap-5 text-[7px] tracking-[0.28em] text-white/20" dir="ltr">
+                    <span>FROM FIRST DAYS</span>
+                    <span class="h-px w-16 bg-white/10"></span>
+                    <span>GROWING ROOM</span>
+                    <span class="h-px w-16 bg-white/10"></span>
+                    <span>TO THEIR OWN WORLD</span>
+                </div>
+            </div>
+        </section>
+        <!-- 17 ABOUT / BRAND STORY -->
+        <section
+            class="section-wrap py-[110px] px-[max(5vw,25px)] overflow-hidden relative bg-[image:linear-gradient(180deg,#0b1511,#07100d)] text-[#fff] mx600:py-[80px] mx600:px-[20px] bg-[#06100c]! light:bg-(color:--bg)! light:bg-[image:linear-gradient(180deg,var(--surface-2),var(--bg))] light:text-(color:--ink)"
+            id="about">
+            <div class="max-w-1400">
+                <div class="gap-[70px] grid grid-cols-[1.15fr_.85fr] [align-items:end] mx900:grid-cols-[1fr]">
+                    <div>
+                        <div class="eyebrow c-eyebrow">MERGEN / 11 — BRAND STORY</div>
+                        <h2
+                            class="text-[length:clamp(50px,8vw,110px)] not-italic font-normal leading-[.95] font-[family-name:Georgia,serif] mt-[22px]">
+                            ما فضا را<br><em class="text-[#79d6aa] not-italic light:text-(color:--accent)">از نو تعریف
+                                می‌کنیم.</em></h2>
+                    </div>
+                    <p class="max-w-[470px] text-[#ffffff80] leading-[2.2] text-[15px] light:text-(color:--ink-soft)">مرگن جایی
+                        بین طراحی معاصر و تجربه واقعی ساخت شکل گرفته؛ جایی که ایده فقط روی کاغذ نمی‌ماند و به یک محصول و فضای
+                        واقعی تبدیل می‌شود.</p>
+                </div>
+                <div
+                    class="border border-[#ffffff14] border-solid gap-[0] grid grid-cols-[1.15fr_.85fr] mt-[70px] mx900:grid-cols-[1fr] light:border-(color:--line)">
+                    <div
+                        class="overflow-hidden min-h-[650px] relative mx900:min-h-[480px] after:inset-0 after:content-[''] after:absolute after:bg-[image:linear-gradient(90deg,#07100d00,#07100d55)] light:after:bg-[image:linear-gradient(90deg,rgba(255,249,240,0),rgba(255,249,240,.5))]">
+                        <img alt="Mergen Interior" class="1 / 1; inset-0 w-full h-full absolute object-cover"
+                            src="img/brandstory.jpg">
+                        <div
+                            class="border border-[#79d6aa88] border-solid absolute z-[2] right-[28px] bottom-[28px] w-[120px] h-[120px] rounded-[50%] grid place-items-center text-center text-[12px] tracking-[.15em] bg-[#07100dcc] light:border-[rgba(14,168,147,.55)] light:bg-[rgba(255,255,255,.9)] light:text-(color:--ink)">
+                            <img src="img/logo.jpg" alt="MERGEN" class="h-full w-full rounded-full object-cover p-[10px]"></div>
+                    </div>
+                    <div
+                        class="p-[70px] flex flex-col justify-center bg-[#0d1a15] mx900:py-[40px] mx900:px-[25px] light:bg-(color:--surface-2)">
+                        <span class="text-[10px] tracking-[.2em] text-[#79d6aa] light:text-[#5a3b24]!">01 — FROM IDEA TO
+                            REALITY</span>
+                        <h3
+                            class="my-[24px] mx-0 not-italic font-normal text-[length:clamp(35px,4vw,58px)] leading-[1.05] font-[family-name:Georgia,serif] light:text-(color:--ink)">
+                            طراحی، ساخت و اجرا در یک مسیر.</h3>
+                        <p class="max-w-[520px] leading-[2.2] text-[#ffffff80] light:text-(color:--ink-soft)">از اولین ایده و
+                            اندازه‌گیری تا طراحی، انتخاب متریال، CNC، تولید و اجرای نهایی؛ هدف این است که تمام اجزا یک زبان
+                            مشترک داشته باشند.</p>
+                        <div class="gap-[20px] grid grid-cols-[repeat(3,1fr)] mt-[45px] mx600:gap-[14px]" id="brandMetrics">
+                            <div class="about-metric c-about-metric" data-suffix="+" data-target="9"><strong
+                                    class="metric-number c-metric-number">0</strong><span class="c-span-7">سال تجربه ساخت</span>
+                            </div>
+                            <div class="about-metric c-about-metric" data-suffix="+" data-target="835"><strong
+                                    class="metric-number c-metric-number">0</strong><span class="c-span-7">پروژه
+                                    تحویل‌شده</span></div>
+                            <div class="about-metric c-about-metric" data-suffix="%" data-target="98"><strong
+                                    class="metric-number c-metric-number">0</strong><span class="c-span-7">رضایت مشتری</span>
+                            </div>
+                        </div>
+                        <a class="mt-8 py-[13px] px-[22px] border border-[#315f4e] border-solid gap-[10px] inline-flex items-center bg-(color:--brand-green) text-[#fff] rounded-[999px] text-[13px] [transition:.25s] light:border-(color:--btn-red)! light:bg-(color:--btn-red)! light:bg-none! light:text-[#fff]! light:hover:border-(color:--btn-red-hover)! light:hover:bg-(color:--btn-red-hover)! light:hover:bg-none! hover:[transform:translateY(-2px)] hover:shadow-[0_12px_35px_color-mix(in_srgb,var(--brand-green)_19%,transparent)] light:hover:shadow-[0_14px_38px_rgba(255,138,120,.3)]"
+                            href="#guide">شروع یک پروژه ←</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 16B CONSOLE SLIDER -->
+        <section class="mg-console" id="console-slider" aria-label="کنسول‌های مرگن">
+            <div class="mgc-bg"></div>
+            <div class="mgc-head">
+                <span class="mgc-kicker">MERGEN / CONSOLE COLLECTION</span>
+                <h2>کنسول‌هایی که <em>ورودی خانه</em> را قاب می‌گیرند</h2>
+            </div>
+            <div class="mgc-stage" id="mgcStage">
+                <div class="mgc-spot"></div>
+                <b class="mgc-bignum" id="mgcBig">01</b>
+                <div class="mgc-ring" id="mgcRing"></div>
+                <div class="mgc-floor"></div>
+            </div>
+            <div class="mgc-info">
+                <div class="mgc-meta" id="mgcMeta"></div>
+                <h3 id="mgcTitle"></h3>
+                <p id="mgcDesc"></p>
+                <div class="mgc-ctrl">
+                <button id="mgcPrev" aria-label="قبلی"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+                <i><em id="mgcBar"></em></i><span id="mgcCount">01 / 06</span>
+                <button id="mgcNext" aria-label="بعدی"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+                </div>
+            </div>
+        </section>
+        <!-- 18 FAQ -->
+        <section
+            class="section-wrap py-[clamp(90px,9vw,150px)] px-[max(5vw,25px)] overflow-hidden relative bg-[image:radial-gradient(circle_at_8%_20%,rgba(121,214,170,.09),transparent_28%),radial-gradient(circle_at_92%_80%,rgba(28,75,61,.13),transparent_30%),none] mx700:py-[80px] mx600:px-[20px] bg-[#06100c]! light:bg-(color:--bg)! dark:[--faq-bg:#09110e] before:content-['FAQ_/_10'] before:absolute before:top-[48px] before:right-[clamp(20px,5vw,90px)] before:text-[10px] before:tracking-[.28em] before:font-bold before:text-(color:--brand-green) before:opacity-[.55] dark:before:text-[#79d6aa] light:before:text-(color:--accent2) light:before:opacity-[.7]"
+            id="faq">
+            <div class="max-w-1000 mx-auto relative z-[2] max-w-[1050px]">
+                <div class="text-center text-right! mb-[42px]! mx700:mb-[28px]! pr-[clamp(4px,2vw,24px)]">
+                    <div
+                        class="eyebrow gap-[14px] text-[10px] tracking-[.22em] text-(color:--brand-green) flex items-center font-extrabold dark:text-[#79d6aa] light:text-[#5a3b24]! before:content-[''] before:w-[42px] before:h-[1px] before:bg-(color:--brand-green) before:opacity-[.55] dark:before:bg-[#79d6aa] light:before:bg-(color:--accent2)">
+                        MERGEN / FAQ</div>
+                    <h2
+                        class="section-title text-[#10241d] not-italic font-[family-name:Georgia,serif] relative tracking-[-.045em] dark:text-[#f1f5f2] light:text-(color:--brown-deep)! font-medium! text-[length:clamp(34px,5vw,68px)]! leading-[1.05]! mt-[12px]! mx700:text-[36px]! light:[text-shadow:0_1px_0_rgba(255,255,255,.5)]">
+                        سؤالات متداول</h2>
+                </div>
+                <div id="faqList" class="gap-[12px] [counter-reset:mergen-faq] flex flex-col">
+                    <div class="faq-item open group/faq-item c-faq-item">
+                        <button class="faq-q c-faq-q">
+                            <span class="c-span-8">آیا محصولات مرگن سفارشی‌سازی می‌شوند؟</span>
+                            <i class="fa-solid fa-plus c-fa-solid"></i>
+                        </button>
+                        <div class="c-div-3">بله. در پروژه‌های سفارشی، ابعاد، رنگ، متریال و جزئیات بر اساس فضای شما بررسی و
+                            طراحی می‌شود.</div>
+                    </div>
+                    <div class="faq-item group/faq-item c-faq-item">
+                        <button class="faq-q c-faq-q">
+                            <span class="c-span-8">زمان تولید چقدر است؟</span>
+                            <i class="fa-solid fa-plus c-fa-solid"></i>
+                        </button>
+                        <div class="c-div-3">زمان تولید به نوع محصول، تعداد و پیچیدگی پروژه بستگی دارد و پس از تأیید طرح اعلام
+                            می‌شود.</div>
+                    </div>
+                    <div class="faq-item group/faq-item c-faq-item">
+                        <button class="faq-q c-faq-q">
+                            <span class="c-span-8">آیا اندازه‌گیری و طراحی هم انجام می‌دهید؟</span>
+                            <i class="fa-solid fa-plus c-fa-solid"></i>
+                        </button>
+                        <div class="c-div-3">برای پروژه‌های دکوراسیون، فرآیند اندازه‌گیری، طراحی و هماهنگی تولید و اجرا قابل
+                            انجام است.</div>
+                    </div>
+                    <div class="faq-item group/faq-item c-faq-item">
+                        <button class="faq-q c-faq-q">
+                            <span class="c-span-8">آیا MDF و CNC در مجموعه انجام می‌شود؟</span>
+                            <i class="fa-solid fa-plus c-fa-solid"></i>
+                        </button>
+                        <div class="c-div-3">بخش قابل توجهی از فرآیند ساخت با برش و CNC انجام می‌شود تا دقت و تکرارپذیری بالا
+                            بماند.</div>
+                    </div>
+                    <div class="faq-item group/faq-item c-faq-item">
+                        <button class="faq-q c-faq-q">
+                            <span class="c-span-8">چطور سفارش را شروع کنم؟</span>
+                            <i class="fa-solid fa-plus c-fa-solid"></i>
+                        </button>
+                        <div class="c-div-3">کافی است محصول یا فضای مورد نظر را مشخص کنید تا برای بررسی ابعاد، سبک و بودجه با
+                            شما هماهنگ شود.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 19 FOOTER -->
+        <footer class="mergen-footer group/footer px-[5%] overflow-hidden bg-[#050806] bg-none text-[#eaf0ed] relative min-h-screen font-[family-name:Vazirmatn,Arial,sans-serif] pt-[110px] pb-[25px] light:bg-transparent light:bg-[image:radial-gradient(ellipse_at_50%_32%,#FFEAD0_0%,#FFF3DE_30%,var(--bg)_66%,#FFFCF4_100%)] light:text-(color:--ink) mx900:px-[24px] mx900:pt-[80px] mx900:pb-[20px] mx550:px-[16px] mx550:pt-[65px] mx550:pb-[15px]" id="footer">
+            <div class="m-auto box-border max-w-[1400px] relative">
+                <div class="box-border text-[9px] tracking-[5px] text-[#3d9276] light:text-[#5a3b24]!">THE LAST ROOM / 01</div>
+                <div class="mx-0 gap-[40px] box-border flex justify-between [align-items:end] mt-[18px] mb-[65px] mx900:items-start mx900:mb-[45px] mx900:flex-col">
+                    <h2 class="m-0 box-border text-[length:clamp(38px,5vw,76px)] font-light leading-[1.15] max-w-[800px] mx550:text-[38px] light:text-(color:--ink)">
+                        فضای بعدی شما از اینجا شروع می‌شود.</h2>
+                    <p class="m-0 box-border max-w-[310px] text-[#718078] text-[12px] leading-[2] mx900:max-w-[500px] light:text-(color:--ink-soft)">
+                        ما فضا را فقط طراحی نمی‌کنیم؛ آن را برای زندگی شما می‌سازیم.</p>
+                </div>
+                <div class="plan border border-[rgba(255,255,255,.1)] border-solid overflow-hidden box-border h-[650px] relative bg-[image:linear-gradient(90deg,rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px)] bg-[length:65px_65px] grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(2,1fr)] [perspective:1000px] mx900:h-[560px] mx550:h-auto mx550:bg-[length:45px_45px] mx550:grid-cols-[1fr_1fr] mx550:grid-rows-[repeat(3,170px)] light:border-(color:--line) light:bg-[image:linear-gradient(90deg,rgba(36,28,21,.05)_1px,transparent_1px),linear-gradient(rgba(36,28,21,.05)_1px,transparent_1px)] before:inset-0 before:content-[''] before:absolute before:pointer-events-none before:bg-[image:radial-gradient(circle_at_50%_50%,rgba(32,217,154,.08),transparent_32%)] light:before:bg-[image:radial-gradient(circle_at_50%_50%,rgba(255,106,77,.1),transparent_32%)] after:inset-y-0 after:content-[''] after:absolute after:pointer-events-none after:left-1/2 after:w-[1px] after:bg-[rgba(255,255,255,.07)] light:after:bg-(color:--line) mx550:after:hidden">
+                    <a class="room group/room c-room" href="#layers">
+                        <i class="c-i-2"></i>
+                        <div class="c-div-4">
+                            <span class="c-span-9">01 BEDROOM</span>
+                            <h3 class="c-h3-2">سرویس خواب</h3>
+                            <b class="c-b-3">↙</b>
+                        </div>
+                    </a>
+                    <a class="room group/room c-room" href="#slider01">
+                        <i class="c-i-2"></i>
+                        <div class="c-div-4">
+                            <span class="c-span-9">02 LIVING</span>
+                            <h3 class="c-h3-2">مبلمان</h3>
+                            <b class="c-b-3">↙</b>
+                        </div>
+                    </a>
+                    <a class="room group/room c-room" href="#slider02">
+                        <i class="c-i-2"></i>
+                        <div class="c-div-4">
+                            <span class="c-span-9">03 KITCHEN</span>
+                            <h3 class="c-h3-2">کابینت</h3>
+                            <b class="c-b-3">↙</b>
+                        </div>
+                    </a>
+                    <a class="room group/room c-room" href="#slider03">
+                        <i class="c-i-2"></i>
+                        <div class="c-div-4">
+                            <span class="c-span-9">04 OFFICE</span>
+                            <h3 class="c-h3-2">میز اداری</h3>
+                            <b class="c-b-3">↙</b>
+                        </div>
+                    </a>
+                    <a class="room group/room c-room" href="#collection">
+                        <i class="c-i-2"></i>
+                        <div class="c-div-4">
+                            <span class="c-span-9">05 INTERIOR</span>
+                            <h3 class="c-h3-2">دکوراسیون داخلی</h3>
+                            <b class="c-b-3">↙</b>
+                        </div>
+                    </a>
+                    <a class="room group/room c-room" href="#collection">
+                        <i class="c-i-2"></i>
+                        <div class="c-div-4">
+                            <span class="c-span-9">06 PROJECT</span>
+                            <h3 class="c-h3-2">پروژه‌های مرگن</h3>
+                            <b class="c-b-3">↙</b>
+                        </div>
+                    </a>
+                    <div
+                        class="border border-[rgba(32,217,154,.35)] border-solid overflow-hidden box-border absolute left-1/2 top-1/2 [transform:translate(-50%,-50%)] w-[145px] h-[145px] rounded-[50%] flex flex-col items-center justify-center bg-[rgba(2,7,5,.78)] z-[5] shadow-[0_0_50px_rgba(32,217,154,.08)] mx550:w-[95px] mx550:h-[95px] light:border-[rgba(14,168,147,.4)] light:bg-[rgba(255,255,255,.85)] light:shadow-[0_0_40px_rgba(14,168,147,.12)]">
+                        <img alt="" src="img/mergen.JPG" class="box-border">
+                        <strong
+                            class="box-border text-[16px] tracking-[4px] mx550:text-[11px] light:text-(color:--ink)">MERGEN</strong>
+                        <span
+                            class="box-border text-[7px] tracking-[3px] text-[#678077] mt-[5px] light:text-(color:--ink-soft)">INTERIOR</span>
+                    </div>
+                    <span
+                        class="box-border absolute text-[7px] tracking-[3px] text-[rgba(255,255,255,.25)] z-[6] left-[18px] top-[15px] light:text-[rgba(36,28,21,.35)] mx550:hidden">MERGEN
+                        / PLAN 01</span>
+                    <span
+                        class="box-border absolute text-[7px] tracking-[3px] text-[rgba(255,255,255,.25)] z-[6] right-[18px] top-[15px] light:text-[rgba(36,28,21,.35)] mx550:hidden">SCALE
+                        1:100</span>
+                    <span
+                        class="box-border absolute text-[7px] tracking-[3px] text-[rgba(255,255,255,.25)] z-[6] right-[18px] bottom-[15px] light:text-[rgba(36,28,21,.35)] mx550:hidden">INTERIOR
+                        / ARCHITECTURE</span>
+                    <span
+                        class="box-border absolute w-[22px] h-[22px] z-[6] left-1/2 top-[8px] before:content-[''] before:absolute before:bg-[rgba(32,217,154,.35)] before:w-[22px] before:h-[1px] before:top-[11px] light:before:bg-[rgba(14,168,147,.4)] after:content-[''] after:absolute after:bg-[rgba(32,217,154,.35)] after:h-[22px] after:w-[1px] after:left-[11px] light:after:bg-[rgba(14,168,147,.4)]"></span>
+                    <span
+                        class="box-border absolute w-[22px] h-[22px] z-[6] left-1/2 bottom-[8px] before:content-[''] before:absolute before:bg-[rgba(32,217,154,.35)] before:w-[22px] before:h-[1px] before:top-[11px] light:before:bg-[rgba(14,168,147,.4)] after:content-[''] after:absolute after:bg-[rgba(32,217,154,.35)] after:h-[22px] after:w-[1px] after:left-[11px] light:after:bg-[rgba(14,168,147,.4)]"></span>
+                </div>
+                <div class="px-0 box-border text-center pt-[80px] pb-[75px] mx550:py-[60px] mx550:px-0">
+                    <span class="box-border text-[8px] tracking-[5px] text-[#3d9276] light:text-(color:--accent2)">YOUR NEXT
+                        SPACE</span>
+                    <h3
+                        class="mx-0 box-border text-[28px] font-light mt-[14px] mb-[22px] mx550:text-[23px] light:text-(color:--ink)">
+                        یک پروژه جدید در ذهن دارید؟</h3>
+                    <a href="#guide"
+                        class="gap-[18px] box-border inline-flex items-center text-[#70d5ae] no-underline text-[11px] border-b-[1px] [border-bottom-style:solid] border-b-[rgba(112,213,174,.35)] pb-[8px] light:text-(color:--accent-deep) light:border-b-[rgba(214,67,31,.4)]">شروع
+                        یک پروژه <b class="box-border">↙</b></a>
+                </div>
+                <div class="gap-[20px] flex items-center [direction:ltr] box-border mx900:hidden">
+                    <button data-search class="c-button-2"><i class="fa-solid fa-magnifying-glass box-border!"></i></button>
+                    <button data-href="wishlist.html" class="c-button-2"><i class="fa-regular fa-heart box-border!"></i></button>
+                    <button data-href="login.html" class="c-button-2"><i class="fa-regular fa-user box-border!"></i></button>
+                    <button data-href="https://www.google.com/maps/search/?api=1&amp;query=Gonbad%20Kavus" data-blank class="c-button-2"><i class="fa-solid fa-location-dot box-border!"></i></button>
+                    <button data-call="+989119725419" class="c-button-2"><i class="fa-solid fa-phone box-border!"></i></button>
+                    <button data-href="cart.html" class="c-button-2"><i class="fa-solid fa-bag-shopping box-border!"></i>
+                        <span
+                            class="absolute right-[-9px] top-[-8px] w-[15px] h-[15px] rounded-[50%] bg-(color:--brand-green) text-[#fff] not-italic font-normal text-[9px] leading-[normal] font-[family-name:Arial] grid place-items-center box-border">0</span>
+                    </button>
+                </div>
+                <div class="mt-[10px] border-t border-(color:--line) pt-[45px] pb-[10px]">
+                    <!-- ردیف بالا: نقشه + شبکه‌ها و عضویت -->
+                    <div class="grid grid-cols-[1.7fr_1fr] gap-6 mx900:grid-cols-1">
+                        <!-- نقشه -->
+                        <div class="rounded-md border border-(color:--line) bg-white/[.035] p-4 light:bg-white/55">
+                            <div class="mb-3 text-right text-[10px] tracking-[3px] text-(color:--accent) [direction:ltr]">FIND US / PLAN 01</div>
+                            <div class="mb-3 flex flex-wrap gap-2">
+                                <button type="button" aria-selected="true" data-map-tab data-q="Gonbad Kavus" data-t="دفتر مرکزی · ساعت کاری ۹ تا ۱۸"
+                                    class="cursor-pointer rounded border border-(color:--line) px-[18px] py-2 text-[13px] text-(color:--ink-soft) transition hover:text-(color:--ink) aria-selected:border-(color:--accent) aria-selected:bg-(color:--accent) aria-selected:text-[#07100d] light:aria-selected:text-white">دفتر</button>
+                                <button type="button" aria-selected="false" data-map-tab data-q="Gonbad Kavus" data-t="فروشگاه · ساعت کاری ۱۰ تا ۲۱"
+                                    class="cursor-pointer rounded border border-(color:--line) px-[18px] py-2 text-[13px] text-(color:--ink-soft) transition hover:text-(color:--ink) aria-selected:border-(color:--accent) aria-selected:bg-(color:--accent) aria-selected:text-[#07100d] light:aria-selected:text-white">فروشگاه</button>
+                                <button type="button" aria-selected="false" data-map-tab data-q="Gonbad Kavus" data-t="کارگاه · با هماهنگی قبلی"
+                                    class="cursor-pointer rounded border border-(color:--line) px-[18px] py-2 text-[13px] text-(color:--ink-soft) transition hover:text-(color:--ink) aria-selected:border-(color:--accent) aria-selected:bg-(color:--accent) aria-selected:text-[#07100d] light:aria-selected:text-white">کارگاه</button>
+                            </div>
+                            <div class="relative h-[300px] overflow-hidden rounded border border-(color:--line) mx900:h-[240px]">
+                                <iframe data-map loading="lazy" title="نقشه مرگن" src="https://maps.google.com/maps?q=Gonbad%20Kavus&output=embed"
+                                    class="block size-full border-0"></iframe>
+                                <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(var(--line)_1px,transparent_1px),linear-gradient(90deg,var(--line)_1px,transparent_1px)] bg-[size:34px_34px] opacity-50"></div>
+                            </div>
+                            <div class="mt-3 flex items-center justify-between gap-[10px] text-[13px] leading-[1.9] text-(color:--ink-soft)">
+                                <span data-map-addr>دفتر مرکزی · ساعت کاری ۹ تا ۱۸</span>
+                                <a data-map-go target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gonbad%20Kavus"
+                                    class="whitespace-nowrap rounded-full border border-(color:--line) px-[14px] py-[7px] text-[12px] text-(color:--ink) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white">مسیریابی</a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <!-- شبکه‌های اجتماعی -->
+                            <div class="rounded-md border border-(color:--line) bg-white/[.035] p-4 light:bg-white/55">
+                                <div class="mb-3 text-right text-[10px] tracking-[3px] text-(color:--accent) [direction:ltr]">SOCIAL</div>
+                                <div class="flex flex-wrap gap-[10px]">
+                                    <a href="#" aria-label="Instagram" class="grid size-[46px] place-items-center rounded-full border border-(color:--line) text-[18px] text-(color:--ink) no-underline transition hover:-translate-y-[3px] hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" aria-label="Pinterest" class="grid size-[46px] place-items-center rounded-full border border-(color:--line) text-[18px] text-(color:--ink) no-underline transition hover:-translate-y-[3px] hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="YouTube" class="grid size-[46px] place-items-center rounded-full border border-(color:--line) text-[18px] text-(color:--ink) no-underline transition hover:-translate-y-[3px] hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="#" aria-label="LinkedIn" class="grid size-[46px] place-items-center rounded-full border border-(color:--line) text-[18px] text-(color:--ink) no-underline transition hover:-translate-y-[3px] hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" aria-label="Telegram" class="grid size-[46px] place-items-center rounded-full border border-(color:--line) text-[18px] text-(color:--ink) no-underline transition hover:-translate-y-[3px] hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-telegram"></i></a>
+                                    <a href="https://wa.me/989119725419" aria-label="WhatsApp" class="grid size-[46px] place-items-center rounded-full border border-(color:--line) text-[18px] text-(color:--ink) no-underline transition hover:-translate-y-[3px] hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <button type="button" data-social-btn aria-expanded="false" aria-label="شبکه‌های بیشتر"
+                                        class="grid size-[46px] cursor-pointer place-items-center rounded-full border border-(color:--line) bg-transparent text-[13px] text-(color:--ink) transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white">+۱۲</button>
+                                </div>
+                                <div data-social-more data-open="false"
+                                    class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 data-[open=true]:grid-rows-[1fr]">
+                                    <div class="flex flex-wrap gap-2 overflow-hidden">
+                                        <div class="w-full pt-3"></div>
+                                        <a href="#" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white">آپارات</a>
+                                        <a href="#" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white">روبیکا</a>
+                                        <a href="#" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white">ایتا</a>
+                                        <a href="#" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white">بله</a>
+                                        <a href="#" aria-label="X" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
+                                        <a href="#" aria-label="Facebook" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#" aria-label="TikTok" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-tiktok"></i></a>
+                                        <a href="#" aria-label="Behance" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-behance"></i></a>
+                                        <a href="#" aria-label="Dribbble" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-dribbble"></i></a>
+                                        <a href="#" aria-label="Discord" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-discord"></i></a>
+                                        <a href="#" aria-label="Threads" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-threads"></i></a>
+                                        <a href="#" aria-label="Snapchat" class="rounded-full border border-(color:--line) px-[13px] py-2 text-[12px] text-(color:--ink-soft) no-underline transition hover:bg-(color:--accent) hover:text-[#07100d] light:hover:text-white"><i class="fa-brands fa-snapchat"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- عضویت -->
+                            <div class="rounded-md border border-(color:--line) bg-white/[.035] p-4 light:bg-white/55">
+                                <h4 class="m-0 mb-1 text-[15px] font-medium text-(color:--ink)">مشاوره رایگان طراحی</h4>
+                                <p class="m-0 mb-3 text-[12px] leading-[1.9] text-(color:--ink-soft)">شماره و ایمیل‌تان را بگذارید؛ کالکشن‌های جدید را اول شما ببینید.</p>
+                                <form data-join class="grid gap-2">
+                                    <input type="tel" inputmode="tel" name="phone" required autocomplete="tel" placeholder="09123456789"
+                                        class="h-11 w-full rounded border border-(color:--line) bg-transparent px-3 text-left text-[13px] text-(color:--ink) [direction:ltr] focus:border-(color:--accent) focus:outline-none">
+                                    <input type="email" name="email" required autocomplete="email" placeholder="name@email.com"
+                                        class="h-11 w-full rounded border border-(color:--line) bg-transparent px-3 text-left text-[13px] text-(color:--ink) [direction:ltr] focus:border-(color:--accent) focus:outline-none">
+                                    <button type="submit"
+                                        class="h-[46px] cursor-pointer rounded border-0 bg-(color:--accent) text-[14px] font-medium text-[#07100d] transition hover:opacity-90 light:text-white">عضویت و دریافت مشاوره</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ستون‌های لینک (دسکتاپ: ستونی؛ موبایل: آکاردئون) -->
+                    <div class="mt-10 grid grid-cols-[1.4fr_1.7fr_1.1fr] gap-10 border-t border-(color:--line) pt-[34px] mx900:mt-7 mx900:grid-cols-1 mx900:gap-0 mx900:pt-0">
+                        <div>
+                            <strong class="block text-[10px] tracking-[3px] text-(color:--ink)">MERGEN</strong>
+                            <p class="m-0 mt-[10px] text-[12px] leading-[2.1] text-(color:--ink-soft)">طراحی، ساخت و اجرای فضاهایی که برای ماندن ساخته شده‌اند.</p>
+                        </div>
+                        <div data-acc data-open="false" class="group/acc mx900:border-b mx900:border-(color:--line)">
+                            <button type="button" class="flex w-full cursor-default items-center justify-between border-0 bg-transparent p-0 text-right text-[10px] tracking-[3px] text-(color:--ink) mx900:cursor-pointer mx900:py-4 mx900:text-[11px]">
+                                <span>دسترسی سریع</span><i class="fa-solid fa-plus hidden text-[11px] transition group-data-[open=true]/acc:rotate-45 mx900:block"></i></button>
+                            <div data-cols2 class="mx900:max-h-0 mx900:overflow-hidden mx900:transition-[max-height] mx900:duration-500 mx900:group-data-[open=true]/acc:max-h-64 mx900:group-data-[open=true]/acc:pb-3">
+                                <a href="#collection" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">پروژه‌ها</a>
+                                <a href="footer-links.html#about" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">درباره ما</a>
+                                <a href="#faq" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">سؤالات متداول</a>
+                                <a href="#contact" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">ارتباط با ما</a>
+                                <a href="footer-links.html#terms" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">شرایط استفاده</a>
+                                <a href="footer-links.html#returns" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">مرجوعی</a>
+                                <a href="footer-links.html#shipping" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">ارسال و تحویل</a>
+                                <a href="footer-links.html#privacy" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">حریم خصوصی</a>
+                                <a href="footer-links.html#ordertracking" class="mt-[10px] block text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:-translate-x-1 hover:text-(color:--accent)">رهگیری سفارش</a>
+                            </div>
+                        </div>
+                                                <div data-acc data-open="false" class="group/acc mx900:border-b mx900:border-(color:--line)">
+                            <button type="button" class="flex w-full cursor-default items-center justify-between border-0 bg-transparent p-0 text-right text-[10px] tracking-[3px] text-(color:--ink) mx900:cursor-pointer mx900:py-4 mx900:text-[11px]">
+                                <span>تماس</span><i class="fa-solid fa-plus hidden text-[11px] transition group-data-[open=true]/acc:rotate-45 mx900:block"></i></button>
+                            <div class="mx900:max-h-0 mx900:overflow-hidden mx900:transition-[max-height] mx900:duration-500 mx900:group-data-[open=true]/acc:max-h-64 mx900:group-data-[open=true]/acc:pb-3">
+                                <a href="tel:+989119725419" class="mt-[10px] block text-right text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:text-(color:--accent) [direction:ltr]">+98 911 972 5419</a>
+                                <a href="mailto:mergen@mergen.com" class="mt-[10px] block text-right text-[12px] leading-[2.1] text-(color:--ink-soft) no-underline transition hover:text-(color:--accent) [direction:ltr]">mergen@mergen.com</a>
+                                <span class="mt-[10px] block text-right text-[12px] leading-[2.1] text-(color:--ink-soft) [direction:ltr]">Gonbad Kavus / Iran</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mx600:gap-[8px] mx600:flex-col mx550:gap-[9px] mx550:flex-col px-0 border-t-[1px] [border-top-style:solid] border-t-[rgba(255,255,255,.08)] pt-[20px] pb-[5px] flex justify-between text-[rgba(255,255,255,.25)] text-[8px] box-border tracking-[2px] light:border-t-(color:--line) light:text-[rgba(36,28,21,.4)]">
+                    <span class="box-border">© 2026 MERGEN FURNITURE</span>
+                    <span class="box-border">DESIGNED FOR SPACES THAT MATTER</span>
+                </div>
+                <div class="not-italic font-bold text-[length:clamp(90px,19vw,280px)] leading-[.72] font-[family-name:Arial,sans-serif] text-[rgba(255,255,255,.025)] tracking-[-.08em] whitespace-nowrap mt-[65px] pointer-events-none box-border text-center light:text-[rgba(36,28,21,.035)] mx550:mt-[45px]">
+                    MERGEN</div>
+            </div>
+        </footer>
+    </main>
+<button aria-label="بازگشت به بالا" id="backTop" class="border border-[#79d6aa55] border-solid fixed bottom-[22px] left-[22px] w-[48px] h-[48px] rounded-[50%] bg-[#0a1713e8] text-[#79d6aa] z-[1700] opacity-0 pointer-events-none [transition:.3s] light:border-[rgba(255,106,77,.35)] light:bg-[#fff] light:text-(color:--accent) light:shadow-[0_12px_32px_rgba(36,28,21,.14)] [&.show]:opacity-100 [&.show]:pointer-events-auto">↑</button>
+<button aria-label="پیام به پشتیبان" class="py-0 px-[18px] border border-[rgba(16,185,129,.38)] border-solid gap-[9px] will-change-[transform] right-[24px] bottom-[24px] min-w-[58px] h-[58px] fixed z-[9990] flex items-center justify-center rounded-[999px] bg-[image:linear-gradient(145deg,var(--brand-green),#0a1712)] text-[#fff] shadow-[0_14px_40px_rgba(0,0,0,.35),0_0_25px_rgba(16,185,129,.08)] font-[family-name:inherit] cursor-pointer [transition:transform_.65s_cubic-bezier(.2,.8,.2,1),box-shadow_.6s_ease,border-color_.5s_ease,background_.5s_ease] hover:border-[rgba(16,185,129,.65)] hover:shadow-[0_22px_55px_rgba(0,0,0,.42),0_0_35px_rgba(16,185,129,.14)] hover:[transform:translateY(-5px)_scale(1.02)] light:border-(color:--btn-red)! light:bg-(color:--btn-red)! light:bg-none! light:text-[#fff]! light:shadow-[0_10px_30px_rgba(255,138,120,.3)]! light:hover:border-(color:--btn-red-hover)! light:hover:bg-(color:--btn-red-hover)! light:hover:bg-none! hover:light:border-(color:--btn-red)! hover:light:shadow-[0_10px_30px_rgba(255,138,120,.3)]!" id="supportButton"><span class="inset-[-4px] border border-[rgba(16,185,129,.18)] border-solid absolute rounded-[inherit] [animation:supportPulse_2.8s_ease-out_infinite] pointer-events-none"></span><i class="fa-solid fa-headset text-[#8ee8c8]! text-[19px]! relative! z-[2]! light:text-[#fff]!"></i><b class="mx600:hidden text-[10px] font-normal relative z-[2] light:text-[#fff]"></b></button><div aria-hidden="true" class="[&.open]:opacity-100 [&.open]:visible [&.open]:[transform:translateY(0)_scale(1)] [&.open]:[transition-delay:0s] p-[22px] border border-[rgba(16,185,129,.18)] border-solid opacity-0 invisible [transform:translateY(18px)_scale(.97)] right-[24px] bottom-[94px] fixed z-[9989] w-[min(360px,calc(100vw_-_32px))] rounded-[22px] bg-[image:linear-gradient(160deg,#0b1511,#050907)] shadow-[0_25px_80px_rgba(0,0,0,.48)] origin-[bottom_right] [transition:opacity_.45s_ease,transform_.65s_cubic-bezier(.16,1,.3,1),visibility_0s_linear_.65s] light:border-(color:--line) light:bg-[image:linear-gradient(160deg,#fff,var(--surface-2))] light:shadow-[0_22px_60px_rgba(36,28,21,.16)]" id="supportPanel"><div class="gap-[15px] flex justify-between items-start mb-[18px]"><div><small class="text-[8px] tracking-[.2em] text-[#10b981] light:text-(color:--accent2)">MERGEN / SUPPORT</small><h3 class="text-[17px] font-normal mt-[7px] light:text-(color:--ink)">چطور می‌توانیم کمک کنیم؟</h3></div><button id="supportClose" class="border-0 border-none bg-transparent text-[#aaa] text-[24px] cursor-pointer [transition:transform_.4s_ease,color_.4s_ease] light:border-(color:--btn-red)! light:bg-(color:--btn-red)! light:text-[#fff]! hover:text-[#fff] hover:[transform:rotate(90deg)]">×</button></div><div class="gap-[8px] grid"><a class="group/support-option c-a-7" href="#"><i class="fa-brands fa-whatsapp c-fa-brands-2"></i><span class="c-span-11"><b class="text-[11px] font-medium">واتساپ</b><small class="c-small-4">پیام سریع به پشتیبان</small></span><em class="c-em">←</em></a><a class="group/support-option c-a-7" href="#"><i class="fa-brands fa-telegram c-fa-brands-2"></i><span class="c-span-11"><b class="text-[11px] font-medium">تلگرام</b><small class="c-small-4">گفت‌وگوی مستقیم</small></span><em class="c-em">←</em></a><a class="group/support-option c-a-7" href="#"><i class="fa-solid fa-phone c-fa-brands-2"></i><span class="c-span-11"><b class="text-[11px] font-medium">تماس با ما</b><small class="c-small-4">پاسخ‌گویی در ساعات کاری</small></span><em class="c-em">←</em></a></div></div>
+
+
+</body></html>

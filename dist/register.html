@@ -1,0 +1,127 @@
+<!doctype html>
+<html data-page="register" lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثبت‌نام | مرگن</title>
+  <link href="./css/style.css" rel="stylesheet">
+<link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
+<script src="./js/main.js"></script>
+</head>
+<body class="min-h-screen bg-[#f4f2ec] text-[#101814] dark:bg-[#050b09] dark:text-white transition-colors duration-500">
+  <main class="relative min-h-screen overflow-hidden noise">
+    <div class="bg-scene absolute inset-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-[#07100D]/90 via-transparent to-[#07100D]/75 dark:block"></div>
+    <div class="absolute inset-0 hidden bg-[#f4f2ec]/35 light:block"></div>
+
+    <div class="orbit absolute -right-24 top-16 h-72 w-72 rounded-full border border-[#79D6AA]/15 bg-[#79D6AA]/5 blur-[1px]"></div>
+    <div class="orbit2 absolute -left-20 bottom-10 h-80 w-80 rounded-full border border-white/10 bg-white/[.03] backdrop-blur-xs"></div>
+
+    <section class="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center justify-center px-5 py-12 lg:px-10">
+      <div class="grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
+
+        <div class="enter2 order-2 text-white lg:order-1">
+          <div class="mb-7 flex items-center gap-3">
+            <span class="h-px w-14 bg-[#79D6AA]"></span>
+            <a href="index.html" style="color:inherit;text-decoration:none"><span class="text-xs tracking-[.35em] text-[#79D6AA]">MERGEN / MEMBERS</span></a>
+          </div>
+          <h1 class="max-w-xl text-4xl font-light leading-[1.25] sm:text-5xl lg:text-6xl">
+            جایی برای انتخاب‌های<br><span class="font-semibold text-[#79D6AA]">خاص‌تر از معمول.</span>
+          </h1>
+          <p class="mt-7 max-w-md text-sm leading-8 text-white/65">
+            حساب مرگن را بسازید و وارد فضای اختصاصی مجموعه‌ای شوید که برای جزئیات، کیفیت و سلیقه متفاوت ساخته شده است.
+          </p>
+          <div class="mt-10 flex items-center gap-5 text-xs text-white/50">
+            <div class="h-px w-16 bg-white/20"></div>
+            <span>طراحی شده برای تجربه‌ای متفاوت</span>
+          </div>
+        </div>
+
+        <div class="enter order-1 lg:order-2">
+          <div class="relative mx-auto w-full max-w-[530px]">
+            <div class="absolute -inset-5 rounded-[38px] bg-[#79D6AA]/10 blur-3xl"></div>
+            <div class="light-path"></div>
+            <div class="reg-card mg-ring relative rounded-[30px] border border-white/15 bg-[#07100D]/65 p-7 shadow-[0_35px_100px_rgba(0,0,0,.55)] backdrop-blur-2xl sm:p-10"><a href="index.html" class="reg-logo" aria-label="MERGEN"><img src="img/logo.jpg" alt="MERGEN"></a>
+              <div class="mb-9 flex items-start justify-between">
+                <div>
+                  <p class="text-[10px] tracking-[.32em] text-[#79D6AA]">CREATE YOUR SPACE</p>
+                  <h2 class="mt-3 text-2xl font-semibold text-white">ساخت حساب مرگن</h2>
+                </div>
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#79D6AA]/20 bg-[#79D6AA]/5 text-[#79D6AA]">✦</div>
+              </div>
+
+              <form id="registerForm" class="space-y-5">
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <label class="field block">
+                    <span class="mb-2 block text-xs text-white/55">نام و نام خانوادگی</span>
+                    <div class="relative">
+                      <input required type="text" placeholder="نام شما" class="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white outline-hidden placeholder:text-white/25">
+                      <span class="field-icon absolute left-0 top-3 text-white/35 transition">◈</span>
+                      <span class="input-line absolute bottom-0 right-0 h-px w-0 transition-all duration-500"></span>
+                    </div>
+                  </label>
+                  <label class="field block">
+                    <span class="mb-2 block text-xs text-white/55">شماره موبایل</span>
+                    <div class="relative">
+                      <input required type="tel" inputmode="tel" placeholder="09••••••••••" class="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-left text-sm text-white outline-hidden placeholder:text-white/25" dir="ltr">
+                      <span class="field-icon absolute left-0 top-3 text-white/35 transition">⌁</span>
+                      <span class="input-line absolute bottom-0 right-0 h-px w-0 transition-all duration-500"></span>
+                    </div>
+                  </label>
+                </div>
+
+                <label class="field block">
+                  <span class="mb-2 block text-xs text-white/55">ایمیل</span>
+                  <div class="relative">
+                    <input required type="email" placeholder="you@example.com" class="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-left text-sm text-white outline-hidden placeholder:text-white/25" dir="ltr">
+                    <span class="field-icon absolute left-0 top-3 text-white/35 transition">@</span>
+                    <span class="input-line absolute bottom-0 right-0 h-px w-0 transition-all duration-500"></span>
+                  </div>
+                </label>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <label class="field block">
+                    <span class="mb-2 block text-xs text-white/55">رمز عبور</span>
+                    <div class="relative">
+                      <input id="password" required minlength="6" type="password" placeholder="••••••••" class="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-left text-sm tracking-widest text-white outline-hidden placeholder:text-white/20" dir="ltr">
+                      <button type="button" data-toggle="password" class="absolute left-0 top-2 text-xs text-white/35 hover:text-[#79D6AA]">نمایش</button>
+                      <span class="input-line absolute bottom-0 right-0 h-px w-0 transition-all duration-500"></span>
+                    </div>
+                    <div class="mt-2 flex gap-1"><i class="h-0.5 flex-1 rounded-sm bg-white/10 strength"></i><i class="h-0.5 flex-1 rounded-sm bg-white/10 strength"></i><i class="h-0.5 flex-1 rounded-sm bg-white/10 strength"></i><i class="h-0.5 flex-1 rounded-sm bg-white/10 strength"></i></div>
+                  </label>
+                  <label class="field block">
+                    <span class="mb-2 block text-xs text-white/55">تکرار رمز</span>
+                    <div class="relative">
+                      <input id="confirmPassword" required type="password" placeholder="••••••••" class="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-left text-sm tracking-widest text-white outline-hidden placeholder:text-white/20" dir="ltr">
+                      <span class="input-line absolute bottom-0 right-0 h-px w-0 transition-all duration-500"></span>
+                    </div>
+                  </label>
+                </div>
+
+                <label class="reveal flex cursor-pointer items-start gap-3 pt-2 text-xs leading-6 text-white/50">
+                  <input required type="checkbox" class="mt-1 h-4 w-4 accent-[#79D6AA]">
+                  <span>با ساخت حساب، <a href="footer-links.html#terms" class="text-[#79D6AA] hover:underline">شرایط استفاده</a> و قوانین حریم خصوصی مرگن را می‌پذیرم.</span>
+                </label>
+
+                <button type="submit" class="group relative mt-2 w-full overflow-hidden rounded-2xl border border-[#79D6AA]/45 px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(121,214,170,.06)] transition-all duration-500 hover:shadow-[0_0_45px_rgba(121,214,170,.22)]">
+                  <span class="absolute inset-y-0 right-0 w-0 bg-[#79D6AA] transition-all duration-500 ease-out group-hover:w-full"></span>
+                  <span class="absolute -right-16 top-1/2 h-24 w-24 -translate-y-1/2 rounded-full bg-[#79D6AA]/45 blur-2xl opacity-0 transition-all duration-700 group-hover:right-1/2 group-hover:opacity-100"></span>
+                  <span class="relative z-10 flex items-center justify-center gap-3 transition-colors duration-500 group-hover:text-[#07100D]">ساخت حساب <span class="text-lg transition-transform duration-500 group-hover:-translate-x-1">←</span></span>
+                </button>
+              </form>
+
+              <div class="mt-7 flex items-center justify-between border-t border-white/10 pt-6 text-xs text-white/40">
+                <span>قبلاً عضو شده‌اید؟</span>
+                <a href="login.html" class="reg-login-btn text-[#79D6AA] transition hover:text-white">ورود به حساب</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-8 rounded-full border border-[#79D6AA]/30 bg-[#07100D]/90 px-6 py-3 text-xs text-white opacity-0 shadow-2xl backdrop-blur-xl transition-all duration-500"></div>
+  </main>
+
+  </body>
+</html>

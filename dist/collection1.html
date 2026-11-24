@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MERGEN — Collection / Digital Exhibition</title>
+<style>
+:root{--bg:#07100d;--ink:#f1eee6;--muted:#9ba59e;--green:#183d31;--line:rgba(255,255,255,.13);--accent:#c8a76b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}
+.cursor{position:fixed;width:16px;height:16px;border:1px solid #fff;border-radius:50%;pointer-events:none;z-index:99;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:.18s}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:26px 42px;color:#fff}
+.logo{font-size:22px;letter-spacing:.28em;font-weight:700}.navlinks{display:flex;gap:28px;font-size:11px;text-transform:uppercase;letter-spacing:.18em}.navlinks a{opacity:.72}.navlinks a:hover{opacity:1}
+.hero{height:100svh;min-height:680px;position:relative;display:grid;align-items:end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.52);transform:scale(1.03);transition:transform 1.6s ease}
+.hero:hover img{transform:scale(1.08)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%,rgba(0,0,0,.8))}
+.heroContent{position:relative;z-index:2;padding:0 7vw 8vh;max-width:1100px}.eyebrow{font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:#d5c79f;margin-bottom:22px}
+.hero h1{font-size:clamp(64px,11vw,170px);line-height:.82;letter-spacing:-.07em;margin:0;font-weight:500}.hero p{max-width:520px;color:#d7d7d0;line-height:1.7;font-size:15px;margin:32px 0 0}
+.scrollHint{position:absolute;right:42px;bottom:38px;z-index:3;font-size:10px;letter-spacing:.25em;text-transform:uppercase;writing-mode:vertical-rl}
+.intro{min-height:55vh;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center;padding:12vh 8vw;background:#091510}.intro .num{font-size:12px;color:var(--accent);letter-spacing:.3em}.intro h2{font-size:clamp(42px,6vw,92px);font-weight:400;line-height:.95;letter-spacing:-.05em;margin:18px 0}.intro p{color:var(--muted);line-height:1.9;max-width:520px;font-size:15px}
+.scene{height:100svh;min-height:720px;position:relative;overflow:hidden}.scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55);transition:transform 1.2s ease,filter 1.2s ease}.scene:hover img{transform:scale(1.04);filter:brightness(.68)}
+.sceneInfo{position:absolute;z-index:3;left:7vw;bottom:9vh}.sceneInfo .kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#d6c69c}.sceneInfo h2{font-size:clamp(54px,9vw,130px);font-weight:400;line-height:.85;margin:14px 0;letter-spacing:-.06em}.sceneInfo p{max-width:410px;color:#ddd;line-height:1.7}
+.hotspot{position:absolute;z-index:4;width:30px;height:30px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(8,16,13,.45);cursor:pointer}.hotspot:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff}.hotspot span{position:absolute;left:42px;top:-7px;white-space:nowrap;background:rgba(5,10,8,.88);border:1px solid var(--line);padding:9px 12px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;opacity:0;transform:translateX(-8px);transition:.3s}.hotspot:hover span{opacity:1;transform:none}
+.productStrip{padding:14vh 7vw;background:#050b08}.stripHead{display:flex;justify-content:space-between;align-items:end;margin-bottom:48px}.stripHead h2{font-size:clamp(42px,6vw,90px);font-weight:400;letter-spacing:-.05em;margin:0}.stripHead p{color:var(--muted);max-width:330px;line-height:1.7}.products{display:grid;grid-template-columns:1.45fr .8fr .8fr;gap:18px}.card{position:relative;min-height:470px;overflow:hidden;background:#101a15}.card img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.card:hover img{transform:scale(1.06)}.card:nth-child(2),.card:nth-child(3){min-height:370px}.cardInfo{position:absolute;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:end}.cardInfo small{display:block;color:#b9bdb8;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}.cardInfo strong{font-size:21px;font-weight:400}.arrow{width:38px;height:38px;border:1px solid rgba(255,255,255,.5);display:grid;place-items:center}
+.material{min-height:72vh;padding:13vh 8vw;background:#10261f;display:grid;grid-template-columns:1fr 1.2fr;gap:8vw;align-items:center}.material h2{font-size:clamp(48px,7vw,100px);font-weight:400;line-height:.9;letter-spacing:-.06em;margin:15px 0}.material p{color:#b9c1bb;line-height:1.8;max-width:460px}.swatches{display:flex;gap:14px;margin-top:35px}.swatch{width:78px;height:78px;border:1px solid rgba(255,255,255,.18);cursor:pointer}.s1{background:#24372d}.s2{background:#6b5944}.s3{background:#a9a092}.s4{background:#1b1b18}.materialVisual{height:510px;position:relative;overflow:hidden}.materialVisual img{width:100%;height:100%;object-fit:cover}.materialVisual .label{position:absolute;left:24px;bottom:24px;background:rgba(0,0,0,.62);padding:14px 18px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.cta{min-height:75vh;display:grid;place-items:center;text-align:center;padding:12vh 6vw;background:radial-gradient(circle at center,#183d31 0,#07100d 55%)}.cta .small{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#cbb782}.cta h2{font-size:clamp(55px,10vw,145px);font-weight:400;line-height:.82;letter-spacing:-.07em;margin:25px 0 38px}.cta a{display:inline-flex;gap:20px;align-items:center;border:1px solid rgba(255,255,255,.35);padding:16px 22px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}.footer{padding:35px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#7e8982;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:800px){.nav{padding:20px}.navlinks{display:none}.intro,.material{grid-template-columns:1fr;gap:35px}.products{grid-template-columns:1fr}.card,.card:nth-child(2),.card:nth-child(3){min-height:420px}.heroContent,.sceneInfo{left:auto;padding-left:24px;padding-right:24px}.scrollHint{right:20px}.cursor{display:none}}
+</style>
+</head>
+<body>
+<div class="cursor"></div>
+<nav class="nav"><div class="logo">MERGEN</div><div class="navlinks"><a href="#">Home</a><a href="#exhibition">Collection</a><a href="product.html">Product</a><a href="#contact">Contact</a></div></nav>
+
+<section class="hero">
+<img src="https://koala.sh/api/image/v2-dry2b-1kkts.jpg?dream=&height=832&width=1216" alt="">
+<div class="heroContent"><div class="eyebrow">MERGEN / COLLECTION 01</div><h1>The Living<br>Archive.</h1><p>A collection is not a list of furniture. It is a sequence of spaces, materials and objects that belong together.</p></div>
+<div class="scrollHint">Scroll to enter</div>
+</section>
+
+<section class="intro" id="exhibition">
+<div><div class="num">01 — THE EXHIBITION</div><h2>Furniture<br>in its habitat.</h2></div>
+<div><p>Welcome to the Mergen Digital Exhibition. Walk through living, dining and bedroom scenes. Find a piece, inspect it, then move naturally to the next room.</p><p>This prototype uses temporary internet imagery. Replace the image URLs with Mergen photography when the final assets are ready.</p></div>
+</section>
+
+<section class="scene">
+<img src="https://i.pinimg.com/originals/b1/3f/e6/b13fe676364f227ddc8d3b4f71b5f59a.jpg" alt="">
+<div class="sceneInfo"><div class="kicker">02 / Living</div><h2>Living.</h2><p>Deep green, warm metal, layered texture. The room becomes the first catalogue.</p></div>
+<button class="hotspot" style="left:55%;top:61%"><span>Merga Sofa — Living</span></button>
+<button class="hotspot" style="left:70%;top:68%"><span>Orbit Table — Center</span></button>
+</section>
+
+<section class="scene">
+<img src="https://images.squarespace-cdn.com/content/v1/666b1e9b5801013aa6a559a3/1718296236903-G0531QC66770K4G7O258/thed1983_70621_moody_and_sophisticated_modern_open_dining_room__0a4b03ad-4d44-4ee9-82c8-a6c933b9fb8e.jpeg" alt="">
+<div class="sceneInfo"><div class="kicker">03 / Dining</div><h2>Dining.</h2><p>A longer rhythm. A table, a chair, a light — and enough negative space for the architecture to breathe.</p></div>
+<button class="hotspot" style="left:49%;top:60%"><span>Linea Dining Table</span></button>
+<button class="hotspot" style="left:67%;top:59%"><span>Forma Chair</span></button>
+</section>
+
+<section class="scene">
+<img src="https://i.pinimg.com/originals/02/7b/15/027b15f3306992a2047e3819fc9559df.png" alt="">
+<div class="sceneInfo"><div class="kicker">04 / Bedroom</div><h2>Night.</h2><p>Quieter proportions, darker surfaces and softer light. The collection changes mood without changing language.</p></div>
+<button class="hotspot" style="left:51%;top:56%"><span>Arco Bed</span></button>
+<button class="hotspot" style="left:72%;top:62%"><span>Night Console</span></button>
+</section>
+
+<section class="productStrip">
+<div class="stripHead"><h2>Selected<br>Objects.</h2><p>Three pieces from the exhibition. Click any piece to enter its dedicated product room.</p></div>
+<div class="products">
+<a class="card" href="product.html"><img src="https://cdn.shopify.com/s/files/1/0653/7697/7075/files/1760078601017-MEATNY-_0000__0001_Visionnaire_ca_Foscari_Sofa_Artemest_1.jpg?v=1760084444"><div class="cardInfo"><div><small>01 / Seating</small><strong>Merga Sofa</strong></div><div class="arrow">↗</div></div></a>
+<a class="card" href="product.html"><img src="https://sfumato.in/WebDemo/salt-studio-web-1/public/imgs/slider/s1.jpg"><div class="cardInfo"><div><small>02 / Dining</small><strong>Linea Table</strong></div><div class="arrow">↗</div></div></a>
+<a class="card" href="product.html"><img src="https://i.pinimg.com/originals/02/7b/15/027b15f3306992a2047e3819fc9559df.png"><div class="cardInfo"><div><small>03 / Bedroom</small><strong>Arco Bed</strong></div><div class="arrow">↗</div></div></a>
+</div>
+</section>
+
+<section class="material">
+<div><div class="num">05 — MATERIAL LANGUAGE</div><h2>Touch<br>the finish.</h2><p>The same object can feel completely different through upholstery, wood, stone and metal. This is where Mergen should later introduce its real material catalogue.</p><div class="swatches"><div class="swatch s1" title="Forest"></div><div class="swatch s2" title="Walnut"></div><div class="swatch s3" title="Stone"></div><div class="swatch s4" title="Black"></div></div></div>
+<div class="materialVisual"><img src="https://cdn.shopify.com/s/files/1/0653/7697/7075/files/1760078601017-MEATNY-_0000__0001_Visionnaire_ca_Foscari_Sofa_Artemest_1.jpg?v=1760084444"><div class="label">Forest / Velvet / Brushed Brass</div></div>
+</section>
+
+<section class="cta" id="contact"><div><div class="small">06 — COMPLETE THE SPACE</div><h2>One piece<br>is never enough.</h2><a href="product.html">Enter Product Room <span>→</span></a></div></section>
+<footer class="footer"><span>MERGEN — DIGITAL EXHIBITION</span><span>Temporary prototype imagery</span></footer>
+<script>
+const c=document.querySelector('.cursor');addEventListener('mousemove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px'});
+document.querySelectorAll('.swatch').forEach((s,i)=>s.addEventListener('click',()=>{document.querySelector('.materialVisual .label').textContent=['Forest / Velvet / Brushed Brass','Walnut / Leather / Smoked Metal','Stone / Linen / Champagne','Black / Bouclé / Graphite'][i]}));
+</script>
+</body></html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MERGEN — Product Room</title>
+<style>
+:root{--bg:#070d0a;--panel:#0d1712;--ink:#f2efe7;--muted:#9ba59e;--line:rgba(255,255,255,.12);--accent:#c8a76b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.nav{height:82px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:fixed;top:0;left:0;right:0;background:rgba(7,13,10,.78);backdrop-filter:blur(14px);z-index:20}.logo{font-size:22px;letter-spacing:.28em;font-weight:700}.nav a{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#aeb5b0}
+.productHero{min-height:100svh;padding:120px 5vw 70px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(360px,.55fr);gap:5vw;align-items:center}
+.visual{height:78vh;min-height:620px;position:relative;background:#eef0eb;overflow:hidden}.visual img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .8s}.visual:hover img{transform:scale(1.035)}
+.index{position:absolute;left:24px;top:24px;font-size:10px;letter-spacing:.2em;color:#59635d}.view{position:absolute;right:24px;bottom:24px;border:1px solid rgba(0,0,0,.18);background:rgba(255,255,255,.75);padding:10px 13px;color:#1b231f;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.info{position:relative}.eyebrow{font-size:10px;color:var(--accent);letter-spacing:.28em;text-transform:uppercase}.info h1{font-size:clamp(60px,8vw,120px);font-weight:400;line-height:.83;letter-spacing:-.07em;margin:18px 0 28px}.desc{color:var(--muted);line-height:1.8;max-width:420px;font-size:14px}.price{font-size:13px;letter-spacing:.15em;text-transform:uppercase;margin:30px 0;color:#d8d2c3}.quote{display:flex;gap:10px}.quote a{border:1px solid rgba(255,255,255,.35);padding:15px 20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase}.quote a:first-child{background:#d9d0bb;color:#101612;border-color:#d9d0bb}
+.meta{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:42px}.meta div{padding:18px 0;border-bottom:1px solid var(--line)}.meta small{display:block;color:#78847d;font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:7px}.meta strong{font-weight:400;font-size:13px}
+.story{min-height:85vh;padding:14vh 8vw;background:#0b1510;display:grid;grid-template-columns:.75fr 1.25fr;gap:8vw;align-items:center}.story h2{font-size:clamp(50px,7vw,100px);font-weight:400;line-height:.9;letter-spacing:-.06em;margin:0}.story p{font-size:16px;line-height:1.9;color:#aeb8b1;max-width:610px}.quoteLine{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#c9b57e;margin-top:45px}
+.context{min-height:100vh;padding:12vh 7vw}.contextHead{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.contextHead h2{font-size:clamp(46px,6vw,90px);font-weight:400;letter-spacing:-.06em;line-height:.9;margin:0}.contextHead p{max-width:340px;color:var(--muted);line-height:1.7}.room{height:72vh;position:relative;overflow:hidden}.room img{width:100%;height:100%;object-fit:cover;filter:brightness(.62);transition:transform 1.2s}.room:hover img{transform:scale(1.045)}.roomText{position:absolute;left:38px;bottom:38px}.roomText small{color:#d1be8b;letter-spacing:.2em;text-transform:uppercase;font-size:10px}.roomText h3{font-size:clamp(40px,6vw,80px);font-weight:400;margin:12px 0}.roomText p{color:#ddd;max-width:430px;line-height:1.7}
+.options{padding:12vh 7vw;background:#07100d}.options h2{font-size:clamp(44px,6vw,86px);font-weight:400;letter-spacing:-.06em;margin:0 0 50px}.optionGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.option{border:1px solid var(--line);padding:18px;background:#0c1712}.option img{width:100%;height:260px;object-fit:cover}.option h3{font-weight:400;margin:18px 0 8px;font-size:18px}.option p{margin:0;color:#8f9a93;font-size:12px;line-height:1.6}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;background:#1e3b30;border:1px solid rgba(255,255,255,.2)}.dot.w{background:#d8d0c2}.dot.b{background:#1b1b18}
+.final{min-height:70vh;display:grid;place-items:center;text-align:center;padding:12vh 6vw;background:radial-gradient(circle at 50% 30%,#183d31,#070d0a 58%)}.final h2{font-size:clamp(55px,10vw,140px);font-weight:400;line-height:.82;letter-spacing:-.07em;margin:20px 0 40px}.final a{display:inline-flex;border:1px solid rgba(255,255,255,.35);padding:16px 22px;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.footer{padding:32px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#758079;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+@media(max-width:900px){.productHero,.story{grid-template-columns:1fr}.visual{height:60vh;min-height:430px}.info{padding:20px 0}.optionGrid{grid-template-columns:1fr}.room{height:60vh}.nav{padding:0 20px}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="logo" href="collection.html">MERGEN</a><a href="collection.html">← Back to Collection</a></nav>
+
+<main>
+<section class="productHero">
+<div class="visual">
+<div class="index">01 / SEATING COLLECTION</div>
+<img id="mainImage" src="https://cdn.shopify.com/s/files/1/0653/7697/7075/files/1760078601017-MEATNY-_0000__0001_Visionnaire_ca_Foscari_Sofa_Artemest_1.jpg?v=1760084444" alt="Mergen sofa placeholder">
+<div class="view">Drag / Inspect</div>
+</div>
+<div class="info">
+<div class="eyebrow">MERGEN / PRODUCT ROOM</div>
+<h1>Merga<br>Sofa.</h1>
+<p class="desc">A sculptural seating piece designed to anchor a room without overpowering it. This page treats the product like an object in an exhibition — then gradually brings it back into the context of a real interior.</p>
+<div class="price">Price on request</div>
+<div class="quote"><a href="#quote">Request configuration</a><a href="#materials">Explore finishes</a></div>
+<div class="meta"><div><small>Structure</small><strong>Solid wood / engineered frame</strong></div><div><small>Upholstery</small><strong>Fabric / leather</strong></div><div><small>Style</small><strong>Contemporary / sculptural</strong></div><div><small>Made for</small><strong>Living / lounge / hospitality</strong></div></div>
+</div>
+</section>
+
+<section class="story">
+<div><h2>Designed to<br>hold the room.</h2></div>
+<div><p>The product page should answer more than “what does it cost?”. It should make the visitor understand why this object exists, how it changes the room and what choices are available.</p><p>For Mergen, this can later become the place where real CNC details, membrane work, upholstery, dimensions and custom options are revealed without turning the page into a technical catalogue.</p><div class="quoteLine">Form / Function / Emotion</div></div>
+</section>
+
+<section class="context">
+<div class="contextHead"><h2>See it<br>at home.</h2><p>The product is strongest when the visitor sees it in its natural habitat. This room image is temporary; replace it with the final Mergen project photography.</p></div>
+<div class="room"><img src="https://i.pinimg.com/originals/b1/3f/e6/b13fe676364f227ddc8d3b4f71b5f59a.jpg" alt=""><div class="roomText"><small>Living / Collection 01</small><h3>The green room.</h3><p>Deep upholstery, warm metal and architectural lighting create a setting where the sofa becomes the visual anchor.</p></div></div>
+</section>
+
+<section class="options" id="materials">
+<h2>Make it yours.</h2>
+<div class="optionGrid">
+<div class="option"><img src="https://cdn.shopify.com/s/files/1/0653/7697/7075/files/1760078601017-MEATNY-_0000__0001_Visionnaire_ca_Foscari_Sofa_Artemest_1.jpg?v=1760084444"><h3>Forest / Velvet</h3><p><span class="dot"></span>Deep green textile with a soft architectural presence.</p></div>
+<div class="option"><img src="https://www.fcilondon.co.uk/site-assets/blog/content/77295/stain-resistance-and-longevity.jpg"><h3>Graphite / Leather</h3><p><span class="dot b"></span>Dark leather language for a sharper, more formal room.</p></div>
+<div class="option"><img src="https://images.squarespace-cdn.com/content/v1/666b1e9b5801013aa6a559a3/1718296236903-G0531QC66770K4G7O258/thed1983_70621_moody_and_sophisticated_modern_open_dining_room__0a4b03ad-4d44-4ee9-82c8-a6c933b9fb8e.jpeg"><h3>Warm / Natural</h3><p><span class="dot w"></span>Neutral upholstery for a calmer, lighter composition.</p></div>
+</div>
+</section>
+
+<section class="final" id="quote">
+<div><div class="eyebrow">NEXT STEP</div><h2>Build the<br>composition.</h2><a href="mailto:info@mergen.example?subject=Merga%20Sofa%20Configuration">Request a configuration →</a></div>
+</section>
+</main>
+<footer class="footer"><span>MERGEN / PRODUCT ROOM</span><span>Temporary prototype imagery</span></footer>
+</body>
+</html>

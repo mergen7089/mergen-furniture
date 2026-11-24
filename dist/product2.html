@@ -1,0 +1,1705 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>MERGEN — AURA 01</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@300;400&family=Vazirmatn:wght@300;400;500&display=swap');
+
+:root{
+  --black:#070908;
+  --deep:#0c120e;
+  --green:#18251d;
+  --green2:#304334;
+  --cream:#ebe7dc;
+  --muted:#858e87;
+  --line:rgba(235,231,220,.13);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:"Vazirmatn",sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* =====================================================
+HEADER
+===================================================== */
+
+.header{
+
+  position:fixed;
+
+  top:0;
+  right:0;
+
+  width:100%;
+  height:90px;
+
+  padding:0 5vw;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  z-index:100;
+
+  mix-blend-mode:difference;
+
+}
+
+.logo{
+
+  font-family:"Playfair Display";
+
+  font-size:25px;
+
+  letter-spacing:7px;
+
+  direction:ltr;
+
+}
+
+.header-center{
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:4px;
+
+  direction:ltr;
+
+}
+
+.header-menu{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+}
+
+.menu-lines{
+
+  width:30px;
+
+}
+
+.menu-lines span{
+
+  display:block;
+
+  height:1px;
+
+  background:white;
+
+  margin:5px 0;
+
+}
+
+
+/* =====================================================
+HERO
+===================================================== */
+
+.product-hero{
+
+  height:100vh;
+
+  min-height:720px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 65% 48%,
+      rgba(90,115,94,.45),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      115deg,
+      #070908,
+      #18251d 65%,
+      #080b09
+    );
+
+}
+
+
+/* giant typography */
+
+.hero-background-title{
+
+  position:absolute;
+
+  left:5vw;
+
+  top:12vh;
+
+  font-family:"Playfair Display";
+
+  font-size:18vw;
+
+  font-weight:300;
+
+  line-height:.7;
+
+  color:rgba(255,255,255,.035);
+
+  direction:ltr;
+
+}
+
+
+/* product */
+
+.product-object{
+
+  position:absolute;
+
+  width:min(60vw,850px);
+
+  height:min(60vw,650px);
+
+  left:50%;
+
+  top:52%;
+
+  transform:translate(-50%,-50%);
+
+  transition:
+    transform .2s linear;
+
+}
+
+
+/* fake furniture */
+
+.product-top{
+
+  position:absolute;
+
+  width:70%;
+
+  height:12%;
+
+  left:15%;
+
+  top:25%;
+
+  transform:skewX(-12deg);
+
+  border-radius:6px;
+
+  background:
+
+    linear-gradient(
+      110deg,
+      #a18d70,
+      #67553f 50%,
+      #352b21
+    );
+
+  box-shadow:
+    0 30px 50px rgba(0,0,0,.4);
+
+}
+
+
+.product-body{
+
+  position:absolute;
+
+  width:68%;
+
+  height:35%;
+
+  left:16%;
+
+  top:35%;
+
+  border-radius:7px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #655844,
+      #30291f 55%,
+      #151512
+    );
+
+}
+
+
+.product-leg{
+
+  position:absolute;
+
+  width:5%;
+
+  height:28%;
+
+  background:#171613;
+
+  top:62%;
+
+}
+
+.product-leg.one{
+  left:23%;
+}
+
+.product-leg.two{
+  left:71%;
+}
+
+
+.product-glow{
+
+  position:absolute;
+
+  width:70%;
+
+  height:35%;
+
+  left:15%;
+
+  top:25%;
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(
+      ellipse,
+      rgba(207,190,155,.23),
+      transparent 70%
+    );
+
+  filter:blur(30px);
+
+}
+
+
+/* product info */
+
+.product-label{
+
+  position:absolute;
+
+  right:7vw;
+
+  bottom:9vh;
+
+  z-index:5;
+
+}
+
+.product-label small{
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:5px;
+
+  color:#9ca59e;
+
+  direction:ltr;
+
+}
+
+.product-label h1{
+
+  font-family:"Playfair Display";
+
+  font-size:clamp(70px,9vw,140px);
+
+  font-weight:300;
+
+  line-height:.75;
+
+  margin-top:14px;
+
+  direction:ltr;
+
+}
+
+.product-label p{
+
+  width:320px;
+
+  margin-top:28px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:2.2;
+
+}
+
+
+/* =====================================================
+PRODUCT NAV
+===================================================== */
+
+.product-nav{
+
+  position:absolute;
+
+  left:6vw;
+
+  bottom:8vh;
+
+  display:flex;
+
+  gap:25px;
+
+  align-items:center;
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  direction:ltr;
+
+}
+
+.product-nav span{
+
+  color:var(--muted);
+
+}
+
+.product-nav .active{
+
+  color:white;
+
+}
+
+
+/* =====================================================
+STORY
+===================================================== */
+
+.story{
+
+  min-height:100vh;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  align-items:center;
+
+  padding:12vw 8vw;
+
+  background:#0a0f0c;
+
+}
+
+.story-number{
+
+  font-family:"Playfair Display";
+
+  font-size:18vw;
+
+  color:rgba(255,255,255,.035);
+
+}
+
+.story-content small{
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:5px;
+
+  color:var(--muted);
+
+  direction:ltr;
+
+}
+
+.story-content h2{
+
+  font-family:"Playfair Display";
+
+  font-size:clamp(55px,7vw,100px);
+
+  font-weight:300;
+
+  line-height:.85;
+
+  margin:40px 0;
+
+  direction:ltr;
+
+}
+
+.story-content p{
+
+  max-width:500px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:2.4;
+
+}
+
+
+/* =====================================================
+DETAIL
+===================================================== */
+
+.detail{
+
+  height:150vh;
+
+  position:relative;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      #283a2c,
+      #080b09 60%
+    );
+
+}
+
+.detail-stage{
+
+  position:sticky;
+
+  top:0;
+
+  height:100vh;
+
+  overflow:hidden;
+
+}
+
+.detail-title{
+
+  position:absolute;
+
+  top:10vh;
+
+  left:6vw;
+
+  font-family:"Playfair Display";
+
+  font-size:14vw;
+
+  color:rgba(255,255,255,.05);
+
+  direction:ltr;
+
+}
+
+
+.detail-object{
+
+  position:absolute;
+
+  width:550px;
+
+  height:550px;
+
+  left:50%;
+
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  transition:.15s linear;
+
+}
+
+
+.detail-surface{
+
+  position:absolute;
+
+  width:70%;
+
+  height:60%;
+
+  left:15%;
+
+  top:20%;
+
+  border-radius:50%;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #927e61,
+      #473b2d
+    );
+
+  box-shadow:
+    0 50px 100px rgba(0,0,0,.55);
+
+}
+
+
+.detail-line{
+
+  position:absolute;
+
+  width:55%;
+
+  height:2px;
+
+  background:#c3aa82;
+
+  left:22%;
+
+  top:49%;
+
+}
+
+
+.detail-info{
+
+  position:absolute;
+
+  right:7vw;
+
+  bottom:9vh;
+
+}
+
+.detail-info small{
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:4px;
+
+  color:var(--muted);
+
+}
+
+.detail-info h3{
+
+  font-family:"Playfair Display";
+
+  font-size:60px;
+
+  font-weight:300;
+
+  direction:ltr;
+
+  margin-top:10px;
+
+}
+
+.detail-info p{
+
+  width:300px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:2;
+
+}
+
+
+/* =====================================================
+MATERIALS
+===================================================== */
+
+.materials{
+
+  padding:14vw 7vw;
+
+  background:#101912;
+
+}
+
+.materials-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+  margin-bottom:100px;
+
+}
+
+.materials-header h2{
+
+  font-family:"Playfair Display";
+
+  font-size:clamp(70px,10vw,150px);
+
+  font-weight:300;
+
+  line-height:.75;
+
+  direction:ltr;
+
+}
+
+.materials-header p{
+
+  width:300px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:2.2;
+
+}
+
+
+.material-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:25px;
+
+}
+
+.material-card{
+
+  height:430px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#28251f;
+
+}
+
+.material-card:nth-child(2){
+
+  background:
+    linear-gradient(
+      140deg,
+      #555d55,
+      #1b201c
+    );
+
+}
+
+.material-card:nth-child(3){
+
+  background:
+    linear-gradient(
+      140deg,
+      #806b51,
+      #29231b
+    );
+
+}
+
+.material-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      transparent 55%,
+      rgba(0,0,0,.8)
+    );
+
+}
+
+.material-card span{
+
+  position:absolute;
+
+  bottom:25px;
+
+  right:25px;
+
+  z-index:2;
+
+  font-family:"Playfair Display";
+
+  font-size:28px;
+
+  direction:ltr;
+
+}
+
+
+/* =====================================================
+SPECIFICATIONS
+===================================================== */
+
+.specs{
+
+  padding:12vw 7vw;
+
+  background:#080b09;
+
+}
+
+.specs-title{
+
+  font-family:"Playfair Display";
+
+  font-size:clamp(70px,11vw,160px);
+
+  line-height:.75;
+
+  font-weight:300;
+
+  direction:ltr;
+
+  margin-bottom:100px;
+
+}
+
+.spec-list{
+
+  max-width:1000px;
+
+  margin:auto;
+
+}
+
+.spec{
+
+  display:grid;
+
+  grid-template-columns:1fr 2fr;
+
+  padding:28px 0;
+
+  border-bottom:1px solid var(--line);
+
+}
+
+.spec-label{
+
+  font-family:"DM Sans";
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  direction:ltr;
+
+}
+
+.spec-value{
+
+  font-size:14px;
+
+}
+
+
+/* =====================================================
+COMBINE
+===================================================== */
+
+.combine{
+
+  min-height:100vh;
+
+  position:relative;
+
+  padding:12vw 7vw;
+
+  background:
+
+    radial-gradient(
+      circle at 70% 50%,
+      #293a2d,
+      #070908 60%
+    );
+
+}
+
+.combine-head{
+
+  max-width:650px;
+
+}
+
+.combine-head small{
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:5px;
+
+  color:var(--muted);
+
+}
+
+.combine-head h2{
+
+  font-family:"Playfair Display";
+
+  font-size:clamp(65px,10vw,150px);
+
+  line-height:.75;
+
+  font-weight:300;
+
+  margin-top:35px;
+
+  direction:ltr;
+
+}
+
+.combine-products{
+
+  display:flex;
+
+  gap:30px;
+
+  margin-top:100px;
+
+}
+
+.combine-card{
+
+  flex:1;
+
+  height:380px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle,
+      #5c685d,
+      #161c17 70%
+    );
+
+  transition:.6s;
+
+}
+
+.combine-card:hover{
+
+  transform:translateY(-15px);
+
+}
+
+.combine-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:60%;
+
+  height:45%;
+
+  left:20%;
+
+  top:25%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b775b,
+      #352b20
+    );
+
+  border-radius:50% 50% 8px 8px;
+
+}
+
+.combine-card span{
+
+  position:absolute;
+
+  bottom:20px;
+
+  left:25px;
+
+  font-family:"Playfair Display";
+
+  font-size:24px;
+
+  direction:ltr;
+
+}
+
+
+/* =====================================================
+PRICE / CTA
+===================================================== */
+
+.cta{
+
+  min-height:90vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  position:relative;
+
+  background:#070908;
+
+  overflow:hidden;
+
+}
+
+.cta::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:60vw;
+
+  height:60vw;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(64,91,71,.4),
+      transparent 65%
+    );
+
+  filter:blur(30px);
+
+}
+
+.cta-content{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+.cta-content small{
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:5px;
+
+  color:var(--muted);
+
+}
+
+.cta-content h2{
+
+  font-family:"Playfair Display";
+
+  font-size:clamp(70px,11vw,160px);
+
+  line-height:.75;
+
+  font-weight:300;
+
+  margin:40px 0;
+
+  direction:ltr;
+
+}
+
+.cta-content p{
+
+  color:var(--muted);
+
+  width:400px;
+
+  max-width:90vw;
+
+  margin:auto;
+
+  font-size:12px;
+
+  line-height:2.2;
+
+}
+
+.quote-button{
+
+  display:inline-flex;
+
+  margin-top:45px;
+
+  padding:18px 45px;
+
+  border:1px solid rgba(255,255,255,.4);
+
+  font-family:"DM Sans";
+
+  font-size:9px;
+
+  letter-spacing:3px;
+
+  direction:ltr;
+
+  transition:.5s;
+
+}
+
+.quote-button:hover{
+
+  background:var(--cream);
+
+  color:#070908;
+
+}
+
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media(max-width:800px){
+
+  .header-center{
+    display:none;
+  }
+
+  .hero-background-title{
+    font-size:35vw;
+  }
+
+  .product-object{
+    width:100vw;
+    height:70vw;
+  }
+
+  .product-label{
+    right:6vw;
+    bottom:8vh;
+  }
+
+  .product-label h1{
+    font-size:70px;
+  }
+
+  .story{
+    grid-template-columns:1fr;
+  }
+
+  .story-number{
+    font-size:30vw;
+  }
+
+  .detail-object{
+    transform:
+      translate(-50%,-50%)
+      scale(.7);
+  }
+
+  .material-grid{
+    grid-template-columns:1fr;
+  }
+
+  .materials-header{
+    display:block;
+  }
+
+  .materials-header p{
+    margin-top:40px;
+  }
+
+  .combine-products{
+    flex-direction:column;
+  }
+
+  .spec{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+}
+
+
+/* =====================================================
+REVEAL ANIMATION
+===================================================== */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(60px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(.2,.8,.2,1);
+
+}
+
+.reveal.visible{
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+  <div class="logo">
+    MERGEN
+  </div>
+
+  <div class="header-center">
+    PRODUCT / AURA 01
+  </div>
+
+  <div class="header-menu">
+
+    MENU
+
+    <div class="menu-lines">
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section class="product-hero">
+
+  <div class="hero-background-title">
+    AURA
+  </div>
+
+  <div class="product-object">
+
+    <div class="product-glow"></div>
+
+    <div class="product-top"></div>
+
+    <div class="product-body"></div>
+
+    <div class="product-leg one"></div>
+
+    <div class="product-leg two"></div>
+
+  </div>
+
+
+  <div class="product-label">
+
+    <small>
+      AURA COLLECTION / 01
+    </small>
+
+    <h1>
+      AURA
+    </h1>
+
+    <p>
+      قطعه‌ای با تناسبات معماری،
+      متریال گرم و فرمی که برای
+      دیده شدن در مرکز فضا طراحی شده است.
+    </p>
+
+  </div>
+
+
+  <div class="product-nav">
+
+    <span class="active">01</span>
+    <span>02</span>
+    <span>03</span>
+    <span>04</span>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+STORY
+===================================================== -->
+
+<section class="story reveal">
+
+  <div class="story-number">
+    01
+  </div>
+
+  <div class="story-content">
+
+    <small>
+      THE IDEA
+    </small>
+
+    <h2>
+      LESS<br>
+      BUT<br>
+      BETTER.
+    </h2>
+
+    <p>
+      AURA از تلاش برای کم‌کردن عناصر غیرضروری
+      شکل گرفته است.
+      فرم اصلی ساده باقی می‌ماند تا متریال،
+      تناسبات و جزئیات خودشان صحبت کنند.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+DETAIL
+===================================================== -->
+
+<section class="detail">
+
+  <div class="detail-stage">
+
+    <div class="detail-title">
+      DETAIL
+    </div>
+
+    <div class="detail-object">
+
+      <div class="detail-surface"></div>
+
+      <div class="detail-line"></div>
+
+    </div>
+
+
+    <div class="detail-info">
+
+      <small>
+        CRAFT / 02
+      </small>
+
+      <h3>
+        THE EDGE
+      </h3>
+
+      <p>
+        جزئیاتی که از فاصله نزدیک
+        شخصیت واقعی محصول را نشان می‌دهند.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+MATERIALS
+===================================================== -->
+
+<section class="materials reveal">
+
+  <div class="materials-header">
+
+    <h2>
+      MATERIAL<br>
+      LANGUAGE.
+    </h2>
+
+    <p>
+      هر متریال رفتار متفاوتی با نور،
+      لمس و محیط دارد.
+      AURA برای هماهنگی این عناصر طراحی شده است.
+    </p>
+
+  </div>
+
+
+  <div class="material-grid">
+
+    <div class="material-card">
+      <span>WOOD</span>
+    </div>
+
+    <div class="material-card">
+      <span>MATTE</span>
+    </div>
+
+    <div class="material-card">
+      <span>TEXTURE</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+SPECIFICATIONS
+===================================================== -->
+
+<section class="specs reveal">
+
+  <h2 class="specs-title">
+    DETAILS.
+  </h2>
+
+  <div class="spec-list">
+
+    <div class="spec">
+
+      <div class="spec-label">
+        MATERIAL
+      </div>
+
+      <div class="spec-value">
+        MDF / WOOD VENEER
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        FINISH
+      </div>
+
+      <div class="spec-value">
+        CUSTOM MATTE FINISH
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        DIMENSIONS
+      </div>
+
+      <div class="spec-value">
+        CUSTOM / MADE TO ORDER
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        PRODUCTION
+      </div>
+
+      <div class="spec-value">
+        MERGEN CUSTOM WORKSHOP
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        COLLECTION
+      </div>
+
+      <div class="spec-value">
+        AURA / 2026
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+COMPLETE THE SPACE
+===================================================== -->
+
+<section class="combine reveal">
+
+  <div class="combine-head">
+
+    <small>
+      COMPLETE THE SPACE
+    </small>
+
+    <h2>
+      PAIR<br>
+      IT.
+    </h2>
+
+  </div>
+
+
+  <div class="combine-products">
+
+    <div class="combine-card">
+      <span>AURA TABLE</span>
+    </div>
+
+    <div class="combine-card">
+      <span>AURA MEDIA</span>
+    </div>
+
+    <div class="combine-card">
+      <span>AURA MIRROR</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+CTA
+===================================================== -->
+
+<section class="cta">
+
+  <div class="cta-content">
+
+    <small>
+      MADE FOR YOUR SPACE
+    </small>
+
+    <h2>
+      MAKE IT<br>
+      YOURS.
+    </h2>
+
+    <p>
+      AURA قابلیت ساخت سفارشی بر اساس
+      ابعاد، رنگ و نیاز فضای شما را دارد.
+    </p>
+
+    <a href="#" class="quote-button">
+      REQUEST A QUOTE
+    </a>
+
+  </div>
+
+</section>
+
+
+<script>
+
+
+/* =====================================================
+HERO PARALLAX
+===================================================== */
+
+const hero =
+  document.querySelector(".product-hero");
+
+const object =
+  document.querySelector(".product-object");
+
+
+window.addEventListener("scroll",()=>{
+
+  const y=window.scrollY;
+
+  if(y<window.innerHeight){
+
+    const progress=y/window.innerHeight;
+
+    object.style.transform=
+      `translate(-50%,-50%)
+       translateY(${progress*80}px)
+       scale(${1-progress*.12})
+       rotateY(${progress*8}deg)`;
+
+  }
+
+});
+
+
+/* =====================================================
+DETAIL SCROLL
+===================================================== */
+
+const detail =
+  document.querySelector(".detail");
+
+const detailObject =
+  document.querySelector(".detail-object");
+
+
+window.addEventListener("scroll",()=>{
+
+  const rect=
+    detail.getBoundingClientRect();
+
+  const progress=
+    Math.min(
+      1,
+      Math.max(
+        0,
+        -rect.top/
+        (rect.height-window.innerHeight)
+      )
+    );
+
+
+  detailObject.style.transform=
+    `translate(-50%,-50%)
+     rotate(${progress*25}deg)
+     scale(${.75+progress*.5})
+     translateX(${progress*180}px)`;
+
+});
+
+
+/* =====================================================
+REVEAL
+===================================================== */
+
+const observer=
+  new IntersectionObserver(
+    entries=>{
+
+      entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("visible");
+
+        }
+
+      });
+
+    },
+    {
+      threshold:.15
+    }
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(el=>observer.observe(el));
+
+
+/* =====================================================
+IMAGE-FREE DEPTH EFFECT
+===================================================== */
+
+const materialCards=
+  document.querySelectorAll(".material-card");
+
+materialCards.forEach(card=>{
+
+  card.addEventListener("mousemove",e=>{
+
+    const rect=
+      card.getBoundingClientRect();
+
+    const x=
+      (e.clientX-rect.left)/rect.width-.5;
+
+    const y=
+      (e.clientY-rect.top)/rect.height-.5;
+
+    card.style.transform=
+      `perspective(700px)
+       rotateY(${x*8}deg)
+       rotateX(${-y*8}deg)
+       scale(1.02)`;
+
+  });
+
+  card.addEventListener("mouseleave",()=>{
+
+    card.style.transform="";
+
+  });
+
+});
+
+</script>
+
+
+</body>
+</html>

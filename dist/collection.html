@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html data-page="collection" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرگن | کالکشن</title>
+    <link href="./css/style.css" rel="stylesheet">
+<link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
+<script src="./js/main.js"></script>
+</head>
+<body>
+    <!-- =========================================================
+        هدر موقت
+    ========================================================= -->
+    <header class="lg:hidden px-6 py-6 border-b border-white/10">
+        <div class="flex items-center justify-between">
+            <a href="index.html" class="text-xl tracking-[.35em]">MERGEN</a>
+            <button id="mobileFilterButton" class="text-[10px] tracking-[.2em] text-white/60">فیلتر</button>
+        </div>
+    </header>
+    <!-- =========================================================
+        LAYOUT
+    ========================================================= -->
+    <div class="min-h-screen">
+    <!-- =======================================================
+        SIDEBAR
+    ======================================================== -->
+        <aside id="sidebar" class="fixed left-5 top-5 bottom-5 w-[145px] hidden lg:flex flex-col border border-[#8d7950]/70 bg-[#080908]/95 z-40">
+            <!-- LOGO -->
+            <div class="px-5 pt-5 pb-6">
+                <a href="index.html" class="text-[17px] tracking-[.32em] serif"> MERGEN </a>
+                <div class="h-px bg-[#8d7950]/50 mt-5"></div>
+            </div>
+            <!-- دسته بندی -->
+            <div class="px-5">
+                <div class="text-[9px] tracking-[.2em] text-white/35 mb-5">کالکشن‌ها</div>
+                <nav class="space-y-4">
+                    <button data-category="all" class="filter-item active block text-right text-[11px]"> همه محصولات </button>
+                    <button data-category="sofas" class="filter-item block text-right text-[11px] text-white/45"> مبلمان </button>
+                    <button data-category="seating" class="filter-item block text-right text-[11px] text-white/45"> صندلی و نشیمن </button>
+                    <button data-category="tables" class="filter-item block text-right text-[11px] text-white/45"> میزها </button>
+                    <button data-category="storage" class="filter-item block text-right text-[11px] text-white/45"> کنسول و کمد </button>
+                </nav>
+            </div>
+            <!-- رنگ -->
+            <div class="px-5 mt-12">
+                <div class="text-[9px] tracking-[.2em] text-white/35 mb-5"> رنگ </div>
+                <div class="w-7 h-px bg-[#8d7950] mb-5"></div>
+                <div id="colorFilters" class="space-y-4">
+                    <button data-color="all" title="همه رنگ‌ها" class="color-filter color-dot active w-4 h-4 rounded-full bg-[#eee4ce] block"></button>
+                    <button data-color="brown" title="قهوه‌ای" class="color-filter color-dot w-4 h-4 rounded-full bg-[#725946] block"></button>
+                    <button data-color="gray" title="خاکستری" class="color-filter color-dot w-4 h-4 rounded-full bg-[#444444] block"></button>
+                    <button data-color="dark" title="تیره" class="color-filter color-dot w-4 h-4 rounded-full bg-[#18202b] block"></button>
+                    <button data-color="gold" title="طلایی / چوبی" class="color-filter color-dot w-4 h-4 rounded-full bg-[#a67c43] block"></button>
+                </div>
+            </div>
+            <!-- متریال -->
+            <div class="px-5 mt-auto pb-6">
+                <div class="text-[9px] tracking-[.2em] text-white/35 mb-5"> متریال </div>
+                <div class="space-y-4">
+                    <!-- چوب -->
+                    <button data-material="wood" title="چوب" class="material-filter w-8 h-8 text-[#bda36d] hover:text-white transition">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M4 14 C10 7 18 20 24 11 S34 8 37 15" />
+                            <path d="M4 21 C10 14 18 27 24 18 S34 15 37 22" />
+                            <path d="M4 28 C10 21 18 34 24 25 S34 22 37 29" />
+                        </svg>
+                    </button>
+                    <!-- سنگ -->
+                    <button data-material="marble" title="سنگ" class="material-filter w-8 h-8 text-[#bda36d] hover:text-white transition">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M8 4 C14 12 10 19 20 24 S26 34 32 36" />
+                            <path d="M18 4 C14 11 23 16 19 22 S25 28 20 36" />
+                            <path d="M30 6 C24 12 32 16 28 23 S33 29 28 35" />
+                        </svg>
+                    </button>
+                    <!-- چرم -->
+                    <button data-material="leather" title="چرم" class="material-filter w-8 h-8 text-[#bda36d] hover:text-white transition">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M8 8 L14 4 L31 8 L35 18 L30 32 L17 36 L7 27 Z" />
+                            <path d="M13 10 L22 8 L29 12 L30 22 L24 30 L14 27 L11 18 Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    <!-- =======================================================
+        CONTENT
+    ======================================================== -->
+        <main class="lg:ml-[190px] px-6 md:px-10 lg:px-10 py-8 lg:py-10">
+            <!-- نوار بالا -->
+            <div class="hidden lg:flex items-center justify-between border-b border-white/10 pb-5 mb-12">
+                <div class="text-[10px] tracking-[.18em] text-white/35"> مرگن / کالکشن </div>
+                <div id="productCount" class="text-[10px] tracking-[.15em] text-white/35"> 00 محصول  </div>
+            </div>
+    <!-- =====================================================
+        TITLE
+    ====================================================== -->
+            <section class="mb-14 reveal">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <div>
+                        <div class="text-[9px] tracking-[.2em] gold mb-5"> کالکشن مرگن </div>
+                        <h1 class="serif text-4xl md:text-6xl font-normal leading-none"> برای زندگی طراحی شده. </h1>
+                    </div>
+                    <p class="max-w-[390px] text-[12px] leading-7  text-white/40">
+                        مجموعه‌ای از مبلمان مرگن؛
+                        ترکیبی از فرم، متریال و جزئیات
+                        برای فضاهایی که قرار است شخصیت داشته باشند.
+                    </p>
+                </div>
+            </section>
+    <!-- =====================================================
+         PRODUCTS
+    ====================================================== -->
+            <section id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 items-start">
+            </section>
+    <!-- =========================================================
+     MATERIAL / CRAFT / SPACE
+    ========================================================= -->
+            <section class="relative mt-32 mb-32 px-6 md:px-10 lg:px-16">
+                <!-- Section Header -->
+                <div class="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+                    <!-- Number -->
+                    <div class="lg:col-span-2">
+                        <span class="text-[11px] tracking-[0.35em] text-[#c1a96f]"> 03 </span>
+                    </div>
+                    <!-- Main Title -->
+                    <div class="lg:col-span-7">
+                        <p class="mb-5 text-[10px] tracking-[0.45em] text-[#8d7950] uppercase">
+                            MATERIAL / CRAFT / SPACE
+                        </p>
+                        <h2 class="serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-[#e8dfca]">
+                            هر فرم، از یک
+                            <span class="italic text-[#c1a96f]">متریال</span>
+                            شروع می‌شود.
+                        </h2>
+                    </div>
+                    <!-- Description -->
+                    <div class="lg:col-span-3">
+                        <p class="text-sm leading-7 text-[#9d9a91] max-w-sm">
+                            ما متریال را فقط به عنوان یک سطح نمی‌بینیم.
+                            انتخاب متریال، آغاز شکل‌گیری فرم، حس و شخصیت هر قطعه است.
+                        </p>
+                    </div>
+                </div>
+    <!-- =====================================================
+         MATERIAL CARDS
+    ====================================================== -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#8d7950]/30">
+                    <!-- WOOD -->
+                    <div class="group relative h-[500px] md:h-[560px] overflow-hidden bg-[#0b0c0b]">
+                        <!-- Image -->
+                        <img src="assets/materials/wood.webp" alt="چوب" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-1000 ease-out group-hover:scale-110 group-hover:opacity-85">
+                        <!-- Dark Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/45 to-transparent">
+                        </div>
+                        <!-- Number -->
+                        <div class="absolute top-7 left-7">
+                            <span class="serif text-5xl text-[#c1a96f]/70">  01 </span>
+                        </div>
+                        <!-- Content -->
+                        <div class="absolute inset-x-0 bottom-0 p-8">
+                            <p class="mb-3 text-[9px] tracking-[0.4em] text-[#c1a96f]"> MATERIAL </p>
+                            <h3 class="serif text-3xl text-[#e8dfca] mb-4">
+                                چوب
+                            </h3>
+                            <div class="max-w-xs opacity-0 translate-y-4 transition-all duration-700 group-hover:opacity-100 group-hover:translate-y-0">
+                                <p class="text-sm leading-7 text-[#c9c4b8]">
+                                    گرما، بافت و اصالت؛
+                                    چوب به هر فرم شخصیت و عمق می‌دهد.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FABRIC -->
+                    <div class="group relative h-[500px] md:h-[560px] overflow-hidden bg-[#0b0c0b]">
+                        <!-- Image -->
+                        <img src="assets/materials/fabric.webp" alt="پارچه" class="absolute inset-0 w-full h-full object-cover
+                       opacity-60
+                       transition-all duration-1000 ease-out
+                       group-hover:scale-110
+                       group-hover:opacity-85">
+
+                        <!-- Dark Overlay -->
+                        <div class="absolute inset-0
+                        bg-gradient-to-t
+                        from-[#050505]
+                        via-[#050505]/45
+                        to-transparent">
+                        </div>
+
+                        <!-- Number -->
+                        <div class="absolute top-7 left-7">
+                            <span class="serif text-5xl text-[#c1a96f]/70">
+                                02
+                            </span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="absolute inset-x-0 bottom-0 p-8">
+
+                            <p class="mb-3 text-[9px] tracking-[0.4em] text-[#c1a96f]">
+                                MATERIAL
+                            </p>
+
+                            <h3 class="serif text-3xl text-[#e8dfca] mb-4">
+                                پارچه
+                            </h3>
+
+                            <div class="max-w-xs
+                            opacity-0
+                            translate-y-4
+                            transition-all duration-700
+                            group-hover:opacity-100
+                            group-hover:translate-y-0">
+
+                                <p class="text-sm leading-7 text-[#c9c4b8]">
+                                    لمس و راحتی؛
+                                    پارچه به فرم، حس انسانی و زندگی می‌بخشد.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STONE -->
+                    <div class="group relative h-[500px] md:h-[560px] overflow-hidden bg-[#0b0c0b]">
+
+                        <!-- Image -->
+                        <img src="assets/materials/stone.webp" alt="سنگ" class="absolute inset-0 w-full h-full object-cover
+                       opacity-60
+                       transition-all duration-1000 ease-out
+                       group-hover:scale-110
+                       group-hover:opacity-85">
+
+                        <!-- Dark Overlay -->
+                        <div class="absolute inset-0
+                        bg-gradient-to-t
+                        from-[#050505]
+                        via-[#050505]/45
+                        to-transparent">
+                        </div>
+
+                        <!-- Number -->
+                        <div class="absolute top-7 left-7">
+                            <span class="serif text-5xl text-[#c1a96f]/70">
+                                03
+                            </span>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="absolute inset-x-0 bottom-0 p-8">
+
+                            <p class="mb-3 text-[9px] tracking-[0.4em] text-[#c1a96f]">
+                                MATERIAL
+                            </p>
+
+                            <h3 class="serif text-3xl text-[#e8dfca] mb-4">
+                                سنگ
+                            </h3>
+
+                            <div class="max-w-xs
+                            opacity-0
+                            translate-y-4
+                            transition-all duration-700
+                            group-hover:opacity-100
+                            group-hover:translate-y-0">
+
+                                <p class="text-sm leading-7 text-[#c9c4b8]">
+                                    استحکام و سکوت؛
+                                    سنگ به فضا حس ماندگاری و وقار می‌دهد.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================================
+         MATERIAL TRANSITION
+    ====================================================== -->
+
+                <div class="relative mt-14 overflow-hidden border-y border-[#8d7950]/30 py-5">
+
+                    <div class="flex w-max
+                    animate-[materialMarquee_28s_linear_infinite]
+                    whitespace-nowrap">
+
+                        <div class="flex items-center gap-10 pr-10">
+
+                            <span class="text-[10px] tracking-[0.45em] text-[#8d7950]">
+                                WOOD
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                            <span class="text-[10px] tracking-[0.45em] text-[#8d7950]">
+                                FABRIC
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                            <span class="text-[10px] tracking-[0.45em] text-[#8d7950]">
+                                STONE
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                            <span class="serif text-lg italic text-[#e8dfca]">
+                                MATERIAL BECOMES FORM
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                        </div>
+
+                        <!-- Duplicate for seamless loop -->
+                        <div class="flex items-center gap-10 pr-10">
+
+                            <span class="text-[10px] tracking-[0.45em] text-[#8d7950]">
+                                WOOD
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                            <span class="text-[10px] tracking-[0.45em] text-[#8d7950]">
+                                FABRIC
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                            <span class="text-[10px] tracking-[0.45em] text-[#8d7950]">
+                                STONE
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                            <span class="serif text-lg italic text-[#e8dfca]">
+                                MATERIAL BECOMES FORM
+                            </span>
+
+                            <span class="text-[#c1a96f]">•</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Closing Statement -->
+                <div class="mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+
+                    <div>
+                        <p class="text-[9px] tracking-[0.4em] text-[#8d7950] mb-4">
+                            FROM MATERIAL TO SPACE
+                        </p>
+
+                        <p class="serif text-2xl md:text-3xl text-[#e8dfca]">
+                            متریال
+                            <span class="text-[#c1a96f]">→</span>
+                            فرم
+                            <span class="text-[#c1a96f]">→</span>
+                            فضا
+                        </p>
+                    </div>
+
+                    <p class="max-w-md text-sm leading-7 text-[#77756e]">
+                        جزئیات زمانی معنا پیدا می‌کنند که در کنار هم،
+                        یک تجربه کامل از فضا بسازند.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================================
+     MATERIAL MARQUEE ANIMATION
+     این قسمت را فقط یک بار در فایل HTML قرار بده.
+========================================================= -->
+
+            <!-- =====================================================
+         ROOM WALK
+    ====================================================== -->
+
+            <section class="mt-32 lg:mt-44">
+
+
+                <!-- عنوان -->
+
+                <div class="flex items-center gap-5 mb-7">
+
+                    <div class="h-px bg-[#8d7950] flex-1"></div>
+
+                    <div class="serif
+                 text-[14px]
+                 tracking-[.18em]
+                 whitespace-nowrap">
+                        فضاهای مرگن
+                    </div>
+
+                    <div class="h-px bg-[#8d7950] flex-1"></div>
+
+                </div>
+
+
+
+                <!-- فضاها -->
+
+                <div id="roomWalk" class="grid
+               grid-cols-2
+               lg:grid-cols-4
+               gap-3">
+
+
+                    <a href="#" class="room-card block">
+
+                        <div class="aspect-[1.15/1]
+                   overflow-hidden
+                   bg-[#111]">
+
+                            <img src="assets/rooms/room-01.webp" alt="فضای مرگن" class="room-image
+                     w-full h-full
+                     object-cover">
+
+                        </div>
+
+                        <div class="mt-4
+                   text-[9px]
+                   tracking-[.12em]
+                   text-white/50">
+                            لافت کپنهاگ
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="#" class="room-card block">
+
+                        <div class="aspect-[1.15/1]
+                   overflow-hidden
+                   bg-[#111]">
+
+                            <img src="assets/rooms/room-02.webp" alt="فضای مرگن" class="room-image
+                     w-full h-full
+                     object-cover">
+
+                        </div>
+
+                        <div class="mt-4
+                   text-[9px]
+                   tracking-[.12em]
+                   text-white/50">
+                            آپارتمان میلان
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="#" class="room-card block">
+
+                        <div class="aspect-[1.15/1]
+                   overflow-hidden
+                   bg-[#111]">
+
+                            <img src="assets/rooms/room-03.webp" alt="فضای مرگن" class="room-image
+                     w-full h-full
+                     object-cover">
+
+                        </div>
+
+                        <div class="mt-4
+                   text-[9px]
+                   tracking-[.12em]
+                   text-white/50">
+                            خانه پاریسی
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="#" class="room-card block">
+
+                        <div class="aspect-[1.15/1]
+                   overflow-hidden
+                   bg-[#111]">
+
+                            <img src="assets/rooms/room-04.webp" alt="فضای مرگن" class="room-image
+                     w-full h-full
+                     object-cover">
+
+                        </div>
+
+                        <div class="mt-4
+                   text-[9px]
+                   tracking-[.12em]
+                   text-white/50">
+                            اقامتگاه استکهلم
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- لینک -->
+
+                <div class="text-center mt-12">
+
+                    <a href="#" class="text-[10px]
+                 tracking-[.18em]
+                 gold
+                 hover:text-white
+                 transition">
+                        مشاهده کالکشن در فضا ←
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER موقت -->
+
+            <footer class="border-t border-white/10
+             mt-32
+             py-10">
+
+                <div class="flex flex-col
+               md:flex-row
+               justify-between
+               gap-4
+               text-[9px]
+               tracking-[.15em]
+               text-white/25">
+
+                    <div>
+                        © مرگن
+                    </div>
+
+                    <div>
+                        مبلمان · دکوراسیون · طراحی
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================================
+     MOBILE FILTER
+========================================================= -->
+
+    <div id="mobileFilter" class="fixed inset-0
+         bg-[#080908]
+         z-50
+         hidden
+         p-8">
+
+        <button id="closeMobileFilter" class="absolute top-7 right-7
+           text-white/50">
+            ✕
+        </button>
+
+
+        <div class="pt-20">
+
+            <div class="text-[10px]
+             tracking-[.2em]
+             gold
+             mb-7">
+                کالکشن‌ها
+            </div>
+
+
+            <div class="space-y-7
+             text-2xl
+             serif">
+
+                <button data-category="all">
+                    همه محصولات
+                </button>
+
+                <button data-category="sofas">
+                    مبلمان
+                </button>
+
+                <button data-category="seating">
+                    صندلی و نشیمن
+                </button>
+
+                <button data-category="tables">
+                    میزها
+                </button>
+
+                <button data-category="storage">
+                    کنسول و کمد
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+     PRODUCTS DATA
+========================================================= -->
+
+    <!-- =========================================================
+     LOGIC
+========================================================= -->
+
+    </body>
+
+</html>

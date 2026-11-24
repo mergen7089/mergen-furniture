@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-page="compare" lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مقایسه‌ی محصولات | مرگن</title>
+<link href="./css/style.css" rel="stylesheet">
+<link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
+<script src="./js/main.js"></script>
+</head>
+<body>
+<div class="blueprint"></div><div class="glow" style="top:-120px;left:-120px"></div><div class="glow" style="bottom:-160px;right:-100px;animation-delay:-6s"></div>
+
+<!-- دکمه‌ی موقت تم؛ با اضافه شدن هدر حذفش کن -->
+<button id="themeBtn" aria-label="تغییر تم" class="fill fixed left-4 top-4 z-50 grid h-11 w-11 place-items-center rounded-full hover:rotate-12"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+
+<main class="mx-auto w-[min(1400px,calc(100%-32px))] pb-24 pt-16 sm:w-[min(1400px,calc(100%-70px))] sm:pt-20">
+<nav class="mb-8 flex items-center gap-3 text-xs tracking-wide text-soft" aria-label="مسیر"><a href="index.html" class="transition hover:text-at">خانه</a><span class="opacity-40">/</span><span class="text-ink">مقایسه</span></nav>
+
+<header class="mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-9">
+<div class="flex items-end gap-5">
+<span class="select-none text-[84px] font-light leading-[.8] text-transparent sm:text-[128px]" style="-webkit-text-stroke:1.5px var(--acc)"><span id="bigNum">۰</span><small class="text-[32px] sm:text-[44px]">/۳</small></span>
+<div class="pb-1"><p class="mb-2 text-[11px] tracking-[.3em] text-at">SIDE BY SIDE · TRUE SCALE</p>
+<h1 class="text-3xl font-light leading-tight sm:text-5xl">کنار هم بگذار،<br><b class="font-semibold">با چشم‌های خودت بسنج.</b></h1></div></div>
+<p class="max-w-sm text-sm leading-8 text-soft">قطعات را در اندازه‌ی واقعی و کنار قد یک خانم ۱۷۰ سانتی‌متری ببین. دستگیره‌ی پایین را بکش تا روی هم بیفتند و تفاوت‌ها را ببینی.</p>
+</header>
+
+<section aria-label="انتخاب محصول" class="mb-8"><p class="mb-3 text-xs text-soft">تا سه محصول انتخاب کن</p><div id="picker" class="flex flex-wrap gap-2"></div></section>
+
+<section class="rb mb-10" aria-label="صحنه‌ی مقایسه">
+<div class="relative z-[1] overflow-hidden rounded-[30px] border border-line bg-surface">
+<div id="stage" class="relative h-[400px] sm:h-[440px]" style="direction:ltr"><div id="layer" class="absolute inset-0"></div></div>
+<div class="border-t border-line px-6 py-6 sm:px-10">
+<div id="legend" class="mb-6 flex flex-wrap gap-x-8 gap-y-3 text-xs"></div>
+<div class="flex items-center gap-5 text-xs text-soft"><button id="toSide" class="fill relative shrink-0 rounded-full px-5 py-2">کنار هم</button>
+<input id="morph" type="range" min="0" max="100" value="0" aria-label="کنار هم تا روی هم">
+<button id="toOver" class="fill relative shrink-0 rounded-full px-5 py-2">روی هم</button></div>
+<div class="mt-6 flex flex-wrap items-center gap-3 border-t border-line pt-5 text-xs"><span class="text-soft">کدام عکس روی بقیه باشد؟</span><div id="topPick" class="flex flex-wrap gap-2"></div></div>
+<p class="mt-3 text-[11px] leading-6 text-soft">در حالت «خودکار» کوچک‌ترین قطعه بالاست و همه‌ی لایه‌ها نیمه‌شفاف‌اند. قاب و شماره‌ی هر قطعه همیشه دیده می‌شود، حتی اگر عکسش زیر بقیه باشد. روی هر عکس هم بزنی همان بالا می‌آید.</p></div></div></section>
+
+<section aria-label="جدول مقایسه">
+<div class="mb-5 flex flex-wrap items-center justify-between gap-4"><h2 class="text-2xl font-medium">جزئیات فنی</h2>
+<label class="flex cursor-pointer items-center gap-3 text-xs text-soft"><input id="only" type="checkbox" class="peer sr-only"><span class="relative h-6 w-11 rounded-full border border-line bg-s2 transition peer-checked:bg-btn peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-acc after:absolute after:top-0.5 after:right-0.5 after:h-4 after:w-4 after:rounded-full after:bg-ink after:transition peer-checked:after:-translate-x-5"></span>فقط تفاوت‌ها</label></div>
+<div id="table" class="overflow-x-auto rounded-[26px] border border-line bg-surface"></div>
+</section>
+</main>
+<div id="toasts" class="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 space-y-2"></div>
+
+</body>
+</html>

@@ -1,0 +1,1312 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MERGEN — AURA Collection</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@300;400&family=Vazirmatn:wght@300;400;500&display=swap');
+
+:root{
+  --black:#070908;
+  --deep:#0b110e;
+  --green:#18251d;
+  --green2:#293b2f;
+  --cream:#e9e5da;
+  --muted:#8e968f;
+  --line:rgba(233,229,218,.14);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:"Vazirmatn",sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.cursor{
+  position:fixed;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--cream);
+  pointer-events:none;
+  z-index:9999;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:difference;
+}
+
+.cursor-ring{
+  position:fixed;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:.15s ease-out;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  position:fixed;
+  top:0;
+  right:0;
+  width:100%;
+  height:90px;
+  padding:0 5vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:100;
+  mix-blend-mode:difference;
+}
+
+.logo{
+  font-family:"Playfair Display",serif;
+  font-size:25px;
+  letter-spacing:7px;
+  direction:ltr;
+}
+
+.header-center{
+  font-family:"DM Sans";
+  font-size:9px;
+  letter-spacing:4px;
+  direction:ltr;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:10px;
+}
+
+.menu{
+  width:30px;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.menu span{
+  width:100%;
+  height:1px;
+  background:white;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  height:100vh;
+  min-height:720px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 72% 45%,
+      rgba(72,100,79,.55),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #070908,
+      #142018 65%,
+      #080b09
+    );
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  background-image:
+    linear-gradient(var(--cream) 1px,transparent 1px),
+    linear-gradient(90deg,var(--cream) 1px,transparent 1px);
+  background-size:120px 120px;
+  transform:perspective(600px) rotateX(55deg) scale(1.5);
+  transform-origin:center bottom;
+}
+
+.hero-glow{
+  position:absolute;
+  width:55vw;
+  height:55vw;
+  border-radius:50%;
+  right:12%;
+  top:10%;
+  background:radial-gradient(
+    circle,
+    rgba(125,145,127,.23),
+    transparent 65%
+  );
+  filter:blur(30px);
+}
+
+.hero-copy{
+  position:absolute;
+  right:7vw;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:5;
+}
+
+.eyebrow{
+  font-family:"DM Sans";
+  font-size:10px;
+  letter-spacing:5px;
+  color:#a7b0a9;
+  direction:ltr;
+  margin-bottom:30px;
+}
+
+.hero-title{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(90px,15vw,220px);
+  line-height:.72;
+  font-weight:300;
+  letter-spacing:-8px;
+  direction:ltr;
+}
+
+.hero-title span{
+  display:block;
+}
+
+.hero-description{
+  margin-top:55px;
+  width:350px;
+  font-size:13px;
+  line-height:2.3;
+  color:#a9afa9;
+}
+
+.hero-number{
+  position:absolute;
+  left:7vw;
+  bottom:7vh;
+  font-family:"DM Sans";
+  font-size:10px;
+  letter-spacing:4px;
+  direction:ltr;
+}
+
+.hero-scroll{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  height:120px;
+  width:1px;
+  background:linear-gradient(
+    transparent,
+    var(--cream)
+  );
+}
+
+/* =========================================================
+   EXHIBITION INTRO
+========================================================= */
+
+.intro{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:var(--deep);
+}
+
+.intro-word{
+  position:absolute;
+  font-family:"Playfair Display";
+  font-size:25vw;
+  white-space:nowrap;
+  color:rgba(255,255,255,.025);
+  direction:ltr;
+  transform:translateX(10%);
+}
+
+.intro-content{
+  width:min(900px,80%);
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.intro-content small{
+  font-family:"DM Sans";
+  font-size:9px;
+  letter-spacing:5px;
+  color:var(--muted);
+  direction:ltr;
+}
+
+.intro-content h2{
+  font-family:"Playfair Display";
+  font-size:clamp(60px,9vw,140px);
+  font-weight:300;
+  line-height:.85;
+  margin:40px 0;
+  direction:ltr;
+}
+
+.intro-content p{
+  width:480px;
+  max-width:100%;
+  margin:auto;
+  color:var(--muted);
+  line-height:2.3;
+  font-size:13px;
+}
+
+/* =========================================================
+   OBJECT EXHIBITION
+========================================================= */
+
+.exhibition{
+  height:150vh;
+  position:relative;
+  background:
+    radial-gradient(
+      circle at center,
+      #26382b,
+      #0a100c 55%
+    );
+}
+
+.exhibition-stage{
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:hidden;
+}
+
+.stage-grid{
+  position:absolute;
+  inset:0;
+  opacity:.08;
+  background:
+    linear-gradient(90deg,transparent 49.9%,white 50%,transparent 50.1%),
+    linear-gradient(transparent 49.9%,white 50%,transparent 50.1%);
+  background-size:150px 150px;
+}
+
+.floor{
+  position:absolute;
+  width:140%;
+  height:65%;
+  bottom:-30%;
+  left:-20%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.06) 1px,
+      transparent 1px
+    );
+  background-size:100px 100px;
+  transform:perspective(400px) rotateX(65deg);
+}
+
+.object{
+  position:absolute;
+  width:min(48vw,700px);
+  height:min(48vw,500px);
+  right:50%;
+  top:50%;
+  transform:translate(50%,-50%);
+  transition:
+    transform .15s linear,
+    filter .15s linear;
+}
+
+.object-shadow{
+  position:absolute;
+  width:75%;
+  height:20%;
+  bottom:8%;
+  left:12%;
+  border-radius:50%;
+  background:rgba(0,0,0,.6);
+  filter:blur(35px);
+}
+
+.object-body{
+  position:absolute;
+  width:68%;
+  height:38%;
+  left:16%;
+  top:30%;
+  border-radius:8px;
+  background:
+    linear-gradient(
+      145deg,
+      #806d55,
+      #473a2d 45%,
+      #171714
+    );
+  box-shadow:
+    0 50px 100px rgba(0,0,0,.5);
+}
+
+.object-top{
+  position:absolute;
+  width:70%;
+  height:11%;
+  left:15%;
+  top:25%;
+  border-radius:5px;
+  background:
+    linear-gradient(
+      110deg,
+      #a18d70,
+      #62513d
+    );
+  transform:skewX(-12deg);
+}
+
+.object-leg{
+  position:absolute;
+  width:5%;
+  height:27%;
+  top:60%;
+  background:#211c16;
+}
+
+.leg1{left:23%}
+.leg2{left:70%}
+
+.object-info{
+  position:absolute;
+  right:7vw;
+  bottom:12vh;
+  z-index:5;
+}
+
+.object-info small{
+  font-family:"DM Sans";
+  font-size:9px;
+  letter-spacing:4px;
+  color:#9fa99f;
+  direction:ltr;
+}
+
+.object-info h3{
+  font-family:"Playfair Display";
+  font-size:70px;
+  font-weight:300;
+  direction:ltr;
+  margin-top:10px;
+}
+
+.object-info p{
+  width:280px;
+  color:#8e978f;
+  font-size:11px;
+  line-height:2;
+}
+
+/* =========================================================
+   PRODUCT REVEAL
+========================================================= */
+
+.reveal{
+  min-height:180vh;
+  position:relative;
+  background:#080c09;
+}
+
+.reveal-stage{
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:hidden;
+}
+
+.reveal-title{
+  position:absolute;
+  left:7vw;
+  top:14vh;
+  font-family:"Playfair Display";
+  font-size:clamp(70px,12vw,180px);
+  line-height:.75;
+  direction:ltr;
+  color:rgba(255,255,255,.08);
+}
+
+.reveal-product{
+  position:absolute;
+  width:430px;
+  height:600px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.reveal-product-main{
+  position:absolute;
+  width:70%;
+  height:58%;
+  top:18%;
+  left:15%;
+  background:
+    linear-gradient(
+      135deg,
+      #4c594e,
+      #252d27
+    );
+  border-radius:50% 50% 8px 8px;
+  box-shadow:0 50px 100px rgba(0,0,0,.55);
+}
+
+.reveal-product-detail{
+  position:absolute;
+  width:40%;
+  height:7px;
+  background:#9c896d;
+  left:30%;
+  top:45%;
+}
+
+.reveal-caption{
+  position:absolute;
+  bottom:9vh;
+  left:7vw;
+}
+
+.reveal-caption small{
+  font-family:"DM Sans";
+  font-size:9px;
+  letter-spacing:4px;
+  color:var(--muted);
+}
+
+.reveal-caption h3{
+  font-family:"Playfair Display";
+  font-size:65px;
+  font-weight:300;
+  direction:ltr;
+  margin-top:10px;
+}
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products{
+  padding:15vw 7vw;
+  background:#0d1510;
+}
+
+.products-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:120px;
+}
+
+.products-head h2{
+  font-family:"Playfair Display";
+  font-size:clamp(70px,10vw,150px);
+  line-height:.75;
+  font-weight:300;
+  direction:ltr;
+}
+
+.products-head p{
+  width:300px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:2.2;
+}
+
+.product-list{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:25px;
+}
+
+.product-card{
+  position:relative;
+  cursor:pointer;
+}
+
+.product-card:nth-child(1){
+  grid-column:1/8;
+}
+
+.product-card:nth-child(2){
+  grid-column:9/13;
+  margin-top:180px;
+}
+
+.product-card:nth-child(3){
+  grid-column:2/7;
+  margin-top:120px;
+}
+
+.product-card:nth-child(4){
+  grid-column:8/13;
+  margin-top:20px;
+}
+
+.product-visual{
+  height:620px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(
+      circle at center,
+      #506052,
+      #141c17 65%
+    );
+}
+
+.product-card:nth-child(2) .product-visual{
+  height:500px;
+}
+
+.product-card:nth-child(3) .product-visual{
+  height:570px;
+}
+
+.product-card:nth-child(4) .product-visual{
+  height:650px;
+}
+
+.product-visual::before{
+  content:"";
+  position:absolute;
+  width:65%;
+  height:50%;
+  left:17%;
+  top:25%;
+  background:
+    linear-gradient(
+      135deg,
+      #8b765d,
+      #30291f
+    );
+  border-radius:50% 50% 8px 8px;
+  transition:transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+.product-card:hover .product-visual::before{
+  transform:scale(1.12) translateY(-3%);
+}
+
+.product-name{
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  padding-bottom:18px;
+}
+
+.product-name span:first-child{
+  font-family:"Playfair Display";
+  font-size:28px;
+  direction:ltr;
+}
+
+.product-name span:last-child{
+  font-family:"DM Sans";
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+/* =========================================================
+   MATERIAL JOURNEY
+========================================================= */
+
+.material{
+  min-height:100vh;
+  padding:12vw 7vw;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 70% 50%,
+      #27382c,
+      #080b09 60%
+    );
+}
+
+.material-number{
+  font-family:"DM Sans";
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:4px;
+  direction:ltr;
+}
+
+.material h2{
+  font-family:"Playfair Display";
+  font-size:clamp(80px,13vw,190px);
+  font-weight:300;
+  line-height:.72;
+  margin:50px 0;
+  direction:ltr;
+}
+
+.material-description{
+  max-width:400px;
+  color:var(--muted);
+  line-height:2.3;
+  font-size:12px;
+}
+
+.material-orbit{
+  position:absolute;
+  width:600px;
+  height:600px;
+  right:55%;
+  top:50%;
+  transform:translateY(-50%);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:50%;
+}
+
+.material-orbit::before,
+.material-orbit::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+
+.material-orbit::before{
+  width:170px;
+  height:170px;
+  background:#7b6952;
+  top:20px;
+  left:120px;
+  box-shadow:0 0 100px rgba(145,120,85,.25);
+}
+
+.material-orbit::after{
+  width:100px;
+  height:100px;
+  background:#56665a;
+  bottom:80px;
+  right:50px;
+}
+
+/* =========================================================
+   COMPLETE SPACE
+========================================================= */
+
+.complete{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  background:#070908;
+  text-align:center;
+}
+
+.complete-bg{
+  position:absolute;
+  width:70vw;
+  height:70vw;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(65,91,72,.4),
+      transparent 65%
+    );
+  filter:blur(30px);
+}
+
+.complete-content{
+  position:relative;
+  z-index:2;
+}
+
+.complete-content small{
+  font-family:"DM Sans";
+  font-size:9px;
+  letter-spacing:5px;
+  color:var(--muted);
+  direction:ltr;
+}
+
+.complete-content h2{
+  font-family:"Playfair Display";
+  font-size:clamp(75px,12vw,180px);
+  font-weight:300;
+  line-height:.75;
+  margin:40px 0;
+  direction:ltr;
+}
+
+.complete-content p{
+  width:400px;
+  max-width:90vw;
+  margin:auto;
+  color:var(--muted);
+  font-size:12px;
+  line-height:2.2;
+}
+
+.complete-button{
+  display:inline-flex;
+  margin-top:45px;
+  padding:17px 38px;
+  border:1px solid rgba(255,255,255,.35);
+  font-family:"DM Sans";
+  font-size:9px;
+  letter-spacing:3px;
+  direction:ltr;
+  transition:.5s;
+}
+
+.complete-button:hover{
+  background:var(--cream);
+  color:#080908;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+  .header-center{
+    display:none;
+  }
+
+  .hero-title{
+    font-size:25vw;
+  }
+
+  .hero-description{
+    width:280px;
+  }
+
+  .intro-content{
+    width:90%;
+  }
+
+  .exhibition{
+    height:125vh;
+  }
+
+  .object{
+    width:90vw;
+    height:70vw;
+  }
+
+  .object-info{
+    right:7vw;
+    bottom:7vh;
+  }
+
+  .object-info h3{
+    font-size:45px;
+  }
+
+  .reveal-product{
+    transform:translate(-50%,-50%) scale(.75);
+  }
+
+  .products-head{
+    display:block;
+  }
+
+  .products-head p{
+    margin-top:40px;
+  }
+
+  .product-list{
+    display:block;
+  }
+
+  .product-card,
+  .product-card:nth-child(n){
+    margin:0 0 80px;
+  }
+
+  .product-visual,
+  .product-card:nth-child(n) .product-visual{
+    height:500px;
+  }
+
+  .material-orbit{
+    width:400px;
+    height:400px;
+    right:-100px;
+    opacity:.5;
+  }
+
+  .complete-content h2{
+    font-size:23vw;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
+
+<header class="header">
+
+  <div class="logo">MERGEN</div>
+
+  <div class="header-center">
+    AURA / COLLECTION 2026
+  </div>
+
+  <div class="header-right">
+    <span>MENU</span>
+
+    <div class="menu">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-copy">
+
+    <div class="eyebrow">
+      MERGEN / COLLECTION 01
+    </div>
+
+    <h1 class="hero-title">
+      <span>AURA</span>
+    </h1>
+
+    <p class="hero-description">
+      مجموعه‌ای متولد شده از برخورد فرم،
+      متریال و معماری؛
+      جایی که هر قطعه بخشی از یک فضای کامل است.
+    </p>
+
+  </div>
+
+  <div class="hero-number">
+    01 — 04
+  </div>
+
+  <div class="hero-scroll"></div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+====================================================== -->
+
+<section class="intro">
+
+  <div class="intro-word">
+    AURA
+  </div>
+
+  <div class="intro-content">
+
+    <small>
+      THE IDEA BEHIND THE COLLECTION
+    </small>
+
+    <h2>
+      FORM<br>
+      BECOMES<br>
+      ATMOSPHERE
+    </h2>
+
+    <p>
+      AURA با هدف ساختن یک محصول منفرد شکل نگرفته.
+      ایده این مجموعه ساختن یک زبان مشترک برای فضاست؛
+      زبانی که هر قطعه به‌تنهایی شخصیت دارد،
+      اما در کنار قطعات دیگر کامل می‌شود.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     DIGITAL EXHIBITION
+====================================================== -->
+
+<section class="exhibition">
+
+  <div class="exhibition-stage">
+
+    <div class="stage-grid"></div>
+    <div class="floor"></div>
+
+    <div class="object" id="object">
+
+      <div class="object-shadow"></div>
+
+      <div class="object-body"></div>
+
+      <div class="object-top"></div>
+
+      <div class="object-leg leg1"></div>
+      <div class="object-leg leg2"></div>
+
+    </div>
+
+    <div class="object-info">
+
+      <small>
+        SIGNATURE PIECE / 01
+      </small>
+
+      <h3>
+        AURA
+      </h3>
+
+      <p>
+        یک قطعه شاخص برای شروع مجموعه.
+        ساده، سنگین و معماری‌گونه.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     REVEAL
+====================================================== -->
+
+<section class="reveal">
+
+  <div class="reveal-stage">
+
+    <div class="reveal-title">
+      DETAIL
+    </div>
+
+    <div class="reveal-product">
+
+      <div class="reveal-product-main"></div>
+      <div class="reveal-product-detail"></div>
+
+    </div>
+
+    <div class="reveal-caption">
+
+      <small>
+        DESIGNED TO BE SEEN
+      </small>
+
+      <h3>
+        AURA 01
+      </h3>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTS
+====================================================== -->
+
+<section class="products">
+
+  <div class="products-head">
+
+    <h2>
+      THE<br>
+      PIECES
+    </h2>
+
+    <p>
+      چهار قطعه، یک زبان.
+      هرکدام مستقل طراحی شده‌اند
+      اما در کنار یکدیگر یک فضای کامل می‌سازند.
+    </p>
+
+  </div>
+
+
+  <div class="product-list">
+
+    <article class="product-card">
+
+      <div class="product-visual"></div>
+
+      <div class="product-name">
+        <span>AURA CONSOLE</span>
+        <span>01 / CONSOLE</span>
+      </div>
+
+    </article>
+
+
+    <article class="product-card">
+
+      <div class="product-visual"></div>
+
+      <div class="product-name">
+        <span>AURA TABLE</span>
+        <span>02 / TABLE</span>
+      </div>
+
+    </article>
+
+
+    <article class="product-card">
+
+      <div class="product-visual"></div>
+
+      <div class="product-name">
+        <span>AURA MEDIA</span>
+        <span>03 / MEDIA</span>
+      </div>
+
+    </article>
+
+
+    <article class="product-card">
+
+      <div class="product-visual"></div>
+
+      <div class="product-name">
+        <span>AURA BED</span>
+        <span>04 / BEDROOM</span>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MATERIAL
+====================================================== -->
+
+<section class="material">
+
+  <div class="material-number">
+    05 — MATERIAL
+  </div>
+
+  <h2>
+    MATERIAL<br>
+    MATTERS.
+  </h2>
+
+  <p class="material-description">
+    در مرگن متریال فقط پوشش یک محصول نیست.
+    بخشی از شخصیت آن است؛
+    از بافت چوب تا رنگ، لمس و انعکاس نور.
+  </p>
+
+  <div class="material-orbit"></div>
+
+</section>
+
+
+<!-- =====================================================
+     COMPLETE SPACE
+====================================================== -->
+
+<section class="complete">
+
+  <div class="complete-bg"></div>
+
+  <div class="complete-content">
+
+    <small>
+      COMPLETE THE SPACE
+    </small>
+
+    <h2>
+      ONE PIECE<br>
+      IS NEVER<br>
+      ENOUGH.
+    </h2>
+
+    <p>
+      قطعه بعدی را پیدا کنید و فضای خود را
+      به یک مجموعه کامل تبدیل کنید.
+    </p>
+
+    <a href="#" class="complete-button">
+      DISCOVER ANOTHER PIECE
+    </a>
+
+  </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   CURSOR
+====================================================== */
+
+const cursor = document.querySelector(".cursor");
+const ring = document.querySelector(".cursor-ring");
+
+document.addEventListener("mousemove", e => {
+
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+
+  ring.style.left = e.clientX + "px";
+  ring.style.top = e.clientY + "px";
+
+});
+
+
+/* =====================================================
+   EXHIBITION SCROLL
+====================================================== */
+
+const exhibition = document.querySelector(".exhibition");
+const object = document.querySelector("#object");
+
+window.addEventListener("scroll", () => {
+
+  const rect = exhibition.getBoundingClientRect();
+
+  const progress =
+    Math.min(
+      1,
+      Math.max(
+        0,
+        -rect.top / (rect.height - window.innerHeight)
+      )
+    );
+
+  const rotate = progress * 18;
+  const scale = 1 + progress * .22;
+  const moveX = progress * -180;
+
+  object.style.transform =
+    `translate(calc(50% + ${moveX}px), -50%)
+     rotateY(${rotate}deg)
+     scale(${scale})`;
+
+  object.style.filter =
+    `blur(${Math.max(0, 5 - progress * 5)}px)`;
+
+});
+
+
+/* =====================================================
+   REVEAL SCROLL
+====================================================== */
+
+const reveal = document.querySelector(".reveal");
+const revealProduct = document.querySelector(".reveal-product");
+
+window.addEventListener("scroll", () => {
+
+  const rect = reveal.getBoundingClientRect();
+
+  const progress =
+    Math.min(
+      1,
+      Math.max(
+        0,
+        -rect.top / (rect.height - window.innerHeight)
+      )
+    );
+
+  const x = (progress - .5) * 400;
+  const rotate = (progress - .5) * 20;
+  const scale = .65 + progress * .55;
+
+  revealProduct.style.transform =
+    `translate(calc(-50% + ${x}px), -50%)
+     rotate(${rotate}deg)
+     scale(${scale})`;
+
+});
+
+
+/* =====================================================
+   PARALLAX HERO
+====================================================== */
+
+const heroGlow = document.querySelector(".hero-glow");
+const heroGrid = document.querySelector(".hero-grid");
+
+window.addEventListener("scroll", () => {
+
+  const y = window.scrollY;
+
+  if(y < window.innerHeight){
+
+    heroGlow.style.transform =
+      `translateY(${y * .15}px)`;
+
+    heroGrid.style.transform =
+      `perspective(600px)
+       rotateX(55deg)
+       scale(1.5)
+       translateY(${y * .08}px)`;
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html data-page="wishlist" lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علاقه‌مندی‌ها | مرگن</title>
+<!-- تم: دقیقاً مثل صفحه‌ی اصلی (کلاس dark روی html، پیش‌فرض تاریک) -->
+<link href="./css/style.css" rel="stylesheet">
+<link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
+<script src="./js/main.js"></script>
+</head>
+<body>
+<div class="blueprint"></div><div class="glow" style="top:-120px;left:-120px"></div><div class="glow" style="bottom:-160px;right:-100px;animation-delay:-6s"></div>
+
+<!-- دکمه‌ی موقت تم؛ وقتی هدر را اضافه کردی حذفش کن -->
+<button id="themeBtn" aria-label="تغییر تم" class="fixed left-4 top-4 z-50 grid h-11 w-11 place-items-center rounded-full border border-line bg-surface text-ink transition hover:rotate-12">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+
+<main class="mx-auto w-[min(1400px,calc(100%-32px))] pb-24 pt-16 sm:w-[min(1400px,calc(100%-70px))] sm:pt-20">
+<nav class="mb-8 flex items-center gap-3 text-xs tracking-wide text-soft" aria-label="مسیر"><a href="index.html" class="transition hover:text-at">خانه</a><span class="opacity-40">/</span><span class="text-ink">علاقه‌مندی‌ها</span></nav>
+
+<header class="mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-9">
+<div class="flex items-end gap-5">
+<span id="bigNum" class="select-none text-[84px] font-light leading-[.8] text-transparent sm:text-[128px]" style="-webkit-text-stroke:1.5px var(--acc)">۰</span>
+<div class="pb-1"><p class="mb-2 text-[11px] tracking-[.3em] text-at">MY SPACE · WISHLIST</p>
+<h1 class="text-3xl font-light leading-tight sm:text-5xl">خانه‌ی رؤیایی‌ات را<br><b class="font-semibold">همین‌جا بچین.</b></h1></div></div>
+<p class="max-w-sm text-sm leading-8 text-soft">هر قطعه‌ای که دلت را برد اینجا نگه می‌داریم؛ بودجه‌ات را بسنج، رنگ‌ها را انتخاب کن و وقتی مطمئن شدی، یک‌جا به سبد ببر.</p>
+</header>
+
+<div class="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_350px]">
+<section aria-label="لیست علاقه‌مندی‌ها">
+<div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+<div id="chips" class="flex flex-wrap gap-2" role="tablist"></div>
+<label class="flex items-center gap-2 text-xs text-soft">مرتب‌سازی
+<select id="sort" class="rounded-full border border-line bg-surface px-4 py-2 text-xs text-ink transition focus:border-acc focus:outline-hidden">
+<option value="new">جدیدترین افزوده</option><option value="lo">قیمت: کم به زیاد</option><option value="hi">قیمت: زیاد به کم</option></select></label>
+</div>
+<div id="grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"></div>
+<div id="empty" class="hidden rounded-[30px] border border-dashed border-line px-6 py-20 text-center">
+<svg class="mx-auto mb-6 text-at" width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M28 70V52a10 10 0 0 1 10-10h44a10 10 0 0 1 10 10v18"/><path d="M18 70a8 8 0 0 1 16 0v14h52V70a8 8 0 0 1 16 0v22H18z"/><path d="M34 92v10M86 92v10"/><path class="origin-center" d="M60 36s-12-7-14-15c-1.5-6 4-10 9-8 3 1 5 3 5 3s2-2 5-3c5-2 10.500 2 9 8-2 8-14 15-14 15z" fill="currentColor" fill-opacity=".15"/></svg>
+<h2 class="mb-3 text-2xl font-medium">هنوز چیزی انتخاب نکرده‌ای</h2>
+<p class="mx-auto mb-8 max-w-sm text-sm leading-8 text-soft">روی قلب هر محصول بزن تا اینجا جمع شود و بعداً راحت پیدایش کنی.</p>
+<a href="collection.html" class="inline-block rounded-full bg-btn px-8 py-3.5 text-sm font-medium text-onbtn transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-10px_var(--acc)]">دیدن کالکشن</a></div>
+</section>
+
+<aside class="lg:sticky lg:top-8" aria-label="خلاصه">
+<div class="rb"><div class="relative z-[1] overflow-hidden rounded-[30px] border border-line bg-surface p-7">
+<div class="pointer-events-none absolute -top-24 -left-24 h-56 w-56 rounded-full bg-acc opacity-10 blur-3xl"></div>
+<p class="mb-5 text-[11px] tracking-[.28em] text-at">ROOM BUDGET</p>
+<div class="relative mx-auto mb-5 h-[168px] w-[168px]">
+<svg viewBox="0 0 128 128" class="-rotate-90"><circle cx="64" cy="64" r="54" fill="none" stroke="var(--line)" stroke-width="7"/><circle id="ring" class="ring-3" cx="64" cy="64" r="54" fill="none" stroke="var(--acc)" stroke-width="7" stroke-linecap="round" stroke-dasharray="0 340"/></svg>
+<div class="absolute inset-0 grid place-content-center text-center"><b id="pct" class="text-3xl font-light">۰٪</b><span class="text-[11px] text-soft">از بودجه</span></div></div>
+<p id="msg" class="mb-6 min-h-[3rem] text-center text-xs leading-6 text-soft"></p>
+<dl class="space-y-3 border-y border-line py-5 text-sm">
+<div class="flex justify-between"><dt class="text-soft">مجموع قطعات</dt><dd id="total" class="font-semibold">—</dd></div>
+<div class="flex justify-between"><dt class="text-soft">تعداد</dt><dd id="count">۰</dd></div>
+<div class="flex justify-between"><dt class="text-soft">داخل سبد</dt><dd id="inCart">۰</dd></div></dl>
+<label class="mt-5 mb-6 flex items-center justify-between gap-3 text-xs text-soft">بودجه‌ی من
+<span class="flex items-center gap-2 rounded-full border border-line px-4 py-2 transition focus-within:border-acc"><input id="budget" type="number" min="1" step="5" class="num w-14 bg-transparent text-center text-sm text-ink focus:outline-hidden" aria-label="بودجه به میلیون تومان"><span>میلیون</span></span></label>
+<button id="addAll" class="mb-3 w-full rounded-full bg-btn px-6 py-4 text-sm font-medium text-onbtn transition hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-12px_var(--acc)]">افزودن همه به سبد</button>
+<div class="flex gap-3"><button id="copy" class="flex-1 rounded-full border border-line px-4 py-3 text-xs text-ink transition hover:border-acc hover:text-at">کپی لیست</button><button id="clear" class="flex-1 rounded-full border border-line px-4 py-3 text-xs text-soft transition hover:border-red-400 hover:text-red-400">پاک کردن همه</button></div>
+</div></div></aside>
+</div>
+</main>
+<div id="toasts" class="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 space-y-2"></div>
+
+</body>
+</html>
