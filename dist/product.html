@@ -1,748 +1,255 @@
 <!DOCTYPE html>
-<html data-page="product" lang="fa" dir="rtl">
-
+<html lang="fa" dir="rtl" data-page="product">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MERGEN — Product</title>
-
-    <!-- Tailwind -->
-    <link href="./css/style.css" rel="stylesheet">
-<link href="./fonts/vazirmatn/vazirmatn.css" rel="stylesheet">
-<script src="./js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b16">
+  <title>MERGEN — ARKA Modular Sofa</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fonts/vazirmatn/vazirmatn.css">
+  <script>
+    try {
+      document.documentElement.classList.toggle('dark', localStorage.getItem('mergen-theme') !== 'light');
+    } catch (e) { document.documentElement.classList.add('dark'); }
+  </script>
 </head>
+<body class="mg-product-page">
+  <header class="mg-p-header">
+    <a class="mg-p-logo" href="index.html" aria-label="MERGEN home">MERGEN<span>FURNITURE / INTERIOR</span></a>
+    <nav class="mg-p-nav" aria-label="ناوبری اصلی">
+      <a href="index.html">خانه</a>
+      <a href="collection.html">کالکشن‌ها</a>
+      <a href="#story">داستان طراحی</a>
+      <a href="#details">جزئیات ساخت</a>
+    </nav>
+    <div class="mg-p-actions">
+      <button class="mg-icon-btn" id="themeToggle" type="button" aria-label="تغییر حالت روز و شب"><span class="mg-theme-icon">☼</span></button>
+      <button class="mg-icon-btn mg-fav-btn" id="favoriteButton" type="button" aria-label="افزودن به علاقه‌مندی‌ها">♡</button>
+      <a class="mg-p-bag" href="cart.html">سبد <span>۰</span></a>
+      <button class="mg-menu-toggle" id="mobileMenuToggle" type="button" aria-label="باز کردن منو">☰</button>
+    </div>
+  </header>
 
+  <main>
+    <div class="mg-p-crumb wrap">
+      <div><a href="index.html">مرگن</a><span>/</span><a href="collection.html">مبلمان</a><span>/</span><b>آرکا</b></div>
+      <span class="mg-p-edition">THE OBJECT SERIES <i>—</i> 2026</span>
+    </div>
 
-<body>
+    <section class="mg-p-hero wrap">
+      <div class="mg-p-gallery">
+        <div class="mg-p-main-visual" id="visualStage">
+          <div class="mg-p-visual-top"><span>MERGEN OBJECT Nº 014</span><span id="imageCount">01 / 04</span></div>
+          <img id="mainProductImage" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=88" alt="مبل ماژولار آرکا در فضای داخلی مینیمال">
+          <div class="mg-p-image-shade"></div>
+          <div class="mg-p-visual-bottom">
+            <span class="mg-p-visual-note"><i></i> STUDIO VIEW / 01</span>
+            <div class="mg-p-gallery-arrows">
+              <button type="button" id="galleryPrev" aria-label="تصویر قبلی">←</button>
+              <button type="button" id="galleryNext" aria-label="تصویر بعدی">→</button>
+            </div>
+          </div>
+          <div class="mg-p-depth-label">FORM <b>IN</b> SPACE</div>
+        </div>
+        <div class="mg-p-thumbs" id="productThumbs">
+          <button class="is-active" type="button" data-index="0"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=300&q=75" alt="نمای اصلی مبل"></button>
+          <button type="button" data-index="1"><img src="https://images.unsplash.com/photo-1550254478-0bbedb7f5e1d?auto=format&fit=crop&w=300&q=75" alt="نمای دوم محصول"></button>
+          <button type="button" data-index="2"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=300&q=75" alt="محصول در فضای داخلی"></button>
+          <button type="button" data-index="3"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=300&q=75" alt="جزئیات فضای محصول"></button>
+        </div>
+        <div class="mg-p-gallery-caption"><span>01 — 04</span><span>تصاویر نمونه برای نمایش چیدمان نهایی</span><span>DRAG TO EXPLORE <b>↗</b></span></div>
+      </div>
 
-    <!-- =====================================================
-     MOBILE HEADER
-====================================================== -->
+      <div class="mg-p-product-info">
+        <div class="mg-p-overline"><span class="mg-p-dot"></span> LIVING / MODULAR SERIES</div>
+        <div class="mg-p-title-wrap">
+          <span class="mg-p-index">014</span>
+          <h1>آرکا<span>مبل ماژولار</span></h1>
+        </div>
+        <p class="mg-p-english-name">ARKA MODULAR SOFA</p>
+        <p class="mg-p-description">فرمی آرام و منعطف برای زندگی امروز؛ آرکا با تناسبات نرم و ساختار ماژولار، فضای نشیمن را به شکلی طبیعی تعریف می‌کند. قطعه‌ای که با ریتم خانه شما هماهنگ می‌شود.</p>
+        <div class="mg-p-price-line"><div><small>قیمت و شرایط ساخت</small><strong>استعلام بر اساس سفارش</strong></div><span>MADE TO ORDER</span></div>
 
-    <header class="mobile-header hidden fixed top-0 left-0 right-0 z-50
-               h-[68px] px-6
-               items-center justify-between
-               border-b border-[#8d7950]/30
-               bg-[#080908]/95 backdrop-blur-md">
-
-        <a href="collection.html" class="serif text-xl tracking-[.15em] text-[#e8dfca]">
-            MERGEN
-        </a>
-
-        <a href="collection.html" class="text-[9px] tracking-[.3em] text-[#c1a96f]">
-            COLLECTION
-        </a>
-
-    </header>
-
-
-    <!-- =====================================================
-     DESKTOP SIDEBAR
-====================================================== -->
-
-    <aside class="product-sidebar hidden lg:flex flex-col justify-between p-5">
-
-        <!-- Logo -->
-
-        <div>
-
-            <a href="collection.html" class="block serif text-2xl tracking-[.12em] text-[#e8dfca]">
-                MERGEN
-            </a>
-
-            <div class="mt-2 h-px w-7 bg-[#c1a96f]"></div>
-
-            <p class="mt-3 text-[7px] tracking-[.32em] text-[#77756e]">
-                FURNITURE / INTERIOR
-            </p>
-
+        <div class="mg-p-config">
+          <div class="mg-p-config-head"><span>01 / انتخاب رنگ پارچه</span><b id="selectedColorName">سبز زیتونی</b></div>
+          <div class="mg-p-swatches" id="fabricSwatches">
+            <button class="is-active" type="button" data-color="#64705d" data-name="سبز زیتونی" style="--swatch:#64705d" aria-label="سبز زیتونی"></button>
+            <button type="button" data-color="#c5b9a4" data-name="شن روشن" style="--swatch:#c5b9a4" aria-label="شن روشن"></button>
+            <button type="button" data-color="#8a6655" data-name="قهوه‌ای خاکی" style="--swatch:#8a6655" aria-label="قهوه‌ای خاکی"></button>
+            <button type="button" data-color="#343b38" data-name="ذغالی" style="--swatch:#343b38" aria-label="ذغالی"></button>
+            <button type="button" data-color="#a7a39a" data-name="طوسی مه‌آلود" style="--swatch:#a7a39a" aria-label="طوسی مه‌آلود"></button>
+          </div>
+          <div class="mg-p-config-divider"></div>
+          <div class="mg-p-config-head"><span>02 / ترکیب ماژول‌ها</span><b>سه‌نفره</b></div>
+          <div class="mg-p-option-row"><span>پیکربندی پیشنهادی</span><span>۳ ماژول + شزلونگ</span></div>
+          <div class="mg-p-option-row"><span>قابلیت سفارشی‌سازی</span><span class="mg-p-available">● قابل سفارش</span></div>
         </div>
 
-
-        <!-- Navigation -->
-
-        <nav class="flex flex-col gap-5 text-[9px] tracking-[.22em] text-[#9a978d]">
-
-            <a href="collection.html" class="sidebar-link w-fit">
-                COLLECTIONS
-            </a>
-
-            <a href="collection.html" class="sidebar-link w-fit">
-                SOFAS
-            </a>
-
-            <a href="collection.html" class="sidebar-link w-fit">
-                SEATING
-            </a>
-
-            <a href="collection.html" class="sidebar-link w-fit">
-                TABLES
-            </a>
-
-            <a href="collection.html" class="sidebar-link w-fit">
-                STORAGE
-            </a>
-
-        </nav>
-
-
-        <!-- Bottom -->
-
-        <div>
-
-            <div class="mb-5 flex items-center gap-2">
-
-                <span class="w-2 h-2 rounded-full border border-[#c1a96f]"></span>
-
-                <span class="text-[8px] tracking-[.2em] text-[#77756e]">
-                    2026
-                </span>
-
-            </div>
-
-            <p class="text-[8px] leading-5 text-[#686760]">
-                Designed for living.
-            </p>
-
+        <div class="mg-p-cta-row">
+          <a class="mg-p-primary-cta" href="index.html#contact">درخواست مشاوره و قیمت <span>↗</span></a>
+          <button class="mg-p-share" id="shareProduct" type="button" aria-label="اشتراک گذاری محصول">↗</button>
         </div>
+        <p class="mg-p-cta-note">برای دریافت قیمت نهایی، انتخاب پارچه و ابعاد با کارشناسان مرگن در ارتباط باشید.</p>
+        <div class="mg-p-trust-row"><span>ساخت سفارشی</span><span>انتخاب متریال</span><span>مشاوره پیش از سفارش</span></div>
+      </div>
+    </section>
 
-    </aside>
+    <section class="mg-p-marquee" aria-label="شعار برند">
+      <div><span>MADE FOR YOUR SPACE</span><i>✳</i><span>FORM FOLLOWS FEELING</span><i>✳</i><span>MERGEN FURNITURE</span><i>✳</i><span>MADE FOR YOUR SPACE</span></div>
+    </section>
 
+    <section class="mg-p-story wrap" id="story">
+      <div class="mg-p-story-kicker"><span>02</span><span>DESIGN PHILOSOPHY</span></div>
+      <div class="mg-p-story-copy">
+        <p class="mg-p-eyebrow">A QUIETER KIND OF PRESENCE</p>
+        <h2>فضا را پُر نمی‌کند؛<br><em>به آن معنا می‌دهد.</em></h2>
+        <p>آرکا برای خانه‌هایی طراحی شده که در آن‌ها زیبایی از تعادل می‌آید. حجم‌های ساده، خطوط پیوسته و نشیمن عمیق، محصولی می‌سازند که بدون شلوغی، حضور خودش را دارد.</p>
+        <a href="#details" class="mg-p-text-link">کشف جزئیات طراحی <span>←</span></a>
+      </div>
+      <div class="mg-p-story-image">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85" alt="فضای نشیمن مینیمال با مبلمان معاصر">
+        <span>THE ART OF SLOW LIVING / 01</span>
+      </div>
+    </section>
 
-    <!-- =====================================================
-     MAIN
-====================================================== -->
-
-    <main class="desktop-main lg:ml-[190px]">
-
-
-        <!-- =================================================
-         TOP BAR
-    ================================================== -->
-
-        <div class="px-6 md:px-10 lg:px-14 pt-8 lg:pt-10">
-
-            <div class="flex items-center justify-between
-                    border-b border-[#8d7950]/30 pb-5">
-
-                <div class="flex items-center gap-3">
-
-                    <a href="collection.html" class="text-[9px] tracking-[.25em] text-[#77756e]
-                          hover:text-[#c1a96f] transition">
-                        COLLECTION
-                    </a>
-
-                    <span class="text-[#c1a96f] text-xs">/</span>
-
-                    <span id="breadcrumbName" class="text-[9px] tracking-[.2em] text-[#aaa79e]">
-                        PRODUCT
-                    </span>
-
-                </div>
-
-
-                <span class="text-[8px] tracking-[.3em] text-[#686760]">
-                    MERGEN / OBJECT
-                </span>
-
-            </div>
-
+    <section class="mg-p-detail-band" id="details">
+      <div class="wrap mg-p-detail-inner">
+        <div class="mg-p-detail-heading">
+          <p class="mg-p-eyebrow">CRAFTED WITH INTENTION</p>
+          <h2>زیبایی، در<br><em>جزئیات پنهان است.</em></h2>
+          <p>هر انتخاب از ساختار تا پوشش نهایی، بخشی از تجربه‌ای است که در طول زمان همراه شما می‌ماند.</p>
         </div>
-
-
-
-        <!-- =================================================
-         PRODUCT HERO
-    ================================================== -->
-
-        <section class="px-6 md:px-10 lg:px-14 pt-10 lg:pt-14">
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-
-
-                <!-- =============================================
-                 GALLERY
-            ============================================== -->
-
-                <div class="lg:col-span-7">
-
-                    <!-- Main Image -->
-
-                    <div class="image-frame relative
-                            aspect-[4/5]
-                            overflow-hidden
-                            bg-[#0d0f0e]
-                            border border-[#8d7950]/30">
-
-                        <img id="mainImage" src="" alt="" class="main-image absolute inset-0
-                               w-full h-full object-cover">
-
-                        <!-- Image number -->
-
-                        <div class="absolute top-5 left-5 z-10">
-
-                            <span id="imageCounter" class="text-[9px] tracking-[.25em]
-                                     text-[#c1a96f]">
-                                01 / 05
-                            </span>
-
-                        </div>
-
-
-                        <!-- Previous -->
-
-                        <button id="prevImage" type="button" aria-label="Previous image" class="absolute bottom-5 left-5 z-10
-                               w-10 h-10
-                               flex items-center justify-center
-                               border border-[#8d7950]/50
-                               bg-[#080908]/60
-                               text-[#c1a96f]
-                               hover:bg-[#c1a96f]
-                               hover:text-[#080908]
-                               transition">
-                            ←
-                        </button>
-
-
-                        <!-- Next -->
-
-                        <button id="nextImage" type="button" aria-label="Next image" class="absolute bottom-5 left-16 z-10
-                               w-10 h-10
-                               flex items-center justify-center
-                               border border-[#8d7950]/50
-                               bg-[#080908]/60
-                               text-[#c1a96f]
-                               hover:bg-[#c1a96f]
-                               hover:text-[#080908]
-                               transition">
-                            →
-                        </button>
-
-                    </div>
-
-
-                    <!-- Thumbnails -->
-
-                    <div id="thumbnails" class="grid grid-cols-5 gap-2 mt-3">
-                    </div>
-
-
-                    <!-- Gallery Caption -->
-
-                    <div class="mt-5 flex items-center justify-between">
-
-                        <span class="text-[8px] tracking-[.3em] text-[#66655f]">
-                            MERGEN COLLECTION
-                        </span>
-
-                        <span class="text-[8px] tracking-[.2em] text-[#66655f]">
-                            DETAIL / FORM / MATERIAL
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =============================================
-                 PRODUCT INFORMATION
-            ============================================== -->
-
-                <div class="lg:col-span-5 flex flex-col justify-between">
-
-                    <div>
-
-                        <!-- Category -->
-
-                        <div class="flex items-center gap-3 mb-7">
-
-                            <span class="w-8 h-px bg-[#c1a96f]"></span>
-
-                            <span id="productCategory" class="text-[9px] tracking-[.35em]
-                                     text-[#c1a96f] uppercase">
-                                COLLECTION
-                            </span>
-
-                        </div>
-
-
-                        <!-- Product Name -->
-
-                        <h1 id="productName" class="serif text-5xl md:text-6xl lg:text-7xl
-                               leading-[.95]
-                               text-[#e8dfca]">
-                            —
-                        </h1>
-
-
-                        <!-- English Name -->
-
-                        <p id="productEnglishName" class="mt-5 text-[10px]
-                              tracking-[.45em]
-                              text-[#77756e] uppercase">
-                            —
-                        </p>
-
-
-                        <!-- Description -->
-
-                        <p id="productDescription" class="mt-10 max-w-lg
-                              text-sm md:text-[15px]
-                              leading-8
-                              text-[#a5a299]">
-                            —
-                        </p>
-
-
-                        <!-- Price -->
-
-                        <div class="mt-10
-                                border-y border-[#8d7950]/30
-                                py-7">
-
-                            <p class="text-[8px] tracking-[.35em]
-                                  text-[#77756e] mb-3">
-                                PRICE
-                            </p>
-
-                            <p class="serif text-2xl text-[#e8dfca]">
-                                برای استعلام قیمت تماس بگیرید
-                            </p>
-
-                        </div>
-
-
-                        <!-- CTA -->
-
-                        <a id="whatsappButton" href="#" target="_blank" class="luxury-button mt-8
-                              relative z-10
-                              flex items-center justify-center
-                              h-14 w-full
-                              text-[10px]
-                              tracking-[.3em]
-                              text-[#c1a96f]">
-
-                            <span class="relative z-10">
-                                استعلام قیمت در واتساپ
-                            </span>
-
-                        </a>
-
-
-                        <!-- Small note -->
-
-                        <p class="mt-4 text-[8px] leading-5 text-[#62615b]">
-                            برای اطلاع از قیمت، رنگ‌بندی، متریال و زمان تحویل
-                            با مرگن در ارتباط باشید.
-                        </p>
-
-                    </div>
-
-
-                    <!-- Product Meta -->
-
-                    <div class="mt-14">
-
-                        <div class="detail-line py-5
-                                flex items-center justify-between">
-
-                            <span class="text-[9px] tracking-[.25em]
-                                     text-[#77756e]">
-                                CATEGORY
-                            </span>
-
-                            <span id="metaCategory" class="text-xs text-[#b7b2a5]">
-                                —
-                            </span>
-
-                        </div>
-
-
-                        <div class="detail-line py-5
-                                flex items-center justify-between">
-
-                            <span class="text-[9px] tracking-[.25em]
-                                     text-[#77756e]">
-                                MATERIAL
-                            </span>
-
-                            <span id="metaMaterial" class="text-xs text-[#b7b2a5]">
-                                —
-                            </span>
-
-                        </div>
-
-
-                        <div class="detail-line py-5
-                                flex items-center justify-between">
-
-                            <span class="text-[9px] tracking-[.25em]
-                                     text-[#77756e]">
-                                DESIGN
-                            </span>
-
-                            <span id="metaDesigner" class="text-xs text-[#b7b2a5]">
-                                MERGEN
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-         PRODUCT STORY
-    ================================================== -->
-
-        <section class="px-6 md:px-10 lg:px-14 mt-36">
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-                <!-- Number -->
-
-                <div class="lg:col-span-2">
-
-                    <span class="text-[10px] tracking-[.35em]
-                             text-[#c1a96f]">
-                        01
-                    </span>
-
-                </div>
-
-
-                <!-- Text -->
-
-                <div class="lg:col-span-7">
-
-                    <p class="text-[9px] tracking-[.4em]
-                          text-[#8d7950] mb-6">
-                        THE OBJECT
-                    </p>
-
-                    <h2 class="serif text-4xl md:text-5xl
-                           leading-[1.1] text-[#e8dfca]">
-                        یک قطعه برای
-                        <span class="italic text-[#c1a96f]">
-                            ماندن
-                        </span>.
-                    </h2>
-
-                    <p id="storyText" class="mt-8 text-sm md:text-[15px]
-                          leading-8 text-[#929087] max-w-2xl">
-                        هر قطعه از مرگن با نگاه به فرم،
-                        عملکرد و تجربه‌ی زندگی طراحی می‌شود.
-                        هدف، ساختن محصولی نیست که فقط زیبا باشد؛
-                        هدف خلق بخشی از فضای زندگی است.
-                    </p>
-
-                </div>
-
-
-                <!-- Side statement -->
-
-                <div class="lg:col-span-3 flex items-end">
-
-                    <p class="serif italic text-xl leading-8
-                          text-[#77756e]">
-                        Form follows feeling.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-         SPECS
-    ================================================== -->
-
-        <section class="px-6 md:px-10 lg:px-14 mt-28">
-
-            <div class="border-t border-[#8d7950]/30 pt-8">
-
-                <div class="flex items-center justify-between mb-10">
-
-                    <div>
-
-                        <p class="text-[9px] tracking-[.4em]
-                              text-[#c1a96f]">
-                            SPECIFICATIONS
-                        </p>
-
-                        <h2 class="serif mt-3 text-3xl text-[#e8dfca]">
-                            جزئیات محصول
-                        </h2>
-
-                    </div>
-
-                    <span class="text-[8px] tracking-[.25em]
-                             text-[#66655f]">
-                        02 / DETAILS
-                    </span>
-
-                </div>
-
-
-                <div id="specifications" class="grid grid-cols-1 md:grid-cols-2
-                        border-t border-[#8d7950]/20">
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-         COLORS
-    ================================================== -->
-
-        <section class="px-6 md:px-10 lg:px-14 mt-28">
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-                <div class="lg:col-span-4">
-
-                    <p class="text-[9px] tracking-[.4em]
-                          text-[#c1a96f]">
-                        PALETTE
-                    </p>
-
-                    <h2 class="serif mt-4 text-3xl md:text-4xl
-                           text-[#e8dfca]">
-                        رنگ و متریال
-                    </h2>
-
-                    <p class="mt-5 text-sm leading-7 text-[#77756e]">
-                        هر رنگ بخشی از شخصیت محصول است.
-                        انتخاب نهایی می‌تواند بر اساس فضای شما انجام شود.
-                    </p>
-
-                </div>
-
-
-                <div class="lg:col-span-8">
-
-                    <div id="colorOptions" class="grid grid-cols-2 md:grid-cols-4
-                            gap-3">
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-         MATERIAL / CRAFT
-    ================================================== -->
-
-        <section class="px-6 md:px-10 lg:px-14 mt-36">
-
-            <div class="relative border-t border-[#8d7950]/30 pt-10">
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-                    <div class="lg:col-span-2">
-
-                        <span class="text-[10px] tracking-[.35em]
-                                 text-[#c1a96f]">
-                            03
-                        </span>
-
-                    </div>
-
-
-                    <div class="lg:col-span-5">
-
-                        <p class="text-[9px] tracking-[.4em]
-                              text-[#8d7950] mb-6">
-                            MATERIAL / CRAFT
-                        </p>
-
-                        <h2 class="serif text-4xl md:text-5xl
-                               leading-[1.1] text-[#e8dfca]">
-                            متریال،
-                            <br>
-                            آغاز داستان است.
-                        </h2>
-
-                    </div>
-
-
-                    <div class="lg:col-span-5">
-
-                        <p id="materialText" class="text-sm leading-8 text-[#85847c]">
-                            انتخاب متریال در مرگن بخشی از فرآیند طراحی است.
-                            بافت، رنگ، لمس و نحوه‌ی قرار گرفتن متریال
-                            در کنار فرم، شخصیت نهایی محصول را شکل می‌دهد.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-         RELATED PRODUCTS
-    ================================================== -->
-
-        <section class="px-6 md:px-10 lg:px-14 mt-36 mb-28">
-
-            <div class="flex items-end justify-between
-                    border-b border-[#8d7950]/30 pb-6 mb-10">
-
-                <div>
-
-                    <p class="text-[9px] tracking-[.4em]
-                          text-[#c1a96f]">
-                        YOU MAY ALSO LIKE
-                    </p>
-
-                    <h2 class="serif mt-3 text-3xl md:text-4xl
-                           text-[#e8dfca]">
-                        از کالکشن مرگن
-                    </h2>
-
-                </div>
-
-
-                <a href="collection.html" class="hidden md:block
-                      text-[9px] tracking-[.25em]
-                      text-[#77756e]
-                      hover:text-[#c1a96f]
-                      transition">
-                    VIEW ALL →
-                </a>
-
-            </div>
-
-
-            <div id="relatedProducts" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-                    gap-5">
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-         FOOTER
-    ================================================== -->
-
-        <footer class="border-t border-[#8d7950]/30
-                   px-6 md:px-10 lg:px-14
-                   py-12">
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-                <div>
-
-                    <div class="serif text-2xl tracking-[.12em]">
-                        MERGEN
-                    </div>
-
-                    <p class="mt-3 text-[9px] tracking-[.25em]
-                          text-[#66655f]">
-                        FURNITURE / INTERIOR
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <p class="text-[9px] tracking-[.3em]
-                          text-[#c1a96f] mb-4">
-                        NAVIGATION
-                    </p>
-
-                    <div class="flex flex-col gap-3
-                            text-[10px] text-[#77756e]">
-
-                        <a href="collection.html" class="hover:text-[#e8dfca] transition">
-                            Collections
-                        </a>
-
-                        <a href="collection.html" class="hover:text-[#e8dfca] transition">
-                            Furniture
-                        </a>
-
-                        <a href="collection.html" class="hover:text-[#e8dfca] transition">
-                            Interior
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="md:text-left">
-
-                    <p class="text-[9px] tracking-[.3em]
-                          text-[#c1a96f] mb-4">
-                        MERGEN
-                    </p>
-
-                    <p class="text-[10px] leading-6 text-[#66655f]">
-                        Designed for living.
-                        <br>
-                        Made with intention.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="mt-12 pt-6
-                    border-t border-[#8d7950]/20
-                    flex flex-col md:flex-row
-                    gap-3 justify-between">
-
-                <span class="text-[8px] tracking-[.2em] text-[#55544f]">
-                    © MERGEN 2026
-                </span>
-
-                <span class="text-[8px] tracking-[.2em] text-[#55544f]">
-                    FURNITURE · INTERIOR · DESIGN
-                </span>
-
-            </div>
-
-        </footer>
-
-    </main>
-
-
-
-    <!-- =====================================================
-     PRODUCT DATA
-====================================================== -->
-
-    <!-- =====================================================
-     PRODUCT PAGE LOGIC
-====================================================== -->
-
-   </body>
-
+        <div class="mg-p-detail-grid">
+          <article><span>01 / STRUCTURE</span><div class="mg-p-detail-icon">⌁</div><h3>ساختار مهندسی‌شده</h3><p>اسکلت مستحکم و اتصالات دقیق برای حفظ فرم و پایداری در استفاده روزمره.</p></article>
+          <article><span>02 / TEXTURE</span><div class="mg-p-detail-icon">◌</div><h3>بافت و لمس</h3><p>امکان انتخاب پارچه و رنگ متناسب با سبک چیدمان و سلیقه شما.</p></article>
+          <article><span>03 / FLEXIBILITY</span><div class="mg-p-detail-icon">↗</div><h3>ترکیب منعطف</h3><p>چیدمان ماژول‌ها می‌تواند با ابعاد و نیاز فضای شما هماهنگ شود.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-p-dimensions wrap">
+      <div class="mg-p-dim-copy">
+        <p class="mg-p-eyebrow">SIZE & PROPORTION / 03</p>
+        <h2>تناسبی برای<br><em>فضای شما.</em></h2>
+        <p>ابعاد زیر صرفاً نمونه نمایشی هستند. اندازه نهایی و ترکیب ماژول‌ها در زمان سفارش قابل بررسی و سفارشی‌سازی است.</p>
+        <div class="mg-p-dim-list">
+          <div><span>عرض کلی</span><b>۲۸۰ <small>cm</small></b></div>
+          <div><span>عمق</span><b>۱۰۰ <small>cm</small></b></div>
+          <div><span>ارتفاع</span><b>۸۲ <small>cm</small></b></div>
+          <div><span>ارتفاع نشیمن</span><b>۴۲ <small>cm</small></b></div>
+        </div>
+        <a href="index.html#contact" class="mg-p-text-link">درخواست ابعاد سفارشی <span>←</span></a>
+      </div>
+      <div class="mg-p-dim-visual">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85" alt="نمای مبل برای بررسی تناسبات">
+        <div class="mg-dim-line mg-dim-width"><span>280 cm</span></div>
+        <div class="mg-dim-line mg-dim-height"><span>82 cm</span></div>
+        <div class="mg-p-dim-stamp">DIMENSIONS<br><b>NOT TO SCALE</b></div>
+      </div>
+    </section>
+
+    <section class="mg-p-room">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2200&q=88" alt="چیدمان مدرن نشیمن با رنگ‌های طبیعی">
+      <div class="mg-p-room-overlay"></div>
+      <div class="mg-p-room-content"><p>MERGEN / LIVING COLLECTION</p><h2>جایی برای<br>زندگی کردن.</h2><a href="collection.html">مشاهده کالکشن <span>↗</span></a></div>
+      <span class="mg-p-room-index">04 — THE LIVING SPACE</span>
+    </section>
+
+    <section class="mg-p-related wrap">
+      <div class="mg-p-related-head"><div><p class="mg-p-eyebrow">MORE TO DISCOVER</p><h2>هم‌نشین‌های <em>آرکا</em></h2></div><a href="collection.html">تمام محصولات <span>←</span></a></div>
+      <div class="mg-p-related-grid">
+        <a href="product.html?id=vela-chair" class="mg-p-related-card"><div><img src="https://images.unsplash.com/photo-1505609375231-2e2a7d8f4b9b?auto=format&fit=crop&w=900&q=82" alt="صندلی ولا"></div><span>SEATING / 021</span><h3>صندلی ولا</h3><small>VELA LOUNGE CHAIR</small></a>
+        <a href="product.html?id=nova-table" class="mg-p-related-card"><div><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=82" alt="میز نوا"></div><span>TABLES / 008</span><h3>میز نوا</h3><small>NOVA COFFEE TABLE</small></a>
+        <a href="product.html?id=orion-console" class="mg-p-related-card"><div><img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=900&q=82" alt="کنسول اوریون"></div><span>STORAGE / 012</span><h3>کنسول اوریون</h3><small>ORION CONSOLE</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mg-p-footer">
+    <div class="wrap mg-p-footer-inner"><a href="index.html" class="mg-p-logo">MERGEN<span>FURNITURE / INTERIOR</span></a><p>برای زندگی طراحی شده.</p><div><a href="collection.html">کالکشن‌ها</a><a href="index.html#contact">تماس با مرگن</a></div><small>© MERGEN 2026</small></div>
+  </footer>
+
+  <div class="mg-p-mobile-menu" id="mobileMenu"><button id="mobileMenuClose" type="button">×</button><a href="index.html">خانه</a><a href="collection.html">کالکشن‌ها</a><a href="#story">داستان طراحی</a><a href="#details">جزئیات ساخت</a></div>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const themeButton = document.getElementById('themeToggle');
+      const themeIcon = document.querySelector('.mg-theme-icon');
+      const setThemeIcon = () => { if (themeIcon) themeIcon.textContent = root.classList.contains('dark') ? '☼' : '☾'; };
+      setThemeIcon();
+      themeButton?.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        try { localStorage.setItem('mergen-theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch(e) {}
+        setThemeIcon();
+      });
+
+      const gallery = [
+        'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=88',
+        'https://images.unsplash.com/photo-1550254478-0bbedb7f5e1d?auto=format&fit=crop&w=1800&q=88',
+        'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=88',
+        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=88'
+      ];
+      let activeImage = 0;
+      const mainImage = document.getElementById('mainProductImage');
+      const count = document.getElementById('imageCount');
+      const thumbs = [...document.querySelectorAll('#productThumbs button')];
+      function showImage(index) {
+        activeImage = (index + gallery.length) % gallery.length;
+        if (mainImage) {
+          mainImage.classList.add('is-changing');
+          window.setTimeout(() => { mainImage.src = gallery[activeImage]; mainImage.classList.remove('is-changing'); }, 150);
+        }
+        if (count) count.textContent = String(activeImage + 1).padStart(2,'0') + ' / ' + String(gallery.length).padStart(2,'0');
+        thumbs.forEach((item,i) => item.classList.toggle('is-active', i === activeImage));
+      }
+      thumbs.forEach((item,i) => item.addEventListener('click', () => showImage(i)));
+      document.getElementById('galleryPrev')?.addEventListener('click', () => showImage(activeImage - 1));
+      document.getElementById('galleryNext')?.addEventListener('click', () => showImage(activeImage + 1));
+
+      document.querySelectorAll('#fabricSwatches button').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('#fabricSwatches button').forEach(item => item.classList.remove('is-active'));
+          button.classList.add('is-active');
+          const label = document.getElementById('selectedColorName');
+          if (label) label.textContent = button.dataset.name;
+          document.documentElement.style.setProperty('--mg-selected-fabric', button.dataset.color);
+        });
+      });
+
+      const favorite = document.getElementById('favoriteButton');
+      favorite?.addEventListener('click', () => {
+        const active = favorite.classList.toggle('is-favorite');
+        favorite.textContent = active ? '♥' : '♡';
+        favorite.setAttribute('aria-pressed', String(active));
+      });
+      document.getElementById('shareProduct')?.addEventListener('click', async () => {
+        try {
+          if (navigator.share) await navigator.share({title: document.title, url: location.href});
+          else { await navigator.clipboard.writeText(location.href); alert('لینک صفحه کپی شد.'); }
+        } catch(e) {}
+      });
+
+      const menu = document.getElementById('mobileMenu');
+      document.getElementById('mobileMenuToggle')?.addEventListener('click', () => menu?.classList.add('is-open'));
+      document.getElementById('mobileMenuClose')?.addEventListener('click', () => menu?.classList.remove('is-open'));
+      menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('is-open')));
+
+      const stage = document.getElementById('visualStage');
+      if (stage && window.matchMedia('(pointer:fine)').matches) {
+        stage.addEventListener('pointermove', event => {
+          const rect = stage.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - .5;
+          const y = (event.clientY - rect.top) / rect.height - .5;
+          stage.style.setProperty('--tilt-x', (y * -2.4).toFixed(2) + 'deg');
+          stage.style.setProperty('--tilt-y', (x * 2.4).toFixed(2) + 'deg');
+        });
+        stage.addEventListener('pointerleave', () => {
+          stage.style.setProperty('--tilt-x', '0deg');
+          stage.style.setProperty('--tilt-y', '0deg');
+        });
+      }
+    })();
+  </script>
+</body>
 </html>
