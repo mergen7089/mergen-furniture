@@ -13,8 +13,8 @@
     } catch (e) { document.documentElement.classList.add('dark'); }
   </script>
 </head>
-<body class="mg-product-page">
-  <header class="mg-p-header">
+<body class="mg-product-page min-h-screen">
+  <header class="mg-p-header sticky top-0 z-50 flex items-center justify-between">
     <a class="mg-p-logo" href="index.html" aria-label="MERGEN home">MERGEN<span>FURNITURE / INTERIOR</span></a>
     <nav class="mg-p-nav" aria-label="ناوبری اصلی">
       <a href="index.html">خانه</a>
@@ -31,14 +31,14 @@
   </header>
 
   <main>
-    <div class="mg-p-crumb wrap">
+    <div class="mg-p-crumb wrap mx-auto w-full">
       <div><a href="index.html">مرگن</a><span>/</span><a href="collection.html">مبلمان</a><span>/</span><b>آرکا</b></div>
       <span class="mg-p-edition">THE OBJECT SERIES <i>—</i> 2026</span>
     </div>
 
-    <section class="mg-p-hero wrap">
-      <div class="mg-p-gallery">
-        <div class="mg-p-main-visual" id="visualStage">
+    <section class="mg-p-hero wrap mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="mg-p-gallery w-full">
+        <div class="mg-p-main-visual relative overflow-hidden" id="visualStage">
           <div class="mg-p-visual-top"><span>MERGEN OBJECT Nº 014</span><span id="imageCount">01 / 04</span></div>
           <img id="mainProductImage" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=88" alt="مبل ماژولار آرکا در فضای داخلی مینیمال">
           <div class="mg-p-image-shade"></div>
@@ -60,7 +60,7 @@
         <div class="mg-p-gallery-caption"><span>01 — 04</span><span>تصاویر نمونه برای نمایش چیدمان نهایی</span><span>DRAG TO EXPLORE <b>↗</b></span></div>
       </div>
 
-      <div class="mg-p-product-info">
+      <div class="mg-p-product-info flex flex-col">
         <div class="mg-p-overline"><span class="mg-p-dot"></span> LIVING / MODULAR SERIES</div>
         <div class="mg-p-title-wrap">
           <span class="mg-p-index">014</span>
@@ -98,7 +98,7 @@
       <div><span>MADE FOR YOUR SPACE</span><i>✳</i><span>FORM FOLLOWS FEELING</span><i>✳</i><span>MERGEN FURNITURE</span><i>✳</i><span>MADE FOR YOUR SPACE</span></div>
     </section>
 
-    <section class="mg-p-story wrap" id="story">
+    <section class="mg-p-story wrap mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10" id="story">
       <div class="mg-p-story-kicker"><span>02</span><span>DESIGN PHILOSOPHY</span></div>
       <div class="mg-p-story-copy">
         <p class="mg-p-eyebrow">A QUIETER KIND OF PRESENCE</p>
@@ -127,7 +127,7 @@
       </div>
     </section>
 
-    <section class="mg-p-dimensions wrap">
+    <section class="mg-p-dimensions wrap mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div class="mg-p-dim-copy">
         <p class="mg-p-eyebrow">SIZE & PROPORTION / 03</p>
         <h2>تناسبی برای<br><em>فضای شما.</em></h2>
@@ -155,9 +155,9 @@
       <span class="mg-p-room-index">04 — THE LIVING SPACE</span>
     </section>
 
-    <section class="mg-p-related wrap">
+    <section class="mg-p-related wrap mx-auto">
       <div class="mg-p-related-head"><div><p class="mg-p-eyebrow">MORE TO DISCOVER</p><h2>هم‌نشین‌های <em>آرکا</em></h2></div><a href="collection.html">تمام محصولات <span>←</span></a></div>
-      <div class="mg-p-related-grid">
+      <div class="mg-p-related-grid grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="product.html?id=vela-chair" class="mg-p-related-card"><div><img src="https://images.unsplash.com/photo-1505609375231-2e2a7d8f4b9b?auto=format&fit=crop&w=900&q=82" alt="صندلی ولا"></div><span>SEATING / 021</span><h3>صندلی ولا</h3><small>VELA LOUNGE CHAIR</small></a>
         <a href="product.html?id=nova-table" class="mg-p-related-card"><div><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=82" alt="میز نوا"></div><span>TABLES / 008</span><h3>میز نوا</h3><small>NOVA COFFEE TABLE</small></a>
         <a href="product.html?id=orion-console" class="mg-p-related-card"><div><img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=900&q=82" alt="کنسول اوریون"></div><span>STORAGE / 012</span><h3>کنسول اوریون</h3><small>ORION CONSOLE</small></a>
